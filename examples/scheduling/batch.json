@@ -1,0 +1,152 @@
+{
+  "recipe": {
+    "id": "r-schedule",
+    "question": "When would a small team need more than a shared rota spreadsheet?",
+    "method": "Compare a frontline employee satisfied with a stable rota and an approver handling frequent changes. Explore rejection as well as adoption.",
+    "dimensions": [
+      {
+        "name": "role",
+        "values": [
+          "employee",
+          "approver"
+        ]
+      },
+      {
+        "name": "schedule",
+        "values": [
+          "stable",
+          "changing"
+        ]
+      }
+    ],
+    "constraints": [
+      "Two contrasting roles, not all four combinations",
+      "No browsing or real customer claims",
+      "Include a role satisfied with the current alternative"
+    ],
+    "persona_count": 2,
+    "language": "en"
+  },
+  "personas": [
+    {
+      "id": "p-employee",
+      "label": "Employee with a stable rota",
+      "recipe_id": "r-schedule",
+      "traits": {
+        "role": "employee",
+        "schedule": "stable"
+      },
+      "attributes": [
+        {
+          "name": "workflow",
+          "value": "Checks a shared spreadsheet once a week",
+          "basis": "assumed",
+          "rationale": "Scenario assumption selected to contrast decision constraints"
+        },
+        {
+          "name": "authority",
+          "value": "Can request changes but cannot buy team software",
+          "basis": "assumed",
+          "rationale": "Scenario assumption selected to contrast decision constraints"
+        },
+        {
+          "name": "current alternative",
+          "value": "A spreadsheet is sufficient while the rota stays stable",
+          "basis": "assumed",
+          "rationale": "Scenario assumption selected to contrast decision constraints"
+        },
+        {
+          "name": "actual spending",
+          "value": "Unknown",
+          "basis": "unknown",
+          "rationale": "No real spending evidence supplied"
+        }
+      ]
+    },
+    {
+      "id": "p-approver",
+      "label": "Supervisor handling schedule changes",
+      "recipe_id": "r-schedule",
+      "traits": {
+        "role": "approver",
+        "schedule": "changing"
+      },
+      "attributes": [
+        {
+          "name": "workflow",
+          "value": "Coordinates hypothetical shift swaps across a small team",
+          "basis": "assumed",
+          "rationale": "Scenario assumption selected to contrast decision constraints"
+        },
+        {
+          "name": "authority",
+          "value": "Approves changes but would need owner approval for recurring costs",
+          "basis": "assumed",
+          "rationale": "Scenario assumption selected to contrast decision constraints"
+        },
+        {
+          "name": "constraint",
+          "value": "Wants a clear approved schedule without duplicate entry",
+          "basis": "assumed",
+          "rationale": "Scenario assumption selected to contrast decision constraints"
+        },
+        {
+          "name": "change frequency",
+          "value": "Unknown",
+          "basis": "unknown",
+          "rationale": "No measured usage frequency supplied"
+        }
+      ]
+    }
+  ],
+  "interviews": [
+    {
+      "id": "i-employee",
+      "persona_id": "p-employee",
+      "synthetic": true,
+      "turns": [
+        {
+          "question": "In this scenario, how would you check your next shift?",
+          "answer": "I would open the shared sheet. With a stable rota, that seems sufficient.",
+          "assumptions": []
+        },
+        {
+          "question": "What change could make that insufficient?",
+          "answer": "If someone edited a shift after I checked it, I would need a clear notification rather than another planning tool.",
+          "assumptions": [
+            "A shift can change after the weekly check"
+          ]
+        },
+        {
+          "question": "Would you want a separate scheduling app solely for notifications?",
+          "answer": "Not necessarily. If a simple message linked to the updated sheet worked, I would prefer to keep that workflow.",
+          "assumptions": []
+        }
+      ]
+    },
+    {
+      "id": "i-approver",
+      "persona_id": "p-approver",
+      "synthetic": true,
+      "turns": [
+        {
+          "question": "How would you coordinate a late swap under these assumptions?",
+          "answer": "I would check both people agree and then update the approved rota.",
+          "assumptions": []
+        },
+        {
+          "question": "What could make a dedicated tool useful?",
+          "answer": "An explicit pending-versus-approved state could help if messages and the rota diverged. The simulation does not establish how often that happens.",
+          "assumptions": [
+            "A proposed swap may be mistaken for an approved swap"
+          ]
+        },
+        {
+          "question": "What would make you reject it?",
+          "answer": "I would reject a tool that requires updating both its schedule and the sheet. I would also need owner approval before agreeing to a recurring cost.",
+          "assumptions": []
+        }
+      ]
+    }
+  ]
+}

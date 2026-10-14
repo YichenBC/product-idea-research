@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "research-workbench"
+version = "0.1.0"
+description = "Local, auditable synthetic research workflows for coding agents"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{name = "Research Workbench contributors"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["build>=1.2", "pytest>=8"]
+
+[project.scripts]
+research-workbench = "research_workbench.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["research_workbench*"]
+
+[tool.setuptools.package-data]
+research_workbench = ["skill/*", "skill/**/*"]

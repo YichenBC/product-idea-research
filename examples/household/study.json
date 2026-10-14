@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "title": "Household shared shopping list: two contrasting scenarios",
+  "revision": 4,
+  "recipe": {
+    "id": "household-recipe",
+    "question": "Under what conditions would a household shared-shopping-list concept improve on an already sufficient alternative, and when would it be rejected?",
+    "method": "Contrast decision style (weekly planner versus spontaneous shopper) and coordination (shared household versus solo), using exactly two synthetic roles: a weekly planner in a shared household and a spontaneous solo shopper. Conduct exactly three turns per role, following each answer with a question about its specific workflow, sufficiency or rejection conditions. This diagonal contrast cannot isolate the effects of the two dimensions.",
+    "dimensions": [
+      {
+        "name": "decision_style",
+        "values": [
+          "weekly planner",
+          "spontaneous shopper"
+        ]
+      },
+      {
+        "name": "coordination",
+        "values": [
+          "shared household",
+          "solo"
+        ]
+      }
+    ],
+    "constraints": [
+      "Exactly two personas, using only the two requested dimension combinations.",
+      "Exactly three simulated question-answer turns per persona, with answer-dependent follow-ups.",
+      "Include an already sufficient current alternative; do not force adoption of the concept.",
+      "All role attributes and responses are synthetic assumptions or explicit unknowns; include at least one unknown attribute per persona.",
+      "Do not invent purchase history, actual spending, measured outcomes, demographics or source evidence.",
+      "Generate fresh content locally; no browsing, external services, subagents, package installation or reuse of existing reports.",
+      "Save recipe, role cards and completed interviews incrementally using the installed CLI; validate and render Markdown and HTML under studies/household.",
+      "English report and study content. Unselected dimension combinations are outside this run's scope."
+    ],
+    "persona_count": 2,
+    "language": "en"
+  },
+  "personas": [
+    {
+      "id": "planner-shared",
+      "label": "Weekly planner coordinating a shared household",
+      "recipe_id": "household-recipe",
+      "traits": {
+        "decision_style": "weekly planner",
+        "coordination": "shared household"
+      },
+      "attributes": [
+        {
+          "name": "task",
+          "value": "In this scenario, prepare a weekly list after checking household supplies and collecting another adult's requests.",
+          "basis": "assumed",
+          "rationale": "Makes the user-specified weekly planning and shared coordination dimensions concrete without claiming observed behavior."
+        },
+        {
+          "name": "current_alternative",
+          "value": "An editable shared phone note is already sufficient when requests are settled before one designated shopper leaves.",
+          "basis": "assumed",
+          "rationale": "Provides a credible sufficient baseline against which the concept must earn a reason to switch."
+        },
+        {
+          "name": "authority",
+          "value": "Can prepare the list and propose a tool, but cannot require the other adult to maintain a second list.",
+          "basis": "assumed",
+          "rationale": "Shared adoption depends on cooperation rather than the planner's preference alone."
+        },
+        {
+          "name": "desired_outcome",
+          "value": "Keep additions and responsibility clear if shopping plans change after the weekly list is prepared.",
+          "basis": "assumed",
+          "rationale": "Explores coordination at handoffs as a conditional need, not a claimed recurring incident."
+        },
+        {
+          "name": "rejection_condition",
+          "value": "Would reject a separate app if it duplicates the note or requires both adults to perform extra routine updates.",
+          "basis": "assumed",
+          "rationale": "Tests whether coordination benefits could outweigh maintenance effort."
+        },
+        {
+          "name": "late_change_frequency",
+          "value": "Unknown: how often requests or shopper responsibility change after departure.",
+          "basis": "unknown",
+          "rationale": "No household observation or purchase history was supplied; frequency cannot be inferred from the scenario."
+        }
+      ]
+    },
+    {
+      "id": "spontaneous-solo",
+      "label": "Spontaneous solo shopper with no household handoff",
+      "recipe_id": "household-recipe",
+      "traits": {
+        "decision_style": "spontaneous shopper",
+        "coordination": "solo"
+      },
+      "attributes": [
+        {
+          "name": "task",
+          "value": "In this scenario, choose whether to shop when convenient and decide optional items at the store.",
+          "basis": "assumed",
+          "rationale": "Expresses the requested spontaneous decision style without inventing a past shopping trip."
+        },
+        {
+          "name": "current_alternative",
+          "value": "A short private phone note for essentials is already sufficient; optional choices can remain undecided.",
+          "basis": "assumed",
+          "rationale": "Creates a satisfied baseline with no assumed need for household sharing."
+        },
+        {
+          "name": "authority",
+          "value": "Chooses and maintains personal tools independently, with no other household shopper to update.",
+          "basis": "assumed",
+          "rationale": "Makes the solo coordination dimension operational and distinct from the shared role."
+        },
+        {
+          "name": "desired_outcome",
+          "value": "Capture an essential quickly while preserving freedom to choose the rest in the moment.",
+          "basis": "assumed",
+          "rationale": "Separates remembering essentials from planning an entire shopping trip."
+        },
+        {
+          "name": "rejection_condition",
+          "value": "Would reject household setup, invitations or detailed planning as prerequisites for keeping a personal list.",
+          "basis": "assumed",
+          "rationale": "Tests the relevance and burden of a household-oriented concept for a solo user."
+        },
+        {
+          "name": "capture_accessibility_needs",
+          "value": "Unknown: device, accessibility requirements and preferred input method.",
+          "basis": "unknown",
+          "rationale": "The prompt supplies none of these details; no particular interface can be presumed usable or faster."
+        }
+      ]
+    }
+  ],
+  "interviews": [
+    {
+      "id": "interview-planner",
+      "persona_id": "planner-shared",
+      "synthetic": true,
+      "turns": [
+        {
+          "question": "Imagine preparing your weekly household shopping list. How would you collect requests and decide that the list is ready, using your current alternative?",
+          "answer": "In this scenario, I would check supplies, put essentials in the shared phone note and ask the other adult to add requests before the designated shopper leaves. If one person shops and the requests are settled, that note is already sufficient. I would not need another app just to display the same items.",
+          "assumptions": [
+            "Both adults can edit the same phone note.",
+            "The baseline task has one designated shopper and requests settled before departure; this is a hypothetical workflow, not a reported purchase history."
+          ]
+        },
+        {
+          "question": "You said the note is sufficient with one shopper and settled requests. Suppose the other adult offers to pick up an item after you have left: how would you handle that handoff, and could the note still be enough?",
+          "answer": "I would ask them to mark their initials next to that item and send a direct confirmation before either of us treats it as assigned. The note could still be enough if we both follow that convention. A shared-list tool might help only if assignment and acknowledgment were clearer without maintaining a second copy. I do not know how often such handoffs would happen, so I cannot claim this deserves a dedicated app.",
+          "assumptions": [
+            "A second adult offers to collect one item after departure solely as a hypothetical stress test.",
+            "Initials in the note plus a direct confirmation are available as a possible workaround; their reliability has not been observed."
+          ]
+        },
+        {
+          "question": "Your workaround needs initials and direct confirmation, and you would consider clearer assignment only without a second copy. What would make you try a shared-list prototype, and what would make you keep the note?",
+          "answer": "Hypothetically, I would try one canonical list with optional item assignment and a visible acknowledgment during a handoff, provided the other adult also agrees to use it. I would keep the note if initials and confirmation remain clear enough, or if the new tool adds mandatory updates for every item. A clearer status on my screen is not useful if the other person never acknowledges it. I would need to see real handoffs before deciding whether switching is worthwhile.",
+          "assumptions": [
+            "The proposed canonical list, optional assignment and acknowledgment are prototype ideas, not verified product capabilities.",
+            "Participation by the other adult is conditional and has not been established."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interview-solo",
+      "persona_id": "spontaneous-solo",
+      "synthetic": true,
+      "turns": [
+        {
+          "question": "Imagine deciding to stop at a store when convenient, without a weekly plan. How would you remember essentials and decide what else to get using your current alternative?",
+          "answer": "In this scenario, I would glance at a short private phone note for essentials and leave optional choices open until I am there. That is already sufficient: I am the only person who needs to see or update it. A household shared list would not solve a handoff for me because there is no other shopper to coordinate with.",
+          "assumptions": [
+            "A private phone note is available for the hypothetical task.",
+            "The imagined store stop and choices are a task scenario, not an account of actual purchases."
+          ]
+        },
+        {
+          "question": "You said a short private note is enough and optional choices should stay open. Suppose you remember an essential just before entering the store: would adding it expose a gap, or would the note still suffice?",
+          "answer": "I would add a short line to the note. It would still suffice if I can reach it easily; I would not need a full plan or a shared household. If capture were awkward, I might compare a quicker personal capture option, but that is a usability question. My device and input needs are unknown here, so I cannot say a new app would be quicker.",
+          "assumptions": [
+            "Remembering an essential just before entry is a hypothetical prompt, not an observed incident.",
+            "Easy access to the note is a condition of sufficiency, not a measured interface property."
+          ]
+        },
+        {
+          "question": "You would compare personal capture only if adding a line were awkward. If this shared-list concept offered a private mode, what would justify trying it, and what would make you reject it?",
+          "answer": "Hypothetically, I would consider a private mode only if it made capturing essentials easier on my actual device and let me leave the rest unplanned. I would reject mandatory household setup, invitations or detailed item fields. Sharing alone gives me no reason to switch. If the note stays easy to reach, I would keep it even if private mode exists; an extra app is not an improvement by itself.",
+          "assumptions": [
+            "Private mode is a hypothetical concept variant, not a confirmed feature.",
+            "No capture comparison has been performed on an actual device."
+          ]
+        }
+      ]
+    }
+  ]
+}

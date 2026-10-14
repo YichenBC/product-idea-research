@@ -1,0 +1,62 @@
+# v0.1 acceptance record
+
+Date: **2026-10-15 (Asia/Shanghai)**. These are observations from this release's
+local verification, not guarantees about every model, agent version or environment.
+
+## Actual host runs
+
+| Check | Result | Evidence / limitation |
+|---|---|---|
+| Codex model-driven workflow | Passed | Codex CLI `0.162.0-alpha.17.2`, installed project skill, fresh household-shopping study, no browsing |
+| Claude Code skill installation | Passed | Same packaged skill installed to `.claude/skills/research-workbench`; fresh wheel installation tested |
+| Claude Code model-driven workflow | Blocked before model call | Claude Code `2.1.280`: local OAuth session expired and could not be refreshed; zero model tokens, no study generated |
+| Offline CLI and wheel smoke | Passed | Python 3.11.15, macOS ARM64; installed wheel outside source checkout; fixture renders both formats and installs both host targets |
+
+Claude Code's data/installation compatibility is tested, but its actual model
+behavior has **not** been verified in this environment. Re-run
+[the Claude prompt](claude-prompt.txt) after authenticating. Do not interpret the
+installation check as a successful Claude interview run.
+
+## Codex run inspected
+
+[Prompt](codex-prompt.txt) · [Generated report](../examples/household/report.md) ·
+[Study snapshot](../examples/household/study.json) ·
+[Report draft](../examples/household/report-draft.json)
+
+- Started with no persona library or supplied persona data.
+- Followed the specified two combinations: weekly planner/shared household and
+  spontaneous shopper/solo. Did not expand to all four combinations.
+- Saved the recipe, both cards and each interview incrementally: final revision 4.
+- Produced two role cards, three question/answer turns per role, and three findings
+  referencing valid interview turns.
+- Follow-up questions explicitly picked up the preceding answer's sufficient
+  alternative, workaround or rejection threshold.
+- Both roles retained a sufficient note-based alternative; the report preserved
+  this rather than forcing a positive product recommendation.
+- Explicit unknowns included change frequency and device/accessibility needs.
+- The report identified the confounding of the two dimensions and did not infer
+  independent effects, willingness to pay or market prevalence.
+- Generated Markdown, standalone HTML and frozen JSON snapshots using the CLI.
+
+This is one synthetic study from one host. It demonstrates the workflow, not the
+validity of simulated consumer preferences. The same Agent generated all roles and
+answers; these are not independent empirical respondents.
+
+## Deterministic checks
+
+The automated suite covers idempotent ingestion, atomic failed batches, strict
+types and references, duplicate JSON keys, malformed inputs, partial and excessive
+coverage, stale revisions, Unicode output in ASCII terminals, safe Markdown/HTML,
+immutable report snapshots, corrected role IDs, concurrent writers, interrupted
+write/render recovery and non-overwriting installation in user/project scopes.
+
+The [scheduling example](../examples/scheduling/report.md) is a hand-authored
+synthetic fixture used for repeatable rendering. It is separate from the live
+Codex output above. GitHub Actions repeats the automated suite and wheel checks
+on Linux, macOS and Windows with Python 3.11 and 3.13; consult the actual run
+status before assuming a remote platform passed.
+
+Independent reviews covered spec compliance and Python correctness/security.
+Review found and prompted fixes for archived-role corrections, Unicode CLI output,
+report coverage enforcement and missing development dependencies. Structural
+validation still cannot prove semantic support or real-world representativeness.

@@ -1,0 +1,65 @@
+{
+  "title": "Scheduling concept — synthetic interview report",
+  "study_revision": 1,
+  "status": "complete",
+  "summary": "These two simulated roles suggest testing change visibility and approval clarity before assuming teams need a new scheduling system. No real users were interviewed.",
+  "interview_ids": [
+    "i-employee",
+    "i-approver"
+  ],
+  "findings": [
+    {
+      "id": "f-notifications",
+      "kind": "simulation",
+      "statement": "For the stable-rota employee, a lightweight notification may be sufficient without adopting another app.",
+      "support": [
+        {
+          "interview_id": "i-employee",
+          "turn": 2
+        },
+        {
+          "interview_id": "i-employee",
+          "turn": 3
+        }
+      ],
+      "counterevidence": [
+        {
+          "interview_id": "i-approver",
+          "turn": 2
+        }
+      ],
+      "limitations": [
+        "The stable rota is a constructed assumption, not an observed user segment."
+      ]
+    },
+    {
+      "id": "f-approval",
+      "kind": "simulation",
+      "statement": "The simulated supervisor values approval clarity but rejects duplicate schedule entry.",
+      "support": [
+        {
+          "interview_id": "i-approver",
+          "turn": 2
+        },
+        {
+          "interview_id": "i-approver",
+          "turn": 3
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "The frequency and cost of approval confusion remain unknown."
+      ]
+    }
+  ],
+  "next_steps": [
+    "Observe how a real team handles one schedule change, with consent.",
+    "Ask whether a message linked to the existing sheet already solves missed changes.",
+    "Test a single-source-of-truth prototype with an actual approver before discussing pricing."
+  ],
+  "limitations": [
+    "All personas and interview responses are synthetic; this is not demand validation.",
+    "Two deliberately contrasting scenarios do not estimate the prevalence of either workflow.",
+    "No willingness-to-pay or time-saving measurement was collected."
+  ]
+}
