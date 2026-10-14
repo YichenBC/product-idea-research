@@ -131,8 +131,8 @@ class CLI(Harness):
         self.cli('render', self.study, '--report', rp)
         first = self.study / 'reports' / '001'
         old = {p.name: p.read_bytes() for p in first.iterdir()}
-        html = (first / 'report.html').read_text()
-        md = (first / 'report.md').read_text()
+        html = (first / 'report.html').read_text(encoding='utf-8')
+        md = (first / 'report.md').read_text(encoding='utf-8')
         self.assertNotIn('<script>', html)
         self.assertNotIn('<img src=', html)
         self.assertIn('&lt;img', html)
@@ -147,7 +147,7 @@ class CLI(Harness):
 
     def test_malformed_json_and_missing_study(self):
         p = self.root / 'broken.json'
-        p.write_text('{broken')
+        p.write_text('{broken', encoding='utf-8')
         self.initialize()
         self.cli('ingest', self.study, '--file', p, code=1)
         self.cli('status', self.root / 'missing', code=1)
@@ -163,9 +163,9 @@ class CLI(Harness):
             self.cli(*args)
             self.assertTrue((path / 'SKILL.md').exists())
             self.cli(*args)
-            (path / 'SKILL.md').write_text('changed')
+            (path / 'SKILL.md').write_text('changed', encoding='utf-8')
             self.cli(*args, code=1)
-            self.assertEqual((path / 'SKILL.md').read_text(), 'changed')
+            self.assertEqual((path / 'SKILL.md').read_text(encoding='utf-8'), 'changed')
         self.cli('install', '--target', 'codex', '--scope', 'user', '--directory', self.root, code=1)
 
 class AdditionalCLI(Harness):
@@ -179,7 +179,7 @@ class AdditionalCLI(Harness):
         self.initialize()
         path = self.root / 'bad.json'
         for text in ['{"personas":[],"personas":[]}', '{"recipe":NaN}', '[]', 'null', '42']:
-            path.write_text(text)
+            path.write_text(text, encoding='utf-8')
             self.cli('ingest', self.study, '--file', path, code=1)
 
     def test_complete_report_and_snapshot_does_not_change_after_append(self):
@@ -218,7 +218,7 @@ class AdditionalCLI(Harness):
         for process in commands:
             out, err = process.communicate(timeout=20)
             self.assertEqual(process.returncode, 0, out + err)
-        state = json.loads((self.study / 'research.json').read_text())
+        state = json.loads((self.study / 'research.json').read_text(encoding='utf-8'))
         self.assertEqual(state['revision'], 3)
         self.assertEqual({i['id'] for i in state['interviews']}, {'i1', 'i2', 'i3'})
 
@@ -228,7 +228,7 @@ class AdditionalCLI(Harness):
         b['recipe']['language'] = 'zh-CN'
         self.ingest(b)
         self.cli('render', self.study, '--report', self.write('r.json', report()))
-        html = (self.study / 'reports' / '001' / 'report.html').read_text()
+        html = (self.study / 'reports' / '001' / 'report.html').read_text(encoding='utf-8')
         self.assertIn('完整模拟访谈', html)
         self.assertIn('合成研究', html)
         self.assertIn('lang="zh"', html)
@@ -256,10 +256,10 @@ class AdditionalCLI(Harness):
         r['findings'][0]['counterevidence'][0]['interview_id'] = 'i3'
         self.cli('render', self.study, '--report', self.write('after.json', r))
         self.assertEqual((self.study / 'reports' / '001' / 'study.json').read_bytes(), old)
-        html = (self.study / 'reports' / '002' / 'report.html').read_text()
+        html = (self.study / 'reports' / '002' / 'report.html').read_text(encoding='utf-8')
         self.assertIn('Corrected active persona', html)
         self.assertNotIn('User (p1)', html)
-        state = json.loads((self.study / 'reports' / '002' / 'study.json').read_text())
+        state = json.loads((self.study / 'reports' / '002' / 'study.json').read_text(encoding='utf-8'))
         self.assertEqual(len(state['personas']), 3)
 
     def test_ascii_terminal_can_initialize_non_ascii_title(self):
