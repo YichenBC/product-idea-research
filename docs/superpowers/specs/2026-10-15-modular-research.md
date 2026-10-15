@@ -34,7 +34,7 @@ A run requires a brief, references stored sources (unique IDs). Complete require
 
 ## Report changes
 
-Existing required fields stay. `interview_ids` can be empty when optional `run_ids` selects >=1 run; missing run_ids means []. Only selected runs' sources can be cited. Report complete requires all selected runs complete, plus existing planned persona coverage if interviews selected; unused stored recipe/personas do not force simulation. Partial may have no findings when all collection is blocked; complete requires >=1 finding. At least one run or interview must be selected.
+Existing required fields stay. `interview_ids` can be empty when optional `run_ids` selects >=1 run; missing run_ids means []. Only selected runs' sources can be cited. Report complete requires all selected runs complete, plus existing planned persona coverage if interviews selected; unused stored recipe/personas do not force simulation. Partial may have no findings only when no eligible source evidence or interviews were selected (all collection blocked/unusable); complete requires >=1 finding. At least one run or interview must be selected.
 
 References are strictly either {interview_id, turn} or {source_id, excerpt_id}. Source refs must select full/excerpt sources. Finding kind enum: simulation (interview support only), source (source support only), inference (source support only), mixed (both types in support). Counterevidence may use either eligible type but never upgrades support. Each finding retains >=1 support and >=1 limitation. Mixed findings must identify synthetic parts in prose. Structural validation cannot prove entailment.
 

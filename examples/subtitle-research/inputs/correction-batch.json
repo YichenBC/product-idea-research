@@ -1,0 +1,189 @@
+{
+  "sources": [
+    {
+      "id": "c2-details",
+      "title": "Amara Plus teams — review, notes and revision detail reread",
+      "url": "https://support.amara.org/support/solutions/articles/192110-amara-plus-teams-quickstart",
+      "platform": "Amara Support",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c2-family",
+      "context": "团队内独立证据审查者在本次复核成功读取原官方页，web ref turn137view0，645行，修改日期2025-12-18。本执行者重开同URL与旧ref均遇OAuth重定向，未登录，不能冒称自己重开成功。审查者提供的原页段落：L463–468为可选Review设置并建议由另一成员完成，不足以证明系统强制；L517、525字幕页可看活动、下载、比较、编辑、关注；L534成员活动；L536编辑器备注；L541–548选两个版本、查看差异与回滚。执行者另亲读官方Community Teams公开页核对类似功能，但不把Community的公开视频条件外推给Plus。",
+      "excerpts": [
+        {
+          "id": "notes",
+          "text": "Subtitle Notes",
+          "locator": "独立审查者web正文turn137view0 L536"
+        },
+        {
+          "id": "revisions",
+          "text": "Compare Revisions, Rollback Revisions",
+          "locator": "独立审查者web正文turn137view0 L539"
+        }
+      ],
+      "limitations": [
+        "与c2是同一URL与文档家族的补读，不是第二个独立产品证据；新增逐字引文6词，连同原c2的19词总计25词。",
+        "原页成功读取来自本研究团队独立审查者，执行者本次重开失败；功能未亲测。",
+        "可选Review与另一成员应审校是说明/建议，不等于权限强制；价格和当前Plus具体适配仍待核实。"
+      ]
+    },
+    {
+      "id": "s6-clarification",
+      "title": "Multilingual subtitle author clarifies styling goal",
+      "url": "https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/comment/oss8nkz/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s6-family",
+      "context": "执行者亲自打开原作者后续评论及父帖上下文，web turn142view1 L101–106。原作者要在DaVinci Resolve分别设样式，双轨只是变通；若一个文件能英文在上、中文在下更理想。修正旧s6 context中把双语建议视为理解偏差的过强判断；旧记录保留历史，新报告以本澄清为准。",
+      "excerpts": [
+        {
+          "id": "styling",
+          "text": "Mainly just so i can have two separate styled sub tracks in davinci resolve.",
+          "locator": "https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/comment/oss8nkz/ L105"
+        },
+        {
+          "id": "ideal",
+          "text": "If i could get it to display like you have with english ontop and mandarin underneath in one sub file that would be ideal",
+          "locator": "同一原作者评论L106连续片段"
+        }
+      ],
+      "limitations": [
+        "同一原帖家族的后续澄清，不增加独立讨论数量；没有团队/采购或最终解决结果。"
+      ]
+    },
+    {
+      "id": "s5-counterpoint",
+      "title": "Welsh subtitle discussion — standard writing can also aid learning",
+      "url": "https://www.reddit.com/r/learnwelsh/comments/1vqupgz/subtitles_not_matching_speech_on_bbc_bitesize/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s5-family",
+      "context": "执行者重新读取原帖和相反意见，web turn143view2 L156–164与L230–234。评论认为规范字形与口语并列可帮助接触两种语域；原作者承认价值但认为自身理解水平可能不足。另一评论认为规范拼写也能帮助将方言发音对应到标准词。不能把听力学习一律映射为逐字转写。",
+      "excerpts": [
+        {
+          "id": "standard",
+          "text": "I actually think it is is helpful to have a more standard form reflected in the subtitles with the spoken variations being different",
+          "locator": "评论L157连续片段；保留原文重复is"
+        },
+        {
+          "id": "learner",
+          "text": "Yeah I can definitely see the value of it, though I think it probably requires a more advanced level of comprehension than I’m currently at.",
+          "locator": "原作者回复L164"
+        },
+        {
+          "id": "purpose",
+          "text": "If the purpose is to ensure that as many people as possible understand the subtitles, or learn how to marry dialectical pronunciations to standard Welsh words, then more standard spellings are appropriate.",
+          "locator": "评论L233"
+        }
+      ],
+      "limitations": [
+        "同一讨论家族的相反意见，不是额外客户样本；未核验学习效果或语言学解释。"
+      ]
+    },
+    {
+      "id": "b7-amara-reread",
+      "title": "Amara Plus page reread access failure",
+      "url": "https://support.amara.org/support/solutions/articles/192110-amara-plus-teams-quickstart",
+      "platform": "Amara Support",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "unavailable",
+      "group_id": "c2-family",
+      "context": "执行者本次补读open和旧ref返回Freshworks OAuth重定向，500且non-retryable。没有登录或绕过；独立审查者成功读取另存c2-details。",
+      "excerpts": [],
+      "limitations": [
+        "本执行者本次请求失败，与同研究团队另一请求成功分别记录；不否定之前保存的c2或审查者补读。"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "run-social-corrected",
+      "module": "social",
+      "status": "complete",
+      "objective": "读6–10个公开讨论家族，识别小团队翻译字幕审校中的任务差异与现有方法够用条件。",
+      "method": "2026-10-15使用web搜索、open、find和评论链接click；选8个正文可访问的讨论家族，读取原帖和可见评论，不把搜索摘要计入。按任务链分组，保留闭环解决和满意案例。 独立复核后亲读原作者后续澄清与威尔士语相反意见，纠正任务目标和教学用途的过强推断；新增摘录仍属于原8个讨论家族。",
+      "queries": [
+        "site.reddit.com/r/TranslationStudies subtitle translation software workflow bilingual subtitles",
+        "site.reddit.com subtitles collaboration proofreading subtitle edit bilingual workflow",
+        "site.community.amara.org subtitles review translation workflow",
+        "site.reddit.com subtitles Welsh translation Subtitle Edit",
+        "site.reddit.com subtitle translation bilingual review Arabic workflow",
+        "site.github.com/SubtitleEdit/subtitleedit/issues \"translation\" \"original\""
+      ],
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "b1",
+        "b2",
+        "b3",
+        "s6-clarification",
+        "s5-counterpoint"
+      ],
+      "limitations": [
+        "便利样本：6个Reddit讨论、1个GitHub issue、1个Adobe社区讨论；不是8名客户或需求频率样本。",
+        "7个家族读到评论或回复；s2只读到原帖；未展开全部折叠评论。",
+        "有英中混合与威尔士语场景，但小语种生产团队与中文原生讨论覆盖薄弱。",
+        "3个讨论正文不可访问，已保存，不计入8个。",
+        "Adobe社区材料由竞品检索意外发现，作为适合的够用/可发现性反例补入。",
+        "s6原context中的任务误解判断由s6-clarification纠正；s5不支持固定教育规则。"
+      ]
+    },
+    {
+      "id": "run-competitor-corrected",
+      "module": "competitor",
+      "status": "complete",
+      "objective": "比较至少3种现有替代方案的官方相关说明并识别已被覆盖的任务。",
+      "method": "2026-10-15读取Subtitle Edit官方仓库文档、Amara Plus官方支持文档和Adobe Premiere官方帮助；以双语对照、审校交接、原工作流适配为比较维度。不登录、不试用、不核价。OOONA正文不可稳定读取，仅记录访问失败，换用Premiere满足3种替代方案。 独立审查者补读同一Plus页的备注和版本比较；执行者补读请求失败但亲读Community公开说明作交叉检查。新报告将原c2与c2-details作为同页证据而非独立佐证。",
+      "queries": [
+        "site.support.amara.org \"review\" \"workflow\" subtitles",
+        "site.ooona.net \"Review\" \"Compare\" tools subtitles",
+        "site.subtitleedit.github.io/subtitleedit \"Translation Mode\"",
+        "site.ooona.atlassian.net \"Share project\" review",
+        "site.ooona.atlassian.net \"Compare\" \"subtitle\"",
+        "site.helpx.adobe.com/premiere-pro \"Translate captions\"",
+        "site.aegisub.org/docs/latest \"Translation Assistant\"",
+        "\"Amara Plus teams\" \"Activities\" \"Subtitle Notes\"",
+        "site.sites.google.com/amara.org/supportandresources \"compare\" \"versions\"",
+        "\"amara-plus-teams-quickstart\" \"revisions\""
+      ],
+      "source_ids": [
+        "c1",
+        "c2",
+        "c3",
+        "b4",
+        "b5",
+        "b6",
+        "c2-details",
+        "b7-amara-reread"
+      ],
+      "limitations": [
+        "官方说明未做实测；并非完整市场扫描。",
+        "未核验价格、席位、语言覆盖、数据保留与导出兼容性，不能做采购推荐或成本排名。",
+        "Subtitle Edit文档取自main分支；Amara文档限定Plus；Premiere文档更新2026-06-02。",
+        "OOONA检索结果不能证明已读官方能力，未纳入比较。",
+        "Plus补读成功的来源为本研究团队独立审查者；执行者的OAuth访问失败另存b7，不混淆访问者。",
+        "Community公开页仅作交叉检查，未将其特定计划条件计入Plus比较。"
+      ]
+    }
+  ]
+}

@@ -1,40 +1,42 @@
-# Research first, conclusions first
+# Modular research, conclusions first
 
-Research Workbench is intended to help a coding agent answer a research question
-and deliver an actionable report. Simulated interviews are one method available
-within that work, not the definition of the product.
+Research Workbench helps a coding agent answer a question and deliver an actionable
+report. Users choose the work: start from an idea, a competitor, public discussions,
+provided materials or a user-defined interview method. Run one module or combine
+several; never invent unperformed research to fill report sections.
 
-The modular design allows starting from an idea, a competitor, public discussions,
-provided materials or a user-defined interview method. Users can request one module
-or a combination; a report should never invent unperformed research just to fill
-sections.
-
-| Module | Question it contributes to | Shipping status |
+| Module | Contribution | v0.2 behavior |
 |---|---|---|
-| Social research | What problems and alternatives appear in public discussions? | Planned |
-| Competitor research | How do existing solutions work and where are their limits? | Planned |
-| Supplied-material analysis | What does existing feedback or research support? | Planned |
-| Simulated interviews | What assumptions, objections and trade-offs should be tested? | Implemented |
+| Social research | Tasks, friction, workarounds, satisfaction, buying signals | Host collects public/supplied material; preserves exact excerpts and discussion context |
+| Competitor research | Existing tools, indirect/manual alternatives, constraints | Dated source-backed comparisons; claims and unknowns distinguished |
+| Simulated interviews | Assumptions, objections and conditional preferences | User-defined method and synthetic roles; generated answers remain hypothetical |
+| Synthesis | Decision, disagreement, implications and next test | One main report from selected runs; linked evidence companion |
 
-## Report contract
+Supplied-material analysis uses the same source ledger and relevant research module;
+it does not require browsing. A later module can extend saved work. Report-only
+requests reuse it. Shared persona libraries and dedicated bulk platform adapters
+remain outside v0.2.
 
-The main report answers the research question: conclusions, meaningful disagreement,
-implications, actions and unresolved questions. It briefly discloses its scope and
-evidence limits. It does not reproduce every step of the research process.
+## Division of responsibility
 
-Detailed methods, role cards, transcripts and other source material belong in a
-separate evidence companion. Links let readers inspect support without forcing
-everyone to read the full interview. The current renderer implements this division
-for simulated interviews; the other modules will contribute their own conclusions
-and source types when implemented.
+The skill directs research and reasoning using available host tools. The CLI does
+not browse or run a model: it stores immutable evidence, validates exact references,
+audits coverage/duplicates and creates frozen exports. This makes the workflow
+portable without pretending every host has the same social-platform access.
 
-Synthetic material remains labeled as simulation even when summarized. A polished
-report must not give hypothetical statements the status of real customer evidence.
+The main report answers the question; detailed methods, source excerpts, role cards
+and transcripts belong in the evidence companion. External statements, researcher
+inference and simulation retain different meanings in a combined report.
 
-## Design influence
+## Atypica as a reference
 
 Atypica's orchestration of research methods, personas and interviews informed the
-design. During the earlier evaluation, final report generation did not complete,
-so this project does not claim to reproduce an inspected Atypica report layout or
-its proprietary persona data. This is an independent implementation of the
-research workflow and the user's desired conclusion-first delivery.
+design. Earlier hands-on evaluation exercised its research flow; final report
+generation did not complete, so we do not claim to reproduce an inspected final
+layout or its proprietary persona data.
+
+This project's target is a stronger fit for coding-agent users who want explicit
+module selection, inspectable local evidence, resumable files and reproducible
+exports. Those are testable workflow properties, not a claim of superior prediction
+accuracy, research validity or platform data coverage. See the evaluation record
+for measured outcomes and remaining gaps.

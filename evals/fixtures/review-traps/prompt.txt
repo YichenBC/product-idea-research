@@ -1,0 +1,2 @@
+Use the research-workbench skill from the installed skill. CLI: research-workbench.
+只使用当前目录 materials.txt，不联网。研究我是否应该做一个双语字幕交接审校 Web 产品：分析这些讨论并比较里面的两个现有工具与手工办法，不要模拟访谈。形成中文报告，给至多一个最值得采取的下一步。不要预设新产品值得做。材料是虚构验收用例，不能当成真实市场证据。研究保存到 studies/review，完成 check/audit/render。不要修改源码、安装、提交或发布。

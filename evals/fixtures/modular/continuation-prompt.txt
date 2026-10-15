@@ -1,0 +1,2 @@
+Use the installed research-workbench skill and the existing studies/review-workflow study. CLI: research-workbench.
+接着已有研究，只使用 materials.txt，不联网。现在补上里面讨论材料的社媒分析，注意同一讨论的评论和重复转帖。然后合成两种工作流角色（单人审校、多人协作），各做三轮模拟访谈，保留现有办法够用的情况。最后合成一份中文报告，综合已有竞品研究、新的讨论分析和模拟访谈，不要重做旧的竞品材料。可以给至多两个机会方向；别把虚构材料和模拟偏好当成真实付费证明。完成保存、检查、审计和渲染。不得修改旧导出文件或代码，不安装、不提交、不发布。

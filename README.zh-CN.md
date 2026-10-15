@@ -1,19 +1,35 @@
 # Research Workbench
 
-**给 coding agent 的研究工作台：围绕问题研究，交付结论和可查阅的依据。**
+**让 Codex / Claude Code 从公开讨论、竞品和模拟访谈中形成有依据、可复查的研究结论。**
 
-给 Codex / Claude Code 用的开源研究 skill，配一个本地 Python CLI。
-Agent 负责合成角色、访谈和分析，CLI 负责保存、检查引用和生成 Markdown / HTML。
-不需要先建角色库，也不需要额外的模型 API key。调用宿主模型仍会消耗正常额度。
+一个共享 Skill，加一个本地 Python CLI。社媒调研、竞品研究、模拟访谈可以
+单独运行，也可以组合，最终汇总成一份研究报告。可以从想法、竞品、链接、已有
+反馈或自定义方法开始，也可以接着已有研究往下做。
 
-模拟访谈是目前已实现的一个研究模块，适用于工作、消费和生活场景。整体设计支持按需
-组合社媒侦察、竞品研究、资料分析和模拟访谈；其他模块、角色库及批量采集尚未实现。
-报告围绕研究问题交付结论，而不是展示所有研究过程。模拟结果用于提出和挑战假设，
-不能当作真实需求或付费意愿验证。
+Agent 负责搜索、阅读、分析与模拟；CLI 负责保存证据、检查引用、提示重复材料和
+导出 Markdown / HTML。无需额外模型 API key、Atypica 订阅、服务器或角色数据库；
+仍会使用你的编程 Agent 本身的额度和工具。
+
+[English](README.md) · [数据契约](docs/contract.md) · [验收记录](evals/README.md)
+
+## 可以做什么
+
+| 你提出的任务 | 交付 |
+|---|---|
+| 只看社媒上的需求、替代方法与反对意见 | 带上下文和出处的发现、证据空白与可验证机会 |
+| 只比较几个竞品 | 功能/工作流/价格条件对照、未知项、选择建议 |
+| 按我的方法合成角色并访谈，不联网 | 模拟结论、分歧与现实验证问题 |
+| 社媒 + 竞品 + 模拟访谈 | 一份综合报告，区分外部材料、研究推断和模拟 |
+| 分析我提供的反馈，不上网 | 保留原始定位和矛盾意见的材料分析 |
+| 继续上次研究 / 只重新形成报告 | 新增研究轮次，或直接复用已保存材料 |
+
+模块由用户选择，不强制从头跑完整流程。适用于工作与生活场景，不限于某个行业。
+明确指定的数量、渠道、语言和研究方法会保留；访问受限时说明缺口，不虚构材料补数。
 
 ## 安装
 
-需要 Python 3.11+ 和 Git。
+需要 Python 3.11+、Git，以及能使用终端和文件的 Codex / Claude Code。
+在线调研还需要宿主提供搜索或浏览工具；也可以直接使用你提供的材料。
 
 ```bash
 git clone https://github.com/YichenBC/research-workbench.git
@@ -26,30 +42,64 @@ research-workbench install --target codex --scope user
 research-workbench install --target claude --scope user
 ```
 
-按需安装其中一个宿主即可。启动 Agent 时保持此虚拟环境已激活，让 CLI 在 PATH 中；
-也可用已有的 `uv tool install .` 或 `pipx install .` 安装。
-Codex 用 `$research-workbench`，Claude Code 用 `/research-workbench` 调用。
-同名 skill 不会被静默覆盖。[更多安装说明](docs/installation.md)。
+Windows 用 `.venv\Scripts\Activate.ps1` 激活。启动 Agent 时保持环境激活，
+或使用 `pipx install .` / `uv tool install .`。安装后可能需要重启 Agent 才能
+发现 Skill。只装到当前项目时使用 `--scope project --directory /path/to/project`。
+安装器不会覆盖已存在但内容不同的 Skill；[更新方式](docs/installation.md)。
 
-## 给它一句任务
+## 怎么用
 
-> 研究一个排班工具。按一线员工和审批者两个角色对比：员工班次稳定、现有表格够用；
-> 审批者经常处理临时换班。合成两个角色，各做三轮模拟访谈，生成中文报告。
-> 不联网，保存到 studies/scheduling。
+Codex 使用 `$research-workbench`，Claude Code 使用 `/research-workbench`。
+接着自然描述任务：
 
-也可以要求“只生成角色”“继续上次访谈”“只用已有记录更新报告”，或者自行指定研究方法。
-角色不绑定行业，方法和数量由用户决定。
+> 调研视频团队审校翻译字幕的流程。看看公开讨论和已有工具，再用两个模拟角色
+> 质疑我的想法。输出一份中文报告，保留现有办法已经够用的证据，推荐个人能交付的
+> 小范围试验。
 
-## 交付什么
+也可以只做一个模块：
 
-- **主报告**：先展示结论、共识与分歧、建议和待验证问题，简要交代依据与局限。
-- **证据附件**：单独保存角色设定、假设、方法与完整访谈；主报告引用可跳转到具体问答。
-- **本地文件**：Markdown、HTML、研究及报告 JSON 快照；可续接，旧报告保留。
+> 只比较这三个产品对双人团队的适用性，核实官方功能与价格条件。不要做角色或访谈。
 
-分享时带上整个报告目录即可保留附件链接；只阅读主报告也能理解主要结论。
+或完全不联网：
 
-[示例报告](examples/scheduling/report.md)来自明确标记的手工合成示例；
-[验收记录](evals/README.md)另行说明两个宿主实际执行的情况。
-CLI 本身不会生成内容，不会联网抓取或自动联系用户。
+> 分析这份导出的用户反馈，不联网。保留相反意见，指出还缺哪些依据，形成研究报告。
 
-完整命令、数据格式和开发说明见 [English README](README.md) 与 [数据契约](docs/contract.md)。
+## 真实调研示例
+
+[字幕审校研究](examples/subtitle-research/README.md)：[综合报告](examples/subtitle-research/combined/report.md) · [纯社媒报告](examples/subtitle-research/social/report.md) · [纯竞品报告](examples/subtitle-research/competitor/report.md)。附原始证据、复审修订和可离线重放的数据。
+
+## 报告是什么样
+
+主报告呈现结论、分歧、竞品对照或机会选择、下一步与局限。原始来源摘录、采样方法、
+角色卡和完整问答放在证据附件中，点击引用可以核查。模拟结论始终与外部材料区分。
+
+每次导出产生独立目录：`report.md/html`、`evidence.md/html` 和冻结的研究/报告 JSON。
+旧版本不会被覆盖；分享时保留整个目录即可保留附件链接。
+
+[模拟报告示例](examples/scheduling/report.md) ·
+[先前 Codex 实跑示例](examples/household/report.md)
+
+## CLI 的职责
+
+- `init / ingest`：初始化并分批保存不可变记录；失败批次不会部分写入。
+- `status / check`：查看进度，校验所选材料、引用、报告版本与覆盖情况。
+- `audit`：检查读取深度、讨论分组、重复 URL/摘录；不生成“真实性分数”。
+- `render`：导出主报告、证据附件与快照。
+- `install`：将同一份 Skill 安装给两种宿主。
+
+CLI 不会自行搜索或生成内容。新一轮研究由 Agent 运行 Skill。
+
+## 能力边界
+
+不保证任何社媒平台都能访问；登录墙和不可读评论会保留为缺口。搜索摘要只能作为线索，
+不能进入结论引用。同一讨论的多条评论不等于多个独立客户。公开帖子是作者自述，
+官网是厂商声明，模拟回答是研究假设，都不能直接证明付费意愿或市场规模。
+
+不包含托管界面、专用平台爬虫、共享角色库或自动外联。角色属性仍标记为假设/未知。
+`complete` 只表示本次声明的研究范围完成，不表示需求已验证。
+
+文件保存在本地，但研究材料仍可能通过宿主的模型与工具服务处理。实际宿主测试结果
+与限制以[验收记录](evals/README.md)为准，不把目录安装成功当成模型工作流验证成功。
+
+MIT 开源；Python 标准库运行时。开发：`python -m pip install -e '.[dev]'`，
+`python -m pytest -q`，`python -m build`。

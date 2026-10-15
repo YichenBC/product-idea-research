@@ -1,0 +1,249 @@
+{
+  "title": "公开讨论修订：显示目标与字幕写法不能由初帖推定",
+  "study_revision": 7,
+  "status": "complete",
+  "summary": "公开讨论呈现多种任务和现有方法够用的反例。补读显示，混合字幕帖的两条轨道是设样式的变通，理想目标是单文件双语显示；学习字幕的规范写法也可能有价值。应先澄清实际目标，材料不足以证明小团队愿意购买新Web工具。",
+  "interview_ids": [],
+  "run_ids": [
+    "run-social-corrected"
+  ],
+  "findings": [
+    {
+      "id": "f-task",
+      "kind": "source",
+      "statement": "材料呈现不同任务：有人要给未定时译稿配时间轴；英中混合音频帖作者后来澄清，分别生成轨道主要为了在DaVinci Resolve设样式，理想结果是一个文件英文在上、中文在下；小机构一致性帖作者则明确不涉及翻译，只能作相邻工作流材料。",
+      "support": [
+        {
+          "source_id": "s2",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s6-clarification",
+          "excerpt_id": "styling"
+        },
+        {
+          "source_id": "s6-clarification",
+          "excerpt_id": "ideal"
+        },
+        {
+          "source_id": "s4",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s4",
+          "excerpt_id": "e3"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "不能把初帖提出的两条轨道固定为两个独立单语交付；不能把不同任务汇总成一种付费需求。"
+      ]
+    },
+    {
+      "id": "f-sufficiency",
+      "kind": "source",
+      "statement": "现有方法有满意者：有评论推荐免费的Subtitle Edit，也有人认为Premiere比专用字幕软件顺手。英中混合音频作者说用LLM分别生成语言轨道基本可用，但随后说明双轨是设样式的变通，单文件双语叠显才是理想结果；可用不等于已经满足全部目标。",
+      "support": [
+        {
+          "source_id": "s1",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "s3",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "s6",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "s6",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "s6-clarification",
+          "excerpt_id": "styling"
+        },
+        {
+          "source_id": "s6-clarification",
+          "excerpt_id": "ideal"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "自述未实测；基本能工作不等于质量合格；未证明任何人愿意为新工具付费。"
+      ]
+    },
+    {
+      "id": "f-not-gaps",
+      "kind": "source",
+      "statement": "历史抱怨不应直接算作当前缺口：Subtitle Edit的单侧查找替换请求出现了维护者往返、改动提交并被标记完成；Adobe社区里找不到翻译入口的提问得到版本和入口解释。",
+      "support": [
+        {
+          "source_id": "s7",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s7",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "s7",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "s8",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s8",
+          "excerpt_id": "e2"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "关闭状态不保证2026所有版本无问题；Adobe帖没有提问者确认成功。"
+      ]
+    },
+    {
+      "id": "f-welsh",
+      "kind": "source",
+      "statement": "威尔士语学习者说字幕与口语不一致妨碍跟听；评论中既有按用途保留方言转写的观点，也有规范拼写有助学习两种语域或对应方言发音的观点。原作者承认后者的价值，但觉得自己可能尚未达到所需理解水平。",
+      "support": [
+        {
+          "source_id": "s5",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s5",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "s5",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "s5-counterpoint",
+          "excerpt_id": "standard"
+        },
+        {
+          "source_id": "s5-counterpoint",
+          "excerpt_id": "learner"
+        },
+        {
+          "source_id": "s5-counterpoint",
+          "excerpt_id": "purpose"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "未观看视频或验证语言解释；这不是任何小语种模型准确率的证据。"
+      ]
+    },
+    {
+      "id": "f-language-inference",
+      "kind": "inference",
+      "statement": "用途、水平和显示目标应由真实项目来澄清。逐字或方言转写可以作为听力学习的待测选项，规范拼写也可能帮助学习，不能将二者固定分配给教学与正式阅读。混合字幕案例说明轨道结构还可能只是实现双语样式的手段；先理解所需显示效果，再判断文件和工具方案。",
+      "support": [
+        {
+          "source_id": "s5",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "s5-counterpoint",
+          "excerpt_id": "purpose"
+        },
+        {
+          "source_id": "s5-counterpoint",
+          "excerpt_id": "standard"
+        },
+        {
+          "source_id": "s6-clarification",
+          "excerpt_id": "styling"
+        },
+        {
+          "source_id": "s6-clarification",
+          "excerpt_id": "ideal"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "s6",
+          "excerpt_id": "e3"
+        }
+      ],
+      "limitations": [
+        "一个学习者讨论与一个混合音频案例；尚无教育内容团队需求或商业渠道证据。"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "alternative": "共享SOP＋现有编辑器",
+      "category": "manual",
+      "dimension": "写法与质量一致性",
+      "assessment": "讨论中有团队建议制定字幕SOP，也有Subtitle Edit辅助检查后人工通看的方法。若问题来自未约定写法，流程文档可能足以改善。",
+      "support": [
+        {
+          "source_id": "s4",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "s4",
+          "excerpt_id": "e4"
+        }
+      ],
+      "limitations": [
+        "相邻同语字幕案例；效果自述，尚未验证译审任务中能否同样解决。"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "保留观察：用途明确的双语教学字幕验收",
+      "audience": "确实制作双语或小语种教学内容、有人负责语言验收的团队",
+      "problem": "待证假设：逐字口语、方言表达和规范书面语之间的验收目标未被清楚记录。",
+      "alternative": "明确教学目标＋共享规范＋原生双语编辑工具",
+      "proposal": "先与真实项目的学习者和语言审校者比较逐字/方言写法、规范拼写及必要解释，记录用途、水平与选择理由；不预先规定哪一种适合听力学习。验证内容选择本身的价值后再问是否需要软件。",
+      "priority": "watch",
+      "rationale": "同一威尔士语讨论支持相反的学习价值解释，不能将某一方当成教育规则。现在只有值得观察的用途与水平差异，没有制作团队愿意购买的证据。",
+      "support": [
+        {
+          "source_id": "s5",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "s5",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "s5-counterpoint",
+          "excerpt_id": "standard"
+        },
+        {
+          "source_id": "s5-counterpoint",
+          "excerpt_id": "learner"
+        },
+        {
+          "source_id": "s5-counterpoint",
+          "excerpt_id": "purpose"
+        }
+      ],
+      "risks": [
+        "是教学内容政策或编辑决策问题，可能没有软件价值。",
+        "各语言规则与可审核者不同，支持成本可能高于可收费价值。",
+        "只见学习者困惑，缺少生产端任务频率、预算和接触渠道。"
+      ],
+      "validation": "先观察2个不同语言的真实教学内容项目，询问目标学习者水平并比较不同字幕写法的理解体验；若一份说明或验收规范就解决选择问题，停止软件方向。只有制作团队反复需要追踪句级决策、现有备注工具仍不足且愿带下个项目验证，才继续。"
+    }
+  ],
+  "next_steps": [
+    "先澄清最终显示效果和语言学习目的，不能从初始轨道方案倒推固定交付需求，也不能以逐字程度直接评判教育字幕。",
+    "只有观察到重复的剩余障碍后，再确认预算负责人、任务频率、数据许可与格式要求，决定是否做原型。"
+  ],
+  "limitations": [
+    "7个家族读取了可见回复，1个只见原帖；没有全部评论完备性保证。三条额外讨论正文读取失败，未计入数量。",
+    "小语种材料主要是一条威尔士语学习者讨论，不足以判断生产团队需求或模型质量；本轮没有小语种技术成熟度结论。",
+    "范围：8个可访问讨论家族，7个读到可见回复；补读s5和s6不增加独立家族。本快照不含官方竞品比较或模拟访谈。"
+  ]
+}

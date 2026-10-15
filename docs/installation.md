@@ -40,8 +40,15 @@ or `pipx uninstall research-workbench`). Your study folders are separate and rem
 - **Invalid JSON:** use the packaged data-contract reference and inspect the error
   path. Do not add model commentary outside the JSON object.
 - **ID conflict:** records are immutable; reuse identical content or create a new
-  persona/interview ID. Revised methods belong in a new study.
+  source/run/persona/interview ID. Revised overall questions or methods belong in a new study.
 - **Stale report:** read the changed study and reconcile your findings, then use its
   current revision. A revision number is not a substitute for reviewing changes.
 - **Permission denial:** ensure the host is allowed to write the chosen study
   directory and execute the installed CLI. The skill does not bypass host permissions.
+
+## Research access
+
+The CLI does not supply browser sessions or platform APIs. Live research uses the
+host's authorized search/browser tools. If a platform is unavailable, keep a partial
+run and its limitations, or use supplied exports. A “no browsing” request can be
+fulfilled with saved/supplied materials; it does not require a network call.

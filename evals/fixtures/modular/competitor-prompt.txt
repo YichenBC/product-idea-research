@@ -1,0 +1,2 @@
+Use the research-workbench skill installed in this workspace to answer this request. The CLI is research-workbench.
+只使用 materials.txt 中的资料，不联网、不运行其他研究服务。先只比较 ClipLedger Team、LocalSub Desk 和现有表格流程对于字幕审校的适用性。不要做社媒调研、不要创建角色或模拟访谈。请保留无法确认的价格条件或功能，不把虚构测试材料当成真实市场证据。中文报告，研究目录 studies/review-workflow。完成保存、检查、审计和渲染。不要修改代码、安装依赖、提交或发布。

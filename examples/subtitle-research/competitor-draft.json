@@ -1,0 +1,127 @@
+{
+  "title": "替代方案修订：Amara备注与版本能力已覆盖部分设想",
+  "study_revision": 7,
+  "status": "complete",
+  "summary": "三种官方替代方案覆盖双语对照、翻译轨道与审校协作。Amara还说明成员活动、字幕备注、版本比较及回滚，与拟议交付层直接重叠；是否存在值得开发的剩余障碍，需要真实任务比较，不能由已有功能缺席的假设推出。",
+  "interview_ids": [],
+  "run_ids": [
+    "run-competitor-corrected"
+  ],
+  "findings": [
+    {
+      "id": "f-official",
+      "kind": "source",
+      "statement": "官方说明覆盖了较多拟议能力：Subtitle Edit提供双语对照及未配对原文行；Amara Plus的Review是可选设置，文档建议另一成员审校，同时说明成员活动、字幕备注、比较两个版本及回滚；Premiere可调整译文并生成字幕轨道。",
+      "support": [
+        {
+          "source_id": "c1",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c1",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c2",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c3",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c3",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c2-details",
+          "excerpt_id": "notes"
+        },
+        {
+          "source_id": "c2-details",
+          "excerpt_id": "revisions"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "官方说明不是实测；另一成员应审校不等于系统强制权限隔离。",
+        "Amara补读由同研究团队独立审查者成功获取；执行者后续OAuth失败另存。c2与c2-details是同一页，不是两份独立佐证。"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "alternative": "Subtitle Edit",
+      "category": "direct",
+      "dimension": "固定时间轴上的双语译审",
+      "assessment": "官方文档提供双语对照和未配对行提示。对熟练的单人译审，这构成强基线；本轮没建立另买Web工具的理由。",
+      "support": [
+        {
+          "source_id": "c1",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c1",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "main分支文档；未测试具体发行版、团队协作或导出兼容。"
+      ]
+    },
+    {
+      "alternative": "Amara Plus",
+      "category": "direct",
+      "dimension": "可选审校、备注及版本追踪",
+      "assessment": "官方文档提供可选Review，建议由另一成员审校；还说明成员活动、字幕备注、两个版本比较与回滚。它与拟议交付层高度重叠，真实比较必须包含这些已有能力，而非只比较一个审校按钮。",
+      "support": [
+        {
+          "source_id": "c2",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c2-details",
+          "excerpt_id": "notes"
+        },
+        {
+          "source_id": "c2-details",
+          "excerpt_id": "revisions"
+        }
+      ],
+      "limitations": [
+        "未实测或核价；建议另一成员操作不是已验证的权限强制。",
+        "Plus原页补读由独立审查者获取，同页重复记录不增加独立证据数量；Community页计划条件不用于Plus判断。"
+      ]
+    },
+    {
+      "alternative": "Adobe Premiere",
+      "category": "indirect",
+      "dimension": "在已有剪辑流程中处理翻译字幕",
+      "assessment": "官方文档说明生成新的语言轨道并允许调整翻译；对于已在此剪辑的团队，可先检验原生流程是否够用，避免额外导入导出。",
+      "support": [
+        {
+          "source_id": "c3",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c3",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "未核验具体语言清单与购买条件；不据此宣称多人语言审校功能完备。"
+      ]
+    }
+  ],
+  "opportunities": [],
+  "next_steps": [
+    "先回放真实返修项目，并对照Amara已有审校、备注、版本比较/回滚和当前编辑器＋SOP；说明哪些已够用、哪些仍有具体障碍。",
+    "只有观察到重复的剩余障碍后，再确认预算负责人、任务频率、数据许可与格式要求，决定是否做原型。"
+  ],
+  "limitations": [
+    "OOONA三个页面正文无法稳定获取；搜索结果未作证据。已用另外三种可访问官方替代方案完成比较，不能宣称没有其他竞争者。",
+    "官方说明没有亲测，未核价或核验具体语言/席位/数据政策；不能计算成本优势。",
+    "c2-details由同研究团队独立审查者成功读取原Plus页；执行者本次访问失败另存b7。执行者亲读Community公开页仅作交叉检查，未将其特定公开性条件外推给Plus。",
+    "范围：3种替代方案；同一Amara官方页补读不是独立产品佐证。本快照无用户讨论或模拟访谈；仅作能力说明比较，不作采购排名。"
+  ]
+}

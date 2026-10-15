@@ -1,46 +1,82 @@
-# Report from the actual transcripts
+# One report from the selected research
 
-Use the data contract for report JSON. The main report is a decision-oriented
-deliverable: answer the user's research question first, then explain findings,
-disagreements, implications and next steps. Summarize what the interviews imply;
-do not organize the report as one interview recap per persona. Do not fill the
-summary with execution counts, filenames, schema checks or other implementation
-details. A short coverage statement is supplied by the renderer.
+Answer the user's question first. Synthesize across modules by decision or finding,
+not by recounting tool calls or writing one interview recap per persona. Include
+only research actually performed. A competitor report is complete without social
+listening or simulation; a combined report does not need equal space for each.
 
-The CLI puts detailed methods, role cards and complete transcripts in a separate
-evidence companion; findings link to its exact turns. You supply the concise
-summary, synthesized findings, limitations and next steps. Keep the simulation
-notice and relevant uncertainty, without repeating the same caveat in every
-sentence. This release's interview conclusions are one input to the broader
-research workbench; don't fabricate social or competitor research not performed.
+Read [data contract](data-contract.md) for JSON. Select relevant `run_ids` and
+`interview_ids`; older corrections and unrelated stored sources remain archived.
+Use the latest study revision only after reading changes. A report-only request
+reuses saved materials without browsing or generating new interviews.
 
-For each finding:
+## Evidence and disagreement
 
-1. Identify one concrete hypothesis, disagreement or constraint.
-2. Cite one-based turn numbers from the selected interviews that actually support it.
-3. Add counterevidence references where the simulated answers disagree.
-4. State its limits, including relevant role assumptions. Never mark a simulated
-   quote as a real customer observation or measured willingness to pay.
+For each finding choose the smallest well-supported statement and exact excerpt
+or one-based interview turn. Read each referenced passage in context, including
+surrounding objections. Valid references are not proof of semantic support.
 
-Use `kind: simulation` for every finding. No percentages of synthetic respondents
-as evidence of demand. No “validated market” conclusion from role play. A useful
-next step is a question or experiment to conduct with real users, not a claim
-that it has already been conducted. Do not automatically contact anyone.
+- `source`: what the source actually reports/claims; external material only.
+- `inference`: your interpretation from external material; explain the reasoning
+  and what could disprove it, not only the conclusion.
+- `simulation`: hypothetical interview conclusions; interview support only.
+- `mixed`: external sources plus synthetic interviews. Name which part is observed
+  as a source statement and which part is simulated. Agreement from a simulated
+  role does not independently corroborate an external claim.
 
-Set `study_revision` from the current saved study. `complete` means the requested
-persona count was interviewed, not that the business idea was verified. `partial`
-is honest when a role failed, scope was narrowed, or interviews remain unfinished.
-Explain partial coverage in the limitations. More than one interview with one role
-still counts as one role.
+Counterevidence can reference either type but never changes what supports the
+claim. Surface satisfaction, cheap alternatives and rejection conditions. If the
+materials disagree, explain plausible task/plan/time/context differences only as
+inferences, or leave the conflict unresolved. Do not average incompatible claims.
+Search snippets/unavailable content cannot support report claims. Vendor marketing
+cannot establish real user success; a user complaint cannot prove a product lacks
+a feature. Repeated authors/comments or copied sources are not independent samples.
 
-Choose only relevant interview IDs for this report revision. Old records remain
-in the study. Rendering writes a new numbered output directory and frozen JSON
-snapshots; it never overwrites an earlier report.
+## Main report and appendices
 
-Example grounded-in-transcript phrasing: “The simulated approver questioned whether
-notifications justified adopting another app (i-2, turn 3). A real interview should
-test whether missed changes are frequent enough to matter.”
+Write a brief summary with the answer, its practical implication and the largest
+uncertainty. Then a few useful findings, optional `comparisons` and `opportunities`,
+next steps and concise limitations. In longer studies, merge repetitive findings
+instead of making the reader sort through hundreds of observations. Keep source
+material, collection queries, role cards and full Q&A in the evidence companion;
+the renderer links to exact passages. Do not put filenames, ingestion counts or
+validation mechanics in the substantive summary.
 
-For a report-only request, reuse saved interviews and avoid changing the recipe or
-generating new roles. If a stale revision error occurs, reread the changed study and
-reconcile the draft rather than merely changing its revision number blindly.
+Use comparison rows for externally supported alternatives. Use opportunity rows
+only when the user needs choices to pursue. Their priorities are reasoned judgments,
+not model probabilities. `test_now` means worth a real test, not validated demand.
+Every next step should answer an unresolved decision: who to reach, what real task
+to inspect/compare, what observable result would support or stop the idea. Do not
+send outreach or run a purchase automatically.
+
+Keep relevant caveats without repeating the same simulation disclaimer in every
+sentence. Local evidence coverage belongs in the scope summary; unknown population
+prevalence, self-report and model role-play remain different limitations.
+
+## Completion and quality pass
+
+`complete` is coverage of the selected bounded work, never a validated market.
+All selected runs must be complete, and selected interviews must cover the recipe's
+planned roles. User-requested but unperformed work remains a partial run/report;
+do not quietly exclude it from selection to obtain a green completion status.
+When retrieval is completely blocked, partial reports can have no findings and
+should explain the specific gap and next collection step instead of inventing data.
+
+Before export:
+
+1. Check every significant sentence against its cited excerpt/turn, preserving
+   date, role, plan, units and source's qualification. Remove unsupported precision.
+2. Recheck the strongest proposed opportunity against the closest alternative
+   and the original authors' later clarifications. Look beyond the excerpt selected
+   on the first pass; record new evidence if it changes the interpretation.
+3. Review counterevidence and source independence. Look for the strongest reason
+   the proposed opportunity would fail or the existing alternative would suffice.
+4. Check the requested scope: languages, platforms, counts, modules and exclusions.
+5. Run `check` and `audit`. Resolve validation errors; inspect duplicate/coverage
+   diagnostics and state unresolved gaps. These commands cannot judge truth.
+6. Render a new numbered snapshot. Do not edit an exported report by hand while
+   leaving its saved draft inconsistent; revise the draft and render again.
+
+Return a short answer and the main report links. Mention only material access or
+validation limits; details remain available behind the source links. Preserve the
+whole export folder when sharing a report with its evidence companion.

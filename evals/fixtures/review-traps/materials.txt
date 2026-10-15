@@ -1,0 +1,21 @@
+FICTIONAL RESEARCH FIXTURE. These are authored excerpts, not real products, people or actual market evidence. Original lines are the complete provided material; no browsing is necessary.
+
+[Thread T1 opening / 2026-10-01]
+I need two separate language tracks. My current bilingual subtitle file isn't giving me the output I want.
+[Thread T1 author follow-up / 2026-10-02]
+The two tracks were just a workaround to style the text in my video editor. What I actually want is English at the top and Spanish below. A single file with that appearance would be ideal.
+[Thread T1 other participant / 2026-10-02]
+My current desktop tool can keep both languages in one styled file, which is sufficient for our one-reviewer projects.
+
+[ReviewHub fictional official guide / Overview / retrieved 2026-10-15]
+Teams can optionally enable a Review step. Another member should review the submitted subtitles. This describes a suggested workflow, not a hard permission requirement.
+[ReviewHub fictional official guide / Working with revisions / retrieved 2026-10-15]
+Subtitle notes record comments on each version. Members can compare two revisions and restore an earlier version. Activity history identifies who changed a file. No pricing or reviewer-seat rules are given in this excerpt.
+
+[LocalCaption fictional official guide / retrieved 2026-10-15]
+The desktop editor supports a single bilingual styled subtitle file. It has no built-in cloud comments or multi-user approval status. The supplied excerpt does not establish actual time saved or translation accuracy.
+
+[Thread T2 opening / 2026-10-03]
+We lose track of who accepted a revision when three people exchange files by email. We have not tried ReviewHub and have not measured the cost of the problem.
+[Thread T2 follow-up / 2026-10-04]
+We tried a shared change log on one project. It was enough for that project; I don't know whether it scales to our next one.

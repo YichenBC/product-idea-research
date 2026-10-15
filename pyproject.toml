@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "research-workbench"
-version = "0.1.1"
-description = "Local, auditable synthetic research workflows for coding agents"
+version = "0.2.0"
+description = "Composable, evidence-backed research workflows for coding agents"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"

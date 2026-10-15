@@ -1,0 +1,996 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>小团队翻译字幕审校：现有方案重叠明显，先验证是否仍有缺口</title><style>body{max-width:960px;margin:auto;padding:2rem;font:16px/1.6 system-ui,sans-serif;color:#162333}h1,h2,h3{line-height:1.25}h2{margin-top:2.5rem;border-bottom:1px solid #ccd3dc}p,li{overflow-wrap:anywhere;white-space:pre-wrap}a{color:#075eb5}.notice{padding:1rem;background:#fff2cd;border:2px solid #947000;border-radius:6px}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse;margin:1rem 0}th,td{text-align:left;vertical-align:top;padding:.65rem;border:1px solid #ccd3dc;overflow-wrap:anywhere}th{background:#eef3f7}td{white-space:pre-wrap}blockquote{margin:1rem 0;padding:.5rem 1rem;border-left:4px solid #9baec4;background:#f4f7fa}</style></head><body>
+
+<h1>小团队翻译字幕审校：现有方案重叠明显，先验证是否仍有缺口 — 研究材料附录</h1>
+
+<p class="notice">合成研究: 所有画像和访谈均为模拟。这些内容仅用于提出假设，不能作为真实客户需求的证据。</p>
+
+<p>完成状态: 完整 | 修订号: 7</p>
+
+<h2>研究简报</h2>
+
+<p>简报编号: brief-subtitle</p>
+
+<p>研究问题: 个人开发者是否值得为小团队开发翻译字幕审校 Web 工具，哪些工作流差异值得真实验证？</p>
+
+<p>语言: zh-CN</p>
+
+<p>约束</p>
+
+<ul><li>阅读6–10条可访问公开讨论，尽量含原帖与评论；按讨论家族计数</li><li>比较至少3种替代方案官方说明，保留够用与拒绝理由</li><li>优先双语和小语种场景，不假定技术不成熟</li><li>两个合成角色，各三轮问答；模拟不是客户证据</li><li>仅公开网页，不登录、不试用、不购买、不联系、不发布；研究日2026-10-15</li></ul>
+
+<h2>所选模块</h2>
+
+<h3 id="run-1">研究轮次 1: 社媒调研 (run-social-corrected)</h3>
+
+<p>完成状态: 完整</p>
+
+<p>目标: 读6–10个公开讨论家族，识别小团队翻译字幕审校中的任务差异与现有方法够用条件。</p>
+
+<p>研究方法: 2026-10-15使用web搜索、open、find和评论链接click；选8个正文可访问的讨论家族，读取原帖和可见评论，不把搜索摘要计入。按任务链分组，保留闭环解决和满意案例。 独立复核后亲读原作者后续澄清与威尔士语相反意见，纠正任务目标和教学用途的过强推断；新增摘录仍属于原8个讨论家族。</p>
+
+<p>检索词</p>
+
+<ul><li>site.reddit.com/r/TranslationStudies subtitle translation software workflow bilingual subtitles</li><li>site.reddit.com subtitles collaboration proofreading subtitle edit bilingual workflow</li><li>site.community.amara.org subtitles review translation workflow</li><li>site.reddit.com subtitles Welsh translation Subtitle Edit</li><li>site.reddit.com subtitle translation bilingual review Arabic workflow</li><li>site.github.com/SubtitleEdit/subtitleedit/issues &quot;translation&quot; &quot;original&quot;</li></ul>
+
+<p>来源材料</p>
+
+<a href="#source-1">来源 1</a> · <a href="#source-2">来源 2</a> · <a href="#source-3">来源 3</a> · <a href="#source-4">来源 4</a> · <a href="#source-5">来源 5</a> · <a href="#source-6">来源 6</a> · <a href="#source-7">来源 7</a> · <a href="#source-8">来源 8</a> · <a href="#source-9">来源 9</a> · <a href="#source-10">来源 10</a> · <a href="#source-11">来源 11</a> · <a href="#source-12">来源 12</a> · <a href="#source-13">来源 13</a>
+
+<p>局限</p>
+
+<ul><li>便利样本：6个Reddit讨论、1个GitHub issue、1个Adobe社区讨论；不是8名客户或需求频率样本。</li><li>7个家族读到评论或回复；s2只读到原帖；未展开全部折叠评论。</li><li>有英中混合与威尔士语场景，但小语种生产团队与中文原生讨论覆盖薄弱。</li><li>3个讨论正文不可访问，已保存，不计入8个。</li><li>Adobe社区材料由竞品检索意外发现，作为适合的够用/可发现性反例补入。</li><li>s6原context中的任务误解判断由s6-clarification纠正；s5不支持固定教育规则。</li></ul>
+
+<h3 id="run-2">研究轮次 2: 竞品调研 (run-competitor-corrected)</h3>
+
+<p>完成状态: 完整</p>
+
+<p>目标: 比较至少3种现有替代方案的官方相关说明并识别已被覆盖的任务。</p>
+
+<p>研究方法: 2026-10-15读取Subtitle Edit官方仓库文档、Amara Plus官方支持文档和Adobe Premiere官方帮助；以双语对照、审校交接、原工作流适配为比较维度。不登录、不试用、不核价。OOONA正文不可稳定读取，仅记录访问失败，换用Premiere满足3种替代方案。 独立审查者补读同一Plus页的备注和版本比较；执行者补读请求失败但亲读Community公开说明作交叉检查。新报告将原c2与c2-details作为同页证据而非独立佐证。</p>
+
+<p>检索词</p>
+
+<ul><li>site.support.amara.org &quot;review&quot; &quot;workflow&quot; subtitles</li><li>site.ooona.net &quot;Review&quot; &quot;Compare&quot; tools subtitles</li><li>site.subtitleedit.github.io/subtitleedit &quot;Translation Mode&quot;</li><li>site.ooona.atlassian.net &quot;Share project&quot; review</li><li>site.ooona.atlassian.net &quot;Compare&quot; &quot;subtitle&quot;</li><li>site.helpx.adobe.com/premiere-pro &quot;Translate captions&quot;</li><li>site.aegisub.org/docs/latest &quot;Translation Assistant&quot;</li><li>&quot;Amara Plus teams&quot; &quot;Activities&quot; &quot;Subtitle Notes&quot;</li><li>site.sites.google.com/amara.org/supportandresources &quot;compare&quot; &quot;versions&quot;</li><li>&quot;amara-plus-teams-quickstart&quot; &quot;revisions&quot;</li></ul>
+
+<p>来源材料</p>
+
+<a href="#source-14">来源 14</a> · <a href="#source-15">来源 15</a> · <a href="#source-16">来源 16</a> · <a href="#source-17">来源 17</a> · <a href="#source-18">来源 18</a> · <a href="#source-19">来源 19</a> · <a href="#source-20">来源 20</a> · <a href="#source-21">来源 21</a>
+
+<p>局限</p>
+
+<ul><li>官方说明未做实测；并非完整市场扫描。</li><li>未核验价格、席位、语言覆盖、数据保留与导出兼容性，不能做采购推荐或成本排名。</li><li>Subtitle Edit文档取自main分支；Amara文档限定Plus；Premiere文档更新2026-06-02。</li><li>OOONA检索结果不能证明已读官方能力，未纳入比较。</li><li>Plus补读成功的来源为本研究团队独立审查者；执行者的OAuth访问失败另存b7，不混淆访问者。</li><li>Community公开页仅作交叉检查，未将其特定计划条件计入Plus比较。</li></ul>
+
+<h2>来源材料</h2>
+
+<h3 id="source-1">来源 1: Subtitling and Translation Programs (Is there one that does both?)</h3>
+
+<p>来源编号: s1</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 2025-06-24</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s1-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/TranslationStudies/comments/1lje43r/subtitling_and_translation_programs_is_there_one/">https://www.reddit.com/r/TranslationStudies/comments/1lje43r/subtitling_and_translation_programs_is_there_one/</a></p>
+
+<p>上下文: 读取原帖与可见评论；提问者是字幕初学者，学校作业背景。</p>
+
+<h4 id="source-1-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: 原帖，web正文L21</p>
+
+<blockquote><p>I don&#x27;t have much experience in subtitling, the only thing I&#x27;ve done was for a school assignment where I translated the video elsewhere and then used Aegisub to add them to the video.</p></blockquote>
+
+<h4 id="source-1-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: https://www.reddit.com/r/TranslationStudies/comments/1lje43r/comment/mzj9qqx/</p>
+
+<blockquote><p>Subtitle Edit. It&#x27;s completely free to use and you can play the video bit by bit while you write down subtitles.</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>初学者求助不是采购意愿；评论是自述；未展开所有More replies。</li></ul>
+
+<h3 id="source-2">来源 2: Workflow question for synchronizing translation</h3>
+
+<p>来源编号: s2</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 2026-02-26</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s2-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/SubtitleEdit/comments/1rf7lgy/workflow_question_for_synchronizing_translation/">https://www.reddit.com/r/SubtitleEdit/comments/1rf7lgy/workflow_question_for_synchronizing_translation/</a></p>
+
+<p>上下文: 读取原帖；正文未显示回复，不能声称问题未解决。</p>
+
+<h4 id="source-2-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: 原帖，web正文L20</p>
+
+<blockquote><p>I have a video and a bare translation (no timecodes). I need to turn the translation into subtitles.</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>单一任务描述；未读到评论；未证明现有软件缺少该能力。</li></ul>
+
+<h3 id="source-3">来源 3: Question for the subtitling community: What software do you use?</h3>
+
+<p>来源编号: s3</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 2025-08-26</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s3-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/TranslationStudies/comments/1n0cfzi/question_for_the_subtitling_community_what/">https://www.reddit.com/r/TranslationStudies/comments/1n0cfzi/question_for_the_subtitling_community_what/</a></p>
+
+<p>上下文: 读取SoftNi使用者求推荐的原帖与可见评论，包括Premiere、Subtitle Edit、OOONA、Aegisub；厂商自荐未作独立体验证据。</p>
+
+<h4 id="source-3-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: 评论，web正文L47</p>
+
+<blockquote><p>I use SubtitleEdit... It&#x27;s quite good...</p></blockquote>
+
+<h4 id="source-3-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: 评论，web正文L154</p>
+
+<blockquote><p>Now I use Adobe Premiere and find the workflow there easier than dedicated subtitle softwares.</p></blockquote>
+
+<h4 id="source-3-excerpt-3">摘录 3 (e3)</h4>
+
+<p>原文位置: 关于Aegisub的回复，web正文L137</p>
+
+<blockquote><p>I work at a localization company that uses it as part of its workflow.</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>不同作者讨论不同任务，不能合成一个客户；地域行业标准与最新版本说法未独立核验。</li></ul>
+
+<h3 id="source-4">来源 4: Subtitles: small agency consistency and revisions</h3>
+
+<p>来源编号: s4</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 2026-03-27</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s4-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/">https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/</a></p>
+
+<p>上下文: 读取原帖与多个回复。原帖虽提到translations，后续作者澄清No translation thankfully，因此只作相邻字幕审校工作流证据；不采信其法规解释。</p>
+
+<h4 id="source-4-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: 原帖，web正文L26</p>
+
+<blockquote><p>With that said is there a way to keep this more consistent and scalable throughout a team of editors that you have found?</p></blockquote>
+
+<h4 id="source-4-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocujsua/</p>
+
+<blockquote><p>You&#x27;re going to want to create an SOP and ideally a style for the subtitles.</p></blockquote>
+
+<h4 id="source-4-excerpt-3">摘录 3 (e3)</h4>
+
+<p>原文位置: 原作者澄清，web正文L186</p>
+
+<blockquote><p>No translation thankfully.</p></blockquote>
+
+<h4 id="source-4-excerpt-4">摘录 4 (e4)</h4>
+
+<p>原文位置: 评论，web正文L226</p>
+
+<blockquote><p>We use subtitle edit for auto spell correction and splitting up into a specific word count per clip for our workflow.</p></blockquote>
+
+<h4 id="source-4-excerpt-5">摘录 5 (e5)</h4>
+
+<p>原文位置: 原作者回复，web正文L64</p>
+
+<blockquote><p>Having someone else do the subtitles would be amazing but that isn’t very likely in the small agency world I’m in currently.</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>主要是同语字幕，不能外推成翻译需求；流程与工具效果均为自述。</li></ul>
+
+<h3 id="source-5">来源 5: Subtitles not matching Speech on BBC Bitesize?</h3>
+
+<p>来源编号: s5</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s5-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/learnwelsh/comments/1vqupgz/subtitles_not_matching_speech_on_bbc_bitesize/">https://www.reddit.com/r/learnwelsh/comments/1vqupgz/subtitles_not_matching_speech_on_bbc_bitesize/</a></p>
+
+<p>上下文: 读取威尔士语学习者原帖、解释规范化的评论及围绕方言转写的争论；未观看被讨论视频。发布日期仅见相对时间。</p>
+
+<h4 id="source-5-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: 原帖，web正文L27的连续片段</p>
+
+<blockquote><p>It made it much harder to follow though, as I’m trying to practice my listening but it’s hard when what I’m hearing doesn’t match what I’m reading</p></blockquote>
+
+<h4 id="source-5-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: https://www.reddit.com/r/learnwelsh/comments/1vqupgz/comment/p48q4cj/</p>
+
+<blockquote><p>This can be a hurdle for learners but it&#x27;s a reflection of the tension between exact subtitles, capturing informal features and dialect and more standard written forms.</p></blockquote>
+
+<h4 id="source-5-excerpt-3">摘录 3 (e3)</h4>
+
+<p>原文位置: 评论，web正文L232</p>
+
+<blockquote><p>Whether transcript-style subtitles would run with heavily dialectical spellings or not would depend on what the purpose of the transcript was.</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>属于学习者反馈，不是字幕团队采购；未验证语言学解释；不能推断威尔士语模型成熟度或准确率。</li></ul>
+
+<h3 id="source-6">来源 6: Multilingual Audio -&gt; Multilingual Subtitle Creation Help</h3>
+
+<p>来源编号: s6</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s6-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/multilingual_audio_multilingual_subtitle_creation/">https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/multilingual_audio_multilingual_subtitle_creation/</a></p>
+
+<p>上下文: 读取英中混合音频原帖和评论。区分同一音轨混合两种语言、两条单语输出，以及评论者理解的双语叠字。日期仅相对时间。</p>
+
+<h4 id="source-6-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: 原帖，web正文L25</p>
+
+<blockquote><p>I have multi lingual audio/video, it contains both English and Mandarin</p></blockquote>
+
+<h4 id="source-6-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/comment/osroxwx/</p>
+
+<blockquote><p>Then i can just ask a LLM to translate it purely into english and mandarin for the two tracks i need.</p></blockquote>
+
+<h4 id="source-6-excerpt-3">摘录 3 (e3)</h4>
+
+<p>原文位置: 同一原作者回复，web正文L90</p>
+
+<blockquote><p>So kind of works.</p></blockquote>
+
+<h4 id="source-6-excerpt-4">摘录 4 (e4)</h4>
+
+<p>原文位置: 评论，web正文L125</p>
+
+<blockquote><p>After they are synced, use Tool&gt;Join subtitles to combine the two into one (make sure both are in the same subtitle format).</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>没有团队规模与付费信息；回复中存在任务理解偏差；未验证其LLM流程准确率。</li></ul>
+
+<h3 id="source-7">来源 7: Enhancement for Find/Replace in Translation mode #6832</h3>
+
+<p>来源编号: s7</p>
+
+<p>平台: GitHub</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 2023-04-15</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s7-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://github.com/SubtitleEdit/subtitleedit/issues/6832">https://github.com/SubtitleEdit/subtitleedit/issues/6832</a></p>
+
+<p>上下文: 读取原issue、维护者与作者测试往返、关联提交和2023-04-19完成关闭状态。</p>
+
+<h4 id="source-7-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: issue正文L155</p>
+
+<blockquote><p>Because oftentimes we need to just find/replace on one side.</p></blockquote>
+
+<h4 id="source-7-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: 2023-04-18关联提交标题L249</p>
+
+<blockquote><p>Remember replace in - thx Leon :)</p></blockquote>
+
+<h4 id="source-7-excerpt-3">摘录 3 (e3)</h4>
+
+<p>原文位置: issue状态事件，web正文L257</p>
+
+<blockquote><p>closed this as completed</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>历史已关闭需求；不能当作2026仍未解决的缺口；未安装测试。</li></ul>
+
+<h3 id="source-8">来源 8: Language translator in Captions is missing in PP 2025</h3>
+
+<p>来源编号: s8</p>
+
+<p>平台: Adobe Community</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 2025-12-05</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s8-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://community.adobe.com/questions-729/language-translator-in-captions-is-missing-in-pp-2025-1621660">https://community.adobe.com/questions-729/language-translator-in-captions-is-missing-in-pp-2025-1621660</a></p>
+
+<p>上下文: 读取原帖及两条回答，包括Community Expert和标注Adobe员工的回答；讨论版本与菜单入口。</p>
+
+<h4 id="source-8-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: 原帖连续片段，web正文L20</p>
+
+<blockquote><p>I can&#x27;t find the languag translate option anymore</p></blockquote>
+
+<h4 id="source-8-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: Community Expert回答，web正文L43</p>
+
+<blockquote><p>Translation was added in PR 25.2.0.</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>厂商社区支持场景；未观察解决后的结果；不引用其语言数量为当前官方能力。</li></ul>
+
+<h3 id="source-9">来源 9: Looking for a service to create .srt files from translated video scripts</h3>
+
+<p>来源编号: b1</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 无法访问</p>
+
+<p>讨论组: b1-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/TranslationStudies/comments/r78gpp">https://www.reddit.com/r/TranslationStudies/comments/r78gpp</a></p>
+
+<p>上下文: 搜索发现后尝试正文读取失败。</p>
+
+<p>搜索摘要或无法访问的材料不能支持研究发现。</p>
+
+<p>局限</p>
+
+<ul><li>open返回TimeoutError；搜索结果只能作为线索，未引用</li></ul>
+
+<h3 id="source-10">来源 10: Workflow for editing unscripted content in a language that’s not your own?</h3>
+
+<p>来源编号: b2</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 无法访问</p>
+
+<p>讨论组: b2-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/editors/comments/l136n6">https://www.reddit.com/r/editors/comments/l136n6</a></p>
+
+<p>上下文: 搜索发现后尝试正文读取失败。</p>
+
+<p>搜索摘要或无法访问的材料不能支持研究发现。</p>
+
+<p>局限</p>
+
+<ul><li>open返回TimeoutError；未引用搜索摘要</li></ul>
+
+<h3 id="source-11">来源 11: Editing in foreign language. Workflow?</h3>
+
+<p>来源编号: b3</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 无法访问</p>
+
+<p>讨论组: b3-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/editors/comments/1dfo3aj/">https://www.reddit.com/r/editors/comments/1dfo3aj/</a></p>
+
+<p>上下文: 搜索发现后尝试正文读取失败。</p>
+
+<p>搜索摘要或无法访问的材料不能支持研究发现。</p>
+
+<p>局限</p>
+
+<ul><li>open返回Internal Error；未引用搜索摘要</li></ul>
+
+<h3 id="source-12">来源 12: Multilingual subtitle author clarifies styling goal</h3>
+
+<p>来源编号: s6-clarification</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 评论</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s6-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/comment/oss8nkz/">https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/comment/oss8nkz/</a></p>
+
+<p>上下文: 执行者亲自打开原作者后续评论及父帖上下文，web turn142view1 L101–106。原作者要在DaVinci Resolve分别设样式，双轨只是变通；若一个文件能英文在上、中文在下更理想。修正旧s6 context中把双语建议视为理解偏差的过强判断；旧记录保留历史，新报告以本澄清为准。</p>
+
+<h4 id="source-12-excerpt-1">摘录 1 (styling)</h4>
+
+<p>原文位置: https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/comment/oss8nkz/ L105</p>
+
+<blockquote><p>Mainly just so i can have two separate styled sub tracks in davinci resolve.</p></blockquote>
+
+<h4 id="source-12-excerpt-2">摘录 2 (ideal)</h4>
+
+<p>原文位置: 同一原作者评论L106连续片段</p>
+
+<blockquote><p>If i could get it to display like you have with english ontop and mandarin underneath in one sub file that would be ideal</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>同一原帖家族的后续澄清，不增加独立讨论数量；没有团队/采购或最终解决结果。</li></ul>
+
+<h3 id="source-13">来源 13: Welsh subtitle discussion — standard writing can also aid learning</h3>
+
+<p>来源编号: s5-counterpoint</p>
+
+<p>平台: Reddit</p>
+
+<p>来源类型: 帖子</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: s5-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.reddit.com/r/learnwelsh/comments/1vqupgz/subtitles_not_matching_speech_on_bbc_bitesize/">https://www.reddit.com/r/learnwelsh/comments/1vqupgz/subtitles_not_matching_speech_on_bbc_bitesize/</a></p>
+
+<p>上下文: 执行者重新读取原帖和相反意见，web turn143view2 L156–164与L230–234。评论认为规范字形与口语并列可帮助接触两种语域；原作者承认价值但认为自身理解水平可能不足。另一评论认为规范拼写也能帮助将方言发音对应到标准词。不能把听力学习一律映射为逐字转写。</p>
+
+<h4 id="source-13-excerpt-1">摘录 1 (standard)</h4>
+
+<p>原文位置: 评论L157连续片段；保留原文重复is</p>
+
+<blockquote><p>I actually think it is is helpful to have a more standard form reflected in the subtitles with the spoken variations being different</p></blockquote>
+
+<h4 id="source-13-excerpt-2">摘录 2 (learner)</h4>
+
+<p>原文位置: 原作者回复L164</p>
+
+<blockquote><p>Yeah I can definitely see the value of it, though I think it probably requires a more advanced level of comprehension than I’m currently at.</p></blockquote>
+
+<h4 id="source-13-excerpt-3">摘录 3 (purpose)</h4>
+
+<p>原文位置: 评论L233</p>
+
+<blockquote><p>If the purpose is to ensure that as many people as possible understand the subtitles, or learn how to marry dialectical pronunciations to standard Welsh words, then more standard spellings are appropriate.</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>同一讨论家族的相反意见，不是额外客户样本；未核验学习效果或语言学解释。</li></ul>
+
+<h3 id="source-14">来源 14: Subtitle Edit official main-window documentation</h3>
+
+<p>来源编号: c1</p>
+
+<p>平台: GitHub official</p>
+
+<p>来源类型: 官方材料</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: c1-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://github.com/SubtitleEdit/subtitleedit/blob/main/docs/features/main-window.md">https://github.com/SubtitleEdit/subtitleedit/blob/main/docs/features/main-window.md</a></p>
+
+<p>上下文: 读取官方仓库main文档的Translation Mode、菜单与视频播放相关段落；未安装实测。</p>
+
+<h4 id="source-14-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: Translation Mode，web正文L495</p>
+
+<blockquote><p>The text editor shows both the original and translation text</p></blockquote>
+
+<h4 id="source-14-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: When the original does not line up 1:1，web正文L501连续片段</p>
+
+<blockquote><p>original lines with no counterpart appear as extra, dimmed rows</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>main分支文档不是指定发行版保证；本轮未比较协作权限和导出往返实测。</li></ul>
+
+<h3 id="source-15">来源 15: Amara Plus teams official quickstart</h3>
+
+<p>来源编号: c2</p>
+
+<p>平台: Amara Support</p>
+
+<p>来源类型: 官方材料</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: c2-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://support.amara.org/support/solutions/articles/192110-amara-plus-teams-quickstart">https://support.amara.org/support/solutions/articles/192110-amara-plus-teams-quickstart</a></p>
+
+<p>上下文: 读取Plus团队文档的Optional Subtitle Workflow: Review、Completing Subtitles、Upload Subtitles；页标注2025-12-18修改。</p>
+
+<h4 id="source-15-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: Optional Subtitle Workflow: Review，web正文L468</p>
+
+<blockquote><p>One team member can create subtitles, then a second team member should perform the Review step.</p></blockquote>
+
+<h4 id="source-15-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: Completing Subtitles，web正文L485连续片段</p>
+
+<blockquote><p>including completed subtitles.</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>官方说明不等于实测；没有核验当前价格、席位限制、内容隐私和小语种能力。</li></ul>
+
+<h3 id="source-16">来源 16: Adobe Premiere official Translate captions</h3>
+
+<p>来源编号: c3</p>
+
+<p>平台: Adobe Help</p>
+
+<p>来源类型: 官方材料</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: c3-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://helpx.adobe.com/premiere/desktop/add-text-images/insert-captions/translate-captions.html">https://helpx.adobe.com/premiere/desktop/add-text-images/insert-captions/translate-captions.html</a></p>
+
+<p>上下文: 读取正文Translate captions及Manage multiple caption tracks；页标注2026-06-02更新。正文说明可导入SRT、云翻译并生成新轨道、切换显示与样式。</p>
+
+<h4 id="source-16-excerpt-1">摘录 1 (e1)</h4>
+
+<p>原文位置: Translate captions，web正文L1818连续片段（网页空格规范化）</p>
+
+<blockquote><p>a new track will be created in the Timeline panel.</p></blockquote>
+
+<h4 id="source-16-excerpt-2">摘录 2 (e2)</h4>
+
+<p>原文位置: 正文引言，web正文L1799</p>
+
+<blockquote><p>Customize translations as needed to ensure accuracy and clarity.</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>未实测；未核验当前语言清单、价格、团队审校流程与模型质量；本页明确使用云服务。</li></ul>
+
+<h3 id="source-17">来源 17: OOONA tools product overview</h3>
+
+<p>来源编号: b4</p>
+
+<p>平台: OOONA</p>
+
+<p>来源类型: 官方材料</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 无法访问</p>
+
+<p>讨论组: b4-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://www.ooona.net/ooona-tools/">https://www.ooona.net/ooona-tools/</a></p>
+
+<p>上下文: 搜索发现后尝试正文读取失败。</p>
+
+<p>搜索摘要或无法访问的材料不能支持研究发现。</p>
+
+<p>局限</p>
+
+<ul><li>搜索显示产品功能线索，但open返回Internal Error；不支撑比较或结论</li></ul>
+
+<h3 id="source-18">来源 18: OOONA User Configuration Translate</h3>
+
+<p>来源编号: b5</p>
+
+<p>平台: OOONA Help</p>
+
+<p>来源类型: 官方材料</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 无法访问</p>
+
+<p>讨论组: b5-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://ooona.atlassian.net/wiki/spaces/OHC/pages/682393623">https://ooona.atlassian.net/wiki/spaces/OHC/pages/682393623</a></p>
+
+<p>上下文: 搜索发现后尝试正文读取失败。</p>
+
+<p>搜索摘要或无法访问的材料不能支持研究发现。</p>
+
+<p>局限</p>
+
+<ul><li>open一度报400行但没有返回相关正文；find无匹配，后续open为Internal Error；保守记为正文未读</li></ul>
+
+<h3 id="source-19">来源 19: OOONA Compare help</h3>
+
+<p>来源编号: b6</p>
+
+<p>平台: OOONA Help</p>
+
+<p>来源类型: 官方材料</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 无法访问</p>
+
+<p>讨论组: b6-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://ooona.atlassian.net/wiki/spaces/OHC/pages/675086348/Compare">https://ooona.atlassian.net/wiki/spaces/OHC/pages/675086348/Compare</a></p>
+
+<p>上下文: 搜索发现后尝试正文读取失败。</p>
+
+<p>搜索摘要或无法访问的材料不能支持研究发现。</p>
+
+<p>局限</p>
+
+<ul><li>open仅返回serverDuration元数据；搜索摘要不作证据</li></ul>
+
+<h3 id="source-20">来源 20: Amara Plus teams — review, notes and revision detail reread</h3>
+
+<p>来源编号: c2-details</p>
+
+<p>平台: Amara Support</p>
+
+<p>来源类型: 官方材料</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 摘录</p>
+
+<p>讨论组: c2-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://support.amara.org/support/solutions/articles/192110-amara-plus-teams-quickstart">https://support.amara.org/support/solutions/articles/192110-amara-plus-teams-quickstart</a></p>
+
+<p>上下文: 团队内独立证据审查者在本次复核成功读取原官方页，web ref turn137view0，645行，修改日期2025-12-18。本执行者重开同URL与旧ref均遇OAuth重定向，未登录，不能冒称自己重开成功。审查者提供的原页段落：L463–468为可选Review设置并建议由另一成员完成，不足以证明系统强制；L517、525字幕页可看活动、下载、比较、编辑、关注；L534成员活动；L536编辑器备注；L541–548选两个版本、查看差异与回滚。执行者另亲读官方Community Teams公开页核对类似功能，但不把Community的公开视频条件外推给Plus。</p>
+
+<h4 id="source-20-excerpt-1">摘录 1 (notes)</h4>
+
+<p>原文位置: 独立审查者web正文turn137view0 L536</p>
+
+<blockquote><p>Subtitle Notes</p></blockquote>
+
+<h4 id="source-20-excerpt-2">摘录 2 (revisions)</h4>
+
+<p>原文位置: 独立审查者web正文turn137view0 L539</p>
+
+<blockquote><p>Compare Revisions, Rollback Revisions</p></blockquote>
+
+<p>局限</p>
+
+<ul><li>与c2是同一URL与文档家族的补读，不是第二个独立产品证据；新增逐字引文6词，连同原c2的19词总计25词。</li><li>原页成功读取来自本研究团队独立审查者，执行者本次重开失败；功能未亲测。</li><li>可选Review与另一成员应审校是说明/建议，不等于权限强制；价格和当前Plus具体适配仍待核实。</li></ul>
+
+<h3 id="source-21">来源 21: Amara Plus page reread access failure</h3>
+
+<p>来源编号: b7-amara-reread</p>
+
+<p>平台: Amara Support</p>
+
+<p>来源类型: 官方材料</p>
+
+<p>发布日期: 未知</p>
+
+<p>访问日期: 2026-10-15</p>
+
+<p>语言: en</p>
+
+<p>访问范围: 无法访问</p>
+
+<p>讨论组: c2-family</p>
+
+<p>原始链接</p>
+
+<p><a href="https://support.amara.org/support/solutions/articles/192110-amara-plus-teams-quickstart">https://support.amara.org/support/solutions/articles/192110-amara-plus-teams-quickstart</a></p>
+
+<p>上下文: 执行者本次补读open和旧ref返回Freshworks OAuth重定向，500且non-retryable。没有登录或绕过；独立审查者成功读取另存c2-details。</p>
+
+<p>搜索摘要或无法访问的材料不能支持研究发现。</p>
+
+<p>局限</p>
+
+<ul><li>本执行者本次请求失败，与同研究团队另一请求成功分别记录；不否定之前保存的c2或审查者补读。</li></ul>
+
+<p>画像：已存储 / 计划 / 所选访谈覆盖: 2 / 2 / 2</p>
+
+<h2>研究方法</h2>
+
+<p>研究方案: recipe-workflows</p>
+
+<p>研究问题: 轻量翻译字幕审校工具在哪些工作流条件下值得替换或补充现有方法？</p>
+
+<p>按交付结构与审校权责对照：固定时间轴的单人双语执行者，及多语言输出与他人确认的小团队协调者。每个角色三轮问答，先现有任务，再追问分歧，最后拒绝条件；使用同一Agent模拟，不构成独立样本。</p>
+
+<h3>画像维度</h3>
+
+<ul><li>workflow: fixed-template, mixed-audio-multiple-outputs</li><li>authority: self-review, coordinate-approval</li></ul>
+
+<h3>约束</h3>
+
+<ul><li>所有属性为假设或未知，不拼接真实作者传记</li><li>不虚构历史购买、节省时间或支付金额</li><li>保留现有方案够用的角色</li><li>各三轮指每个角色三次连续问答</li></ul>
+
+<h2>角色卡</h2>
+
+<h3 id="persona-1">固定模板的双语译审执行者（合成） (p-template)</h3>
+
+<p>研究方案: recipe-workflows</p>
+
+<ul><li>workflow: fixed-template</li><li>authority: self-review</li></ul>
+
+<p>属性与假设</p>
+
+<ul><li>task: 收到已定时的原文字幕，翻译和自查后交回另一条语言字幕 [假设] — 用来检验双语对照本身是否构成换工具理由；不是任何真实作者的画像</li><li>workflow: 习惯在Subtitle Edit中看视频、对照原文与译文，客户给出既定写法规范 [假设] — 官方已有双语模式，设置一个现有方法满意的压力测试场景</li><li>authority: 能选择自己的编辑工具，不能强制客户更换交付系统 [假设] — 检验个人便利和团队迁移之间的差别</li><li>constraint: 时码基本固定；必须能交回原有文件；偶发修改可手工核对 [假设] — 明确足以维持现有方法的条件</li><li>budget-frequency: 预算、真实项目频率和客户数据上传许可均未知 [未知] — 公开材料没有此人的实证资料</li></ul>
+
+<h3 id="persona-2">混合语言教育视频的小团队审校协调者（合成） (p-coordinator)</h3>
+
+<p>研究方案: recipe-workflows</p>
+
+<ul><li>workflow: mixed-audio-multiple-outputs</li><li>authority: coordinate-approval</li></ul>
+
+<p>属性与假设</p>
+
+<ul><li>task: 协调一段中英混合音频的两条单语字幕交付；另用小语种教学项目压力测试逐字与规范化目标的差异 [假设] — 来自材料启发的任务对照，并不声称真实团队同时做这两种项目</li><li>workflow: 剪辑者生成初稿，语言审校者看视频与文件，协调者收集修改并确认最终版本 [假设] — 检验跨人交接；公开材料未建立完整团队画像</li><li>authority: 可以组织小规模试用流程，但是否有购买权与可用预算未知 [未知] — 不能将协调者自动当成付费决策人</li><li>constraint: 必须事先说清是双语叠显还是两份单语文件；对口语/书面语修改保留理由 [假设] — 用来测试输出目标和审校标准是否比生成质量更有意义</li><li>alternative: 现有剪辑软件、共享规范和人工复核；可考虑Amara的独立审校步骤 [假设] — 让模拟面对已存在的替代方案而非预设新Web工具必要</li><li>frequency-cost: 真实返修频率、责任漏项比例、模型质量和每月成本未知 [未知] — 模拟不能产生真实指标</li></ul>
+
+<h2>完整模拟访谈</h2>
+
+<h3 id="interview-1">访谈: i-template</h3>
+
+<p>来源追溯</p>
+
+<a href="#persona-1">画像: 固定模板的双语译审执行者（合成） (p-template)</a>
+
+<h4 id="turn-interview-1-1">轮次 1</h4>
+
+<p>研究问题: 第一轮：在这张角色卡的条件下，收到已定时的原文字幕后，你会如何完成一条目标语言交付？现有方法哪里已经够用？</p>
+
+<p>回答: 在这个假设场景里，我会打开视频和原文字幕，在熟悉的双语编辑界面写译文，再通看语义、断句和时长。既然时码固定、写法规则清楚，能看到原文和译文并交回文件就够了。我没有真实项目用时数据，也不能据此报节省多少分钟。</p>
+
+<p>假设</p>
+
+<p>未提供</p>
+
+<h4 id="turn-interview-1-2">轮次 2</h4>
+
+<p>研究问题: 第二轮：你说时码固定、规则清楚就够用。若客户中途替换几处原文，哪些情况会改变这个判断？</p>
+
+<p>回答: 如果修改集中且能标出句子，我仍会手工核对。若改动跨多版而且行号因拆句变化，才可能想看原文变更对应哪些译文需要复查。但不能只比字符串就把译文自动覆盖，语义还要我决定；新工具若要求重新录入或丢失时码，反而增加工作。</p>
+
+<p>假设</p>
+
+<ul><li>加入客户中途修改原文和可能拆句的压力测试；不是已观察到的用户历史</li></ul>
+
+<h4 id="turn-interview-1-3">轮次 3</h4>
+
+<p>研究问题: 第三轮：若有一个Web工具提供对照、差异提示和确认状态，你会在什么条件下拒绝？需要什么真实证据才值得试？</p>
+
+<p>回答: 如果这只是复制我的对照界面，或者每个客户都要注册，我会拒绝。低频项目里，文件加一张清单就可以。要试的话，先用我有权分享的同一段旧项目与现有方法并排做一遍，确认没有格式损失、总耗时更低；预算和购买权仍需问真实客户，模拟不能替他们承诺。</p>
+
+<p>假设</p>
+
+<ul><li>拟议Web工具具备三项概念功能；并未开发或测试</li></ul>
+
+<h3 id="interview-2">访谈: i-coordinator</h3>
+
+<p>来源追溯</p>
+
+<a href="#persona-2">画像: 混合语言教育视频的小团队审校协调者（合成） (p-coordinator)</a>
+
+<h4 id="turn-interview-2-1">轮次 1</h4>
+
+<p>研究问题: 第一轮：在这张角色卡的条件下，怎样分配一段中英混合音频的字幕交付？开始前最需要澄清什么？</p>
+
+<p>回答: 我会先确认要的是两份单语字幕还是屏幕同时显示两种语言，再让剪辑者给出初稿和可看的视频，让审校者逐句确认。若团队用共享规范和清晰文件名就能交付，我不会先买新系统。这里没有真实客户或历史工作量，不能认定混合语言一定识别不好。</p>
+
+<p>假设</p>
+
+<p>未提供</p>
+
+<h4 id="turn-interview-2-2">轮次 2</h4>
+
+<p>研究问题: 第二轮：你强调先确认输出目标。换成小语种教学项目，审校者坚持逐字口语、委托方却要求规范书面语，你会怎么处理？</p>
+
+<p>回答: 在这个假设任务里，我会先把面向听力练习还是正式阅读写进验收规则，再在争议句上保留修改理由和谁作最终决定。这个分歧不一定是模型错误，更好的模型也未必替我们决定教学目的。两版都合理时，可以保留两个交付版本，而不是把其中一版标成错误。</p>
+
+<p>假设</p>
+
+<ul><li>加入小语种教学项目和逐字/规范化分歧；材料只启发此情境，不证明团队实际遇到过</li></ul>
+
+<h4 id="turn-interview-2-3">轮次 3</h4>
+
+<p>研究问题: 第三轮：如果Amara已有独立审校步骤，为什么还要试一个新Web工具？什么结果会使你停止？</p>
+
+<p>回答: 只有我们实际项目里仍发生漏确认或把意见落到错误版本，而且新工具能接住原来的文件与规则时，我才愿意比较。若Amara或共享清单已经把问题解决，就不值得迁移。真实试验应连导入、解释规则、修正误报、导出都计时；不能靠演示里少点几次按钮判断收益。是否付费还需要实际有预算的人决策。</p>
+
+<p>假设</p>
+
+<ul><li>以已读官方说明所描述的Amara审校步骤作为概念对照；不是亲测，也不假设新工具更好</li></ul>
+</body></html>

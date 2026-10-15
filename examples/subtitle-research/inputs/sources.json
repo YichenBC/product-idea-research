@@ -1,0 +1,449 @@
+{
+  "sources": [
+    {
+      "id": "s1",
+      "title": "Subtitling and Translation Programs (Is there one that does both?)",
+      "url": "https://www.reddit.com/r/TranslationStudies/comments/1lje43r/subtitling_and_translation_programs_is_there_one/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2025-06-24",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s1-family",
+      "context": "读取原帖与可见评论；提问者是字幕初学者，学校作业背景。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I don't have much experience in subtitling, the only thing I've done was for a school assignment where I translated the video elsewhere and then used Aegisub to add them to the video.",
+          "locator": "原帖，web正文L21"
+        },
+        {
+          "id": "e2",
+          "text": "Subtitle Edit. It's completely free to use and you can play the video bit by bit while you write down subtitles.",
+          "locator": "https://www.reddit.com/r/TranslationStudies/comments/1lje43r/comment/mzj9qqx/"
+        }
+      ],
+      "limitations": [
+        "初学者求助不是采购意愿；评论是自述；未展开所有More replies。"
+      ]
+    },
+    {
+      "id": "s2",
+      "title": "Workflow question for synchronizing translation",
+      "url": "https://www.reddit.com/r/SubtitleEdit/comments/1rf7lgy/workflow_question_for_synchronizing_translation/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-02-26",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s2-family",
+      "context": "读取原帖；正文未显示回复，不能声称问题未解决。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I have a video and a bare translation (no timecodes). I need to turn the translation into subtitles.",
+          "locator": "原帖，web正文L20"
+        }
+      ],
+      "limitations": [
+        "单一任务描述；未读到评论；未证明现有软件缺少该能力。"
+      ]
+    },
+    {
+      "id": "s3",
+      "title": "Question for the subtitling community: What software do you use?",
+      "url": "https://www.reddit.com/r/TranslationStudies/comments/1n0cfzi/question_for_the_subtitling_community_what/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2025-08-26",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s3-family",
+      "context": "读取SoftNi使用者求推荐的原帖与可见评论，包括Premiere、Subtitle Edit、OOONA、Aegisub；厂商自荐未作独立体验证据。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I use SubtitleEdit... It's quite good...",
+          "locator": "评论，web正文L47"
+        },
+        {
+          "id": "e2",
+          "text": "Now I use Adobe Premiere and find the workflow there easier than dedicated subtitle softwares.",
+          "locator": "评论，web正文L154"
+        },
+        {
+          "id": "e3",
+          "text": "I work at a localization company that uses it as part of its workflow.",
+          "locator": "关于Aegisub的回复，web正文L137"
+        }
+      ],
+      "limitations": [
+        "不同作者讨论不同任务，不能合成一个客户；地域行业标准与最新版本说法未独立核验。"
+      ]
+    },
+    {
+      "id": "s4",
+      "title": "Subtitles: small agency consistency and revisions",
+      "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-03-27",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s4-family",
+      "context": "读取原帖与多个回复。原帖虽提到translations，后续作者澄清No translation thankfully，因此只作相邻字幕审校工作流证据；不采信其法规解释。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "With that said is there a way to keep this more consistent and scalable throughout a team of editors that you have found?",
+          "locator": "原帖，web正文L26"
+        },
+        {
+          "id": "e2",
+          "text": "You're going to want to create an SOP and ideally a style for the subtitles.",
+          "locator": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocujsua/"
+        },
+        {
+          "id": "e3",
+          "text": "No translation thankfully.",
+          "locator": "原作者澄清，web正文L186"
+        },
+        {
+          "id": "e4",
+          "text": "We use subtitle edit for auto spell correction and splitting up into a specific word count per clip for our workflow.",
+          "locator": "评论，web正文L226"
+        },
+        {
+          "id": "e5",
+          "text": "Having someone else do the subtitles would be amazing but that isn’t very likely in the small agency world I’m in currently.",
+          "locator": "原作者回复，web正文L64"
+        }
+      ],
+      "limitations": [
+        "主要是同语字幕，不能外推成翻译需求；流程与工具效果均为自述。"
+      ]
+    },
+    {
+      "id": "s5",
+      "title": "Subtitles not matching Speech on BBC Bitesize?",
+      "url": "https://www.reddit.com/r/learnwelsh/comments/1vqupgz/subtitles_not_matching_speech_on_bbc_bitesize/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s5-family",
+      "context": "读取威尔士语学习者原帖、解释规范化的评论及围绕方言转写的争论；未观看被讨论视频。发布日期仅见相对时间。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "It made it much harder to follow though, as I’m trying to practice my listening but it’s hard when what I’m hearing doesn’t match what I’m reading",
+          "locator": "原帖，web正文L27的连续片段"
+        },
+        {
+          "id": "e2",
+          "text": "This can be a hurdle for learners but it's a reflection of the tension between exact subtitles, capturing informal features and dialect and more standard written forms.",
+          "locator": "https://www.reddit.com/r/learnwelsh/comments/1vqupgz/comment/p48q4cj/"
+        },
+        {
+          "id": "e3",
+          "text": "Whether transcript-style subtitles would run with heavily dialectical spellings or not would depend on what the purpose of the transcript was.",
+          "locator": "评论，web正文L232"
+        }
+      ],
+      "limitations": [
+        "属于学习者反馈，不是字幕团队采购；未验证语言学解释；不能推断威尔士语模型成熟度或准确率。"
+      ]
+    },
+    {
+      "id": "s6",
+      "title": "Multilingual Audio -> Multilingual Subtitle Creation Help",
+      "url": "https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/multilingual_audio_multilingual_subtitle_creation/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s6-family",
+      "context": "读取英中混合音频原帖和评论。区分同一音轨混合两种语言、两条单语输出，以及评论者理解的双语叠字。日期仅相对时间。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I have multi lingual audio/video, it contains both English and Mandarin",
+          "locator": "原帖，web正文L25"
+        },
+        {
+          "id": "e2",
+          "text": "Then i can just ask a LLM to translate it purely into english and mandarin for the two tracks i need.",
+          "locator": "https://www.reddit.com/r/SubtitleEdit/comments/1uavdit/comment/osroxwx/"
+        },
+        {
+          "id": "e3",
+          "text": "So kind of works.",
+          "locator": "同一原作者回复，web正文L90"
+        },
+        {
+          "id": "e4",
+          "text": "After they are synced, use Tool>Join subtitles to combine the two into one (make sure both are in the same subtitle format).",
+          "locator": "评论，web正文L125"
+        }
+      ],
+      "limitations": [
+        "没有团队规模与付费信息；回复中存在任务理解偏差；未验证其LLM流程准确率。"
+      ]
+    },
+    {
+      "id": "s7",
+      "title": "Enhancement for Find/Replace in Translation mode #6832",
+      "url": "https://github.com/SubtitleEdit/subtitleedit/issues/6832",
+      "platform": "GitHub",
+      "source_type": "post",
+      "published_at": "2023-04-15",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s7-family",
+      "context": "读取原issue、维护者与作者测试往返、关联提交和2023-04-19完成关闭状态。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Because oftentimes we need to just find/replace on one side.",
+          "locator": "issue正文L155"
+        },
+        {
+          "id": "e2",
+          "text": "Remember replace in - thx Leon :)",
+          "locator": "2023-04-18关联提交标题L249"
+        },
+        {
+          "id": "e3",
+          "text": "closed this as completed",
+          "locator": "issue状态事件，web正文L257"
+        }
+      ],
+      "limitations": [
+        "历史已关闭需求；不能当作2026仍未解决的缺口；未安装测试。"
+      ]
+    },
+    {
+      "id": "s8",
+      "title": "Language translator in Captions is missing in PP 2025",
+      "url": "https://community.adobe.com/questions-729/language-translator-in-captions-is-missing-in-pp-2025-1621660",
+      "platform": "Adobe Community",
+      "source_type": "post",
+      "published_at": "2025-12-05",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s8-family",
+      "context": "读取原帖及两条回答，包括Community Expert和标注Adobe员工的回答；讨论版本与菜单入口。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I can't find the languag translate option anymore",
+          "locator": "原帖连续片段，web正文L20"
+        },
+        {
+          "id": "e2",
+          "text": "Translation was added in PR 25.2.0.",
+          "locator": "Community Expert回答，web正文L43"
+        }
+      ],
+      "limitations": [
+        "厂商社区支持场景；未观察解决后的结果；不引用其语言数量为当前官方能力。"
+      ]
+    },
+    {
+      "id": "c1",
+      "title": "Subtitle Edit official main-window documentation",
+      "url": "https://github.com/SubtitleEdit/subtitleedit/blob/main/docs/features/main-window.md",
+      "platform": "GitHub official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c1-family",
+      "context": "读取官方仓库main文档的Translation Mode、菜单与视频播放相关段落；未安装实测。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "The text editor shows both the original and translation text",
+          "locator": "Translation Mode，web正文L495"
+        },
+        {
+          "id": "e2",
+          "text": "original lines with no counterpart appear as extra, dimmed rows",
+          "locator": "When the original does not line up 1:1，web正文L501连续片段"
+        }
+      ],
+      "limitations": [
+        "main分支文档不是指定发行版保证；本轮未比较协作权限和导出往返实测。"
+      ]
+    },
+    {
+      "id": "c2",
+      "title": "Amara Plus teams official quickstart",
+      "url": "https://support.amara.org/support/solutions/articles/192110-amara-plus-teams-quickstart",
+      "platform": "Amara Support",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c2-family",
+      "context": "读取Plus团队文档的Optional Subtitle Workflow: Review、Completing Subtitles、Upload Subtitles；页标注2025-12-18修改。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "One team member can create subtitles, then a second team member should perform the Review step.",
+          "locator": "Optional Subtitle Workflow: Review，web正文L468"
+        },
+        {
+          "id": "e2",
+          "text": "including completed subtitles.",
+          "locator": "Completing Subtitles，web正文L485连续片段"
+        }
+      ],
+      "limitations": [
+        "官方说明不等于实测；没有核验当前价格、席位限制、内容隐私和小语种能力。"
+      ]
+    },
+    {
+      "id": "c3",
+      "title": "Adobe Premiere official Translate captions",
+      "url": "https://helpx.adobe.com/premiere/desktop/add-text-images/insert-captions/translate-captions.html",
+      "platform": "Adobe Help",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c3-family",
+      "context": "读取正文Translate captions及Manage multiple caption tracks；页标注2026-06-02更新。正文说明可导入SRT、云翻译并生成新轨道、切换显示与样式。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "a new track will be created in the Timeline panel.",
+          "locator": "Translate captions，web正文L1818连续片段（网页空格规范化）"
+        },
+        {
+          "id": "e2",
+          "text": "Customize translations as needed to ensure accuracy and clarity.",
+          "locator": "正文引言，web正文L1799"
+        }
+      ],
+      "limitations": [
+        "未实测；未核验当前语言清单、价格、团队审校流程与模型质量；本页明确使用云服务。"
+      ]
+    },
+    {
+      "id": "b1",
+      "title": "Looking for a service to create .srt files from translated video scripts",
+      "url": "https://www.reddit.com/r/TranslationStudies/comments/r78gpp",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "unavailable",
+      "group_id": "b1-family",
+      "context": "搜索发现后尝试正文读取失败。",
+      "excerpts": [],
+      "limitations": [
+        "open返回TimeoutError；搜索结果只能作为线索，未引用"
+      ]
+    },
+    {
+      "id": "b2",
+      "title": "Workflow for editing unscripted content in a language that’s not your own?",
+      "url": "https://www.reddit.com/r/editors/comments/l136n6",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "unavailable",
+      "group_id": "b2-family",
+      "context": "搜索发现后尝试正文读取失败。",
+      "excerpts": [],
+      "limitations": [
+        "open返回TimeoutError；未引用搜索摘要"
+      ]
+    },
+    {
+      "id": "b3",
+      "title": "Editing in foreign language. Workflow?",
+      "url": "https://www.reddit.com/r/editors/comments/1dfo3aj/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "unavailable",
+      "group_id": "b3-family",
+      "context": "搜索发现后尝试正文读取失败。",
+      "excerpts": [],
+      "limitations": [
+        "open返回Internal Error；未引用搜索摘要"
+      ]
+    },
+    {
+      "id": "b4",
+      "title": "OOONA tools product overview",
+      "url": "https://www.ooona.net/ooona-tools/",
+      "platform": "OOONA",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "unavailable",
+      "group_id": "b4-family",
+      "context": "搜索发现后尝试正文读取失败。",
+      "excerpts": [],
+      "limitations": [
+        "搜索显示产品功能线索，但open返回Internal Error；不支撑比较或结论"
+      ]
+    },
+    {
+      "id": "b5",
+      "title": "OOONA User Configuration Translate",
+      "url": "https://ooona.atlassian.net/wiki/spaces/OHC/pages/682393623",
+      "platform": "OOONA Help",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "unavailable",
+      "group_id": "b5-family",
+      "context": "搜索发现后尝试正文读取失败。",
+      "excerpts": [],
+      "limitations": [
+        "open一度报400行但没有返回相关正文；find无匹配，后续open为Internal Error；保守记为正文未读"
+      ]
+    },
+    {
+      "id": "b6",
+      "title": "OOONA Compare help",
+      "url": "https://ooona.atlassian.net/wiki/spaces/OHC/pages/675086348/Compare",
+      "platform": "OOONA Help",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "unavailable",
+      "group_id": "b6-family",
+      "context": "搜索发现后尝试正文读取失败。",
+      "excerpts": [],
+      "limitations": [
+        "open仅返回serverDuration元数据；搜索摘要不作证据"
+      ]
+    }
+  ]
+}

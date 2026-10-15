@@ -1,0 +1,69 @@
+{
+  "runs": [
+    {
+      "id": "run-social",
+      "module": "social",
+      "status": "complete",
+      "objective": "读6–10个公开讨论家族，识别小团队翻译字幕审校中的任务差异与现有方法够用条件。",
+      "method": "2026-10-15使用web搜索、open、find和评论链接click；选8个正文可访问的讨论家族，读取原帖和可见评论，不把搜索摘要计入。按任务链分组，保留闭环解决和满意案例。",
+      "queries": [
+        "site.reddit.com/r/TranslationStudies subtitle translation software workflow bilingual subtitles",
+        "site.reddit.com subtitles collaboration proofreading subtitle edit bilingual workflow",
+        "site.community.amara.org subtitles review translation workflow",
+        "site.reddit.com subtitles Welsh translation Subtitle Edit",
+        "site.reddit.com subtitle translation bilingual review Arabic workflow",
+        "site.github.com/SubtitleEdit/subtitleedit/issues \"translation\" \"original\""
+      ],
+      "source_ids": [
+        "s1",
+        "s2",
+        "s3",
+        "s4",
+        "s5",
+        "s6",
+        "s7",
+        "s8",
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "limitations": [
+        "便利样本：6个Reddit讨论、1个GitHub issue、1个Adobe社区讨论；不是8名客户或需求频率样本。",
+        "7个家族读到评论或回复；s2只读到原帖；未展开全部折叠评论。",
+        "有英中混合与威尔士语场景，但小语种生产团队与中文原生讨论覆盖薄弱。",
+        "3个讨论正文不可访问，已保存，不计入8个。",
+        "Adobe社区材料由竞品检索意外发现，作为适合的够用/可发现性反例补入。"
+      ]
+    },
+    {
+      "id": "run-competitor",
+      "module": "competitor",
+      "status": "complete",
+      "objective": "比较至少3种现有替代方案的官方相关说明并识别已被覆盖的任务。",
+      "method": "2026-10-15读取Subtitle Edit官方仓库文档、Amara Plus官方支持文档和Adobe Premiere官方帮助；以双语对照、审校交接、原工作流适配为比较维度。不登录、不试用、不核价。OOONA正文不可稳定读取，仅记录访问失败，换用Premiere满足3种替代方案。",
+      "queries": [
+        "site.support.amara.org \"review\" \"workflow\" subtitles",
+        "site.ooona.net \"Review\" \"Compare\" tools subtitles",
+        "site.subtitleedit.github.io/subtitleedit \"Translation Mode\"",
+        "site.ooona.atlassian.net \"Share project\" review",
+        "site.ooona.atlassian.net \"Compare\" \"subtitle\"",
+        "site.helpx.adobe.com/premiere-pro \"Translate captions\"",
+        "site.aegisub.org/docs/latest \"Translation Assistant\""
+      ],
+      "source_ids": [
+        "c1",
+        "c2",
+        "c3",
+        "b4",
+        "b5",
+        "b6"
+      ],
+      "limitations": [
+        "官方说明未做实测；并非完整市场扫描。",
+        "未核验价格、席位、语言覆盖、数据保留与导出兼容性，不能做采购推荐或成本排名。",
+        "Subtitle Edit文档取自main分支；Amara文档限定Plus；Premiere文档更新2026-06-02。",
+        "OOONA检索结果不能证明已读官方能力，未纳入比较。"
+      ]
+    }
+  ]
+}

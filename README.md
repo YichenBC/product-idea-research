@@ -1,29 +1,41 @@
 # Research Workbench
 
-**A research workbench for coding agents, with conclusions you can act on and evidence you can inspect.**
+**From public discussions and competing products to a research report you can inspect and act on.**
 
-A shared skill for **Codex and Claude Code**, backed by a small local Python CLI.
-The first implemented module is simulated interviewing. The broader design combines
-social research, competitor research, supplied-material analysis and optional
-simulated interviews into a report tailored to the user's question. Those other
-modules are planned, not shipped features.
-See [product direction](docs/product-direction.md) for the module boundaries and
-the distinction between conclusions and research evidence.
-The Agent creates the personas, asks follow-up questions and interprets answers.
-The CLI saves checkpoints, checks references and exports Markdown and standalone HTML.
+A shared skill for **Codex and Claude Code**, with a small local Python CLI. Run
+social research, competitor research or simulated interviews independently—or
+combine them into one conclusion-first report. Start with an idea, a competitor,
+links, exported feedback or a research method. Continue a saved study without
+repeating completed work.
 
-No persona database, external research service, additional model API key or server
-is required. Your usual coding-agent usage still applies. This is a tool for
-exploring hypotheses and rehearsing interviews, **not evidence that real customers
-want a product or will pay for it**.
+The agent uses its available browsing and model tools. The CLI preserves evidence,
+checks exact citations, flags duplicates and exports Markdown plus standalone HTML.
+No separate model API key, Atypica subscription, server or persona database required.
+Your usual coding-agent usage still applies.
 
-[中文说明](README.zh-CN.md) · [Example report](examples/scheduling/report.md) ·
-[HTML report source (download to view)](examples/scheduling/report.html) ·
-[Data contract](docs/contract.md) · [Evaluation record](evals/README.md)
+[中文](README.zh-CN.md) · [Data contract](docs/contract.md) ·
+[Evaluation record](evals/README.md) · [Product scope](docs/product-direction.md)
+
+## What you can ask
+
+| Request | Result |
+|---|---|
+| “Research complaints and workarounds in these communities; no interviews.” | Contextualized social findings, contrary cases, evidence and gaps |
+| “Compare these products for this workflow.” | Sourced comparison, plan/price conditions, unknowns and task-specific recommendation |
+| “Use my method to synthesize two roles and interview them. No browsing.” | Hypothetical objections, trade-offs and real-world questions to test |
+| “Combine social signals, alternatives and a concept stress test.” | One report separating external statements, inference and simulation |
+| “Use this feedback export offline.” | Analysis from supplied material with local provenance |
+| “Add a competitor refresh to this study” / “Just update the report.” | New immutable iteration or synthesis using existing evidence |
+
+Research is general across work and everyday life. A module is a choice, not a
+mandatory stage. Explicit counts, methods, network restrictions and exclusions
+are respected. A blocked requested channel remains a documented gap.
 
 ## Install
 
-Requires Python 3.11+, Git, and either Codex or Claude Code with terminal/file access.
+Requires Python 3.11+, Git, and Codex or Claude Code with terminal/file access.
+Live research also needs the host's available search/browser tools or supplied
+materials; this package does not provide proprietary social-platform access.
 
 ```bash
 git clone https://github.com/YichenBC/research-workbench.git
@@ -32,117 +44,108 @@ python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install .
 
-# Choose one or both. No existing skill is overwritten.
+# Choose either or both; existing differing skills are never overwritten.
 research-workbench install --target codex --scope user
 research-workbench install --target claude --scope user
 ```
 
-Keep this environment activated when launching your coding agent so the CLI is
-on PATH. Alternatively install the cloned project with `pipx install .` or
-`uv tool install .` if you already use one of those tools. No PyPI release is
-required. Restart an existing agent session if the installed skill is not discovered.
+On Windows activate with `.venv\Scripts\Activate.ps1`. Keep the environment active
+when launching your agent, or use `pipx install .` / `uv tool install .`. No PyPI
+publication is required. Restart a running agent if it has not discovered the skill.
+For project-only installation add `--scope project --directory /path/to/project`
+instead of `--scope user`. Codex receives `.agents/skills/research-workbench/`;
+Claude Code receives `.claude/skills/research-workbench/`. Both use the same package.
+See [updates/uninstall](docs/installation.md).
 
-For a project-only installation:
+## Use it
 
-```bash
-research-workbench install --target codex --scope project --directory /path/to/project
-research-workbench install --target claude --scope project --directory /path/to/project
-```
+In Codex invoke `$research-workbench`; in Claude Code invoke `/research-workbench`.
+For example:
 
-Both receive the same packaged `SKILL.md` and references. Codex uses `.agents/skills/`;
-Claude Code uses `.claude/skills/`. Add `--dry-run` to inspect the destination.
-Identical installations are harmless to repeat; conflicts are reported.
-For upgrading or uninstalling, see [installation notes](docs/installation.md).
+> Research whether a small Web product could help video teams review translated
+> subtitles. Look at public discussions and competing tools, include reasons the
+> existing workflow is sufficient, then stress-test the concept with two simulated
+> roles. Produce one Chinese report with a narrow opportunity and the next real test.
 
-## Use it in your agent
+Or run a single module:
 
-In Codex, invoke `$research-workbench`; in Claude Code, invoke `/research-workbench`.
-Then give a question and a method, for example:
+> Only compare the tools I linked for a two-person team. Use official docs and
+> pricing, explain unknowns, and don't generate personas or conduct interviews.
 
-> Explore a shift-scheduling concept. Compare a frontline employee satisfied with
-> a stable spreadsheet rota and a supervisor handling frequent changes. Create two
-> personas, conduct three-turn simulated interviews, and produce an English report.
-> Do not browse. Save to studies/scheduling.
+Or offline:
 
-Or use a completely different domain:
+> Analyze this exported feedback without browsing. Keep contradictory statements.
+> Do not fabricate missing context; give me a report and a next validation step.
 
-> Help me explore a group-travel planning idea. Use three contrasting approaches
-> to planning rather than demographic stereotypes. Propose the role assumptions,
-> simulate interviews and write a Chinese report. No browsing.
+## A live example
 
-You can stop after persona creation, resume interviews later, or ask for a new
-report from saved interviews. A user-specified method takes precedence over the
-skill's suggested interview structure. Work and everyday-life scenarios are both
-supported; roles do not need a business budget or procurement authority.
+[Subtitle research](examples/subtitle-research/README.md): [combined report](examples/subtitle-research/combined/report.md), [social only](examples/subtitle-research/social/report.md), [competitors only](examples/subtitle-research/competitor/report.md). Includes evidence, review corrections and offline replay inputs.
 
 ## What gets saved
 
 ```text
-studies/scheduling/
-  research.json          # recipe, immutable personas and interview checkpoints
-  ...draft JSON files... # written by your Agent
+studies/topic/
+  research.json          # brief, sources, runs, optional recipe/personas/interviews
+  ...draft JSON files... # generated by your agent
   reports/001/
     report.md
-    report.html          # self-contained; no scripts or remote assets
-    evidence.md          # detailed method, role cards and full interviews
-    evidence.html        # linked evidence companion; keep beside report.html
-    study.json           # frozen study snapshot
+    report.html          # conclusions; no scripts or remote assets
+    evidence.md
+    evidence.html        # source excerpts, methods, role cards and complete Q&A
+    study.json           # frozen evidence snapshot
     report.json          # frozen report draft
 ```
 
-The main report leads with conclusions, disagreements and next steps. It gives
-only enough scope and limitations to interpret them. Detailed methods, role cards
-and transcripts live in a separate evidence companion, linked from each finding.
-Every report carries a concise synthetic-research notice. A new render creates
-a new numbered directory, preserving earlier reports. Share the directory when
-readers need working evidence links; the main report itself is readable on its own.
+The main report presents conclusions, meaningful disagreement, optional competitor
+and opportunity tables, next actions and limits. Exact citations open the evidence
+companion. External statements, interpretation and simulation are distinguished;
+simulated answers never become proof of real demand. Share the entire export folder
+to preserve links. Re-rendering creates a new numbered snapshot.
 
-## Replay the included example without a model
+## CLI
 
-This replays a **hand-authored synthetic fixture**, not a fresh AI study:
+| Command | Purpose |
+|---|---|
+| `init` | Create a local study without overwriting one |
+| `ingest` | Atomically save immutable JSON records |
+| `status` | Show stored module/source/interview coverage |
+| `check` | Validate types, references, selected evidence and completeness |
+| `audit` | Inspect access depth, discussion groups and duplicate evidence |
+| `render` | Export the main report, evidence companions and frozen JSON |
+| `install` | Install the shared skill for either host |
+
+`audit` is a coverage diagnostic, not a truth score. A citation to a search snippet
+is rejected; multiple comments from a thread are not counted as independent people.
+The host must still verify that each excerpt supports its interpretation.
+
+## Replay a fixture without a model
+
+This replays the original hand-authored simulation example:
 
 ```bash
 research-workbench init studies/demo --title "Scheduling concept"
 research-workbench ingest studies/demo --file examples/scheduling/batch.json
 research-workbench check studies/demo --report examples/scheduling/report-draft.json
 research-workbench render studies/demo --report examples/scheduling/report-draft.json
-research-workbench status studies/demo --json
 ```
 
-To create new content, use the skill in your Agent. The CLI by itself never
-generates personas or responses. [Actual host evaluations](evals/README.md) are
-documented separately from this deterministic example.
+[Scheduling report](examples/scheduling/report.md) ·
+[Prior live Codex simulation](examples/household/report.md).
+The CLI does not generate research; new content comes from the skill in your agent.
 
-## CLI
+## Boundaries
 
-| Command | Purpose |
-|---|---|
-| `init` | Create a study without overwriting one |
-| `ingest` | Atomically save a recipe, persona cards or interviews from JSON |
-| `status` | Show saved, planned and interviewed role counts |
-| `check` | Validate structure, references, coverage and report revision |
-| `render` | Create Markdown/HTML and frozen JSON snapshots |
-| `install` | Install the shared skill for either host |
-
-Run `research-workbench --help` or see the [full contract](docs/contract.md).
-Input records are immutable. Re-ingesting identical records is a no-op; conflicting
-content is rejected. Use new persona/interview IDs for corrections. A materially
-different method starts a new study. Partial studies can be resumed without losing
-the roles and interviews already saved.
-
-## Scope and limits
-
-- v0.1 implements the simulation workflow. Shared persona libraries, crawling,
-  social listening and competitor-research modules are not shipped yet.
-- Role attributes are explicitly `assumed` or `unknown`. Evidence-backed persona
-  records will require a later data model; do not import real-user data as if
-  this version verified it.
-- `complete` means the requested role count was interviewed, not that a market or
-  product was validated. Synthetic respondents are not a statistical sample.
-- Structural checks catch broken citations and missing roles. They cannot decide
-  whether prose is true or whether a cited turn really supports an interpretation.
-- The CLI is local and offline. The coding agent still processes prompts through
-  its configured model service. No automatic outreach or publishing is included.
+- No guaranteed access to Reddit, X, Xiaohongshu or any login-gated platform. The
+  agent uses authorized tools and records partial access; supplied material works offline.
+- Public posts remain self-report; vendor pages remain vendor claims. Neither
+  source count nor role-play estimates willingness to pay or market prevalence.
+- No automatic outreach, publication, private-data upload or paid product trials.
+- Shared persona libraries, dedicated platform crawlers and a hosted research UI
+  are not included. Role attributes remain assumed/unknown.
+- `complete` means declared research coverage, not validated demand. Structural
+  validation cannot prove truth, source independence or semantic entailment.
+- Storage/rendering are local. Prompts and research still pass through your host's
+  configured model/tools; local storage does not imply offline model inference.
 
 ## Develop
 
@@ -152,8 +155,7 @@ python -m pytest -q
 python -m build
 ```
 
-The canonical skill lives in `src/research_workbench/skill/` and ships inside the
-Python package. Keep its data-contract reference synchronized with `docs/contract.md`.
-See [contributing](CONTRIBUTING.md) and the [evaluation checklist](evals/cases.md).
-
-MIT licensed. Examples are fictional, authored for this repository.
+Runtime is Python standard library only. The canonical skill is packaged from
+`src/research_workbench/skill/`; keep its data-contract reference identical to
+`docs/contract.md`. See [contributing](CONTRIBUTING.md) and [eval cases](evals/cases.md).
+MIT licensed. Fictional fixtures and any live-source examples are labeled separately.

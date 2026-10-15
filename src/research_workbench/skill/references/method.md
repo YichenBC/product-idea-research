@@ -23,11 +23,14 @@ describe task, current workflow, desired outcome, authority, constraints, curren
 alternative, acceptance/rejection conditions and unknowns as relevant. More fields
 are not automatically better. Include only attributes that change the discussion.
 
-Every attribute in v0.1 is `assumed` or `unknown`, with an explanation of why it
+Every attribute is `assumed` or `unknown`, with an explanation of why it
 was included. Do not decorate cards with fabricated age, biography or purchasing
 history. If the user supplies grounded material, this release can rehearse a
 scenario informed by it, but cannot record that as a verified persona database.
 State this limit rather than silently relabeling source evidence as a fact.
+When combining modules, cite the external material separately in report findings;
+role cards and generated answers retain their hypothetical status. Never turn a
+collection of different commenters into a fictional biography of one real person.
 
 Before interviewing, check:
 
@@ -37,6 +40,12 @@ Before interviewing, check:
 - The proposed tool is not assumed to be needed by everyone.
 
 ## Interview protocol
+
+Resolve the unit of requested interview counts before generation. By default,
+“three rounds” / “三轮” for each persona means one interview containing three
+question-answer turns, not three separate interviews of three turns each. State
+that interpretation briefly. Only create repeated full interviews when explicitly
+requested. This keeps costs and selected coverage aligned with the user's scope.
 
 The same Agent may take interviewer and respondent turns. Separate their voices
 in the structured transcript; no subagent, extra model, persona service or network
