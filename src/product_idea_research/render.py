@@ -15,6 +15,7 @@ from urllib.parse import quote, urlsplit
 from . import store
 from . import validation as v
 from .audit import coverage
+from .discovery import pool, csv_text, CLAIM_FIELDS
 from .types import JSONObject, JSONValue, PathInput, Study
 
 ZH = {
@@ -38,7 +39,13 @@ ZH = {
     'All material families (including unread)': '全部材料组（含未读）',
     'Readable material families': '可引用材料组',
     'Readable social families': '可引用社媒讨论组',
-    'Finding': '发现',
+    'Finding': '发现', 'Demand pool': '需求池', 'Need': '需求', 'Cluster': '任务簇',
+    'Disposition': '信号判断', 'candidate': '候选需求', 'resolved': '已有解决办法',
+    'promotion': '推广信号', 'adjacent': '相邻任务', 'unclear': '证据不明',
+    'stated': '来源陈述', 'inferred': '研究者推断',
+    'actor': '执行者／付款人', 'trigger': '触发场景', 'outcome': '期望结果',
+    'workaround': '当前办法', 'friction': '仍存在的阻碍', 'frequency': '频率', 'payment': '付款线索',
+    'Basis': '依据', 'Parent source': '父级来源',
     'Source': '来源', 'Excerpt': '摘录', 'Run': '研究轮次', 'Module': '模块',
     'social': '社媒调研', 'competitor': '竞品调研', 'Objective': '目标', 'Queries': '检索词',
     'Source statement': '来源陈述', 'Inference': '推断', 'Simulation': '模拟', 'Mixed': '混合',
@@ -229,6 +236,8 @@ def decision_tables(doc: Document, report: JSONObject, selected: Selection) -> N
             doc.links('Support', selected.references(doc, row['support']), f'evidence.{doc.kind}')
             doc.paragraph(tr('Limitations'))
             doc.items(row['limitations'])
+    if report.get('need_ids'):
+        doc.links('Demand pool', [('need-' + ident, ident) for ident in report['need_ids']], f'needs.{doc.kind}')
     opportunities = report.get('opportunities', [])
     if opportunities:
         doc.heading(2, tr('Opportunities'))
@@ -237,6 +246,8 @@ def decision_tables(doc: Document, report: JSONObject, selected: Selection) -> N
                    for n, row in enumerate(opportunities, 1)])
         for n, row in enumerate(opportunities, 1):
             doc.heading(3, f'{tr("Opportunity")} {n}: {row["title"]}')
+            if row.get('need_ids'):
+                doc.links('Demand pool', [('need-' + ident, ident) for ident in row['need_ids']], f'needs.{doc.kind}')
             for key, label in (('audience', 'Audience'), ('problem', 'Problem'), ('alternative', 'Alternative'),
                                ('rationale', 'Rationale'), ('validation', 'Validation')):
                 doc.paragraph(f'{tr(label)}: {row[key]}')
@@ -325,6 +336,13 @@ def source_evidence(doc: Document, selected: Selection) -> None:
             if key in ('source_type', 'access'):
                 value = tr(value)
             doc.paragraph(f'{tr(label)}: {value}')
+        if source.get('parent_source_id'):
+            parent_id = source['parent_source_id']
+            positions = {item['id']: index for index, item in enumerate(selected.sources, 1)}
+            if parent_id in positions:
+                doc.links('Parent source', [(f'source-{positions[parent_id]}', parent_id)])
+            else:
+                doc.paragraph(tr('Parent source') + ': ' + parent_id + ' (outside selected runs)')
         doc.paragraph(tr('Original URL'))
         if source['url']:
             doc.external_link(source['url'])
@@ -404,6 +422,28 @@ def evidence_document(state: Study, report: JSONObject, kind: str) -> str:
     return doc.finish()
 
 
+def needs_document(state: Study, report: JSONObject, kind: str) -> str:
+    doc = report_document(state, report, kind)
+    selected = Selection(state, report)
+    result = pool(state, report)
+    doc.heading(1, doc.tr('Demand pool'))
+    doc.paragraph('需求卡和任务簇是研究者的解释，不代表已验证客户或市场规模。' if doc.chinese else
+                  'Need cards and clusters are researcher interpretations, not verified customers or market size.', notice=True)
+    doc.table(['Need', 'Cluster', 'Disposition'], [[n['id'] + ': ' + n['summary'], n['cluster'],
+              doc.tr(n['disposition'])] for n in result['needs']])
+    for n in result['needs']:
+        doc.heading(2, n['id'] + ': ' + n['summary'], 'need-' + n['id'])
+        doc.paragraph(doc.tr('Disposition') + ': ' + doc.tr(n['disposition']))
+        for key in CLAIM_FIELDS:
+            claim = n['claims'][key]
+            doc.heading(3, doc.tr(key) + ' · ' + doc.tr(claim['basis']))
+            doc.paragraph(claim['text'])
+            doc.links('Support', selected.references(doc, claim['support']), f'evidence.{kind}')
+        doc.links('Counterevidence', selected.references(doc, n['counterevidence']), f'evidence.{kind}')
+        doc.items(n['limitations'])
+    return doc.finish()
+
+
 def render(directory: PathInput, report: JSONValue, output_format: str) -> JSONObject:
     directory = Path(directory)
     with store.lock(directory):
@@ -419,9 +459,16 @@ def render(directory: PathInput, report: JSONValue, output_format: str) -> JSONO
         try:
             store.write_json(temporary / 'study.json', state)
             store.write_json(temporary / 'report.json', report)
+            if report.get('need_ids'):
+                need_pool = pool(state, report)
+                store.write_json(temporary / 'needs.json', need_pool)
+                (temporary / 'needs.csv').write_text(csv_text(need_pool), encoding='utf-8')
             formats = ('md', 'html') if output_format == 'both' else (output_format,)
+            builders = [('report', document), ('evidence', evidence_document)]
+            if report.get('need_ids'):
+                builders.append(('needs', needs_document))
             for kind in formats:
-                for name, build in (('report', document), ('evidence', evidence_document)):
+                for name, build in builders:
                     with (temporary / f'{name}.{kind}').open('w', encoding='utf-8') as handle:
                         handle.write(build(state, report, kind))
                         handle.flush()
@@ -433,6 +480,8 @@ def render(directory: PathInput, report: JSONValue, output_format: str) -> JSONO
                 shutil.rmtree(temporary)
     resolved = final.resolve()
     artifacts = {f'{name}_{kind}': str(resolved / f'{name}.{kind}')
-                 for name in ('report', 'evidence') for kind in formats}
+                 for name, _ in builders for kind in formats}
+    if report.get('need_ids'):
+        artifacts.update({f'needs_{kind}': str(resolved / f'needs.{kind}') for kind in ('json', 'csv')})
     return {'ok': True, 'directory': str(resolved), 'revision': state['revision'],
             'formats': list(formats), 'artifacts': artifacts}

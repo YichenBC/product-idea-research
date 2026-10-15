@@ -143,8 +143,10 @@ def iso_date(value: Any, path: str) -> None:
 
 def source(value: Any) -> None:
     obj(value, ('id', 'title', 'url', 'platform', 'source_type', 'published_at', 'accessed_at',
-                'language', 'access', 'group_id', 'context', 'excerpts', 'limitations'), 'source')
+                'language', 'access', 'group_id', 'context', 'excerpts', 'limitations'), 'source', optional=('parent_source_id',))
     identifier(value['id'], 'source.id')
+    if 'parent_source_id' in value:
+        identifier(value['parent_source_id'], 'source.parent_source_id')
     for key in ('title', 'platform', 'language', 'group_id', 'context'):
         string(value[key], f'source.{key}')
     require(value['source_type'] in ('post', 'comment', 'review', 'official', 'article', 'provided'),
@@ -190,14 +192,14 @@ def run(value: Any, sources: Mapping[str, JSONObject], has_brief: bool) -> None:
 
 def study(value: Any) -> None:
     obj(value, ('schema_version', 'title', 'revision', 'recipe', 'personas', 'interviews'), 'study',
-        optional=('created_at', 'updated_at', 'brief', 'sources', 'runs'))
+        optional=('created_at', 'updated_at', 'brief', 'sources', 'runs', 'needs'))
     require(type(value['schema_version']) is int and value['schema_version'] == 1, 'study: unsupported schema_version')
     string(value['title'], 'study.title')
     integer(value['revision'], 'study.revision')
     for key in ('created_at', 'updated_at'):
         if key in value:
             string(value[key], f'study.{key}')
-    for key in ('personas', 'interviews', 'sources', 'runs'):
+    for key in ('personas', 'interviews', 'sources', 'runs', 'needs'):
         array(value.get(key, []), f'study.{key}')
     ids: set[str] = set()
 
@@ -227,8 +229,25 @@ def study(value: Any) -> None:
         source(item)
         register(item)
         sources[item['id']] = item
+    for item in sources.values():
+        seen = {item['id']}
+        current = item
+        while 'parent_source_id' in current:
+            parent_id = current['parent_source_id']
+            require(parent_id in sources, 'source.parent_source_id: unknown source')
+            require(parent_id not in seen, 'source.parent_source_id: cycle')
+            parent = sources[parent_id]
+            require(parent['group_id'] == item['group_id'], 'source.parent_source_id: different discussion family')
+            seen.add(parent_id)
+            current = parent
+    runs = {}
     for item in value.get('runs', []):
         run(item, sources, value.get('brief') is not None)
+        register(item)
+        runs[item['id']] = item
+    from .discovery import validate_need
+    for item in value.get('needs', []):
+        validate_need(item, runs, sources)
         register(item)
 
 
@@ -259,7 +278,7 @@ def references(value: Any, path: str, interviews: Mapping[str, JSONObject],
 
 def report(value: Any, state: Study) -> None:
     obj(value, ('title', 'study_revision', 'status', 'summary', 'interview_ids', 'findings', 'next_steps', 'limitations'),
-        'report', optional=('run_ids', 'comparisons', 'opportunities'))
+        'report', optional=('run_ids', 'comparisons', 'opportunities', 'need_ids'))
     for key in ('title', 'summary'):
         string(value[key], f'report.{key}')
     integer(value['study_revision'], 'report.study_revision')
@@ -278,6 +297,11 @@ def report(value: Any, state: Study) -> None:
     runs = [r for r in state.get('runs', []) if r['id'] in selected_runs]
     source_ids = {i for r in runs for i in r['source_ids']}
     sources = {s['id']: s for s in state.get('sources', []) if s['id'] in source_ids}
+    strings(value.get('need_ids', []), 'report.need_ids', unique=True)
+    needs = {n['id']: n for n in state.get('needs', [])}
+    for ident in value.get('need_ids', []):
+        require(ident in needs, 'report.need_ids: unknown need')
+        require(needs[ident]['run_id'] in selected_runs, 'report.need_ids: need run is not selected')
     if selected:
         covered = {i['persona_id'] for i in interviews.values()}
         require(state['recipe'] is not None and len(covered) <= state['recipe']['persona_count'],
@@ -320,7 +344,10 @@ def report(value: Any, state: Study) -> None:
     array(value.get('opportunities', []), 'report.opportunities')
     for opportunity in value.get('opportunities', []):
         obj(opportunity, ('title', 'audience', 'problem', 'alternative', 'proposal', 'priority', 'rationale',
-                          'support', 'risks', 'validation'), 'opportunity')
+                          'support', 'risks', 'validation'), 'opportunity', optional=('need_ids',))
+        strings(opportunity.get('need_ids', []), 'opportunity.need_ids', unique=True)
+        require(set(opportunity.get('need_ids', [])) <= set(value.get('need_ids', [])),
+                'opportunity.need_ids: need is not selected')
         for key in ('title', 'audience', 'problem', 'alternative', 'proposal', 'rationale', 'validation'):
             string(opportunity[key], f'opportunity.{key}')
         require(opportunity['priority'] in ('test_now', 'watch', 'drop'), 'opportunity.priority: invalid priority')

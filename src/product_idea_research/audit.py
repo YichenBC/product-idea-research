@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 import unicodedata
+import re
 from urllib.parse import unquote_plus, urlsplit, urlunsplit
 
 from .types import JSONObject, Study
@@ -15,6 +16,10 @@ def canonical_url(url: str) -> str:
     v.source_url(url)
     parts = urlsplit(url)
     host = parts.hostname.lower()
+    if host in ('x.com', 'www.x.com', 'twitter.com', 'www.twitter.com', 'mobile.twitter.com'):
+        match = re.fullmatch(r'/(?:[^/]+|i/web)/status/([0-9]+)/?', parts.path)
+        if match:
+            return 'https://x.com/i/web/status/' + match.group(1)
     if ':' in host:  # Preserve valid IPv6 authority syntax.
         host = f'[{host}]'
     port = parts.port

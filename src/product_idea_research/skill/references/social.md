@@ -1,5 +1,8 @@
 # Social research: statements in context
 
+For broad need finding and comment sweeps, first read [Discovery](discovery.md).
+For host MCP/browser route selection, read [Access](access.md).
+
 ## Turn the question into a sampling plan
 
 Identify the task, who performs/pays/approves it, the trigger, market/language and

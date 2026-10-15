@@ -93,7 +93,7 @@ def initialize(directory: PathInput, title: str) -> Study:
 
 
 def ingest(directory: PathInput, batch: JSONValue) -> Study:
-    v.obj(batch, (), 'batch', optional=('recipe', 'personas', 'interviews', 'brief', 'sources', 'runs'))
+    v.obj(batch, (), 'batch', optional=('recipe', 'personas', 'interviews', 'brief', 'sources', 'runs', 'needs'))
     batch = cast(JSONObject, batch)
     v.require(bool(batch), 'batch: at least one field is required')
     with lock(directory):
@@ -104,7 +104,7 @@ def ingest(directory: PathInput, batch: JSONValue) -> Study:
                 validate(batch[key])
                 v.require(merged.get(key) is None or merged[key] == batch[key], f'{key}: immutable conflict')
                 merged[key] = batch[key]
-        for key in ('personas', 'interviews', 'sources', 'runs'):
+        for key in ('personas', 'interviews', 'sources', 'runs', 'needs'):
             if key not in batch:
                 continue
             v.array(batch[key], f'batch.{key}')

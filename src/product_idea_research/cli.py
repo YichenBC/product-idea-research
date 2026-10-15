@@ -13,6 +13,7 @@ from . import __version__, store, validation as v
 from .install import install
 from .audit import audit
 from .render import render
+from .discovery import pool
 from .types import JSONObject, Study
 
 
@@ -40,6 +41,9 @@ def parser() -> Parser:
     evidence = sub.add_parser('audit', help='Explain evidence coverage and duplication')
     evidence.add_argument('directory', type=Path)
     evidence.add_argument('--report', type=Path)
+    needs = sub.add_parser('pool', help='Inspect demand cards, dispositions and task clusters')
+    needs.add_argument('directory', type=Path)
+    needs.add_argument('--report', type=Path)
     output = sub.add_parser('render', help='Create an immutable report snapshot')
     output.add_argument('directory', type=Path)
     output.add_argument('--report', required=True, type=Path)
@@ -60,7 +64,7 @@ def status(state: Study) -> JSONObject:
             'interviews': len(state['interviews']),
             'interviewed_personas': len({i['persona_id'] for i in state['interviews']}),
             'brief_id': state['brief']['id'] if state.get('brief') else None,
-            'sources': len(state.get('sources', [])), 'runs': len(state.get('runs', [])),
+            'needs': len(state.get('needs', [])), 'sources': len(state.get('sources', [])), 'runs': len(state.get('runs', [])),
             'modules': dict(sorted(Counter(r['module'] for r in state.get('runs', [])).items()))}
 
 
@@ -76,9 +80,11 @@ def execute(args: argparse.Namespace) -> JSONObject:
     with store.lock(args.directory):
         state = store.load(args.directory)
         draft = None
-        if args.command in ('check', 'audit') and args.report:
+        if args.command in ('check', 'audit', 'pool') and args.report:
             draft = store.read_json(args.report)
             v.report(draft, state)
+        if args.command == 'pool':
+            return pool(state, draft)
         if args.command == 'audit':
             return audit(state, draft)
         return status(state)

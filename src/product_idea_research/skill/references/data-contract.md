@@ -378,3 +378,49 @@ object mapping `report_md`, `report_html`, `evidence_md`, and `evidence_html` to
 absolute file paths. Only the requested formats are present. These paths refer to
 the published snapshot, not a temporary directory. Use them directly for local
 file links; keep relative links inside the generated report/evidence pair unchanged.
+
+
+## Demand discovery additions (v0.4)
+
+Existing schema_version=1 remains compatible. `needs` is an optional study/batch
+collection. `source.parent_source_id` is optional: it must identify another saved
+source in the same group, with no parent cycles. It records ancestry, not guaranteed
+parent reading; preserve access/limitations. Do not invent a parent or comment URL.
+
+`product-idea-research pool DIR [--report REPORT.json]` returns need cards, clusters,
+source-family counts and dispositions. Without --report all stored cards are shown,
+including historical corrections; with --report only explicit `need_ids` are shown.
+
+A need has exactly these fields:
+
+```json
+{
+  "id": "need-1", "run_id": "social-1", "cluster": "subtitle-handoff",
+  "disposition": "candidate", "summary": "Deliver approved subtitles after a recut",
+  "claims": {
+    "actor": {"text": "Editor", "basis": "stated", "support": [{"source_id": "s1", "excerpt_id": "e1"}]},
+    "trigger": {"text": "Unknown", "basis": "unknown", "support": []},
+    "outcome": {"text": "Aligned subtitle delivery", "basis": "inferred", "support": [{"source_id": "s1", "excerpt_id": "e1"}]},
+    "workaround": {"text": "Unknown", "basis": "unknown", "support": []},
+    "friction": {"text": "Unknown", "basis": "unknown", "support": []},
+    "frequency": {"text": "Unknown", "basis": "unknown", "support": []},
+    "payment": {"text": "Unknown", "basis": "unknown", "support": []}
+  },
+  "counterevidence": [], "limitations": ["Single self-report; example schema only"]
+}
+```
+
+`run_id` must select an existing social run. `cluster` is nonempty text, not an
+algorithmic classification. Disposition is candidate/resolved/promotion/adjacent/unclear.
+Each of the seven claims requires text, basis and support. Stated/inferred requires
+at least one eligible full/excerpt reference in that run. Unknown requires no support.
+At least one claim must be source-backed. Counterevidence uses the same source
+reference format (possibly empty). Limitations requires at least one item. Synthetic
+interviews never support need fields. Structure cannot verify whether the text is true.
+
+Reports may specify `need_ids` (unique IDs of needs belonging to selected runs).
+Opportunity cards may specify `need_ids`, which must be a subset of the report's
+selection. Corrections use new IDs; select current cards to avoid counting history.
+With nonempty need_ids, render exports needs.json, needs.csv, needs.md and/or needs.html
+alongside existing outputs. CSV values beginning with formula markers receive an
+apostrophe; JSON retains original text. Share the whole directory for working links.

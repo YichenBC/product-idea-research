@@ -378,3 +378,6 @@ object mapping `report_md`, `report_html`, `evidence_md`, and `evidence_html` to
 absolute file paths. Only the requested formats are present. These paths refer to
 the published snapshot, not a temporary directory. Use them directly for local
 file links; keep relative links inside the generated report/evidence pair unchanged.
+
+
+Demand discovery v0.4 adds optional `needs`, `source.parent_source_id`, report/opportunity `need_ids`, and `pool`. The exact claim-level schema and selection rules are in [the packaged contract](../src/product_idea_research/skill/references/data-contract.md#demand-discovery-additions-v04). Selected demand cards export as JSON/CSV/Markdown/HTML with the report snapshot.

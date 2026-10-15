@@ -1,6 +1,6 @@
 ---
 name: product-idea-research
-description: Research user needs and competing solutions from public discussions or supplied materials, optionally explore concepts with simulated interviews, and deliver a sourced decision report. Supports standalone modules, combined studies and continuation in Codex or Claude Code.
+description: Discover product needs in real social posts and comments, preserve a demand pool, and research competing solutions from public or supplied materials, optionally explore concepts with simulated interviews, and deliver a sourced decision report. Supports standalone modules, combined studies and continuation in Codex or Claude Code.
 ---
 
 # Product Idea Research
@@ -20,7 +20,8 @@ handful of examples or pad the count with snippets and duplicate comments.
 
 | User's starting point | Work to perform | Read next |
 |---|---|---|
-| Public needs, complaints, discussion links, exported feedback | Social research | [Social research](references/social.md) |
+| Find needs, sweep posts/comments, build an opportunity pool | Demand discovery and social research | [Discovery](references/discovery.md), then [Social research](references/social.md) |
+| Specific discussion links or exported feedback | Social research | [Social research](references/social.md) |
 | A product, alternatives, pricing or positioning | Competitor research | [Competitors](references/competitors.md) |
 | A method, persona descriptions, concept stress test | Simulated interviews | [Personas and interviews](references/method.md) |
 | An idea needing an overall assessment | Choose useful modules; briefly state the scope | Only selected module references |
@@ -52,7 +53,9 @@ feedback export can be analyzed through the social module without live collectio
 5. For interviews, save the recipe and synthetic role cards before conducting
    interviews; ingest each interview as it finishes. Source-informed scenarios
    remain assumptions, and their simulated answers never become customer evidence.
-6. Read [reporting](references/reporting.md). Synthesize only selected runs and
+6. For demand discovery, persist field-level `needs`, inspect `pool DIR`, and select
+   `need_ids` for the report. Do not replace a requested pool with only a shortlist.
+   Read [reporting](references/reporting.md). Synthesize only selected runs and
    interviews into a single report draft; reconcile their disagreements. Add a
    comparison table or opportunity shortlist when useful, not to fill a template.
 7. Run `product-idea-research check DIR --report FILE` and
@@ -89,5 +92,6 @@ unchanged blocked request. Do not treat `complete` as “demand validated.”
   supplied material or collect personal biographies/contacts to make roles vivid.
 - Records are immutable. Use new IDs for corrections, select the revised runs in
   the next report, and retain history. Re-read changed evidence before updating a
-  stale report revision. Shared persona libraries and platform-specific crawlers
-  are not prerequisites and are not included.
+  stale report revision. Shared persona libraries and bundled platform crawlers
+  are not included. Discover usable host integrations and browser routes before
+  concluding that a requested source platform is inaccessible.
