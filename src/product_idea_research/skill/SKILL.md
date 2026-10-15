@@ -53,7 +53,7 @@ feedback export can be analyzed through the social module without live collectio
 5. For interviews, save the recipe and synthetic role cards before conducting
    interviews; ingest each interview as it finishes. Source-informed scenarios
    remain assumptions, and their simulated answers never become customer evidence.
-6. For demand discovery, persist field-level `needs`, inspect `pool DIR`, and select
+6. For demand discovery, persist field-level `needs`, inspect `pool DIR --review`, and select
    `need_ids` for the report. Do not replace a requested pool with only a shortlist.
    Read [reporting](references/reporting.md). Synthesize only selected runs and
    interviews into a single report draft; reconcile their disagreements. Add a

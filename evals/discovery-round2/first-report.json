@@ -1,0 +1,471 @@
+{
+  "title": "个人 agent Web 产品机会：先卖交付，再决定是否做订阅",
+  "study_revision": 9,
+  "status": "partial",
+  "summary": "优先试卖两种窄交付：客户批准译稿的字幕对齐包、卖家月度数据整理与初始设置包。自由职业者的版本变更归档值得观察，但大量痛点来自范围约定和执行，通用项目管理软件价值不足。需求池保存27张卡、11个任务簇，包含已解决、推广与不明确线索；这是机会筛选，不是市场验证。",
+  "interview_ids": [],
+  "run_ids": [
+    "run-video",
+    "run-freelance",
+    "run-seller",
+    "browser-social-1",
+    "fw-social-video",
+    "fw-social-freelance",
+    "fw-social-seller",
+    "fw-competitors"
+  ],
+  "need_ids": [
+    "n-recut",
+    "n-style",
+    "n-style-solved",
+    "n-align",
+    "n-caption-batch",
+    "n-burnt",
+    "n-free",
+    "n-variants",
+    "n-mobile",
+    "n-book-setup",
+    "n-monthly",
+    "n-multichannel",
+    "n-sheet-enough",
+    "n-beginner",
+    "n-template-paid",
+    "n-sync",
+    "n-revision",
+    "n-attribution",
+    "n-weekly",
+    "n-consolidate",
+    "n-stalled",
+    "n-fpromo",
+    "n-spromo",
+    "n-bookpromo",
+    "n-video-cost",
+    "n-video-preview",
+    "n-vietnamese"
+  ],
+  "findings": [
+    {
+      "id": "f-align",
+      "kind": "inference",
+      "statement": "字幕机会更具体地落在“保留客户批准译文并对齐”，而非再造通用翻译器。西语教学项目作者最后用Excel人工装配，报告每15分钟视频约需1小时；他也计划以后先让译者填定时表格。另一越南语替换案例只佐证任务存在，不足以佐证相同痛点。",
+      "support": [
+        {
+          "source_id": "fw-v3-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "fw-v3-c21",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "li-subtitles",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e3"
+        }
+      ],
+      "limitations": [
+        "历史单一痛点案例；新流程可能足以解决；越南语材料由父研究者读取且保存引文很短。"
+      ]
+    },
+    {
+      "id": "f-seller",
+      "kind": "inference",
+      "statement": "卖家更可能需要把已经存在的工具配置好、解释并整理数据，而非又一套账务系统。一个作者有Wave账户却没完成设置；跨渠道作者后来找了整理服务。相反，有每月100多单的卖家认为复制粘贴到表格、每月整理几小时已足够。",
+      "support": [
+        {
+          "source_id": "fw-s2-c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s2-c11",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "fw-s3-c5",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "fw-s3-c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s6-c8",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "服务推荐可能含商业关联；不将月订单量当软件购买阈值；不提供税务判断。"
+      ]
+    },
+    {
+      "id": "f-payment",
+      "kind": "source",
+      "statement": "现有替代有明确的支付自述：同帖评论者称通过App Store支付QuickBooks，并称每月25美元；另一个人说花40英镑买了Madeonthecommon模板。这是历史支出自述，不是当前官方价格，也不是新产品的预算。",
+      "support": [
+        {
+          "source_id": "fw-s2-c6",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s2-c8",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s6-c10",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s6-c10",
+          "excerpt_id": "e2"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "没有付款凭证；£40模板不是Paper and Spark；其他作者“可考虑付费”、报价和生成token成本须分开。"
+      ]
+    },
+    {
+      "id": "f-revision",
+      "kind": "inference",
+      "statement": "交付变更有真实摩擦，但“增加一个评论入口”不足以解决。技术写作者已有两轮约定却回查历史修订来厘清责任；另有作者用周报减少方向偏差。可测试的窄任务是整理版本差异、原约定和待客户确认项，由人判断归责。",
+      "support": [
+        {
+          "source_id": "fw-f3-post",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "fw-f3-post",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "fw-f3-c33",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "fw-f4-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-f1-c22",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "fw-f1-c22",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "fw-f3-c18",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "不保证客户守约或付款，不以AI自动决定争议责任。"
+      ]
+    },
+    {
+      "id": "f-exclude",
+      "kind": "inference",
+      "statement": "暂不优先通用字幕翻译、低量卖家的全套订阅系统或视频生成修复平台。原材料有免费诉求、表格已足够和服务方推广；AI生成成本高尚未说明个人可控制的技术切入点。订单变体履约与移动库存继续保留，但目前各仅一个讨论家族。",
+      "support": [
+        {
+          "source_id": "v1-post",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "vv0-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s3-c17",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s1-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s2-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "x-generations",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "fw-s6-c10",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s6-c10",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "不做判断限于本轮证据，不表示不存在市场。"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "alternative": "已定时译稿表格 + Excel / Word",
+      "category": "manual",
+      "dimension": "保持客户批准译文与可校对的对应关系",
+      "assessment": "原作者最后采用Excel装配并计划改造上游译者交接；这是新产品必须赢过的强基线。",
+      "support": [
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "fw-v3-c9",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "历史工作流自述，未测新工具。"
+      ]
+    },
+    {
+      "alternative": "现成卖家表格 + 教程 / 记账员设置",
+      "category": "direct",
+      "dimension": "月度整理和上手成本",
+      "assessment": "用户报告跨渠道表格足够；官方目录仍列Etsy Seller Spreadsheet。切换理由必须是更少设置/核对工作，不能只是把表格搬到Web。",
+      "support": [
+        {
+          "source_id": "fw-s3-c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s3-c19",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "official-ps",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "官方目录不是独立用户评价；未购买测试。"
+      ]
+    },
+    {
+      "alternative": "Frame.io / Google Doc / 直接沟通",
+      "category": "indirect",
+      "dimension": "反馈整理与范围确认",
+      "assessment": "Frame.io已有评论导出；评论者提到Google Doc清单；可先用已有导出测试变更整理，避免要求客户迁移。",
+      "support": [
+        {
+          "source_id": "official-frame",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-f1-c22",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "fw-f1-c22",
+          "excerpt_id": "e3"
+        }
+      ],
+      "limitations": [
+        "没有证明这些工具缺少任何特定能力；未进行功能对比测试。"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "批准译稿 → 可验收字幕交付包",
+      "audience": "有已批准多语稿的课程剪辑者/小代理",
+      "problem": "人工把译稿装入已有时间轴，且不能擅自重译",
+      "alternative": "先定时再翻译的表格交接；人工Excel装配",
+      "proposal": "上传SRT+指定译稿，返回对齐SRT、未匹配句和差异报告。agent提出映射，人确认断句、语义和时轴；目标客户保留最终语言验收。测试价$49/10分钟，模型$1–3及人工20–40分钟×$30/小时均为假设。以剪辑社区的自愿样例试用获客，尚未联系。",
+      "priority": "test_now",
+      "rationale": "约束明确、可交付文件可检查；先用窄任务测试节省时间，尚不足以推出通用SaaS。",
+      "support": [
+        {
+          "source_id": "fw-v3-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "fw-v3-c21",
+          "excerpt_id": "e1"
+        }
+      ],
+      "need_ids": [
+        "n-align",
+        "n-vietnamese",
+        "n-recut"
+      ],
+      "risks": [
+        "现成表格交接可能更便宜；外语审校成本可能超过价格；只有一个独立痛点案例。"
+      ],
+      "validation": "3个真实任务中至少2个完成付费且核对时间减半；不满足则停止。"
+    },
+    {
+      "title": "卖家月度数据清理与初始配置包",
+      "audience": "有多渠道CSV或现成账务账户但设置未完成的独立卖家",
+      "problem": "格式合并、类别和可追溯检查耗时，现有工具未用好",
+      "alternative": "Paper and Spark表格、既有记账软件、记账员培训",
+      "proposal": "从授权CSV生成可追溯分类草稿、差异清单和月报；人审核映射与异常，税务分类交给合格人员。先卖$99/首月整理作为假设；软件成本$1–5加人工1–2小时×$30/小时，未验证。可通过卖家教程样例与记账服务合作寻找自愿客户，未联系。",
+      "priority": "test_now",
+      "rationale": "多家族出现设置与整理任务；优先按次服务，免费表格和一次性模板限制订阅空间。",
+      "support": [
+        {
+          "source_id": "fw-s2-c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s2-c11",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "fw-s3-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s3-c19",
+          "excerpt_id": "e1"
+        }
+      ],
+      "need_ids": [
+        "n-book-setup",
+        "n-monthly",
+        "n-multichannel",
+        "n-beginner",
+        "n-sheet-enough",
+        "n-template-paid"
+      ],
+      "risks": [
+        "已有表格足够；服务设置可能一次性；财务错误需人工审查；平台CSV改版带来维护成本。"
+      ],
+      "validation": "3家中2家付费并第二个月复用；现有表格教程等效则只做设置服务。"
+    },
+    {
+      "title": "交付版本与范围变更说明包",
+      "audience": "有多稿长文或设计交付的自由职业者",
+      "problem": "回查修改原因并整理待客户确认事项",
+      "alternative": "合同、周报、Google Doc清单、Frame.io导出",
+      "proposal": "上传双方已授权的范围文件、版本和反馈导出；agent整理差异与来源，人判断是否计费并发给客户。测试价$39/项目，解析<$1加30分钟人工为假设；先在自由职业者社区展示匿名示例，不要求客户改用新平台。",
+      "priority": "watch",
+      "rationale": "有具体回查任务，但合同执行与关系问题比工具更突出，必须先证实文件整理本身值得付费。",
+      "support": [
+        {
+          "source_id": "fw-f3-post",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "fw-f3-c33",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-f4-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "need_ids": [
+        "n-attribution",
+        "n-consolidate",
+        "n-stalled",
+        "n-revision",
+        "n-weekly"
+      ],
+      "risks": [
+        "AI可能误判责任；客户不回复无法靠工具修复；已有软件足够。"
+      ],
+      "validation": "先回放一个已完成项目，核对全部指向来源；没人为节省的整理时间付费则停止。"
+    },
+    {
+      "title": "通用免费字幕翻译包装",
+      "audience": "想看外语内容的低预算用户",
+      "problem": "生成、翻译或提取字幕",
+      "alternative": "免费工具、既有编辑器和人工流程",
+      "proposal": "本轮不开发；只保留烧录OCR与批准译稿两种不同任务，避免把它们混成通用翻译。",
+      "priority": "drop",
+      "rationale": "多条原始诉求明确免费或便宜，尚无新通用Web订阅的切换与付款证据。",
+      "support": [
+        {
+          "source_id": "v1-post",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "vv0-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "need_ids": [
+        "n-burnt",
+        "n-free"
+      ],
+      "risks": [
+        "免费意向样本不排除其他付费人群。"
+      ],
+      "validation": "只有找到有截止日和已付人工成本的具体交付再重开。"
+    },
+    {
+      "title": "订单变体履约单与移动库存",
+      "audience": "有变体订单的手工作坊及已有库存表的转售卖家",
+      "problem": "变体导出难用；外出更新现有Excel不便",
+      "alternative": "原始导出表和现成库存应用",
+      "proposal": "保留为两个独立任务：一次变体CSV转履约清单，或一次Excel导入移动表单。agent映射字段，人核对，不自动改动库存。",
+      "priority": "watch",
+      "rationale": "个人可做，但各只有一个原始讨论家族，不能把它们合并成已验证库存平台。",
+      "support": [
+        {
+          "source_id": "s1-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s1-c2",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "need_ids": [
+        "n-variants",
+        "n-mobile",
+        "n-sync"
+      ],
+      "risks": [
+        "现成方案可能满足；商家可达性与真实付费未验证；同步接口维护可能超出个人能力。"
+      ],
+      "validation": "各找到第二个真实任务并取得一份授权去标识样例；不能重现明确数据错误或节省时间则停止。"
+    }
+  ],
+  "next_steps": [
+    "字幕：找3个已有双语稿和最终视频的真实任务，由原客户或合格审校者验收；对比现有表格流程，2个愿按测试价购买且核对耗时至少减少一半才继续。出现关键漏句、擅改批准译文或时轴错误未被标出即停止自动交付。",
+    "卖家：用合成或经授权去标识的多渠道CSV做可复核样例，再测试3家商店的一月整理；至少2家付费、第二个月再次使用，且能追溯每个差异才进入持续产品化。若现成表格加一次讲解同样好，改卖设置服务而不做订阅。",
+    "自由职业者：在一个真实结束项目上回放导出反馈与版本，不接入客户消息账户；若当事人能更快整理变更且愿付费，再开发上传型Web工具。若主要阻力仍是拒绝执行边界，停止软件路线。"
+  ],
+  "limitations": [
+    "本轮新增12篇Reddit正文、78条相关评论，均有原帖和评论永久链接；继承的78条原始来源含13帖65评论，未算新增。另有父研究者读取的X/LinkedIn保留材料3帖3评论，未冒充本代理浏览记录。没有达到数百条的广泛调查规模。",
+    "选中公开社媒共28个可引用讨论家族；它们不是28位独立买家。英文Reddit占主导，X/LinkedIn只作小样本补充，无中文市场代表性。",
+    "保留候选、解决方案、推广和未知；未读完隐藏评论。4个候选原帖请求超时未计数，Subtitle Edit官方正文未取到，竞争方案未实测，因此整体保持partial。",
+    "报价、单位成本、转化门槛、获客渠道与可行性均为研究者提出的实验假设；没有外联、支付、发布或私密数据上传。"
+  ]
+}

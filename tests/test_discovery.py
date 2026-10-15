@@ -111,3 +111,33 @@ class Discovery(Harness):
         cluster = self.cli('pool', self.study)['clusters'][0]
         self.assertEqual(cluster['reported_families'], 2)
         self.assertEqual(cluster['discussion_families'], 1)
+
+    def test_review_joins_exact_excerpts_and_respects_report_selection(self):
+        self.initialize()
+        b = research_batch()
+        b['sources'][0]['excerpts'].append({
+            'id': 'e2', 'text': 'I might pay, but have not bought it.',
+            'locator': 'Author follow-up'})
+        self.ingest(b)
+        card = need()
+        card['claims']['payment'] = {
+            'text': 'Conditional interest, no completed payment', 'basis': 'stated',
+            'support': [{'source_id': 's1', 'excerpt_id': 'e2'}]}
+        card['counterevidence'] = [{'source_id': 's1', 'excerpt_id': 'e1'}]
+        self.ingest({'needs': [card, need('unselected')]})
+        before = (self.study / 'research.json').read_bytes()
+        draft = self.write('report.json', research_report() | {
+            'study_revision': 2, 'need_ids': ['n1']})
+        result = self.cli('pool', self.study, '--report', draft, '--review')
+        self.assertEqual([n['id'] for n in result['claim_review']], ['n1'])
+        review = result['claim_review'][0]
+        self.assertEqual(review['claims']['payment']['evidence'][0]['text'],
+                         'I might pay, but have not bought it.')
+        self.assertEqual(review['claims']['payment']['evidence'][0]['locator'],
+                         'Author follow-up')
+        self.assertEqual(review['claims']['payment']['evidence'][0]['source_id'], 's1')
+        self.assertEqual(review['claims']['frequency']['evidence'], [])
+        self.assertEqual(review['counterevidence'][0]['text'],
+                         b['sources'][0]['excerpts'][0]['text'])
+        self.assertEqual(before, (self.study / 'research.json').read_bytes())
+        self.assertNotIn('claim_review', self.cli('pool', self.study))

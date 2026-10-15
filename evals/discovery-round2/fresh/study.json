@@ -1,0 +1,2001 @@
+{
+  "schema_version": 1,
+  "title": "独立内容服务商：公开社媒需求发现与竞品核查",
+  "revision": 5,
+  "recipe": null,
+  "personas": [],
+  "interviews": [],
+  "brief": {
+    "id": "brief",
+    "question": "从真实社媒原帖与评论寻找独立播客、视频剪辑、文案服务商可由一人借助agent实现的Web产品需求，并独立核查竞品。",
+    "language": "zh-CN",
+    "constraints": [
+      "只读公开网页，不外联、不购买、不登录绕过",
+      "至少3篇新读原帖、20条永久链接评论；不模拟访谈",
+      "优先2025/2026；未知日期不猜；同一讨论不算多个客户",
+      "非Reddit每页累计直接引文不超过25英文词",
+      "输出仅在.eval-runs/discovery-fresh"
+    ]
+  },
+  "sources": [
+    {
+      "id": "p1",
+      "title": "How to Handle DIY Copy Clients",
+      "url": "https://www.reddit.com/r/copywriting/comments/1lej6p6/how_to_handle_diy_copy_clients/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2025-06-18",
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "copy-diy",
+      "context": "已读原帖正文及8条人工评论；初入行文案服务者希望节省编辑时间，未看到作者接受解决方案；日期来自本次搜索呈现的原帖日期及原页日期归档。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Client keeps changing their mind about things and asking me to re-write... then ends up just doing their own draft and using that anyway.",
+          "locator": "https://www.reddit.com/r/copywriting/comments/1lej6p6/how_to_handle_diy_copy_clients/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "Looking for Better Podcast Editing Software",
+      "url": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/looking_for_better_podcast_editing_software_any/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2025-02-23",
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-template",
+      "context": "已读完整正文：Riverside→Auphonic→Podcastle→Acast；本人是否商业服务商不明，属于相邻播客创作者。作者后续说替代模板方案与现状相同。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Ideally, I’d like to save a template (intro/outro music, interval music, etc.) and just swap out the new recording each week, but Riverside doesn’t seem capable of this.",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/looking_for_better_podcast_editing_software_any/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "I hire editors for a living and honestly most of the revisions I ask for are my fault",
+      "url": "https://www.reddit.com/r/editors/comments/1tn3lhc/i_hire_editors_for_a_living_and_honestly_most_of/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-05-25",
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "video-brief",
+      "context": "完整正文自报小型媒体公司买方；建议先锁brief、书面约定改稿轮次；部分评论质疑表达方式，无法验证身份，不因此判定为机器人。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I run a small media company. We put out a lot of video every month so I'm basically on the client side of the table every single day.",
+          "locator": "https://www.reddit.com/r/editors/comments/1tn3lhc/i_hire_editors_for_a_living_and_honestly_most_of/"
+        },
+        {
+          "id": "e2",
+          "text": "They were about me not actually knowing what I wanted until I saw a version of it.",
+          "locator": "https://www.reddit.com/r/editors/comments/1tn3lhc/i_hire_editors_for_a_living_and_honestly_most_of/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "What does your editing process typically involve?",
+      "url": "https://www.reddit.com/r/podcasting/comments/1inlvvk/what_does_your_editing_process_typically_involve/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2025-02-12",
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-process",
+      "context": "完整问题及下列4条详细回复已读；讨论混合自用创作者、接客服务商和推广者。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I'm curious to know how others are editing their audio. Do you tend to spend a lot in it?",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1inlvvk/what_does_your_editing_process_typically_involve/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ]
+    },
+    {
+      "id": "c1",
+      "title": "letsryan: 文案反馈回复",
+      "url": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mygpjbs/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "copy-diy",
+      "context": "对原帖建议事先限轮次、超出收费；是建议，不是已收款凭证。 原帖p1已读。评论精确日期未知，保留null。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "If theyre overloading with feedback and rewrites, establish a set number that come with each project, and a schedule for extra costs and fees for any above and beyond.",
+          "locator": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mygpjbs/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p1"
+    },
+    {
+      "id": "c2",
+      "title": "Curious_Fail_3723: 文案反馈回复",
+      "url": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mygn4qr/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "copy-diy",
+      "context": "建议合同与解除合作；自报做过web agency，非新软件购买需求。 原帖p1已读。评论精确日期未知，保留null。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Do you have a contract stipulating things like number of free revisions or a kill fee?",
+          "locator": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mygn4qr/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p1"
+    },
+    {
+      "id": "c3",
+      "title": "OldGreyWriter: 文案反馈回复",
+      "url": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mygqo9e/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "copy-diy",
+      "context": "认为客户控制欲或合作不匹配；建议对话或接受角色，反驳软件能单独解决。 原帖p1已读。评论精确日期未知，保留null。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Sounds like they don't want to give up any control, which begs the question of why they need a writer in the first place.",
+          "locator": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mygqo9e/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p1"
+    },
+    {
+      "id": "c4",
+      "title": "babutheocelot: 文案反馈回复",
+      "url": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mygnymy/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "copy-diy",
+      "context": "自报在签约范围文档中说明写作流程；随后建议包价项目限制修改轮次，是已用手工替代。 原帖p1已读。评论精确日期未知，保留null。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I typically put a “copywriting process” section in my scope of work when I sign a contract with a client, and walk them through it on the first call.",
+          "locator": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mygnymy/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p1"
+    },
+    {
+      "id": "c5",
+      "title": "deleted: 文案反馈回复",
+      "url": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/myljvu9/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "copy-diy",
+      "context": "账号已删但正文仍公开；合同建议，不把匿名建议当独立付费客户。 原帖p1已读。评论精确日期未知，保留null。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Set the terms before you start. Get the research notes – submit. 1 or 2 revisions. Done. Don't like it, don't hire.",
+          "locator": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/myljvu9/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p1"
+    },
+    {
+      "id": "c6",
+      "title": "Copyman3081: 文案反馈回复",
+      "url": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mylxvy1/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "copy-diy",
+      "context": "建议结束合作或迎合客户，体现问题可能属于关系而非工具。 原帖p1已读。评论精确日期未知，保留null。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I'd probably just drop them if possible.",
+          "locator": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mylxvy1/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p1"
+    },
+    {
+      "id": "c7",
+      "title": "Kelvin_TS_: 文案反馈回复",
+      "url": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mym2d8u/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "copy-diy",
+      "context": "建议把决策责任及研究依据说清；未提供实际转化数据或已执行案例。 原帖p1已读。评论精确日期未知，保留null。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Ask them “Do you think this is the best approach that will increase conversions? Because our data and research says otherwise”",
+          "locator": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/mym2d8u/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p1"
+    },
+    {
+      "id": "c8",
+      "title": "MouthTypo: 文案反馈回复",
+      "url": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/myn11lq/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "copy-diy",
+      "context": "完整评论讨论文案策略未达标及客户不懂反馈的可能；替代方案为面对面工作会、粗稿、A/B测试，不断言原帖作者能力差。 原帖p1已读。评论精确日期未知，保留null。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "F2F conversations are helpful so you can dig in on what’s not working and offer some different approaches",
+          "locator": "https://www.reddit.com/r/copywriting/comments/1lej6p6/comment/myn11lq/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p1"
+    },
+    {
+      "id": "c9",
+      "title": "evanponter: 播客模板回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/nceinyj/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-template",
+      "context": "自报Riverside录制后到Reaper复用模板，有现成可用办法。 原帖p2及可见上下文已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "That way, the music beds, intervals, and outro are already lined up. I just replace the episode audio and hit export.",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/nceinyj/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p2"
+    },
+    {
+      "id": "c10",
+      "title": "Beautiful-Fortune410: 播客模板回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/neprdpk/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-template",
+      "context": "原作者回应c9，明确替代软件没有消除跨工具步骤。 原帖p2及可见上下文已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Interesting. That's exactly what I do albeit with another programme but the process is the same.",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/neprdpk/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "c9"
+    },
+    {
+      "id": "c11",
+      "title": "wndrgrl555: 播客模板回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/meb3wgn/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-template",
+      "context": "自报使用Hindenburg 2；称收费且好用，不是发票或为新产品付费意愿。 原帖p2及可见上下文已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Not free, but excellent.",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/meb3wgn/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p2"
+    },
+    {
+      "id": "c12",
+      "title": "qminty: 播客模板回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/meg1nbc/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-template",
+      "context": "自报Audacity处理简单音频含intro/outro；只适用少量编辑，不能外推所有节目。 原帖p2及可见上下文已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I don't do a ton of editing for my audio files and I can usually have my editing done in 10 minutes.",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/meg1nbc/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p2"
+    },
+    {
+      "id": "c13",
+      "title": "Wonderful-Fix9346: 播客模板回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/p09t6c9/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-template",
+      "context": "后续评论称Riverside现在可复用；官方页进一步显示套餐与纯音频限制，因此不照单全收。日期仅相对时间，未知。 原帖p2及可见上下文已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "you can actually save show branding/intro/outro elements and reuse them across episodes in riverside now",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/p09t6c9/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p2"
+    },
+    {
+      "id": "c14",
+      "title": "Boring_Impress: 播客模板回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/mecgb1d/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-template",
+      "context": "自报多年用Audition，明确现状足够，不想为新工具迁移。 原帖p2及可见上下文已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I thought about giving some of the other more podcasting specific ones a try, but it’s hard to try something new when what I have isn’t broken.",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1iw4wrw/comment/mecgb1d/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p2"
+    },
+    {
+      "id": "c15",
+      "title": "Avast7: 视频brief回复",
+      "url": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onr88zw/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "video-brief",
+      "context": "自报agency雇剪辑师；建议明确意图后让专业者发挥，而不是机械规定每次操作。 原帖p3及相邻回复已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Be clear about the intent, the audience, the pacing, make sure your editor has all the assets they need to work their craft, then step aside.",
+          "locator": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onr88zw/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p3"
+    },
+    {
+      "id": "c16",
+      "title": "Longjumping-Hope5941: 视频brief回复",
+      "url": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onr8nhg/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "video-brief",
+      "context": "原作者跟进c15，支持目标与意图优先；不是第二个客户。 原帖p3及相邻回复已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "The times I gave intent instead of instructions are the times I got something better than what was even in my head.",
+          "locator": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onr8nhg/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "c15"
+    },
+    {
+      "id": "c17",
+      "title": "newMike3400: 视频brief回复",
+      "url": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onr85e7/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "video-brief",
+      "context": "完整长评论读到：多次改变brief压缩时间；包含夸张个人化表达，不把泛称当行业统计。 原帖p3及相邻回复已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "If you’re handing your guys three briefs they need more time",
+          "locator": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onr85e7/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p3"
+    },
+    {
+      "id": "c18",
+      "title": "newMike3400: 视频brief回复",
+      "url": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onr9u7t/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "video-brief",
+      "context": "同一评论者补充，应重新排期并解释时间或金钱代价；其half为修辞性经验说法，报告不计比例。 原帖p3及相邻回复已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Plus when told the tiny things they’re asking for will cost them money or time half of them will vanish.",
+          "locator": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onr9u7t/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "c17"
+    },
+    {
+      "id": "c19",
+      "title": "wrosecrans: 视频brief回复",
+      "url": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onu9623/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "video-brief",
+      "context": "针对c17反证：创造性迭代不可完全消除；应保留试验空间，合同给不确定性留余量。 原帖p3及相邻回复已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Some amount of “thinking out loud” as process is always going to be there.",
+          "locator": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/onu9623/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "c17"
+    },
+    {
+      "id": "c20",
+      "title": "JuniorSwing: 视频brief回复",
+      "url": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/ontpqt2/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "video-brief",
+      "context": "自报花时间理解模糊意见；仅此讨论中的具体任务线索。 原帖p3及相邻回复已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I know the problem is I’m spinning my wheels trying to figure out how to address notes like “smooth out shot” and “this vibe feels off”",
+          "locator": "https://www.reddit.com/r/editors/comments/1tn3lhc/comment/ontpqt2/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p3"
+    },
+    {
+      "id": "c21",
+      "title": "Endwin: 播客制作回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1inlvvk/comment/mce6rp4/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-process",
+      "context": "自用与cohost做节目，已设Reaper模板；寻找自动清理插件属于未付费愿望，不能认定为独立服务商。 原帖p4已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I’m currently looking into audio plugins that could help reduce editing time by automatically removing mouth noises, breaths, and off-mic inconsistencies.",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1inlvvk/comment/mce6rp4/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p4"
+    },
+    {
+      "id": "c22",
+      "title": "Perth_lad30: 播客制作回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1inlvvk/comment/mcef0fm/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-process",
+      "context": "自报为客户制作，使用环境SOP；末尾推广自己制作服务，保留推广标记。 原帖p4已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Audition. I produce for clients in all types of environments and settings. Once I've done one in that particular environment I set an SOP template.",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1inlvvk/comment/mcef0fm/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p4"
+    },
+    {
+      "id": "c23",
+      "title": "hendosyndrome: 播客制作回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1inlvvk/comment/mcf5gok/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-process",
+      "context": "自报多节目服务，使用Logic模板；提前指导主持人录音以减少后期，仍遇嘉宾录音质量问题。 原帖p4已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I work on a number of podcasts and each has its own template depending on the format / hosts / guests",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1inlvvk/comment/mcf5gok/"
+        },
+        {
+          "id": "e2",
+          "text": "I’m not fond of polishing turds so i try to take that out of the equation as much as I can but it’s often guest audio where I have to put in some extra effort.",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1inlvvk/comment/mcf5gok/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p4"
+    },
+    {
+      "id": "c24",
+      "title": "Gelissa_17: 播客制作回复",
+      "url": "https://www.reddit.com/r/podcasting/comments/1inlvvk/comment/mcsb3rg/",
+      "platform": "Reddit",
+      "source_type": "comment",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "full",
+      "group_id": "podcast-process",
+      "context": "自报关联推广；文字编辑删口头禅后加intro/outro，不作为独立买方需求。 原帖p4已读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I use eddy.headliner.app (affiliated!)",
+          "locator": "https://www.reddit.com/r/podcasting/comments/1inlvvk/comment/mcsb3rg/"
+        }
+      ],
+      "limitations": [
+        "公开自报，身份及经历未独立核实；仅计实际保存项目，不代表全串评论。"
+      ],
+      "parent_source_id": "p4"
+    },
+    {
+      "id": "o1",
+      "title": "Frame.io V4 Comments Panel",
+      "url": "https://help.frame.io/en/articles/9105278-comments-panel-overview",
+      "platform": "Official",
+      "source_type": "official",
+      "published_at": "2026-09-09",
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "o1",
+      "context": "已读评论面板说明；正文提供回复、标完成、按时间码排序和导出；本次只把摘录支持的导出与回复过滤限制作为主要对照。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "as a CSV, XML, Plain Text, or FIOJSON file.",
+          "locator": "Export Comments"
+        },
+        {
+          "id": "e2",
+          "text": "Replies will not populate in any filtering, sort, and search actions.",
+          "locator": "Search note"
+        }
+      ],
+      "limitations": [
+        "官方资料声明，未登录或动手测试；价格与能力可变。"
+      ]
+    },
+    {
+      "id": "o2",
+      "title": "Filestage voice to text",
+      "url": "https://help.filestage.io/de/articles/9465093-using-voice-to-text-ai-summary",
+      "platform": "Official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "o2",
+      "context": "英文地址工具访问失败；改读官方德语路径下英文正文，公开可访问。声音转文字与摘要受Business/Enterprise套餐限制；未声称是公共API。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "The system will automatically transcribe your speech and generate a concise summary.",
+          "locator": "How to leave a voice comment, step 4"
+        },
+        {
+          "id": "e2",
+          "text": "This feature is included exclusively in our Business and Enterprise plans.",
+          "locator": "Plan restriction"
+        }
+      ],
+      "limitations": [
+        "官方资料声明，未登录或动手测试；价格与能力可变。"
+      ]
+    },
+    {
+      "id": "o3",
+      "title": "Riverside brand setup",
+      "url": "https://support.riverside.com/hc/en-us/articles/22578708831901-Set-up-your-brand",
+      "platform": "Official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "o3",
+      "context": "已读完整官方操作页。官方默认片头片尾功能存在，但纯音频录音不显示Brand面板；不能因此说原帖需求全部解决。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Set up your default intro and outro",
+          "locator": "Step 7"
+        },
+        {
+          "id": "e2",
+          "text": "Pro, Grow, Webinar and Business",
+          "locator": "Plan"
+        },
+        {
+          "id": "e3",
+          "text": "The Brand panel does not appear for Audio only recordings.",
+          "locator": "Good to know"
+        }
+      ],
+      "limitations": [
+        "官方资料声明，未登录或动手测试；价格与能力可变。"
+      ]
+    },
+    {
+      "id": "o4",
+      "title": "Filestage Review Agents",
+      "url": "https://filestage.io/review-agents/",
+      "platform": "Official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "o4",
+      "context": "已读产品介绍、具体agent、人工批准边界与格式限制。自定义提示审阅已存在；未建立该agent对视频或音频的直接分析能力，不把普通视频审阅功能混同。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Custom Prompt Agent",
+          "locator": "Agent list"
+        },
+        {
+          "id": "e2",
+          "text": "Available on Business and Enterprise plans",
+          "locator": "Plan section"
+        },
+        {
+          "id": "e3",
+          "text": "Review Agents never sign off on anything.",
+          "locator": "Own every decision"
+        },
+        {
+          "id": "e4",
+          "text": "support documents, images, and PDF files.",
+          "locator": "FAQ file formats"
+        }
+      ],
+      "limitations": [
+        "官方资料声明，未登录或动手测试；价格与能力可变。"
+      ]
+    },
+    {
+      "id": "o5",
+      "title": "Filestage pricing",
+      "url": "https://filestage.io/pricing/",
+      "platform": "Official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "o5",
+      "context": "已读价格页。Free限制用于成本基线。Starter与Business显示美元数字，但页面同时呈现年/月切换，抓取文本不能确认激活计费周期，故不引用付费数额、不做单位经济核算。Business列API，尚未查端点权限；不依赖其API实现MVP。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "1 active project",
+          "locator": "Free"
+        },
+        {
+          "id": "e2",
+          "text": "5 new files per month",
+          "locator": "Free"
+        },
+        {
+          "id": "e3",
+          "text": "10 team members",
+          "locator": "Free"
+        },
+        {
+          "id": "e4",
+          "text": "Webhooks & API Access",
+          "locator": "Business"
+        },
+        {
+          "id": "e5",
+          "text": "Intake forms (Add-on)",
+          "locator": "Business"
+        }
+      ],
+      "limitations": [
+        "官方资料声明，未登录或动手测试；价格与能力可变。"
+      ]
+    },
+    {
+      "id": "o6",
+      "title": "Frame.io pricing",
+      "url": "https://frame.io/pricing/",
+      "platform": "Official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "o6",
+      "context": "已读免费及付费卡片。付费卡片显示15/25美元每席位每月并有年/月切换，但抓取不能确认切换状态；只引用零成本额度，不声称完整免费功能矩阵或付费月付价格。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Free",
+          "locator": "Plan"
+        },
+        {
+          "id": "e2",
+          "text": "$0",
+          "locator": "Free price"
+        },
+        {
+          "id": "e3",
+          "text": "Up to 2 members",
+          "locator": "Free limits"
+        },
+        {
+          "id": "e4",
+          "text": "2GB storage",
+          "locator": "Free limits"
+        },
+        {
+          "id": "e5",
+          "text": "Up to 2 projects",
+          "locator": "Free limits"
+        }
+      ],
+      "limitations": [
+        "官方资料声明，未登录或动手测试；价格与能力可变。"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "social-1",
+      "module": "social",
+      "status": "complete",
+      "objective": "有界发现：亲读四篇原帖并保存24条相关评论和上下文",
+      "method": "2026-10-16通过host web搜索找线索，再open原帖正文，逐个click评论时间链接核实永久链接。计数读取清单仅含p1-p4及c1-c24，其他页面顺带显示回复不计数；8条文案、6条模板、6条视频brief、4条播客制作。用4个group_id归并，不按点赞数或回复数估算买方。未穷尽折叠分支。未调用外部模型、未模拟访谈。",
+      "queries": [
+        "site:reddit.com/r/editors 2025 client feedback revisions freelance",
+        "site:reddit.com/r/podcasting 2025 editing clients workflow",
+        "site:reddit.com/r/copywriting 2025 client revisions freelance",
+        "site:reddit.com/r/editors/comments/ \"2025\" \"revisions\" \"client\"",
+        "site:reddit.com/r/editors/comments/ \"2026\" \"feedback\" \"client\""
+      ],
+      "source_ids": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5",
+        "c6",
+        "c7",
+        "c8",
+        "c9",
+        "c10",
+        "c11",
+        "c12",
+        "c13",
+        "c14",
+        "c15",
+        "c16",
+        "c17",
+        "c18",
+        "c19",
+        "c20",
+        "c21",
+        "c22",
+        "c23",
+        "c24"
+      ],
+      "limitations": [
+        "便利样本，仅英文Reddit；4个讨论不等于4个已验证客户，包含自用及推广",
+        "原帖优先2025/2026；评论精确日期未知，均为null，不从相对时间回推",
+        "仅有界读取，不声称读完全部折叠回复；平台覆盖与行业代表性有限"
+      ]
+    },
+    {
+      "id": "competitor-1",
+      "module": "competitor",
+      "status": "complete",
+      "objective": "核查最接近的反馈审批与播客模板替代，尤其防止把已存在能力当差异化",
+      "method": "独立搜索后打开官方文档与价格页；保存6条官方来源。Frame.io V4导出、Filestage语音摘要/Review Agents及套餐/格式条件、Riverside默认片头片尾与纯音频限制均查到正文。只做资料核查，无产品试用。英文Filestage帮助页有空壳/内部错误，使用官方其他语言路径和产品页恢复读取；价格切换不确定，付费金额留空，仅用明确免费额度。",
+      "queries": [
+        "site.support.frame.io V4 comments export resolve approvals version comparison",
+        "site:help.filestage.io AI review comments summary approval",
+        "site:support.riverside.fm brand kit intro outro reuse template",
+        "site:help.filestage.io \"AI\" \"comments\"",
+        "site:support.riverside.fm \"template\" \"intro\"",
+        "site:support.riverside.com \"brand\" \"intro\"",
+        "site:riverside.fm \"brand kit\" \"intro\""
+      ],
+      "source_ids": [
+        "o1",
+        "o2",
+        "o3",
+        "o4",
+        "o5",
+        "o6"
+      ],
+      "limitations": [
+        "官方声明未实测；仅有界覆盖三家，不证明市场无类似功能",
+        "付费套餐精确计费周期和音频处理API成本未建立，未做数值盈利预测",
+        "Filestage帮助页访问失败已换官方路径；未登录或绕过"
+      ]
+    }
+  ],
+  "needs": [
+    {
+      "id": "n1",
+      "run_id": "social-1",
+      "cluster": "brief-scope",
+      "disposition": "candidate",
+      "summary": "文案客户把反馈变成重写：先对齐修改目的与交付边界",
+      "claims": {
+        "actor": {
+          "text": "接客户文案项目的写作者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "客户改变想法并要求重写",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "减少无效返工并保留修改理由",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "跟随客户重写",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "反复重写后客户仍使用自己的版本",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c3",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c4",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c8",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "单条自报/建议；关联讨论中的多条回复不构成多个独立买方。"
+      ]
+    },
+    {
+      "id": "n2",
+      "run_id": "social-1",
+      "cluster": "brief-scope",
+      "disposition": "candidate",
+      "summary": "视频买方在看到成片后才知道要什么：锁定目的与变更记录",
+      "claims": {
+        "actor": {
+          "text": "小型媒体公司买方",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "看到版本后才形成具体想法",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "让brief的变化显式化，减少免费猜测",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "通过剪辑轮次继续思考需求",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未清楚想法就开始迭代",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "每月制作许多视频，但确切数未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c15",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c19",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "买方身份自报；同串作者跟进不算独立需求。",
+        "不能把帖主声称的轮次改善当受控实验。"
+      ]
+    },
+    {
+      "id": "n3",
+      "run_id": "social-1",
+      "cluster": "brief-scope",
+      "disposition": "candidate",
+      "summary": "把“感觉不对”变成待客户确认的问题，而非擅自生成剪辑指令",
+      "claims": {
+        "actor": {
+          "text": "接收剪辑反馈的人",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "收到smooth out shot / vibe feels off之类反馈",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "把意见拆成明确问题、预期与原始上下文",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "自己反复猜测意见的含义",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "理解模糊意见耗费精力",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c19",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "与n2来自同一串；只增加任务细节，不增加独立客户。"
+      ]
+    },
+    {
+      "id": "n4",
+      "run_id": "social-1",
+      "cluster": "podcast-assembly",
+      "disposition": "unclear",
+      "summary": "复用片头片尾但不再跨工具搬运：模板已有，端到端省步未确认",
+      "claims": {
+        "actor": {
+          "text": "每周更新录音的播客制作者，是否服务商未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "每周换入新的节目录音",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "复用片头片尾模板",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "另一软件做与Reaper建议相同的流程",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c10",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "换软件方案仍与原先过程相同",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c10",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "每周换入新录音",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c9",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c12",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c13",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "原作者没有确认最终解决；官方Riverside仅条件性覆盖，不能抹去音频限制。",
+        "商业服务商角色不确定。"
+      ]
+    },
+    {
+      "id": "n5",
+      "run_id": "social-1",
+      "cluster": "podcast-assembly",
+      "disposition": "resolved",
+      "summary": "长期Audition用户明确认为现有方案足够",
+      "claims": {
+        "actor": {
+          "text": "已用现有音频编辑软件的播客制作者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "考虑试用其他播客软件",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "维持足够好且熟悉的制作方式",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "继续用现有工具",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未陈述未解决摩擦；迁移理由不足",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "resolved指该用户当前满意，非证明所有播客需求已解决。"
+      ]
+    },
+    {
+      "id": "n6",
+      "run_id": "social-1",
+      "cluster": "audio-cleanup",
+      "disposition": "adjacent",
+      "summary": "自动去口腔音、呼吸、离麦不一致：未付费插件愿望",
+      "claims": {
+        "actor": {
+          "text": "正在找音频插件的制作者；独立服务商身份未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c21",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "清理音频花费时间",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c21",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "自动清理mouth noises/breaths/off-mic inconsistencies",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c21",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未知，摘录未给当前清理操作细节",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "希望降低编辑时间",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c21",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "自用播客背景，不能当专业服务商需求。",
+        "查找插件不等于愿意为新SaaS付费。"
+      ]
+    },
+    {
+      "id": "n7",
+      "run_id": "social-1",
+      "cluster": "guest-preflight",
+      "disposition": "candidate",
+      "summary": "多节目服务者在录制前排查嘉宾音频，减少后期补救",
+      "claims": {
+        "actor": {
+          "text": "多节目制作者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "嘉宾音频往往仍需额外处理",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "在录制前尽量消除后期修补",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "按格式、主持人、嘉宾使用不同模板",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "仍需为嘉宾音频额外投入",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "只有一个讨论族中的一名服务者自报；Web预检的付费意愿及远程设备覆盖未建立。"
+      ]
+    },
+    {
+      "id": "n8",
+      "run_id": "social-1",
+      "cluster": "audio-cleanup",
+      "disposition": "promotion",
+      "summary": "环境SOP已被服务商使用，同时夹带服务推广",
+      "claims": {
+        "actor": {
+          "text": "为客户制作音频的人",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c22",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "制作不同环境的客户项目",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c22",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "后续相同环境复用处理流程",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c22",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "Audition与按环境保存的SOP模板",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c22",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未知；评论未陈述模板之外仍有何痛点",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "评论末尾推广其制作服务，不能作为独立买方背书；其已有解决办法仍应保留。"
+      ]
+    },
+    {
+      "id": "n9",
+      "run_id": "social-1",
+      "cluster": "audio-cleanup",
+      "disposition": "promotion",
+      "summary": "Eddy使用推荐明确披露关联，排除买方证据",
+      "claims": {
+        "actor": {
+          "text": "自报关联推广者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c24",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未知",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未知，不能凭推广句推断真实购买任务",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "自称使用Eddy",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c24",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未知",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "明确affiliated；只作推广分类，不进入机会需求强度。"
+      ]
+    },
+    {
+      "id": "n10",
+      "run_id": "social-1",
+      "cluster": "brief-scope",
+      "disposition": "resolved",
+      "summary": "签约SOW与首次电话说明流程，是可用的人工基线",
+      "claims": {
+        "actor": {
+          "text": "与客户签文案合同的服务者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c4",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "签约及首次客户电话",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c4",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "让客户提前理解写作反馈流程",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c4",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "在SOW加入copywriting process并在电话说明",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c4",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未知；没有陈述这个已有流程仍失败",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "resolved仅表示评论者已使用该办法；不声称原帖作者采用或成功。"
+      ]
+    },
+    {
+      "id": "n2-reviewed",
+      "run_id": "social-1",
+      "cluster": "brief-scope",
+      "disposition": "candidate",
+      "summary": "视频买方在看到成片后才知道要什么：锁定目的与变更记录",
+      "claims": {
+        "actor": {
+          "text": "小型媒体公司买方",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "看到版本后才形成具体想法",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "让brief的变化显式化，减少猜测",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "通过剪辑轮次继续思考需求",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未清楚想法就开始迭代",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "每月制作许多视频，但确切数未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c15",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c19",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "买方身份自报；同串作者跟进不算独立需求。",
+        "不能把帖主声称的轮次改善当受控实验。"
+      ]
+    },
+    {
+      "id": "n5-reviewed",
+      "run_id": "social-1",
+      "cluster": "podcast-assembly",
+      "disposition": "resolved",
+      "summary": "既有音频软件用户明确认为现有方案足够",
+      "claims": {
+        "actor": {
+          "text": "已用现有音频编辑软件的播客制作者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "考虑试用其他播客软件",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "维持足够好且熟悉的制作方式",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "继续用现有工具",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未陈述未解决摩擦；迁移理由不足",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "resolved指该用户当前满意，非证明所有播客需求已解决。"
+      ]
+    },
+    {
+      "id": "n4-reviewed",
+      "run_id": "social-1",
+      "cluster": "podcast-assembly",
+      "disposition": "unclear",
+      "summary": "复用片头片尾但不再跨工具搬运：模板已有，端到端省步未确认",
+      "claims": {
+        "actor": {
+          "text": "播客制作者，是否服务商未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "期望每周换入新录音",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "复用片头片尾模板",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "另一软件已在执行被建议的类似流程",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c10",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "换软件方案仍与原先过程相同",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c10",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "期望每周换入新录音；实际发布频率未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c9",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c12",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c13",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "原作者没有确认最终解决；官方Riverside仅条件性覆盖，不能抹去音频限制。",
+        "商业服务商角色不确定。"
+      ]
+    }
+  ]
+}

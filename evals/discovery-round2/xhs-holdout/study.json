@@ -1,0 +1,525 @@
+{
+  "schema_version": 1,
+  "title": "字幕时间轴需求：离线社媒材料独立发现",
+  "revision": 2,
+  "recipe": null,
+  "personas": [],
+  "interviews": [],
+  "brief": {
+    "id": "brief-subtitles",
+    "question": "根据提供的小红书材料，个人借助 agent 做字幕相关产品是否存在值得继续验证的需求？",
+    "language": "zh-CN",
+    "constraints": [
+      "只做所提供材料的社媒需求发现，不联网",
+      "不生成角色、访谈或竞品实测",
+      "保留需求卡与相反意见，不以产品成立为目标"
+    ]
+  },
+  "sources": [
+    {
+      "id": "xhs-align-post",
+      "title": "字幕时间同步尝试及后续结果",
+      "url": "https://www.xiaohongshu.com/search_result/6a887900000000000302a506",
+      "platform": "xiaohongshu",
+      "source_type": "provided",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "zh-CN",
+      "access": "excerpt",
+      "group_id": "xhs-6a887900000000000302a506",
+      "context": "本次分析仅阅读所提供 sources.json 中的短摘录及上下文，未访问小红书。上游原始类型=post，上游标记 access=full；以下为上游采集者描述，非本分析者亲自阅读全文：Read entire expanded note and both displayed comments. Main passage explicitly introduced as an AI-written recap of prior experiments, with purported model performance and API expense. The author adds their own final paragraph describing manual Subtitle Edit work and subsequently locating an already aligned version. The posted media was not inspected; no tool performance test or expense was independently verified.",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "手动对齐波形",
+          "locator": "提供文件 sources.json，source.id=xhs-align-post，excerpt.id=e1；上游平台定位：Note body: author-added final paragraph; displayed 08-22"
+        },
+        {
+          "id": "e2",
+          "text": "找到时间轴完美版本",
+          "locator": "提供文件 sources.json，source.id=xhs-align-post，excerpt.id=e2；上游平台定位：Note body: author-added final paragraph; displayed 08-22"
+        }
+      ],
+      "limitations": [
+        "Parent agent read the original via authorized Chrome UI; this is supplied source material for the evaluator.",
+        "Displayed dates omit the year; published_at remains unknown.",
+        "Public canonical path omits temporary access parameters; a future reader may need to search the title in an authorized session.",
+        "本次只能核对短摘录，无法独立复核正文、回复或媒体；保留原始URL作出处。"
+      ]
+    },
+    {
+      "id": "xhs-align-tip",
+      "title": "评论推荐另一工具",
+      "url": "https://www.xiaohongshu.com/search_result/6a887900000000000302a506",
+      "platform": "xiaohongshu",
+      "source_type": "provided",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "zh-CN",
+      "access": "excerpt",
+      "group_id": "xhs-6a887900000000000302a506",
+      "context": "本次分析仅阅读所提供 sources.json 中的短摘录及上下文，未访问小红书。上游原始类型=comment，上游标记 access=full；以下为上游采集者描述，非本分析者亲自阅读全文：Read full visible recommendation; affiliation unknown. No demonstrated result.",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "试试subeasy.ai",
+          "locator": "提供文件 sources.json，source.id=xhs-align-tip，excerpt.id=e1；上游平台定位：First visible comment, displayed 08-22; text uniquely locates this short recommendation"
+        }
+      ],
+      "limitations": [
+        "Parent agent read the original via authorized Chrome UI; this is supplied source material for the evaluator.",
+        "Displayed dates omit the year; published_at remains unknown.",
+        "Public canonical path omits temporary access parameters; a future reader may need to search the title in an authorized session.",
+        "本次只能核对短摘录，无法独立复核正文、回复或媒体；保留原始URL作出处。"
+      ],
+      "parent_source_id": "xhs-align-post"
+    },
+    {
+      "id": "xhs-align-answer",
+      "title": "作者回应工具建议",
+      "url": "https://www.xiaohongshu.com/search_result/6a887900000000000302a506",
+      "platform": "xiaohongshu",
+      "source_type": "provided",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "zh-CN",
+      "access": "excerpt",
+      "group_id": "xhs-6a887900000000000302a506",
+      "context": "本次分析仅阅读所提供 sources.json 中的短摘录及上下文，未访问小红书。上游原始类型=comment，上游标记 access=full；以下为上游采集者描述，非本分析者亲自阅读全文：Read author response to tool recommendation; indicates intent to investigate, not a completed trial.",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "OK",
+          "locator": "提供文件 sources.json，source.id=xhs-align-answer，excerpt.id=e1；上游平台定位：Author reply to first comment, displayed 08-22"
+        }
+      ],
+      "limitations": [
+        "Parent agent read the original via authorized Chrome UI; this is supplied source material for the evaluator.",
+        "Displayed dates omit the year; published_at remains unknown.",
+        "Public canonical path omits temporary access parameters; a future reader may need to search the title in an authorized session.",
+        "本次只能核对短摘录，无法独立复核正文、回复或媒体；保留原始URL作出处。"
+      ],
+      "parent_source_id": "xhs-align-tip"
+    },
+    {
+      "id": "xhs-timing-post",
+      "title": "个人字幕制作者寻找低成本时间轴方案",
+      "url": "https://www.xiaohongshu.com/search_result/6a808647000000002803397a",
+      "platform": "xiaohongshu",
+      "source_type": "provided",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "zh-CN",
+      "access": "excerpt",
+      "group_id": "xhs-6a808647000000002803397a",
+      "context": "本次分析仅阅读所提供 sources.json 中的短摘录及上下文，未访问小红书。上游原始类型=post，上游标记 access=full；以下为上游采集者描述，非本分析者亲自阅读全文：Read title, full short body and 25 visible comments including five newly loaded after expanding a ten-reply branch. Title expresses conditional low-price willingness, body asks for no-cost timed YouTube captions. Hashtags concern personal fansubbing. No purchase or budget amount was reported. Displayed total 86 comments is not the count read.",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "不贵的话付费的也可以",
+          "locator": "提供文件 sources.json，source.id=xhs-timing-post，excerpt.id=e1；上游平台定位：Note title, displayed 08-15"
+        },
+        {
+          "id": "e2",
+          "text": "油管",
+          "locator": "提供文件 sources.json，source.id=xhs-timing-post，excerpt.id=e2；上游平台定位：Note body"
+        }
+      ],
+      "limitations": [
+        "Parent agent read the original via authorized Chrome UI; this is supplied source material for the evaluator.",
+        "Displayed dates omit the year; published_at remains unknown.",
+        "Public canonical path omits temporary access parameters; a future reader may need to search the title in an authorized session.",
+        "本次只能核对短摘录，无法独立复核正文、回复或媒体；保留原始URL作出处。"
+      ]
+    },
+    {
+      "id": "xhs-timing-clarification",
+      "title": "作者解释主要困难",
+      "url": "https://www.xiaohongshu.com/search_result/6a808647000000002803397a",
+      "platform": "xiaohongshu",
+      "source_type": "provided",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "zh-CN",
+      "access": "excerpt",
+      "group_id": "xhs-6a808647000000002803397a",
+      "context": "本次分析仅阅读所提供 sources.json 中的短摘录及上下文，未访问小红书。上游原始类型=comment，上游标记 access=full；以下为上游采集者描述，非本分析者亲自阅读全文：Author responds to a suggestion to use AI transcription. Full reply says text translation is not their issue; timing is.",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "打时间轴很麻烦",
+          "locator": "提供文件 sources.json，source.id=xhs-timing-clarification，excerpt.id=e1；上游平台定位：DOM comment-6a808840000000002b025ac4; displayed 08-15"
+        }
+      ],
+      "limitations": [
+        "Parent agent read the original via authorized Chrome UI; this is supplied source material for the evaluator.",
+        "Displayed dates omit the year; published_at remains unknown.",
+        "Public canonical path omits temporary access parameters; a future reader may need to search the title in an authorized session.",
+        "本次只能核对短摘录，无法独立复核正文、回复或媒体；保留原始URL作出处。"
+      ],
+      "parent_source_id": "xhs-timing-post"
+    },
+    {
+      "id": "xhs-timing-free",
+      "title": "评论介绍零费用字幕下载途径",
+      "url": "https://www.xiaohongshu.com/search_result/6a808647000000002803397a",
+      "platform": "xiaohongshu",
+      "source_type": "provided",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "zh-CN",
+      "access": "excerpt",
+      "group_id": "xhs-6a808647000000002803397a",
+      "context": "本次分析仅阅读所提供 sources.json 中的短摘录及上下文，未访问小红书。上游原始类型=comment，上游标记 access=full；以下为上游采集者描述，非本分析者亲自阅读全文：Commenter describes a web caption downloader as zero-cost; following self-reply specifies its domain and tolerable popup ads. This was not tested by the researcher.",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "免费的",
+          "locator": "提供文件 sources.json，source.id=xhs-timing-free，excerpt.id=e1；上游平台定位：DOM comment-6a83fd08000000001c0126c3; displayed 08-18"
+        }
+      ],
+      "limitations": [
+        "Parent agent read the original via authorized Chrome UI; this is supplied source material for the evaluator.",
+        "Displayed dates omit the year; published_at remains unknown.",
+        "Public canonical path omits temporary access parameters; a future reader may need to search the title in an authorized session.",
+        "本次只能核对短摘录，无法独立复核正文、回复或媒体；保留原始URL作出处。"
+      ],
+      "parent_source_id": "xhs-timing-post"
+    },
+    {
+      "id": "xhs-timing-domain",
+      "title": "同一评论者补充工具名称",
+      "url": "https://www.xiaohongshu.com/search_result/6a808647000000002803397a",
+      "platform": "xiaohongshu",
+      "source_type": "provided",
+      "published_at": null,
+      "accessed_at": "2026-10-16",
+      "language": "zh-CN",
+      "access": "excerpt",
+      "group_id": "xhs-6a808647000000002803397a",
+      "context": "本次分析仅阅读所提供 sources.json 中的短摘录及上下文，未访问小红书。上游原始类型=comment，上游标记 access=full；以下为上游采集者描述，非本分析者亲自阅读全文：Same commenter specifies the earlier downloader and reports tolerating popup ads. Not independent corroboration of the previous comment.",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "downsub.com",
+          "locator": "提供文件 sources.json，source.id=xhs-timing-domain，excerpt.id=e1；上游平台定位：DOM comment-6a83fda3000000001c010e3d; displayed 08-18"
+        }
+      ],
+      "limitations": [
+        "Parent agent read the original via authorized Chrome UI; this is supplied source material for the evaluator.",
+        "Displayed dates omit the year; published_at remains unknown.",
+        "Public canonical path omits temporary access parameters; a future reader may need to search the title in an authorized session.",
+        "本次只能核对短摘录，无法独立复核正文、回复或媒体；保留原始URL作出处。"
+      ],
+      "parent_source_id": "xhs-timing-free"
+    }
+  ],
+  "runs": [
+    {
+      "id": "social-offline-1",
+      "module": "social",
+      "status": "complete",
+      "objective": "对给定短摘录作有边界的字幕需求发现并保存完整需求池",
+      "method": "本分析者离线阅读 sources.json 的7条保留记录及 read-manifest.json；未访问平台。上游清单记录查询“字幕翻译 时间轴”，经 Chrome 授权会话读2篇笔记与27条可见评论，保留7条来源，来自2个讨论串。本次没有新增查询或采集；27条评论摘要仅用于理解采样覆盖，未转写为原话证据。依次区分时间轴摩擦、已解决案例、免费替代和未经试用的工具建议；核查每个字段的短摘录支持。",
+      "queries": [],
+      "source_ids": [
+        "xhs-align-post",
+        "xhs-align-tip",
+        "xhs-align-answer",
+        "xhs-timing-post",
+        "xhs-timing-clarification",
+        "xhs-timing-free",
+        "xhs-timing-domain"
+      ],
+      "limitations": [
+        "上游27条评论不是27个独立用户；86为页面显示评论总数，非已读数量。",
+        "本次来源类型统一为provided、访问深度excerpt；上游原始类型及full声明仅在context保留。",
+        "上游未读全部折叠回复、未检查媒体；原帖年份未知。",
+        "complete仅表示完成给定离线材料分析，不表示覆盖全部社媒、需求已验证或已验证付费。"
+      ]
+    }
+  ],
+  "needs": [
+    {
+      "id": "need-timing",
+      "run_id": "social-offline-1",
+      "cluster": "字幕时间轴获取与制作",
+      "disposition": "candidate",
+      "summary": "打时间轴被明确描述为麻烦；保留为待验证候选",
+      "claims": {
+        "actor": {
+          "text": "需要处理字幕时间轴的人；具体职业及付费决策身份未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-timing-clarification",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "减少制作字幕时间轴的麻烦",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-timing-clarification",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "作者说“打时间轴很麻烦”",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-clarification",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "标题表示“不贵的话付费的也可以”；金额、实际付款及订阅意愿未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "xhs-timing-free",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-timing-domain",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "仅一个讨论串的作者陈述；上游上下文称翻译文本不是其主要困难，但短摘录不足以细分具体语言、处理量与交付格式。",
+        "评论推荐免费字幕下载；没有该作者成功使用或拒绝它的记录，尚不能判定需求未被满足。",
+        "频率、当前完整操作步骤、耗时及可接受价格未知；不能从条件付费表态推断收入。"
+      ]
+    },
+    {
+      "id": "need-alignment-resolved",
+      "run_id": "social-offline-1",
+      "cluster": "已有字幕时间同步",
+      "disposition": "resolved",
+      "summary": "曾手动对齐波形，后报告找到时间轴完美版本",
+      "claims": {
+        "actor": {
+          "text": "进行字幕对齐的人；职业未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "获得时间轴对齐的字幕版本",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "手动对齐波形；随后报告找到时间轴完美版本",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "曾存在人工对齐步骤；成本和当前残余麻烦未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "xhs-align-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "resolved为研究者对该次事件的分类，依据作者自述，未检验文件质量。",
+        "帖内AI生成回顾不能作为模型表现、API花费或作者实际付款的证据；本卡仅使用作者末段。",
+        "与打时间轴候选是不同讨论串、不同任务条件；不能直接合并成两个同类付费需求。"
+      ]
+    },
+    {
+      "id": "need-free-alternative",
+      "run_id": "social-offline-1",
+      "cluster": "字幕时间轴获取与制作",
+      "disposition": "adjacent",
+      "summary": "免费字幕下载建议作为替代线索保留，不计作新增痛点",
+      "claims": {
+        "actor": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "评论者称存在免费方案，并在后续回复给出downsub.com",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-free",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "xhs-timing-domain",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "评论者称方案免费；非价格实测，非购买记录",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-free",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "同一评论者的主回复和补充回复属于同一证据链；不作为两个独立成功案例。",
+        "没有验证工具当前功能、质量或可用性；也没有作者采纳后的结果。",
+        "保留为候选需求的相反意见，非独立产品机会。"
+      ]
+    },
+    {
+      "id": "need-subeasy-unclear",
+      "run_id": "social-offline-1",
+      "cluster": "字幕工具推荐",
+      "disposition": "unclear",
+      "summary": "SubEasy推荐未附结果，作者“OK”不足以证明试用或新需求",
+      "claims": {
+        "actor": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "评论建议尝试subeasy.ai；实际采用情况未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-align-tip",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "xhs-align-answer",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "推荐者关联关系未知，不能判定为推广，也不能当作独立买方需求。",
+        "作者简短回应不是产品成功、付费或试用完成的证据。"
+      ]
+    }
+  ]
+}

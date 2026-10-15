@@ -1,0 +1,174 @@
+{
+  "title": "字幕产品需求发现：值得验证时间轴摩擦，尚不支持投入通用产品",
+  "study_revision": 2,
+  "status": "complete",
+  "summary": "存在一个值得低成本继续验证的候选：帮助有时间轴处理麻烦的人减少人工工作。但尚不能判断免费字幕下载是否已足够，也没有实际付款、重复使用或 agent 优势证据。建议先验证现有工具仍解决不了的具体任务，再决定是否做产品。本次仅完成所给材料的离线分析。",
+  "interview_ids": [],
+  "run_ids": [
+    "social-offline-1"
+  ],
+  "need_ids": [
+    "need-timing",
+    "need-alignment-resolved",
+    "need-free-alternative",
+    "need-subeasy-unclear"
+  ],
+  "findings": [
+    {
+      "id": "f-timing",
+      "kind": "source",
+      "statement": "一名作者明确表示“打时间轴很麻烦”，并在标题表达“不贵的话付费的也可以”。这支持存在时间轴任务摩擦与条件付费表态；并不证明实际购买、预算金额或订阅意愿。",
+      "support": [
+        {
+          "source_id": "xhs-timing-clarification",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-timing-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "xhs-timing-free",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-timing-domain",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "仅一个讨论串；免费方案由评论者推荐，是否满足作者任务尚不清楚。"
+      ]
+    },
+    {
+      "id": "f-resolved",
+      "kind": "source",
+      "statement": "另一作者描述手动对齐波形，随后报告已找到时间轴完美版本。这个案例保留为已解决信号，不能只截取手动步骤来证明持续未满足需求。",
+      "support": [
+        {
+          "source_id": "xhs-align-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-align-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "解决结果是作者自述；未独立检查文件或后续重复任务。帖内AI写的实验回顾不用于判断模型效果或成本。"
+      ]
+    },
+    {
+      "id": "f-priority",
+      "kind": "inference",
+      "statement": "下一步最有信息量的是核实“现成字幕和免费工具仍不足的时间轴任务”。通用字幕翻译、仅封装下载或立即推出订阅产品，目前缺乏足够支持；SubEasy推荐及“OK”回应也未构成试用结果。agent是否降低人工检查成本，仍是待测试的实现假设。",
+      "support": [
+        {
+          "source_id": "xhs-timing-clarification",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-timing-free",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-align-tip",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-align-answer",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "xhs-align-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "材料不能确定任务频率、获客可达性、数据可用性、质量要求或处理成本。"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "alternative": "寻找现成对齐版本",
+      "category": "indirect",
+      "dimension": "是否还需要新工具",
+      "assessment": "已有一个作者报告找到完美时间轴版本；该事件不进入未满足需求短名单。",
+      "support": [
+        {
+          "source_id": "xhs-align-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "单次自述，适用范围未知。"
+      ]
+    },
+    {
+      "alternative": "评论中的免费字幕下载方案",
+      "category": "indirect",
+      "dimension": "最低成本替代",
+      "assessment": "评论者提供免费方案及downsub.com名称；必须先核实它能否解决具体任务，不能凭推荐认定已经解决。",
+      "support": [
+        {
+          "source_id": "xhs-timing-free",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-timing-domain",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "本次未联网试用，同一评论者的补充不是独立佐证。"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "验证现有工具不足时的时间轴处理服务",
+      "audience": "确有近期时间轴制作任务、能提供授权材料的个人制作者；这是待验证的招募条件",
+      "problem": "作者明确反映时间轴麻烦，但剩余缺口尚未确认",
+      "alternative": "先尝试现成对齐版本、免费字幕下载和当前手动流程",
+      "proposal": "最小交付假设：针对一段用户授权视频和已有文本，交付经人工检查的时间轴及问题清单；agent只负责调度与初稿，质量验收由人负责。先人工试交付，不先开发完整应用。",
+      "priority": "test_now",
+      "rationale": "仅建议开展小规模真实任务对照。一个清晰摩擦值得核实，但免费替代和已解决案例使直接产品化风险较高；没有依据设置售价或预测收入。",
+      "need_ids": [
+        "need-timing"
+      ],
+      "support": [
+        {
+          "source_id": "xhs-timing-clarification",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-timing-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "risks": [
+        "可触达买方与获客渠道尚未验证；招募可从自愿提供字幕任务的社群成员开始，这是计划而非已获客。",
+        "人工检查、模型/API调用、文件处理和支持成本未知；需逐单计时计费，低价意愿可能无法覆盖成本。",
+        "免费工具可能足够；单次人工麻烦可能不足以带来重复使用。"
+      ],
+      "validation": "预先约定试验而非市场阈值：找3名彼此独立、有近期真实任务的自愿参与者，先记录现有方案结果；仅对残余缺口做同任务对照。若至少2例在质量不下降前提下减少总人工时间并愿提供下一份任务，再探索明确报价下的真实付款；若现有工具足够或核验成本抵消节省，停止该方向。此轮未执行招募、试交付或收费。"
+    }
+  ],
+  "next_steps": [
+    "优先补足证据：在后续获准采集时，找独立作者的近期任务，按“下载现成CC”“制作时间轴”“修正不同版本偏移”分开记录；同时保留免费方案足够、已解决或放弃的案例。当前不执行联网或联系。",
+    "按机会卡的小规模同任务对照，记录输入条件、现有方案、人工总耗时、返工与复用；免费替代足够时停止，不把求助自动转成产品。",
+    "只有重复交付价值成立后，记录真实报价、接受或拒绝原因、实际付款，以及每单调用、检查和支持成本，再决定个人开发是否可持续。"
+  ],
+  "limitations": [
+    "我只读提供的7条短摘录记录及读取清单，未亲自访问平台。上游记录为2篇笔记、27条可见评论、2个讨论串；86是其中一串显示总评论数，不是本次已读数。",
+    "来源均按provided/excerpt保存：本次audit的可引用材料家族数应为2，直接社媒类型家族数为0；来源于小红书的事实由上游提供，不冒称直接采集。",
+    "仅一个候选需求卡，另存已解决、免费替代及不明推荐卡各一张；4张卡不等于4名潜在客户。未生成角色或访谈。",
+    "摘要没有原话支持的Mac、导入导出、本地/云端偏好等仅为后续线索，不升级为已证实需求。样本小、原帖年份未知、回复与媒体覆盖不完整。"
+  ]
+}

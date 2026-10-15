@@ -1,0 +1,2630 @@
+{
+  "ok": true,
+  "revision": 12,
+  "needs": [
+    {
+      "id": "n-recut",
+      "run_id": "fw-social-video",
+      "cluster": "字幕更新与对齐",
+      "disposition": "candidate",
+      "summary": "重切后更新已有多语字幕时间轴",
+      "claims": {
+        "actor": {
+          "text": "处理字幕的剪辑从业者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-v1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "视频重新剪辑",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "更新字幕时间而不全部重做",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "重新剪辑导致字幕时间失配",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-v1-c11",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "先锁画面即可消除一部分需求；暂无独立第二个重切付费案例。"
+      ]
+    },
+    {
+      "id": "n-style-solved",
+      "run_id": "fw-social-video",
+      "cluster": "字幕风格校验",
+      "disposition": "resolved",
+      "summary": "用客户历史反馈制定规则的内部字幕校对工具",
+      "claims": {
+        "actor": {
+          "text": "代理团队",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v2-c54",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "大量字幕内容带来语法和结构修正工作",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v2-c54",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "复用客户规则校对字幕",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-v2-c54",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "已用AI建立内部小工具并收集客户偏好",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v2-c54",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "已有内部方案，是外部工具切换阻力；同帖不增加讨论家族。"
+      ]
+    },
+    {
+      "id": "n-burnt",
+      "run_id": "run-video",
+      "cluster": "烧录字幕恢复",
+      "disposition": "unclear",
+      "summary": "提取烧录字幕并翻译，而非翻译音轨",
+      "claims": {
+        "actor": {
+          "text": "希望观看外语剧集的人",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "v1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "字幕烧录在画面上，没有SRT",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "v1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "翻译现有字幕并分配时间戳",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "v1-post",
+              "excerpt_id": "e2"
+            },
+            {
+              "source_id": "v1-post",
+              "excerpt_id": "e3"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "知道单图OCR但不知道如何处理整个视频",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "v1-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "明确寻找免费工具",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "v1-post",
+              "excerpt_id": "e3"
+            }
+          ]
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "原始继承材料；没有付费交付证据。"
+      ]
+    },
+    {
+      "id": "n-free",
+      "run_id": "run-video",
+      "cluster": "通用自动字幕翻译",
+      "disposition": "unclear",
+      "summary": "免费或低价把英文视频转成西语字幕",
+      "claims": {
+        "actor": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "自动生成并翻译字幕",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "vv0-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "FREE or cheap；未报告付费",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "vv0-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "不适合作为高价订阅需求证据。"
+      ]
+    },
+    {
+      "id": "n-book-setup",
+      "run_id": "fw-social-seller",
+      "cluster": "卖家月度数据整理",
+      "disposition": "candidate",
+      "summary": "为现有表格卖家建立可信分类和月度导入流程",
+      "claims": {
+        "actor": {
+          "text": "单人Etsy副业经营者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s2-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "记录经常落后，不确定做法是否正确",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s2-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "更自动化并看清经营记录",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s2-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-s2-c11",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "月末按销售、费用、营销、运输等分类记账；Wave账户未配置",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s2-c11",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-s2-c11",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "有软件仍未完成初始设置，分类需要确认",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s2-c11",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "作者认为销量可支持付费，但未报告自己付款",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s2-c11",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-s1-c6",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "不能把同帖他人的QuickBooks付款归给作者。"
+      ]
+    },
+    {
+      "id": "n-monthly",
+      "run_id": "fw-social-seller",
+      "cluster": "卖家月度数据整理",
+      "disposition": "candidate",
+      "summary": "单人商店将月度表格升级为库存和财务工作流",
+      "claims": {
+        "actor": {
+          "text": "无雇员的单人经营者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "改善记账并加入更好的库存管理",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "Excel表格公式记录月度支出销售等",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-s1-c6",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s1-c8",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。"
+      ]
+    },
+    {
+      "id": "n-multichannel",
+      "run_id": "fw-social-seller",
+      "cluster": "卖家月度数据整理",
+      "disposition": "resolved",
+      "summary": "跨Etsy、Shopify和PayPal数据整理成月报",
+      "claims": {
+        "actor": {
+          "text": "增加Shopify及定制业务的Etsy卖家",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s3-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "新增渠道后需要合并记录",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s3-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "统一月报",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s3-c5",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "Wave和QuickBooks太重；后来找小型服务团队整理",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s3-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-s3-c5",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "跨平台数据整理耗时",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s3-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-s3-c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s3-c13",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "作者后续推荐特定服务且邀请私聊，可能有商业关联但无法核实；不能视为独立成交证明。"
+      ]
+    },
+    {
+      "id": "n-beginner",
+      "run_id": "fw-social-seller",
+      "cluster": "卖家月度数据整理",
+      "disposition": "candidate",
+      "summary": "不熟悉表格的初学卖家追踪收入成本利润",
+      "claims": {
+        "actor": {
+          "text": "英国Etsy初学卖家",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-s6-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "追踪收入费用和利润",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s6-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "订单追踪和履约使用Etsy seller app",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s6-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "一直不擅长表格，希望避免",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s6-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-s6-c8",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s6-c10",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s6-c10",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。"
+      ]
+    },
+    {
+      "id": "n-template-paid",
+      "run_id": "fw-social-seller",
+      "cluster": "卖家月度数据整理",
+      "disposition": "resolved",
+      "summary": "一次性表格加教程消除记录困难",
+      "claims": {
+        "actor": {
+          "text": "卖家评论者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-s6-c8",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "省去数据整理时间",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-s6-c8",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "购买自动化Excel模板并按教程粘贴数据",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s6-c8",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "自述£40已花在Madeonthecommon模板上；不是Paper and Spark价格",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s6-c10",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-s6-c10",
+              "excerpt_id": "e2"
+            }
+          ]
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "公开自述，未见付款凭证；无新产品付费承诺。"
+      ]
+    },
+    {
+      "id": "n-sync",
+      "run_id": "fw-social-seller",
+      "cluster": "库存账务系统同步",
+      "disposition": "candidate",
+      "summary": "在既有Zoho系统与销售平台间维持同步",
+      "claims": {
+        "actor": {
+          "text": "多工具卖家评论者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-s6-c12",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "找到匹配库存记账系统和市场渠道的更好同步方案",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s6-c12",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "Zoho One、Flow脚本与Baselinker",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s6-c12",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "未说当前同步具体哪里失败，需求尚不足以定义MVP。"
+      ]
+    },
+    {
+      "id": "n-attribution",
+      "run_id": "fw-social-freelance",
+      "cluster": "交付变更归档与确认",
+      "disposition": "candidate",
+      "summary": "把版本修改区分为原有错误与客户改变方向",
+      "claims": {
+        "actor": {
+          "text": "自由技术写作者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f3-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "约定两轮修改却已到第七、第十二稿",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f3-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "整理修改来源以解释返修边界",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-f3-post",
+              "excerpt_id": "e3"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "花一小时回查历史修订",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f3-post",
+              "excerpt_id": "e3"
+            }
+          ]
+        },
+        "friction": {
+          "text": "有轮次约定仍因质量归责产生争议",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f3-post",
+              "excerpt_id": "e3"
+            },
+            {
+              "source_id": "fw-f3-c33",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "双方约定分摊额外分包工时70%/30%，并非新工具付款",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f3-c11",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-f3-c11",
+              "excerpt_id": "e2"
+            }
+          ]
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-f3-c18",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "后续电话似乎接受最后一轮，尚无最终结案；软件不能强制客户守约。"
+      ]
+    },
+    {
+      "id": "n-weekly",
+      "run_id": "fw-social-freelance",
+      "cluster": "交付变更归档与确认",
+      "disposition": "resolved",
+      "summary": "用简短周报及显式假设提前消除方向偏差",
+      "claims": {
+        "actor": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "提前发现误解并减少返工",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f4-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "每周发完成、下一步和时间线风险",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f4-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "每周",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f4-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-f4-c6",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "标题“近半”未经测量；不报告为因果效率基准。"
+      ]
+    },
+    {
+      "id": "n-consolidate",
+      "run_id": "fw-social-freelance",
+      "cluster": "交付变更归档与确认",
+      "disposition": "candidate",
+      "summary": "先收齐意见再开始下一轮编辑",
+      "claims": {
+        "actor": {
+          "text": "自由编辑人员",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-f5-c6",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "客户在上一批完成后才发不相关新意见",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f5-c6",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "一次收齐反馈",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f5-c6",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "直接要求客户合并发送",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f5-c6",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "分批意见消耗更多时间",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f5-c6",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-f5-c8",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。"
+      ]
+    },
+    {
+      "id": "n-fpromo",
+      "run_id": "fw-social-freelance",
+      "cluster": "交付变更归档与确认",
+      "disposition": "promotion",
+      "summary": "Workstamped创始人推荐自己的签约与交付工具",
+      "claims": {
+        "actor": {
+          "text": "产品创建者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f1-c28",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "签署范围变更并确认付款再交付",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f1-c28",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "推广，不是独立付费买家。"
+      ]
+    },
+    {
+      "id": "n-bookpromo",
+      "run_id": "fw-social-seller",
+      "cluster": "卖家月度数据整理",
+      "disposition": "promotion",
+      "summary": "记账服务方建议软件与培训",
+      "claims": {
+        "actor": {
+          "text": "自称提供小企业记账服务的人",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s2-c10",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "提供设置和培训",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-s2-c10",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "不能把服务方推荐计为第二个独立需求。"
+      ]
+    },
+    {
+      "id": "n-video-cost",
+      "run_id": "browser-social-1",
+      "cluster": "视频生成返修成本",
+      "disposition": "adjacent",
+      "summary": "影片作者自述生成成本较高并接受瑕疵",
+      "claims": {
+        "actor": {
+          "text": "AI影片创建者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "x-generations",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "修复瑕疵目前太贵",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "x-cost-reply",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "作者自述生成token成本约900美元；非已核验付款或给新工具的预算",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "x-generations",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "父代理Chrome读取；隐藏回复未读，截断内容只保留excerpt。"
+      ]
+    },
+    {
+      "id": "n-video-preview",
+      "run_id": "browser-social-1",
+      "cluster": "视频生成返修成本",
+      "disposition": "promotion",
+      "summary": "产品视频服务创始人抱怨每次重渲染无预览",
+      "claims": {
+        "actor": {
+          "text": "制作产品视频的人",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "x-preview",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "每次从头渲染30–40分钟且无法预览",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "x-preview",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "父代理读取；作者有产品服务关联，无法证明独立购买需求。"
+      ]
+    },
+    {
+      "id": "n-vietnamese",
+      "run_id": "browser-social-1",
+      "cluster": "已批准译稿对齐",
+      "disposition": "adjacent",
+      "summary": "另一从业者报告替换客户提供的越南语稿",
+      "claims": {
+        "actor": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "把提供的越南语稿替换进字幕",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "li-subtitles",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "父代理读取；保留引文仅能说明替换行为，不能支持耗时、痛点或支付。"
+      ]
+    },
+    {
+      "id": "n-mobile-r2",
+      "run_id": "run-seller",
+      "cluster": "移动库存更新",
+      "disposition": "candidate",
+      "summary": "将已有数百项Excel库存导入适合手机快速更新的工具",
+      "claims": {
+        "actor": {
+          "text": "转售卖家",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "s2-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "在外也能快速更新并导入历史Excel",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s2-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "s2-post",
+              "excerpt_id": "e2"
+            },
+            {
+              "source_id": "s2-post",
+              "excerpt_id": "e3"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "维护详细Excel库存成本售价和利润表",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s2-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "手机Excel体验不理想，不愿手工重新录入数百项",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s2-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "s2-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "有条件愿付费，不是已付费",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s2-post",
+              "excerpt_id": "e3"
+            }
+          ]
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "s2-c1",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s2-c2",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "原始继承材料；建议应用的当前导入能力未实测。",
+        "第二轮独立语义审查后追加修正版；原卡及首次报告保留。"
+      ]
+    },
+    {
+      "id": "n-spromo-r2",
+      "run_id": "run-seller",
+      "cluster": "卖家月度数据整理",
+      "disposition": "promotion",
+      "summary": "建造者询问20美元表格价格",
+      "claims": {
+        "actor": {
+          "text": "计划销售表格的创建者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s3-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "出售整合表格",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s3-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "s3-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "20美元为卖方拟价；评论有免费副本激励",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s3-post",
+              "excerpt_id": "e2"
+            },
+            {
+              "source_id": "s3-post",
+              "excerpt_id": "e3"
+            }
+          ]
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "不得记为成交价或消费者愿付价。",
+        "第二轮独立语义审查后追加修正版；原卡及首次报告保留。"
+      ]
+    },
+    {
+      "id": "n-style-r2",
+      "run_id": "fw-social-video",
+      "cluster": "字幕风格校验",
+      "disposition": "adjacent",
+      "summary": "小型代理团队统一字幕标点、大小写和编辑规则",
+      "claims": {
+        "actor": {
+          "text": "代理公司的剪辑人员",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v2-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "开始为更多视频添加字幕",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v2-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "团队字幕质量一致并减少返修",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v2-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "Premiere转写生成字幕后人工修正",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v2-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "频繁收到标点、大小写和漏改意见",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v2-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-v2-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "准备向老板提议Rev，尚非已购买",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v2-c34",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-v2-c17",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-v2-c32",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-v2-c43",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "作者明确无翻译任务；不把自述法规理由当已核验的法律事实。",
+        "第二轮独立语义审查后追加修正版；原卡及首次报告保留。"
+      ]
+    },
+    {
+      "id": "n-caption-batch-r2",
+      "run_id": "fw-social-video",
+      "cluster": "字幕风格校验",
+      "disposition": "candidate",
+      "summary": "长访谈字幕的同步和校对交付",
+      "claims": {
+        "actor": {
+          "text": "Adobe剪辑人员",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v5-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "20条各30–45分钟访谈字幕任务",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v5-c16",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "更快完成正确同步的字幕",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-v5-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "AI转写后导入字幕插件",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v5-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "同步、语法修正耗时",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v5-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-v5-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "自述已投入AI转写工具和Subtitle Pro，金额不明",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v5-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-v5-c10",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-v5-c19",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "历史案例，不用旧AI评价断言2026模型能力。",
+        "第二轮独立语义审查后追加修正版；原卡及首次报告保留。"
+      ]
+    },
+    {
+      "id": "n-variants-r2",
+      "run_id": "run-seller",
+      "cluster": "订单变体转履约单",
+      "disposition": "candidate",
+      "summary": "将订单颜色变体转为零件或生产履约清单",
+      "claims": {
+        "actor": {
+          "text": "3D打印灯具卖家",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s1-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "s1-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "开店几周达到125单",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "自动输出需要履约的订单变体信息",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s1-c2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "查看订单列表和变体CSV",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s1-c2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "列表仅标题，变体导出表难用",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "s1-c2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "s1-c1",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s1-c2",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "作者澄清产能足够；应聚焦订单信息，不推断制造瓶颈。仅一讨论家族。",
+        "第二轮独立语义审查后追加修正版；原卡及首次报告保留。"
+      ]
+    },
+    {
+      "id": "n-stalled-r2",
+      "run_id": "run-freelance",
+      "cluster": "交付变更归档与确认",
+      "disposition": "candidate",
+      "summary": "已约定反馈期限仍收不到客户意见",
+      "claims": {
+        "actor": {
+          "text": "接了5个项目的新自由职业者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fx-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "获得及时反馈并保持客户关系",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fx-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fx-post",
+              "excerpt_id": "e3"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "约定V1–V3和反馈截止时间",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fx-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "客户接受流程但不提供反馈",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fx-post",
+              "excerpt_id": "e3"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fx-c1",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fx-c2",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "截止日期未必是用户愿执行的惩罚，不能默认自动关闭可行。",
+        "第二轮独立语义审查后追加修正版；原卡及首次报告保留。"
+      ]
+    },
+    {
+      "id": "n-align-r2",
+      "run_id": "fw-social-video",
+      "cluster": "已批准译稿对齐",
+      "disposition": "candidate",
+      "summary": "将客户批准的西语译稿逐字装配到英文视频字幕时间轴",
+      "claims": {
+        "actor": {
+          "text": "承接教学视频项目的剪辑人员",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v3-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "客户提供必须使用的专业西语译稿",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v3-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "保留指定译文并正确导出定时SRT",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v3-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-v3-c21",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-v3-c15",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-v3-c15",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "Premiere英文SRT→Excel人工替换→文本编辑器保存SRT",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v3-c15",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-v3-c15",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "自述每15分钟视频耗费约1小时装配",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-v3-c15",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e3"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "原帖称dozens，后续称not a ton，项目规模不确定；1小时/15分钟是该作者历史任务自述，非通用基准。",
+        "第二轮独立语义审查后追加修正版；原卡及首次报告保留。"
+      ]
+    },
+    {
+      "id": "n-sheet-enough-r2",
+      "run_id": "fw-social-seller",
+      "cluster": "卖家月度数据整理",
+      "disposition": "resolved",
+      "summary": "每月100多单卖家用现成表格每月整理几小时已足够",
+      "claims": {
+        "actor": {
+          "text": "自述每月100多单的卖家",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s3-c11",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "当前方案足够简单且可接受",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s3-c11",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "Paper and Spark表格复制粘贴订单",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s3-c9",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-s3-c11",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "每月一至两次，自述数小时；时长是单次还是月总量不明确",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-s3-c11",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "这是订阅软件的强反证；不能仅凭订单量规定必须换软件。",
+        "第二轮独立语义审查后追加修正版；原卡及首次报告保留。"
+      ]
+    },
+    {
+      "id": "n-revision-r2",
+      "run_id": "fw-social-freelance",
+      "cluster": "交付变更归档与确认",
+      "disposition": "candidate",
+      "summary": "把无边界修改转为有范围的交付轮次",
+      "claims": {
+        "actor": {
+          "text": "自由职业者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "fw-f1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "小修改变成大量消息、电话和不同版本",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "控制返修范围且不破坏关系",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f1-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "没有明确合同流程",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "fw-f1-c12",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "fw-f1-c11",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未观察到",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "fw-f1-c19",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-f1-c22",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "fw-f1-c22",
+          "excerpt_id": "e3"
+        }
+      ],
+      "limitations": [
+        "研究者归类；公开自述，不能推算普遍发生率或新产品转化率。",
+        "规则与执行可能足够，不应默认需要新平台。",
+        "第二轮独立语义审查后追加修正版；原卡及首次报告保留。"
+      ]
+    },
+    {
+      "id": "need-timing",
+      "run_id": "social-offline-1",
+      "cluster": "字幕时间轴获取与制作",
+      "disposition": "candidate",
+      "summary": "打时间轴被明确描述为麻烦；保留为待验证候选",
+      "claims": {
+        "actor": {
+          "text": "需要处理字幕时间轴的人；具体职业及付费决策身份未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-timing-clarification",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "减少制作字幕时间轴的麻烦",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-timing-clarification",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "作者说“打时间轴很麻烦”",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-clarification",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "标题表示“不贵的话付费的也可以”；金额、实际付款及订阅意愿未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "xhs-timing-free",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-timing-domain",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "仅一个讨论串的作者陈述；上游上下文称翻译文本不是其主要困难，但短摘录不足以细分具体语言、处理量与交付格式。",
+        "评论推荐免费字幕下载；没有该作者成功使用或拒绝它的记录，尚不能判定需求未被满足。",
+        "频率、当前完整操作步骤、耗时及可接受价格未知；不能从条件付费表态推断收入。"
+      ]
+    },
+    {
+      "id": "need-alignment-resolved",
+      "run_id": "social-offline-1",
+      "cluster": "已有字幕时间同步",
+      "disposition": "resolved",
+      "summary": "曾手动对齐波形，后报告找到时间轴完美版本",
+      "claims": {
+        "actor": {
+          "text": "进行字幕对齐的人；职业未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "获得时间轴对齐的字幕版本",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "手动对齐波形；随后报告找到时间轴完美版本",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "曾存在人工对齐步骤；成本和当前残余麻烦未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "xhs-align-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "resolved为研究者对该次事件的分类，依据作者自述，未检验文件质量。",
+        "帖内AI生成回顾不能作为模型表现、API花费或作者实际付款的证据；本卡仅使用作者末段。",
+        "与打时间轴候选是不同讨论串、不同任务条件；不能直接合并成两个同类付费需求。"
+      ]
+    },
+    {
+      "id": "need-free-alternative",
+      "run_id": "social-offline-1",
+      "cluster": "字幕时间轴获取与制作",
+      "disposition": "adjacent",
+      "summary": "免费字幕下载建议作为替代线索保留，不计作新增痛点",
+      "claims": {
+        "actor": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "评论者称存在免费方案，并在后续回复给出downsub.com",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-free",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "xhs-timing-domain",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "评论者称方案免费；非价格实测，非购买记录",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-free",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "同一评论者的主回复和补充回复属于同一证据链；不作为两个独立成功案例。",
+        "没有验证工具当前功能、质量或可用性；也没有作者采纳后的结果。",
+        "保留为候选需求的相反意见，非独立产品机会。"
+      ]
+    },
+    {
+      "id": "need-subeasy-unclear",
+      "run_id": "social-offline-1",
+      "cluster": "字幕工具推荐",
+      "disposition": "unclear",
+      "summary": "SubEasy推荐未附结果，作者“OK”不足以证明试用或新需求",
+      "claims": {
+        "actor": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "评论建议尝试subeasy.ai；实际采用情况未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-align-tip",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "xhs-align-answer",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "推荐者关联关系未知，不能判定为推广，也不能当作独立买方需求。",
+        "作者简短回应不是产品成功、付费或试用完成的证据。"
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "cluster": "交付变更归档与确认",
+      "need_ids": [
+        "n-attribution",
+        "n-weekly",
+        "n-consolidate",
+        "n-fpromo",
+        "n-stalled-r2",
+        "n-revision-r2"
+      ],
+      "discussion_families": 5,
+      "reported_families": 5,
+      "source_ids": [
+        "fw-f1-c11",
+        "fw-f1-c12",
+        "fw-f1-c28",
+        "fw-f1-post",
+        "fw-f3-c11",
+        "fw-f3-c33",
+        "fw-f3-post",
+        "fw-f4-post",
+        "fw-f5-c6",
+        "fx-post"
+      ],
+      "dispositions": {
+        "candidate": 4,
+        "promotion": 1,
+        "resolved": 1
+      }
+    },
+    {
+      "cluster": "卖家月度数据整理",
+      "need_ids": [
+        "n-book-setup",
+        "n-monthly",
+        "n-multichannel",
+        "n-beginner",
+        "n-template-paid",
+        "n-bookpromo",
+        "n-spromo-r2",
+        "n-sheet-enough-r2"
+      ],
+      "discussion_families": 5,
+      "reported_families": 5,
+      "source_ids": [
+        "fw-s1-post",
+        "fw-s2-c10",
+        "fw-s2-c11",
+        "fw-s2-post",
+        "fw-s3-c11",
+        "fw-s3-c5",
+        "fw-s3-c9",
+        "fw-s3-post",
+        "fw-s6-c10",
+        "fw-s6-c8",
+        "fw-s6-post",
+        "s3-post"
+      ],
+      "dispositions": {
+        "candidate": 3,
+        "promotion": 2,
+        "resolved": 3
+      }
+    },
+    {
+      "cluster": "字幕工具推荐",
+      "need_ids": [
+        "need-subeasy-unclear"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "xhs-align-tip"
+      ],
+      "dispositions": {
+        "unclear": 1
+      }
+    },
+    {
+      "cluster": "字幕时间轴获取与制作",
+      "need_ids": [
+        "need-timing",
+        "need-free-alternative"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "xhs-timing-clarification",
+        "xhs-timing-domain",
+        "xhs-timing-free",
+        "xhs-timing-post"
+      ],
+      "dispositions": {
+        "adjacent": 1,
+        "candidate": 1
+      }
+    },
+    {
+      "cluster": "字幕更新与对齐",
+      "need_ids": [
+        "n-recut"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "fw-v1-post"
+      ],
+      "dispositions": {
+        "candidate": 1
+      }
+    },
+    {
+      "cluster": "字幕风格校验",
+      "need_ids": [
+        "n-style-solved",
+        "n-style-r2",
+        "n-caption-batch-r2"
+      ],
+      "discussion_families": 2,
+      "reported_families": 2,
+      "source_ids": [
+        "fw-v2-c34",
+        "fw-v2-c54",
+        "fw-v2-post",
+        "fw-v5-c16",
+        "fw-v5-post"
+      ],
+      "dispositions": {
+        "adjacent": 1,
+        "candidate": 1,
+        "resolved": 1
+      }
+    },
+    {
+      "cluster": "已批准译稿对齐",
+      "need_ids": [
+        "n-vietnamese",
+        "n-align-r2"
+      ],
+      "discussion_families": 2,
+      "reported_families": 2,
+      "source_ids": [
+        "fw-v3-c15",
+        "fw-v3-c21",
+        "fw-v3-post",
+        "li-subtitles"
+      ],
+      "dispositions": {
+        "adjacent": 1,
+        "candidate": 1
+      }
+    },
+    {
+      "cluster": "已有字幕时间同步",
+      "need_ids": [
+        "need-alignment-resolved"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "xhs-align-post"
+      ],
+      "dispositions": {
+        "resolved": 1
+      }
+    },
+    {
+      "cluster": "库存账务系统同步",
+      "need_ids": [
+        "n-sync"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "fw-s6-c12"
+      ],
+      "dispositions": {
+        "candidate": 1
+      }
+    },
+    {
+      "cluster": "烧录字幕恢复",
+      "need_ids": [
+        "n-burnt"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "v1-post"
+      ],
+      "dispositions": {
+        "unclear": 1
+      }
+    },
+    {
+      "cluster": "移动库存更新",
+      "need_ids": [
+        "n-mobile-r2"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "s2-post"
+      ],
+      "dispositions": {
+        "candidate": 1
+      }
+    },
+    {
+      "cluster": "视频生成返修成本",
+      "need_ids": [
+        "n-video-cost",
+        "n-video-preview"
+      ],
+      "discussion_families": 2,
+      "reported_families": 2,
+      "source_ids": [
+        "x-cost-reply",
+        "x-generations",
+        "x-preview"
+      ],
+      "dispositions": {
+        "adjacent": 1,
+        "promotion": 1
+      }
+    },
+    {
+      "cluster": "订单变体转履约单",
+      "need_ids": [
+        "n-variants-r2"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "s1-c2",
+        "s1-post"
+      ],
+      "dispositions": {
+        "candidate": 1
+      }
+    },
+    {
+      "cluster": "通用自动字幕翻译",
+      "need_ids": [
+        "n-free"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "vv0-post"
+      ],
+      "dispositions": {
+        "unclear": 1
+      }
+    }
+  ],
+  "coverage": {
+    "needs": 31,
+    "clusters": 14,
+    "dispositions": {
+      "adjacent": 4,
+      "candidate": 14,
+      "promotion": 4,
+      "resolved": 6,
+      "unclear": 3
+    }
+  },
+  "limitations": [
+    "Need cards and clusters are researcher interpretations, not verified customers.",
+    "Several needs may come from one conversation; counts are not market demand.",
+    "Source-backed fields still require semantic review."
+  ]
+}

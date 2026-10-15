@@ -1,0 +1,351 @@
+{
+  "ok": true,
+  "revision": 2,
+  "needs": [
+    {
+      "id": "need-timing",
+      "run_id": "social-offline-1",
+      "cluster": "字幕时间轴获取与制作",
+      "disposition": "candidate",
+      "summary": "打时间轴被明确描述为麻烦；保留为待验证候选",
+      "claims": {
+        "actor": {
+          "text": "需要处理字幕时间轴的人；具体职业及付费决策身份未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-timing-clarification",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "减少制作字幕时间轴的麻烦",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-timing-clarification",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "作者说“打时间轴很麻烦”",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-clarification",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "标题表示“不贵的话付费的也可以”；金额、实际付款及订阅意愿未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "xhs-timing-free",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "xhs-timing-domain",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "仅一个讨论串的作者陈述；上游上下文称翻译文本不是其主要困难，但短摘录不足以细分具体语言、处理量与交付格式。",
+        "评论推荐免费字幕下载；没有该作者成功使用或拒绝它的记录，尚不能判定需求未被满足。",
+        "频率、当前完整操作步骤、耗时及可接受价格未知；不能从条件付费表态推断收入。"
+      ]
+    },
+    {
+      "id": "need-alignment-resolved",
+      "run_id": "social-offline-1",
+      "cluster": "已有字幕时间同步",
+      "disposition": "resolved",
+      "summary": "曾手动对齐波形，后报告找到时间轴完美版本",
+      "claims": {
+        "actor": {
+          "text": "进行字幕对齐的人；职业未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "获得时间轴对齐的字幕版本",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "手动对齐波形；随后报告找到时间轴完美版本",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "曾存在人工对齐步骤；成本和当前残余麻烦未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "xhs-align-post",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "xhs-align-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "resolved为研究者对该次事件的分类，依据作者自述，未检验文件质量。",
+        "帖内AI生成回顾不能作为模型表现、API花费或作者实际付款的证据；本卡仅使用作者末段。",
+        "与打时间轴候选是不同讨论串、不同任务条件；不能直接合并成两个同类付费需求。"
+      ]
+    },
+    {
+      "id": "need-free-alternative",
+      "run_id": "social-offline-1",
+      "cluster": "字幕时间轴获取与制作",
+      "disposition": "adjacent",
+      "summary": "免费字幕下载建议作为替代线索保留，不计作新增痛点",
+      "claims": {
+        "actor": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "评论者称存在免费方案，并在后续回复给出downsub.com",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-free",
+              "excerpt_id": "e1"
+            },
+            {
+              "source_id": "xhs-timing-domain",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "评论者称方案免费；非价格实测，非购买记录",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-timing-free",
+              "excerpt_id": "e1"
+            }
+          ]
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "同一评论者的主回复和补充回复属于同一证据链；不作为两个独立成功案例。",
+        "没有验证工具当前功能、质量或可用性；也没有作者采纳后的结果。",
+        "保留为候选需求的相反意见，非独立产品机会。"
+      ]
+    },
+    {
+      "id": "need-subeasy-unclear",
+      "run_id": "social-offline-1",
+      "cluster": "字幕工具推荐",
+      "disposition": "unclear",
+      "summary": "SubEasy推荐未附结果，作者“OK”不足以证明试用或新需求",
+      "claims": {
+        "actor": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "trigger": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "评论建议尝试subeasy.ai；实际采用情况未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "xhs-align-tip",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未提供足够证据",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "xhs-align-answer",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "推荐者关联关系未知，不能判定为推广，也不能当作独立买方需求。",
+        "作者简短回应不是产品成功、付费或试用完成的证据。"
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "cluster": "字幕工具推荐",
+      "need_ids": [
+        "need-subeasy-unclear"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "xhs-align-tip"
+      ],
+      "dispositions": {
+        "unclear": 1
+      }
+    },
+    {
+      "cluster": "字幕时间轴获取与制作",
+      "need_ids": [
+        "need-timing",
+        "need-free-alternative"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "xhs-timing-clarification",
+        "xhs-timing-domain",
+        "xhs-timing-free",
+        "xhs-timing-post"
+      ],
+      "dispositions": {
+        "adjacent": 1,
+        "candidate": 1
+      }
+    },
+    {
+      "cluster": "已有字幕时间同步",
+      "need_ids": [
+        "need-alignment-resolved"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "xhs-align-post"
+      ],
+      "dispositions": {
+        "resolved": 1
+      }
+    }
+  ],
+  "coverage": {
+    "needs": 4,
+    "clusters": 3,
+    "dispositions": {
+      "adjacent": 1,
+      "candidate": 1,
+      "resolved": 1,
+      "unclear": 1
+    }
+  },
+  "limitations": [
+    "Need cards and clusters are researcher interpretations, not verified customers.",
+    "Several needs may come from one conversation; counts are not market demand.",
+    "Source-backed fields still require semantic review."
+  ]
+}

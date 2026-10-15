@@ -1,0 +1,1699 @@
+{
+  "review_date": "2026-10-16",
+  "scope": "Frozen 001, independent semantic review; not code tests",
+  "status": "citation_corrections_required",
+  "material_product_selection_error_observed": false,
+  "denominators": {
+    "needs": 27,
+    "non_unknown_need_fields": 106,
+    "payment": 10,
+    "frequency": 2,
+    "noncandidate_cards": 14,
+    "opportunities": 5,
+    "findings": 5,
+    "comparisons": 3,
+    "additional_report_payment_case": 1
+  },
+  "issues": [
+    {
+      "id": "SEM-001",
+      "severity": "citation_error",
+      "fields": [
+        "n-mobile.payment"
+      ],
+      "problem": "条件愿付仅引用s2-post:e1；e1只谈当前Excel和手机不便。",
+      "correction": "改引e3，保持不是已付费。",
+      "evidence": [
+        {
+          "source_id": "s2-post",
+          "excerpt_id": "e3",
+          "url": "https://www.reddit.com/r/spreadsheets/comments/1vacnaq/looking_for_inventory_management_software_for_a/",
+          "quote": "I don’t mind paying if it’s worth it"
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-002",
+      "severity": "citation_error",
+      "fields": [
+        "n-spromo.payment",
+        "n-spromo.outcome"
+      ],
+      "problem": "$20拟价、评论免费副本激励和出售动作只引e1；e1只说明制作中。",
+      "correction": "payment引e2+e3；outcome补e2。",
+      "evidence": [
+        {
+          "source_id": "s3-post",
+          "excerpt_id": "e2",
+          "url": "https://www.reddit.com/r/Etsy/comments/12hne4i/question_what_would_you_need_in_a_etsy_management/",
+          "quote": "I'm thinking of selling it for 20$."
+        },
+        {
+          "source_id": "s3-post",
+          "excerpt_id": "e3",
+          "url": "https://www.reddit.com/r/Etsy/comments/12hne4i/question_what_would_you_need_in_a_etsy_management/",
+          "quote": "a free copy of it to anyone who comments"
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-003",
+      "severity": "citation_error",
+      "fields": [
+        "n-style.friction"
+      ],
+      "problem": "标点、大小写、漏改具体内容在e2，现引用在关键句前截断的e1。",
+      "correction": "补fw-v2-post:e2。",
+      "evidence": [
+        {
+          "source_id": "fw-v2-post",
+          "excerpt_id": "e2",
+          "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+          "quote": "punctuate, capitalize and just generally I miss some things that should've been edited."
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-004",
+      "severity": "citation_error",
+      "fields": [
+        "n-caption-batch.friction"
+      ],
+      "problem": "同步和语法问题在e2；e1只说明使用工具且耗时。",
+      "correction": "补fw-v5-post:e2。",
+      "evidence": [
+        {
+          "source_id": "fw-v5-post",
+          "excerpt_id": "e2",
+          "url": "https://www.reddit.com/r/editors/comments/hfh5ux/",
+          "quote": "the sync is usually off, the grammar is terrible and the time wasted is immense"
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-005",
+      "severity": "citation_error",
+      "fields": [
+        "n-variants.actor"
+      ],
+      "problem": "3D打印灯具卖家引用e1，但行业在e2。",
+      "correction": "改引或补s1-post:e2。",
+      "evidence": [
+        {
+          "source_id": "s1-post",
+          "excerpt_id": "e2",
+          "url": "https://www.reddit.com/r/EtsySellers/comments/ln8n78/how_do_you_all_do_inventory_management_my_shop/",
+          "quote": "I make 3D printed lights and print/order a bunch of parts for assembly."
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-006",
+      "severity": "citation_error",
+      "fields": [
+        "n-mobile.outcome",
+        "n-mobile.friction"
+      ],
+      "problem": "导入历史Excel、数百项、避免重录不在当前e1。",
+      "correction": "outcome补e2/e3；friction补e2。",
+      "evidence": [
+        {
+          "source_id": "s2-post",
+          "excerpt_id": "e2",
+          "url": "https://www.reddit.com/r/spreadsheets/comments/1vacnaq/looking_for_inventory_management_software_for_a/",
+          "quote": "since I already have hundreds of items"
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-007",
+      "severity": "citation_error",
+      "fields": [
+        "n-stalled.outcome",
+        "n-stalled.workaround",
+        "n-stalled.friction"
+      ],
+      "problem": "三个字段只引介绍一般V1反馈流程的e1，未包含限期、V2/V3、接受流程仍不回复及关系担忧。",
+      "correction": "workaround引fx-post:e2；friction引e3；outcome推断补e3。",
+      "evidence": [
+        {
+          "source_id": "fx-post",
+          "excerpt_id": "e2",
+          "url": "https://www.reddit.com/r/freelance/comments/13dy5sn/",
+          "quote": "we'll do V1, V2, and V3"
+        },
+        {
+          "source_id": "fx-post",
+          "excerpt_id": "e3",
+          "url": "https://www.reddit.com/r/freelance/comments/13dy5sn/",
+          "quote": "bad for the working relationship"
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-008",
+      "severity": "citation_error",
+      "fields": [
+        "n-align.outcome"
+      ],
+      "problem": "指定译文由现引文支持，但定时SRT输出没有出现在所引正文e1与c21:e1中。",
+      "correction": "补fw-v3-c15:e1/e2。",
+      "evidence": [
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e2",
+          "url": "https://www.reddit.com/r/editors/comments/17pbwmo/comment/kifwdic/",
+          "quote": "saved as an SRT and reuploded into premiere"
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-009",
+      "severity": "citation_error",
+      "fields": [
+        "report.comparisons[1].assessment"
+      ],
+      "problem": "“用户报告跨渠道表格足够”引用c11（表格足够但未说多渠道）、c19（记账员教QuickBooks）、官方产品名，均不能直接支持跨渠道表格使用。",
+      "correction": "加入fw-s3-c13:e1/e2，c19仅支持培训服务。",
+      "evidence": [
+        {
+          "source_id": "fw-s3-c19",
+          "excerpt_id": "e1",
+          "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjpb1uk/",
+          "quote": "i hired a bookkeeper to teach me how to use it"
+        },
+        {
+          "source_id": "fw-s3-c13",
+          "excerpt_id": "e2",
+          "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjq9ecz/",
+          "quote": "I got the Shopify Add-On Spreadsheet"
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-010",
+      "severity": "wording_precision",
+      "fields": [
+        "n-sheet-enough.frequency",
+        "report.findings[f-seller].statement"
+      ],
+      "problem": "原文每月一至两次、for a few hours；need写每次几小时，report又写每月几小时，采用不同时间分母。",
+      "correction": "统一为每月一至两次，自述数小时；时长是单次还是月总量不明确。",
+      "evidence": [
+        {
+          "source_id": "fw-s3-c11",
+          "excerpt_id": "e1",
+          "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjof18r/",
+          "quote": "once or twice a month for a few hours"
+        }
+      ],
+      "material_product_selection_error": false
+    },
+    {
+      "id": "SEM-011",
+      "severity": "context_traceability",
+      "fields": [
+        "n-revision.friction"
+      ],
+      "problem": "Not really脱离父问题无法读出合同含义；raw上下文支持但support不自足。",
+      "correction": "加入fw-f1-c11:e1父问题，或context保留父问题和作者身份。",
+      "evidence": [
+        {
+          "source_id": "fw-f1-c12",
+          "excerpt_id": "e1",
+          "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ocjxeza/",
+          "quote": "Not really"
+        }
+      ],
+      "material_product_selection_error": false
+    }
+  ],
+  "claim_ledger": [
+    {
+      "field": "n-recut.actor",
+      "claim": "处理字幕的剪辑从业者",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-v1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-recut.trigger",
+      "claim": "视频重新剪辑",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-recut.outcome",
+      "claim": "更新字幕时间而不全部重做",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-recut.friction",
+      "claim": "重新剪辑导致字幕时间失配",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-style.actor",
+      "claim": "代理公司的剪辑人员",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-style.trigger",
+      "claim": "开始为更多视频添加字幕",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-style.outcome",
+      "claim": "团队字幕质量一致并减少返修",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v2-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-style.workaround",
+      "claim": "Premiere转写生成字幕后人工修正",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-style.friction",
+      "claim": "频繁收到标点、大小写和漏改意见",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-003"
+      ]
+    },
+    {
+      "field": "n-style.payment",
+      "claim": "准备向老板提议Rev，尚非已购买",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v2-c34",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-style-solved.actor",
+      "claim": "代理团队",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v2-c54",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-style-solved.trigger",
+      "claim": "大量字幕内容带来语法和结构修正工作",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v2-c54",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-style-solved.outcome",
+      "claim": "复用客户规则校对字幕",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-v2-c54",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-style-solved.workaround",
+      "claim": "已用AI建立内部小工具并收集客户偏好",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v2-c54",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-align.actor",
+      "claim": "承接教学视频项目的剪辑人员",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v3-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-align.trigger",
+      "claim": "客户提供必须使用的专业西语译稿",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v3-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-align.outcome",
+      "claim": "保留指定译文并正确导出定时SRT",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v3-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-v3-c21",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-008"
+      ]
+    },
+    {
+      "field": "n-align.workaround",
+      "claim": "Premiere英文SRT→Excel人工替换→文本编辑器保存SRT",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-align.friction",
+      "claim": "自述每15分钟视频耗费约1小时装配",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v3-c15",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-caption-batch.actor",
+      "claim": "Adobe剪辑人员",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v5-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-caption-batch.trigger",
+      "claim": "20条各30–45分钟访谈字幕任务",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v5-c16",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-caption-batch.outcome",
+      "claim": "更快完成正确同步的字幕",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-v5-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-caption-batch.workaround",
+      "claim": "AI转写后导入字幕插件",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v5-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-caption-batch.friction",
+      "claim": "同步、语法修正耗时",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v5-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-004"
+      ]
+    },
+    {
+      "field": "n-caption-batch.payment",
+      "claim": "自述已投入AI转写工具和Subtitle Pro，金额不明",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-v5-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-burnt.actor",
+      "claim": "希望观看外语剧集的人",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "v1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-burnt.trigger",
+      "claim": "字幕烧录在画面上，没有SRT",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "v1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-burnt.outcome",
+      "claim": "翻译现有字幕并分配时间戳",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "v1-post",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "v1-post",
+          "excerpt_id": "e3"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-burnt.workaround",
+      "claim": "知道单图OCR但不知道如何处理整个视频",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "v1-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-burnt.payment",
+      "claim": "明确寻找免费工具",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "v1-post",
+          "excerpt_id": "e3"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-free.outcome",
+      "claim": "自动生成并翻译字幕",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "vv0-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-free.payment",
+      "claim": "FREE or cheap；未报告付费",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "vv0-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-variants.actor",
+      "claim": "3D打印灯具卖家",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-005"
+      ]
+    },
+    {
+      "field": "n-variants.trigger",
+      "claim": "开店几周达到125单",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-variants.outcome",
+      "claim": "自动输出需要履约的订单变体信息",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s1-c2",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-variants.workaround",
+      "claim": "查看订单列表和变体CSV",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s1-c2",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-variants.friction",
+      "claim": "列表仅标题，变体导出表难用",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s1-c2",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-mobile.actor",
+      "claim": "转售卖家",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "s2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-mobile.outcome",
+      "claim": "在外也能快速更新并导入历史Excel",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-006"
+      ]
+    },
+    {
+      "field": "n-mobile.workaround",
+      "claim": "维护详细Excel库存成本售价和利润表",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-mobile.friction",
+      "claim": "手机Excel体验不理想，不愿手工重新录入数百项",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-006"
+      ]
+    },
+    {
+      "field": "n-mobile.payment",
+      "claim": "有条件愿付费，不是已付费",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-001"
+      ]
+    },
+    {
+      "field": "n-book-setup.actor",
+      "claim": "单人Etsy副业经营者",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-book-setup.trigger",
+      "claim": "记录经常落后，不确定做法是否正确",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s2-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-book-setup.outcome",
+      "claim": "更自动化并看清经营记录",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s2-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s2-c11",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-book-setup.workaround",
+      "claim": "月末按销售、费用、营销、运输等分类记账；Wave账户未配置",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s2-c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s2-c11",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-book-setup.friction",
+      "claim": "有软件仍未完成初始设置，分类需要确认",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s2-c11",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-book-setup.payment",
+      "claim": "作者认为销量可支持付费，但未报告自己付款",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s2-c11",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-monthly.actor",
+      "claim": "无雇员的单人经营者",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-monthly.outcome",
+      "claim": "改善记账并加入更好的库存管理",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-monthly.workaround",
+      "claim": "Excel表格公式记录月度支出销售等",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-multichannel.actor",
+      "claim": "增加Shopify及定制业务的Etsy卖家",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s3-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-multichannel.trigger",
+      "claim": "新增渠道后需要合并记录",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s3-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-multichannel.outcome",
+      "claim": "统一月报",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s3-c5",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-multichannel.workaround",
+      "claim": "Wave和QuickBooks太重；后来找小型服务团队整理",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s3-post",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s3-c5",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-multichannel.friction",
+      "claim": "跨平台数据整理耗时",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s3-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-sheet-enough.actor",
+      "claim": "自述每月100多单的卖家",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s3-c11",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-sheet-enough.outcome",
+      "claim": "当前方案足够简单且可接受",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s3-c11",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-sheet-enough.workaround",
+      "claim": "Paper and Spark表格复制粘贴订单",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s3-c9",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s3-c11",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-sheet-enough.frequency",
+      "claim": "每月一至两次，每次几小时",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s3-c11",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-010"
+      ]
+    },
+    {
+      "field": "n-beginner.actor",
+      "claim": "英国Etsy初学卖家",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-s6-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-beginner.outcome",
+      "claim": "追踪收入费用和利润",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s6-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-beginner.workaround",
+      "claim": "订单追踪和履约使用Etsy seller app",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s6-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-beginner.friction",
+      "claim": "一直不擅长表格，希望避免",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s6-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-template-paid.actor",
+      "claim": "卖家评论者",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-s6-c8",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-template-paid.outcome",
+      "claim": "省去数据整理时间",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-s6-c8",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-template-paid.workaround",
+      "claim": "购买自动化Excel模板并按教程粘贴数据",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s6-c8",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-template-paid.payment",
+      "claim": "自述£40已花在Madeonthecommon模板上；不是Paper and Spark价格",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s6-c10",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-s6-c10",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-sync.actor",
+      "claim": "多工具卖家评论者",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-s6-c12",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-sync.outcome",
+      "claim": "找到匹配库存记账系统和市场渠道的更好同步方案",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s6-c12",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-sync.workaround",
+      "claim": "Zoho One、Flow脚本与Baselinker",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s6-c12",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-revision.actor",
+      "claim": "自由职业者",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-f1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-revision.trigger",
+      "claim": "小修改变成大量消息、电话和不同版本",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-revision.outcome",
+      "claim": "控制返修范围且不破坏关系",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f1-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-revision.friction",
+      "claim": "没有明确合同流程",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f1-c12",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-011"
+      ]
+    },
+    {
+      "field": "n-attribution.actor",
+      "claim": "自由技术写作者",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f3-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-attribution.trigger",
+      "claim": "约定两轮修改却已到第七、第十二稿",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f3-post",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-attribution.outcome",
+      "claim": "整理修改来源以解释返修边界",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-f3-post",
+          "excerpt_id": "e3"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-attribution.workaround",
+      "claim": "花一小时回查历史修订",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f3-post",
+          "excerpt_id": "e3"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-attribution.friction",
+      "claim": "有轮次约定仍因质量归责产生争议",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f3-post",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "fw-f3-c33",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-attribution.payment",
+      "claim": "双方约定分摊额外分包工时70%/30%，并非新工具付款",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f3-c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "fw-f3-c11",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-weekly.outcome",
+      "claim": "提前发现误解并减少返工",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f4-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-weekly.workaround",
+      "claim": "每周发完成、下一步和时间线风险",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f4-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-weekly.frequency",
+      "claim": "每周",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f4-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-consolidate.actor",
+      "claim": "自由编辑人员",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-f5-c6",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-consolidate.trigger",
+      "claim": "客户在上一批完成后才发不相关新意见",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f5-c6",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-consolidate.outcome",
+      "claim": "一次收齐反馈",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f5-c6",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-consolidate.workaround",
+      "claim": "直接要求客户合并发送",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f5-c6",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-consolidate.friction",
+      "claim": "分批意见消耗更多时间",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f5-c6",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-stalled.actor",
+      "claim": "接了5个项目的新自由职业者",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fx-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-stalled.outcome",
+      "claim": "获得及时反馈并保持客户关系",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fx-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-007"
+      ]
+    },
+    {
+      "field": "n-stalled.workaround",
+      "claim": "约定V1–V3和反馈截止时间",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fx-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-007"
+      ]
+    },
+    {
+      "field": "n-stalled.friction",
+      "claim": "客户接受流程但不提供反馈",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fx-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-007"
+      ]
+    },
+    {
+      "field": "n-fpromo.actor",
+      "claim": "产品创建者",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f1-c28",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-fpromo.outcome",
+      "claim": "签署范围变更并确认付款再交付",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-f1-c28",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-spromo.actor",
+      "claim": "计划销售表格的创建者",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s3-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-spromo.outcome",
+      "claim": "出售整合表格",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s3-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-002"
+      ]
+    },
+    {
+      "field": "n-spromo.payment",
+      "claim": "20美元为卖方拟价；评论有免费副本激励",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "s3-post",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "correction_or_qualification",
+      "issues": [
+        "SEM-002"
+      ]
+    },
+    {
+      "field": "n-bookpromo.actor",
+      "claim": "自称提供小企业记账服务的人",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "fw-s2-c10",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-bookpromo.outcome",
+      "claim": "提供设置和培训",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "fw-s2-c10",
+          "excerpt_id": "e2"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-video-cost.actor",
+      "claim": "AI影片创建者",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "x-generations",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-video-cost.friction",
+      "claim": "修复瑕疵目前太贵",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "x-cost-reply",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-video-cost.payment",
+      "claim": "作者自述生成token成本约900美元；非已核验付款或给新工具的预算",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "x-generations",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-video-preview.actor",
+      "claim": "制作产品视频的人",
+      "basis": "inferred",
+      "support": [
+        {
+          "source_id": "x-preview",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-video-preview.friction",
+      "claim": "每次从头渲染30–40分钟且无法预览",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "x-preview",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    },
+    {
+      "field": "n-vietnamese.outcome",
+      "claim": "把提供的越南语稿替换进字幕",
+      "basis": "stated",
+      "support": [
+        {
+          "source_id": "li-subtitles",
+          "excerpt_id": "e1"
+        }
+      ],
+      "verdict": "consistent_with_stated_inference_level",
+      "issues": []
+    }
+  ],
+  "input_sha256": {
+    ".eval-runs/discovery-forward/needs-batch.json": "f0d876e2e7421cb3886cdfdfeede4092e2bfcc2b1dff125aee1a657040968c1e",
+    ".eval-runs/discovery-forward/study/reports/001/study.json": "a0d37ad58fb3c13330499d77e1ee5424346f1e02e57bb1187b749b1f9827e5b2",
+    ".eval-runs/discovery-forward/study/reports/001/report.json": "a56a62aa52ebb91746a942f3f285304214d593482206c94304fe4b3ca3fe2505",
+    ".eval-runs/discovery-forward/read-manifest.json": "783a1ec40d503328c1e5400a0e688e760a9190546d116f201d01851e51322550"
+  },
+  "limitations": [
+    "未读取父代理其他审查、Atypica结论或旧baseline报告。",
+    "X重开Internal Error，无法独立确认完整原文和身份。",
+    "不声称总体准确率、代表性或真实客户/支付验证。"
+  ]
+}

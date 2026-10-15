@@ -1,4 +1,4 @@
-# v0.2 data and CLI contract
+# Data and CLI contract (v0.4, study schema 1)
 
 Social research, competitor research and simulated interviews can run separately
 or contribute to one report. The host collects/generates content; the CLI is
@@ -19,11 +19,14 @@ Unknown fields are errors (except arbitrary keys in persona `traits`). IDs match
 
 `product-idea-research audit DIR [--report REPORT.json]`
 
+`product-idea-research pool DIR [--report REPORT.json] [--review]`
+
 `product-idea-research render DIR --report REPORT.json [--format both|md|html]`
 
 `product-idea-research install --target codex|claude --scope user|project [--directory DIR] [--dry-run]`
 
-All successful commands emit JSON (status --json is a convenience alias).
+Successful subcommands emit JSON (status --json is a convenience alias).
+Top-level `--help` and `--version` emit plain text; do not JSON-decode them.
 Errors emit structured JSON to stderr with exit code 1; argparse usage errors use 2.
 Install project scope uses --directory or cwd; user scope uses the actual home and
 rejects --directory. Copy the same packaged skill into `.agents/skills/product-idea-research`
@@ -36,7 +39,7 @@ installation is a no-op; differing files are a conflict, never silently overwrit
 recipe (null initially), personas=[], interviews=[], brief=null, sources=[], runs=[].
 Legacy studies may omit brief/sources/runs; reads do not rewrite them. Additional
 internal timestamps are allowed in the study format only. Batch keys are recipe,
-personas, interviews, brief, sources, runs;
+personas, interviews, brief, sources, runs, needs;
 each optional, at least one required. Recipe and brief are immutable once set. All records are immutable; same ID + same content is a no-op, conflicting
 content is an error. New records append. Entire batch validates against merged
 state before atomic replacement, under an exclusive write lock. Empty/no-op batches
@@ -44,7 +47,7 @@ must not increment revision. Incomplete studies are valid checkpoint states.
 Corrections use new record IDs (or a new study for a revised overall question/recipe).
 Reports select run and interview IDs for that iteration; older records remain.
 Source excerpt IDs are unique within each source; all entity record IDs are unique
-across brief, recipe, sources, runs, personas and interviews.
+across brief, recipe, sources, runs, personas, interviews and needs.
 
 ### Shared brief, sources and module runs
 
@@ -207,7 +210,7 @@ Stored personas are immutable, so interview references pin exact role cards.
 ```
 
 status is partial or complete. title/summary nonempty. All report fields in the
-example are required. Optional fields are `run_ids`, `comparisons`, `opportunities`.
+example are required. Optional fields are `run_ids`, `need_ids`, `comparisons`, `opportunities`.
 Missing run_ids means []; interview_ids may be [] when >=1 run is selected.
 Select at least one run or interview. IDs in each selection are unique and resolve.
 
@@ -380,4 +383,52 @@ the published snapshot, not a temporary directory. Use them directly for local
 file links; keep relative links inside the generated report/evidence pair unchanged.
 
 
-Demand discovery v0.4 adds optional `needs`, `source.parent_source_id`, report/opportunity `need_ids`, and `pool`. The exact claim-level schema and selection rules are in [the packaged contract](../src/product_idea_research/skill/references/data-contract.md#demand-discovery-additions-v04). Selected demand cards export as JSON/CSV/Markdown/HTML with the report snapshot.
+## Demand discovery additions (v0.4)
+
+Existing schema_version=1 remains compatible. `needs` is an optional study/batch
+collection. `source.parent_source_id` is optional: it must identify another saved
+source in the same group, with no parent cycles. It records ancestry, not guaranteed
+parent reading; preserve access/limitations. Do not invent a parent or comment URL.
+
+`product-idea-research pool DIR [--report REPORT.json]` returns need cards, clusters,
+source-family counts and dispositions. Without --report all stored cards are shown,
+including historical corrections; with --report only explicit `need_ids` are shown.
+With `--review`, the result additionally contains `claim_review`: each selected
+card's claims with basis and exact cited excerpt text, locator and source URL;
+counterevidence is expanded the same way. Unknown claims have no evidence. This
+read-only join helps semantic review; it does not certify entailment or alter
+saved records. Without the flag, the output is unchanged.
+
+A need has exactly these fields:
+
+```json
+{
+  "id": "need-1", "run_id": "social-1", "cluster": "subtitle-handoff",
+  "disposition": "candidate", "summary": "Deliver approved subtitles after a recut",
+  "claims": {
+    "actor": {"text": "Editor", "basis": "stated", "support": [{"source_id": "s1", "excerpt_id": "e1"}]},
+    "trigger": {"text": "Unknown", "basis": "unknown", "support": []},
+    "outcome": {"text": "Aligned subtitle delivery", "basis": "inferred", "support": [{"source_id": "s1", "excerpt_id": "e1"}]},
+    "workaround": {"text": "Unknown", "basis": "unknown", "support": []},
+    "friction": {"text": "Unknown", "basis": "unknown", "support": []},
+    "frequency": {"text": "Unknown", "basis": "unknown", "support": []},
+    "payment": {"text": "Unknown", "basis": "unknown", "support": []}
+  },
+  "counterevidence": [], "limitations": ["Single self-report; example schema only"]
+}
+```
+
+`run_id` must select an existing social run. `cluster` is nonempty text, not an
+algorithmic classification. Disposition is candidate/resolved/promotion/adjacent/unclear.
+Each of the seven claims requires text, basis and support. Stated/inferred requires
+at least one eligible full/excerpt reference in that run. Unknown requires no support.
+At least one claim must be source-backed. Counterevidence uses the same source
+reference format (possibly empty). Limitations requires at least one item. Synthetic
+interviews never support need fields. Structure cannot verify whether the text is true.
+
+Reports may specify `need_ids` (unique IDs of needs belonging to selected runs).
+Opportunity cards may specify `need_ids`, which must be a subset of the report's
+selection. Corrections use new IDs; select current cards to avoid counting history.
+With nonempty need_ids, render exports needs.json, needs.csv, needs.md and/or needs.html
+alongside existing outputs. CSV values beginning with formula markers receive an
+apostrophe; JSON retains original text. Share the whole directory for working links.

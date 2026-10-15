@@ -1,0 +1,151 @@
+{
+  "accessed_at": "2026-10-16",
+  "query": "字幕翻译 时间轴",
+  "route": "Chrome public note UI, existing authorized session",
+  "posts_read": 2,
+  "comments_read": 27,
+  "retained_sources": 7,
+  "comments": [
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a845084000000002b02b2ab",
+      "summary": "Recommends Jianying but mentions paid export"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a8530920000000015009659",
+      "summary": "Suggests a cracked version; not followed"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a8afd40000000000b014e2b",
+      "summary": "Mentions Mac-specific option"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a8b26a8000000001500b9ca",
+      "summary": "Asks for Mac option"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a83fd08000000001c0126c3",
+      "summary": "Recommends free web downloader"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a83fda3000000001c010e3d",
+      "summary": "Specifies downloader and accepts advertising"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a86c46d000000000b01b454",
+      "summary": "Suggests import into editor after extraction"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6ac83fb30000000012003144",
+      "summary": "Asks about more languages or SRT export"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a883f7c000000000202b7ba",
+      "summary": "Asks which mobile app imports SRT"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a895de6000000001500501c",
+      "summary": "Suggests cloud storage app"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a8086ec000000000701782e",
+      "summary": "Suggests AI transcription"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a808840000000002b025ac4",
+      "summary": "Author distinguishes timing from text translation"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a8088bf00000000030080ae",
+      "summary": "Describes timestamped transcription while unsure of timing task"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a81c608000000001c013c1f",
+      "summary": "Prefers local deployment"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a81c6c0000000003016c2b",
+      "summary": "Prefers cloud processing and particular VAD"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a81c6f000000000302db3e",
+      "summary": "Disagrees about local model quality"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a81c7010000000003017cb2",
+      "summary": "Argues cloud cost lower except privacy constraint"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a8087140000000014017377",
+      "summary": "Asks whether CC captions"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a80880a000000002a024b34",
+      "summary": "Author confirms CC"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a808c75000000002b02abcb",
+      "summary": "Suggests caption download or audio transcription"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a80920a000000002902e078",
+      "summary": "Author thanks suggestion"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a808810000000002902efe0",
+      "summary": "Suggests web caption download search"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a809202000000002902df6a",
+      "summary": "Author thanks suggestion"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a81ee49000000002901b9e6",
+      "summary": "Mentions free iOS app"
+    },
+    {
+      "post_id": "6a808647000000002803397a",
+      "locator": "comment-6a81eeb4000000002b02424d",
+      "summary": "Describes subsequent Aegisub workflow"
+    },
+    {
+      "post_id": "6a887900000000000302a506",
+      "locator": "First visible recommendation, 08-22",
+      "summary": "Recommends SubEasy"
+    },
+    {
+      "post_id": "6a887900000000000302a506",
+      "locator": "Author reply to first comment, 08-22",
+      "summary": "Will investigate suggestion"
+    }
+  ],
+  "limits": [
+    "Partial comment coverage of 86-comment thread; other folded branches remain unread.",
+    "Two media attachments on first note not inspected.",
+    "No new login, outreach or product trial.",
+    "No private browser parameters, profiles or account metadata retained."
+  ]
+}

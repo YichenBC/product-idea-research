@@ -1,0 +1,1308 @@
+[
+  {
+    "id": "fw-v1-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/editors/comments/1s2mgg1/managing_srtvtt_files_across_multiple_languages/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-v1-c7",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s2mgg1/comment/oc9gi4b/",
+    "locator": "turn216view0 timestamp-link 7",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v1-c9",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s2mgg1/comment/ocfowq8/",
+    "locator": "turn216view0 timestamp-link 9",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v1-c11",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s2mgg1/comment/oc9kbdc/",
+    "locator": "turn216view0 timestamp-link 11",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v1-c13",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s2mgg1/managing_srtvtt_files_across_multiple_languages/",
+    "locator": "turn216view0 timestamp-link 13",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v1-c18",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s2mgg1/comment/oceg832/",
+    "locator": "turn216view0 timestamp-link 18",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-v2-c7",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocuml8u/",
+    "locator": "turn216view1 timestamp-link 7",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c9",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocuq2un/",
+    "locator": "turn216view1 timestamp-link 9",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c11",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocv8mpm/",
+    "locator": "turn216view1 timestamp-link 11",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c14",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 14",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c17",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocujsua/",
+    "locator": "turn216view1 timestamp-link 17",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c18",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocupkaz/",
+    "locator": "turn216view1 timestamp-link 18",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c20",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/od06b6g/",
+    "locator": "turn216view1 timestamp-link 20",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c24",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocvg374/",
+    "locator": "turn216view1 timestamp-link 24",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c25",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 25",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c28",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocvz5bu/",
+    "locator": "turn216view1 timestamp-link 28",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c29",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocuq372/",
+    "locator": "turn216view1 timestamp-link 29",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c31",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocv2rsf/",
+    "locator": "turn216view1 timestamp-link 31",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c32",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocv3spz/",
+    "locator": "turn216view1 timestamp-link 32",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c33",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocv4d44/",
+    "locator": "turn216view1 timestamp-link 33",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c34",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocvp0zm/",
+    "locator": "turn216view1 timestamp-link 34",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c39",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 39",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c41",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 41",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c43",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocyds0t/",
+    "locator": "turn216view1 timestamp-link 43",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c45",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 45",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c50",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 50",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c52",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 52",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c54",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/comment/ocxouxy/",
+    "locator": "turn216view1 timestamp-link 54",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v2-c56",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 56",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c58",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 58",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c59",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 59",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c60",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 60",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v2-c63",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/1s5gosy/subtitles/",
+    "locator": "turn216view1 timestamp-link 63",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v3-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-v3-c7",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/comment/k87hdiw/",
+    "locator": "turn221view0 timestamp-link 7",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v3-c8",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/comment/k8dnglh/",
+    "locator": "turn221view0 timestamp-link 8",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v3-c9",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/comment/k8e6lfu/",
+    "locator": "turn221view0 timestamp-link 9",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v3-c10",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/comment/k8o9aye/",
+    "locator": "turn221view0 timestamp-link 10",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v3-c15",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/comment/kifwdic/",
+    "locator": "turn221view0 timestamp-link 15",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v3-c17",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/",
+    "locator": "turn221view0 timestamp-link 17",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v3-c20",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/",
+    "locator": "turn221view0 timestamp-link 20",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v3-c21",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/comment/kifwnvu/",
+    "locator": "turn221view0 timestamp-link 21",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v3-c23",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/",
+    "locator": "turn221view0 timestamp-link 23",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v3-c24",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/17pbwmo/",
+    "locator": "turn221view0 timestamp-link 24",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v5-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-v5-c7",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fvxjvib/",
+    "locator": "turn232view0 timestamp-link 7",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c8",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fvxk5b3/",
+    "locator": "turn232view0 timestamp-link 8",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c10",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fvxxd91/",
+    "locator": "turn232view0 timestamp-link 10",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c13",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fw221wp/",
+    "locator": "turn232view0 timestamp-link 13",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c15",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fvy027z/",
+    "locator": "turn232view0 timestamp-link 15",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c16",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fw22eqg/",
+    "locator": "turn232view0 timestamp-link 16",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c17",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/",
+    "locator": "turn232view0 timestamp-link 17",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v5-c19",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fvxnf5y/",
+    "locator": "turn232view0 timestamp-link 19",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c20",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/",
+    "locator": "turn232view0 timestamp-link 20",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v5-c22",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fvyf4nx/",
+    "locator": "turn232view0 timestamp-link 22",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c25",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fvymnkw/",
+    "locator": "turn232view0 timestamp-link 25",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c28",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fvz5l3t/",
+    "locator": "turn232view0 timestamp-link 28",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c30",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/comment/fvzr84t/",
+    "locator": "turn232view0 timestamp-link 30",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-v5-c31",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/",
+    "locator": "turn232view0 timestamp-link 31",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-v5-c32",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/editors/comments/hfh5ux/",
+    "locator": "turn232view0 timestamp-link 32",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f1-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/anyone_else_feel_like_revisions_never_actually_end/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-f1-c7",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/anyone_else_feel_like_revisions_never_actually_end/",
+    "locator": "turn220view0 timestamp-link 7",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f1-c11",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ocjr6om/",
+    "locator": "turn220view0 timestamp-link 11",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c12",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ocjxeza/",
+    "locator": "turn220view0 timestamp-link 12",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c14",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/od3lnrs/",
+    "locator": "turn220view0 timestamp-link 14",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c17",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ockm66b/",
+    "locator": "turn220view0 timestamp-link 17",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c19",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ockqc7e/",
+    "locator": "turn220view0 timestamp-link 19",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c22",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ocjxman/",
+    "locator": "turn220view0 timestamp-link 22",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c24",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ockhax0/",
+    "locator": "turn220view0 timestamp-link 24",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c26",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ocl6xip/",
+    "locator": "turn220view0 timestamp-link 26",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c28",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ocmdhqq/",
+    "locator": "turn220view0 timestamp-link 28",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c31",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/comment/ocog737/",
+    "locator": "turn220view0 timestamp-link 31",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f1-c33",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/anyone_else_feel_like_revisions_never_actually_end/",
+    "locator": "turn220view0 timestamp-link 33",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f1-c35",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/anyone_else_feel_like_revisions_never_actually_end/",
+    "locator": "turn220view0 timestamp-link 35",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f1-c36",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/anyone_else_feel_like_revisions_never_actually_end/",
+    "locator": "turn220view0 timestamp-link 36",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f1-c37",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/Freelancers/comments/1s41mud/anyone_else_feel_like_revisions_never_actually_end/",
+    "locator": "turn220view0 timestamp-link 37",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f3-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-f3-c6",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frdjcew/",
+    "locator": "turn228view0 timestamp-link 6",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c7",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frdomqf/",
+    "locator": "turn228view0 timestamp-link 7",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c10",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frdk5wv/",
+    "locator": "turn228view0 timestamp-link 10",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c11",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frdq6q3/",
+    "locator": "turn228view0 timestamp-link 11",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c12",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frdrcfy/",
+    "locator": "turn228view0 timestamp-link 12",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c13",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frdwmcf/",
+    "locator": "turn228view0 timestamp-link 13",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c17",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/",
+    "locator": "turn228view0 timestamp-link 17",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f3-c18",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frdp3k5/",
+    "locator": "turn228view0 timestamp-link 18",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c19",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/",
+    "locator": "turn228view0 timestamp-link 19",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f3-c20",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/",
+    "locator": "turn228view0 timestamp-link 20",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f3-c22",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/",
+    "locator": "turn228view0 timestamp-link 22",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f3-c26",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/",
+    "locator": "turn228view0 timestamp-link 26",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f3-c27",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frg7s28/",
+    "locator": "turn228view0 timestamp-link 27",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c29",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frgduh6/",
+    "locator": "turn228view0 timestamp-link 29",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c32",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/",
+    "locator": "turn228view0 timestamp-link 32",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f3-c33",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/comment/frg7x87/",
+    "locator": "turn228view0 timestamp-link 33",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f3-c35",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/",
+    "locator": "turn228view0 timestamp-link 35",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f3-c37",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/go2lpe/",
+    "locator": "turn228view0 timestamp-link 37",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-f4-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/freelance/comments/1uspapp/weekly_updates_cut_my_revision_requests_almost_in/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-f4-c6",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelance/comments/1uspapp/comment/ows6hjj/",
+    "locator": "turn230view0 timestamp-link 6",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f5-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/freelancing/comments/1nqgr8a/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-f5-c6",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelancing/comments/1nqgr8a/comment/ng9ldtx/",
+    "locator": "turn231view0 timestamp-link 6",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-f5-c8",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/freelancing/comments/1nqgr8a/comment/ngktzg0/",
+    "locator": "turn231view0 timestamp-link 8",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s1-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1dyerrr/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-s1-c6",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1dyerrr/comment/lc87lee/",
+    "locator": "turn223view0 timestamp-link 6",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s1-c8",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1dyerrr/comment/lcfl6j6/",
+    "locator": "turn223view0 timestamp-link 8",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s1-c10",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1dyerrr/",
+    "locator": "turn223view0 timestamp-link 10",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-s2-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1i7fika/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-s2-c6",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1i7fika/comment/m8kfa32/",
+    "locator": "turn224view0 timestamp-link 6",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s2-c7",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1i7fika/comment/m8l22pl/",
+    "locator": "turn224view0 timestamp-link 7",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s2-c8",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1i7fika/comment/m8n3tce/",
+    "locator": "turn224view0 timestamp-link 8",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s2-c10",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1i7fika/comment/m8khhow/",
+    "locator": "turn224view0 timestamp-link 10",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s2-c11",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1i7fika/comment/m8ll2xw/",
+    "locator": "turn224view0 timestamp-link 11",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s2-c13",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1i7fika/",
+    "locator": "turn224view0 timestamp-link 13",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-s2-c15",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1i7fika/",
+    "locator": "turn224view0 timestamp-link 15",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-s2-c16",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1i7fika/",
+    "locator": "turn224view0 timestamp-link 16",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-s3-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-s3-c5",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjwwiqu/",
+    "locator": "turn225view0 timestamp-link 5",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s3-c7",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjmnyy7/",
+    "locator": "turn225view0 timestamp-link 7",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s3-c9",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjoe5ao/",
+    "locator": "turn225view0 timestamp-link 9",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s3-c11",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjof18r/",
+    "locator": "turn225view0 timestamp-link 11",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s3-c13",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjq9ecz/",
+    "locator": "turn225view0 timestamp-link 13",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s3-c15",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/",
+    "locator": "turn225view0 timestamp-link 15",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-s3-c17",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjpaqit/",
+    "locator": "turn225view0 timestamp-link 17",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s3-c19",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjpb1uk/",
+    "locator": "turn225view0 timestamp-link 19",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s3-c21",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/comment/mjukqxy/",
+    "locator": "turn225view0 timestamp-link 21",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s3-c23",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/",
+    "locator": "turn225view0 timestamp-link 23",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-s3-c25",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1jjfk5a/",
+    "locator": "turn225view0 timestamp-link 25",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-s6-post",
+    "type": "post",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1eygzuk/how_to_track_finances_as_a_uk_etsy_sellerbeginner/",
+    "access": "full",
+    "retained": true,
+    "reader": "forward"
+  },
+  {
+    "id": "fw-s6-c5",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1eygzuk/comment/ljdyb8p/",
+    "locator": "turn234view0 timestamp-link 5",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s6-c6",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1eygzuk/how_to_track_finances_as_a_uk_etsy_sellerbeginner/",
+    "locator": "turn234view0 timestamp-link 6",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-s6-c8",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1eygzuk/comment/ljgs43l/",
+    "locator": "turn234view0 timestamp-link 8",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s6-c9",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1eygzuk/how_to_track_finances_as_a_uk_etsy_sellerbeginner/",
+    "locator": "turn234view0 timestamp-link 9",
+    "access": "full",
+    "retained": false,
+    "reader": "forward",
+    "reason": "not retained: bot, deleted, short acknowledgement, duplicate promotion or lower relevance"
+  },
+  {
+    "id": "fw-s6-c10",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1eygzuk/comment/ljgt55n/",
+    "locator": "turn234view0 timestamp-link 10",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  },
+  {
+    "id": "fw-s6-c12",
+    "type": "comment",
+    "url": "https://www.reddit.com/r/EtsySellers/comments/1eygzuk/comment/ljfwlms/",
+    "locator": "turn234view0 timestamp-link 12",
+    "access": "full",
+    "retained": true,
+    "reader": "forward",
+    "reason": "selected task/workaround/counterevidence"
+  }
+]

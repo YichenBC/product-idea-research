@@ -29,3 +29,15 @@ Status: implementation reviewed; second live forward evaluation interrupted by h
 6. Publish reviewed, verified changes to GitHub under existing user authorization. Keep unrelated main-checkout household/report.html edit untouched. Do not publish raw browsing captures, credentials, unrelated profile information or private API state.
 
 The user's target remains real demand discovery, not merely report generation. Goal is unfinished; account usage limit must not be represented as achievement or as user-requested pause.
+
+## Resume result — 2026-10-16
+
+The interrupted forward run finished: 12 new posts / 78 retained comments, 27 cards.
+All 106 non-unknown fields received independent semantic review; citation corrections
+were appended and the original report stayed frozen. The final main example adds
+Xiaohongshu holdout and Subtitle Edit official evidence: 31 selected cards / 187 sources.
+A fresh independent request used the revised skill on 4 new posts / 24 comments and
+6 official pages, producing 10 selected cards after self-review with `pool --review`.
+See [current evaluation](../../evals/README.md) and
+[final report](../../examples/demand-discovery/README.md) for counts, replays and limits.
+The initial “unfinished” status above describes the saved checkpoint, not current output.

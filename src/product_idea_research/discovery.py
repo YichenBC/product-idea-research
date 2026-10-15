@@ -60,7 +60,7 @@ def family_count(items: list[JSONObject]) -> int:
     return len({root(group) for group in parents})
 
 
-def pool(state: Study, report: JSONObject | None = None) -> JSONObject:
+def pool(state: Study, report: JSONObject | None = None, *, review: bool = False) -> JSONObject:
     v.study(state)
     if report is not None:
         v.report(report, state)
@@ -78,12 +78,29 @@ def pool(state: Study, report: JSONObject | None = None) -> JSONObject:
                      'reported_families': len({sources[i]['group_id'] for i in ids}),
                      'source_ids': sorted(ids),
                      'dispositions': dict(sorted(Counter(n['disposition'] for n in items).items()))})
-    return {'ok': True, 'revision': state['revision'], 'needs': needs, 'clusters': rows,
+    result = {'ok': True, 'revision': state['revision'], 'needs': needs, 'clusters': rows,
             'coverage': {'needs': len(needs), 'clusters': len(rows),
                          'dispositions': dict(sorted(Counter(n['disposition'] for n in needs).items()))},
             'limitations': ['Need cards and clusters are researcher interpretations, not verified customers.',
                             'Several needs may come from one conversation; counts are not market demand.',
                             'Source-backed fields still require semantic review.']}
+    if review:
+        excerpts = {(s['id'], e['id']): e for s in sources.values() for e in s['excerpts']}
+
+        def evidence(refs: list[JSONObject]) -> list[JSONObject]:
+            return [ref | {'text': excerpts[(ref['source_id'], ref['excerpt_id'])]['text'],
+                           'locator': excerpts[(ref['source_id'], ref['excerpt_id'])]['locator'],
+                           'url': sources[ref['source_id']]['url']}
+                    for ref in refs]
+
+        result['claim_review'] = [
+            {'id': n['id'], 'summary': n['summary'], 'disposition': n['disposition'],
+             'claims': {field: {'text': c['text'], 'basis': c['basis'],
+                                'evidence': evidence(c['support'])}
+                        for field, c in n['claims'].items()},
+             'counterevidence': evidence(n['counterevidence'])}
+            for n in needs]
+    return result
 
 
 def csv_text(result: JSONObject) -> str:

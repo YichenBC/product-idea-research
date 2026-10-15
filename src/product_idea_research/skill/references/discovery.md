@@ -57,7 +57,17 @@ independent cases as separate cards in one cluster, and repeated author replies 
 one discussion family. A cluster with ten replies in one thread is not corroborated
 by ten customers. Reusing the same source across cards does not add evidence.
 
-After `pool DIR`, inspect both promising and rejected cards. Expand the leading
+Run `pool DIR --review` (add `--report FILE` for a selected snapshot) to inspect
+each claim beside its exact cited text. Review all shortlisted cards and every
+non-unknown payment/frequency field before reporting. A long source split into
+excerpts can contain the right fact in a different excerpt: repair the specific
+reference, narrow the claim, or mark it unknown. The command joins evidence; it
+does not judge whether the claim follows from it. Append corrected cards with new
+IDs and select those IDs in the next report, preserving the first output.
+For a large pool, save the JSON to a file and inspect `claim_review` in batches;
+truncated terminal/tool output does not count as reviewing the omitted claims.
+
+Inspect both promising and rejected cards. Expand the leading
 clusters using different queries/authors/channels; explain if no independent case
 was found. Preserve singleton opportunities as hypotheses, without pretending that
 repetition is necessary for every new experience or that a pain proves a business.

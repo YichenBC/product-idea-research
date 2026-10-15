@@ -44,6 +44,8 @@ def parser() -> Parser:
     needs = sub.add_parser('pool', help='Inspect demand cards, dispositions and task clusters')
     needs.add_argument('directory', type=Path)
     needs.add_argument('--report', type=Path)
+    needs.add_argument('--review', action='store_true',
+                       help='Join each claim to its exact saved excerpts for semantic review')
     output = sub.add_parser('render', help='Create an immutable report snapshot')
     output.add_argument('directory', type=Path)
     output.add_argument('--report', required=True, type=Path)
@@ -84,7 +86,7 @@ def execute(args: argparse.Namespace) -> JSONObject:
             draft = store.read_json(args.report)
             v.report(draft, state)
         if args.command == 'pool':
-            return pool(state, draft)
+            return pool(state, draft, review=args.review)
         if args.command == 'audit':
             return audit(state, draft)
         return status(state)

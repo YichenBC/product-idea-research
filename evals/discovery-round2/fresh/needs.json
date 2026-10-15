@@ -1,0 +1,849 @@
+{
+  "ok": true,
+  "revision": 5,
+  "needs": [
+    {
+      "id": "n1",
+      "run_id": "social-1",
+      "cluster": "brief-scope",
+      "disposition": "candidate",
+      "summary": "文案客户把反馈变成重写：先对齐修改目的与交付边界",
+      "claims": {
+        "actor": {
+          "text": "接客户文案项目的写作者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "客户改变想法并要求重写",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "减少无效返工并保留修改理由",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "跟随客户重写",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "反复重写后客户仍使用自己的版本",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p1",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c3",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c4",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c8",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "单条自报/建议；关联讨论中的多条回复不构成多个独立买方。"
+      ]
+    },
+    {
+      "id": "n3",
+      "run_id": "social-1",
+      "cluster": "brief-scope",
+      "disposition": "candidate",
+      "summary": "把“感觉不对”变成待客户确认的问题，而非擅自生成剪辑指令",
+      "claims": {
+        "actor": {
+          "text": "接收剪辑反馈的人",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "收到smooth out shot / vibe feels off之类反馈",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "把意见拆成明确问题、预期与原始上下文",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "自己反复猜测意见的含义",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "理解模糊意见耗费精力",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c20",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c19",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "与n2来自同一串；只增加任务细节，不增加独立客户。"
+      ]
+    },
+    {
+      "id": "n6",
+      "run_id": "social-1",
+      "cluster": "audio-cleanup",
+      "disposition": "adjacent",
+      "summary": "自动去口腔音、呼吸、离麦不一致：未付费插件愿望",
+      "claims": {
+        "actor": {
+          "text": "正在找音频插件的制作者；独立服务商身份未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c21",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "清理音频花费时间",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c21",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "自动清理mouth noises/breaths/off-mic inconsistencies",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c21",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "未知，摘录未给当前清理操作细节",
+          "basis": "unknown",
+          "support": []
+        },
+        "friction": {
+          "text": "希望降低编辑时间",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c21",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "自用播客背景，不能当专业服务商需求。",
+        "查找插件不等于愿意为新SaaS付费。"
+      ]
+    },
+    {
+      "id": "n7",
+      "run_id": "social-1",
+      "cluster": "guest-preflight",
+      "disposition": "candidate",
+      "summary": "多节目服务者在录制前排查嘉宾音频，减少后期补救",
+      "claims": {
+        "actor": {
+          "text": "多节目制作者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "嘉宾音频往往仍需额外处理",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "在录制前尽量消除后期修补",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "按格式、主持人、嘉宾使用不同模板",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "仍需为嘉宾音频额外投入",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c23",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "只有一个讨论族中的一名服务者自报；Web预检的付费意愿及远程设备覆盖未建立。"
+      ]
+    },
+    {
+      "id": "n8",
+      "run_id": "social-1",
+      "cluster": "audio-cleanup",
+      "disposition": "promotion",
+      "summary": "环境SOP已被服务商使用，同时夹带服务推广",
+      "claims": {
+        "actor": {
+          "text": "为客户制作音频的人",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c22",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "制作不同环境的客户项目",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c22",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "后续相同环境复用处理流程",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c22",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "Audition与按环境保存的SOP模板",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c22",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未知；评论未陈述模板之外仍有何痛点",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "评论末尾推广其制作服务，不能作为独立买方背书；其已有解决办法仍应保留。"
+      ]
+    },
+    {
+      "id": "n9",
+      "run_id": "social-1",
+      "cluster": "audio-cleanup",
+      "disposition": "promotion",
+      "summary": "Eddy使用推荐明确披露关联，排除买方证据",
+      "claims": {
+        "actor": {
+          "text": "自报关联推广者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c24",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "未知",
+          "basis": "unknown",
+          "support": []
+        },
+        "outcome": {
+          "text": "未知，不能凭推广句推断真实购买任务",
+          "basis": "unknown",
+          "support": []
+        },
+        "workaround": {
+          "text": "自称使用Eddy",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c24",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未知",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "明确affiliated；只作推广分类，不进入机会需求强度。"
+      ]
+    },
+    {
+      "id": "n10",
+      "run_id": "social-1",
+      "cluster": "brief-scope",
+      "disposition": "resolved",
+      "summary": "签约SOW与首次电话说明流程，是可用的人工基线",
+      "claims": {
+        "actor": {
+          "text": "与客户签文案合同的服务者",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c4",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "签约及首次客户电话",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c4",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "让客户提前理解写作反馈流程",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c4",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "在SOW加入copywriting process并在电话说明",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c4",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未知；没有陈述这个已有流程仍失败",
+          "basis": "unknown",
+          "support": []
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "resolved仅表示评论者已使用该办法；不声称原帖作者采用或成功。"
+      ]
+    },
+    {
+      "id": "n2-reviewed",
+      "run_id": "social-1",
+      "cluster": "brief-scope",
+      "disposition": "candidate",
+      "summary": "视频买方在看到成片后才知道要什么：锁定目的与变更记录",
+      "claims": {
+        "actor": {
+          "text": "小型媒体公司买方",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "看到版本后才形成具体想法",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "让brief的变化显式化，减少猜测",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "通过剪辑轮次继续思考需求",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未清楚想法就开始迭代",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e2"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "每月制作许多视频，但确切数未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p3",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c15",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c19",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "买方身份自报；同串作者跟进不算独立需求。",
+        "不能把帖主声称的轮次改善当受控实验。"
+      ]
+    },
+    {
+      "id": "n5-reviewed",
+      "run_id": "social-1",
+      "cluster": "podcast-assembly",
+      "disposition": "resolved",
+      "summary": "既有音频软件用户明确认为现有方案足够",
+      "claims": {
+        "actor": {
+          "text": "已用现有音频编辑软件的播客制作者",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "考虑试用其他播客软件",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "维持足够好且熟悉的制作方式",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "继续用现有工具",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "未陈述未解决摩擦；迁移理由不足",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "c14",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "未知，不能从回复数推断频率",
+          "basis": "unknown",
+          "support": []
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [],
+      "limitations": [
+        "resolved指该用户当前满意，非证明所有播客需求已解决。"
+      ]
+    },
+    {
+      "id": "n4-reviewed",
+      "run_id": "social-1",
+      "cluster": "podcast-assembly",
+      "disposition": "unclear",
+      "summary": "复用片头片尾但不再跨工具搬运：模板已有，端到端省步未确认",
+      "claims": {
+        "actor": {
+          "text": "播客制作者，是否服务商未知",
+          "basis": "inferred",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "trigger": {
+          "text": "期望每周换入新录音",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "outcome": {
+          "text": "复用片头片尾模板",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "workaround": {
+          "text": "另一软件已在执行被建议的类似流程",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c10",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "friction": {
+          "text": "换软件方案仍与原先过程相同",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "c10",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "frequency": {
+          "text": "期望每周换入新录音；实际发布频率未知",
+          "basis": "stated",
+          "support": [
+            {
+              "source_id": "p2",
+              "excerpt_id": "e1"
+            }
+          ]
+        },
+        "payment": {
+          "text": "未知；未观察到为该新Web产品实际付款或明确出价",
+          "basis": "unknown",
+          "support": []
+        }
+      },
+      "counterevidence": [
+        {
+          "source_id": "c9",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c12",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c13",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "原作者没有确认最终解决；官方Riverside仅条件性覆盖，不能抹去音频限制。",
+        "商业服务商角色不确定。"
+      ]
+    }
+  ],
+  "clusters": [
+    {
+      "cluster": "audio-cleanup",
+      "need_ids": [
+        "n6",
+        "n8",
+        "n9"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "c21",
+        "c22",
+        "c24"
+      ],
+      "dispositions": {
+        "adjacent": 1,
+        "promotion": 2
+      }
+    },
+    {
+      "cluster": "brief-scope",
+      "need_ids": [
+        "n1",
+        "n3",
+        "n10",
+        "n2-reviewed"
+      ],
+      "discussion_families": 2,
+      "reported_families": 2,
+      "source_ids": [
+        "c20",
+        "c4",
+        "p1",
+        "p3"
+      ],
+      "dispositions": {
+        "candidate": 3,
+        "resolved": 1
+      }
+    },
+    {
+      "cluster": "guest-preflight",
+      "need_ids": [
+        "n7"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "c23"
+      ],
+      "dispositions": {
+        "candidate": 1
+      }
+    },
+    {
+      "cluster": "podcast-assembly",
+      "need_ids": [
+        "n5-reviewed",
+        "n4-reviewed"
+      ],
+      "discussion_families": 1,
+      "reported_families": 1,
+      "source_ids": [
+        "c10",
+        "c14",
+        "p2"
+      ],
+      "dispositions": {
+        "resolved": 1,
+        "unclear": 1
+      }
+    }
+  ],
+  "coverage": {
+    "needs": 10,
+    "clusters": 4,
+    "dispositions": {
+      "adjacent": 1,
+      "candidate": 4,
+      "promotion": 2,
+      "resolved": 2,
+      "unclear": 1
+    }
+  },
+  "limitations": [
+    "Need cards and clusters are researcher interpretations, not verified customers.",
+    "Several needs may come from one conversation; counts are not market demand.",
+    "Source-backed fields still require semantic review."
+  ]
+}
