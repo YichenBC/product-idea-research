@@ -9,8 +9,9 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
 from research_workbench import store
 from research_workbench.install import install
-from research_workbench.render import render
+from research_workbench.render import evidence_document, render
 from test_cli import batch, report
+from test_research import research_batch, research_report
 
 
 class Recovery(unittest.TestCase):
@@ -56,6 +57,27 @@ class Recovery(unittest.TestCase):
         self.assertEqual([p.resolve() for p in (self.directory / 'reports').iterdir()], [first])
         self.assertEqual({p.name: p.read_bytes() for p in first.iterdir()}, original)
         self.assertEqual(Path(render(self.directory, report(), 'both')['directory']).name, '002')
+
+    def test_source_export_failure_after_markdown_keeps_previous_snapshot(self):
+        store.ingest(self.directory, research_batch())
+        draft = research_report()
+        draft['study_revision'] = 2
+        first = Path(render(self.directory, draft, 'both')['directory'])
+        original = {p.name: p.read_bytes() for p in first.iterdir()}
+        study_before = (self.directory / 'research.json').read_bytes()
+
+        def fail_html(state, report, kind):
+            if kind == 'html':
+                raise OSError('Failed final companion')
+            return evidence_document(state, report, kind)
+
+        with patch('research_workbench.render.evidence_document', side_effect=fail_html):
+            with self.assertRaises(OSError):
+                render(self.directory, draft, 'both')
+        self.assertEqual([p.resolve() for p in (self.directory / 'reports').iterdir()], [first])
+        self.assertEqual(original, {p.name: p.read_bytes() for p in first.iterdir()})
+        self.assertEqual((self.directory / 'research.json').read_bytes(), study_before)
+        self.assertEqual(Path(render(self.directory, draft, 'html')['directory']).name, '002')
 
     def test_user_install_uses_home_and_preserves_identical_files(self):
         home = Path(self.tmp.name) / 'home'
