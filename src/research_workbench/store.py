@@ -87,27 +87,30 @@ def initialize(directory: PathInput, title: str) -> Study:
     with lock(path):
         v.require(not (path / 'research.json').exists(), 'Study already initialized')
         result = {'schema_version': 1, 'title': title, 'revision': 0,
-                  'recipe': None, 'personas': [], 'interviews': []}
+                  'recipe': None, 'personas': [], 'interviews': [], 'brief': None, 'sources': [], 'runs': []}
         write_json(path / 'research.json', result)
     return result
 
 
 def ingest(directory: PathInput, batch: JSONValue) -> Study:
-    v.obj(batch, (), 'batch', optional=('recipe', 'personas', 'interviews'))
+    v.obj(batch, (), 'batch', optional=('recipe', 'personas', 'interviews', 'brief', 'sources', 'runs'))
     batch = cast(JSONObject, batch)
     v.require(bool(batch), 'batch: at least one field is required')
     with lock(directory):
         current = load(directory)
         merged = copy.deepcopy(current)
-        if 'recipe' in batch:
-            v.recipe(batch['recipe'])
-            v.require(merged['recipe'] is None or merged['recipe'] == batch['recipe'], 'recipe: immutable conflict')
-            merged['recipe'] = batch['recipe']
-        for key in ('personas', 'interviews'):
+        for key, validate in (('recipe', v.recipe), ('brief', v.brief)):
+            if key in batch:
+                validate(batch[key])
+                v.require(merged.get(key) is None or merged[key] == batch[key], f'{key}: immutable conflict')
+                merged[key] = batch[key]
+        for key in ('personas', 'interviews', 'sources', 'runs'):
             if key not in batch:
                 continue
             v.array(batch[key], f'batch.{key}')
-            records = {r['id']: r for r in merged[key]}
+            # Missing optional collections stay absent on a no-op legacy ingest.
+            target = merged.get(key, [])
+            records = {r['id']: r for r in target}
             for record in batch[key]:
                 v.require(isinstance(record, dict), f'batch.{key}: expected objects')
                 v.identifier(record.get('id'), f'batch.{key}.id')
@@ -116,7 +119,9 @@ def ingest(directory: PathInput, batch: JSONValue) -> Study:
                     v.require(json.dumps(records[ident], sort_keys=True) == json.dumps(record, sort_keys=True),
                               f'{key}: immutable conflict for {ident}')
                 else:
-                    merged[key].append(record)
+                    if key not in merged:
+                        merged[key] = target
+                    target.append(record)
                     records[ident] = record
         v.study(merged)
         if merged != current:

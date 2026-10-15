@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 import json
 from pathlib import Path
 import sys
@@ -10,6 +11,7 @@ from typing import NoReturn
 
 from . import __version__, store, validation as v
 from .install import install
+from .audit import audit
 from .render import render
 from .types import JSONObject, Study
 
@@ -35,6 +37,9 @@ def parser() -> Parser:
     check = sub.add_parser('check', help='Validate a study and optional report draft')
     check.add_argument('directory', type=Path)
     check.add_argument('--report', type=Path)
+    evidence = sub.add_parser('audit', help='Explain evidence coverage and duplication')
+    evidence.add_argument('directory', type=Path)
+    evidence.add_argument('--report', type=Path)
     output = sub.add_parser('render', help='Create an immutable report snapshot')
     output.add_argument('directory', type=Path)
     output.add_argument('--report', required=True, type=Path)
@@ -53,7 +58,10 @@ def status(state: Study) -> JSONObject:
             'recipe_id': rec['id'] if rec else None, 'personas': len(state['personas']),
             'planned_personas': rec['persona_count'] if rec else None,
             'interviews': len(state['interviews']),
-            'interviewed_personas': len({i['persona_id'] for i in state['interviews']})}
+            'interviewed_personas': len({i['persona_id'] for i in state['interviews']}),
+            'brief_id': state['brief']['id'] if state.get('brief') else None,
+            'sources': len(state.get('sources', [])), 'runs': len(state.get('runs', [])),
+            'modules': dict(sorted(Counter(r['module'] for r in state.get('runs', [])).items()))}
 
 
 def execute(args: argparse.Namespace) -> JSONObject:
@@ -67,8 +75,12 @@ def execute(args: argparse.Namespace) -> JSONObject:
         return render(args.directory, store.read_json(args.report), args.format)
     with store.lock(args.directory):
         state = store.load(args.directory)
-        if args.command == 'check' and args.report:
-            v.report(store.read_json(args.report), state)
+        draft = None
+        if args.command in ('check', 'audit') and args.report:
+            draft = store.read_json(args.report)
+            v.report(draft, state)
+        if args.command == 'audit':
+            return audit(state, draft)
         return status(state)
 
 
