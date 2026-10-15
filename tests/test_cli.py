@@ -42,7 +42,7 @@ class Harness(unittest.TestCase):
         self.tmp.cleanup()
 
     def cli(self, *args, code=0):
-        p = subprocess.run([sys.executable, '-m', 'research_workbench', *map(str, args)],
+        p = subprocess.run([sys.executable, '-m', 'product_idea_research', *map(str, args)],
                            cwd=self.root, env=self.env, text=True, capture_output=True)
         self.assertEqual(p.returncode, code, p.stdout + p.stderr)
         self.assertNotIn('Traceback', p.stderr)
@@ -184,11 +184,53 @@ class CLI(Harness):
         self.cli('init', self.study, '--title', 'Again', code=1)
         self.cli('init', self.root / 'empty', '--title', ' ', code=1)
 
+    def test_render_returns_existing_absolute_artifact_paths_for_requested_formats(self):
+        self.study = self.root / '研究 with spaces'
+        draft = self.ready()
+        for kind, formats in [('md', ['md']), ('html', ['html']), ('both', ['md', 'html'])]:
+            result = self.cli('render', self.study, '--report', draft, '--format', kind)
+            self.assertEqual(set(result['artifacts']),
+                             {f'{name}_{fmt}' for name in ['report', 'evidence'] for fmt in formats})
+            for key, raw_path in result['artifacts'].items():
+                path = Path(raw_path)
+                self.assertTrue(path.is_absolute())
+                self.assertEqual(path.parent, Path(result['directory']))
+                name, fmt = key.split('_')
+                self.assertEqual(path.name, f'{name}.{fmt}')
+                self.assertTrue(path.read_text(encoding='utf-8'))
+                self.assertNotIn('.tmp', raw_path)
+
+    def test_legacy_module_reads_same_study(self):
+        self.ready()
+        before = (self.study / 'research.json').read_bytes()
+        old = subprocess.run([sys.executable, '-m', 'research_workbench', 'status', str(self.study)],
+                             cwd=self.root, env=self.env, text=True, capture_output=True)
+        self.assertEqual(old.returncode, 0, old.stderr)
+        self.assertEqual(json.loads(old.stdout), self.cli('status', self.study))
+        self.assertEqual(before, (self.study / 'research.json').read_bytes())
+
+    def test_legacy_skill_is_preserved_and_reported(self):
+        for target, dirname in [('codex', '.agents'), ('claude', '.claude')]:
+            legacy = self.root / dirname / 'skills' / 'research-workbench'
+            legacy.mkdir(parents=True)
+            custom = b'original user-customized skill'
+            (legacy / 'SKILL.md').write_bytes(custom)
+            args = ['install', '--target', target, '--scope', 'project', '--directory', self.root]
+            dry = self.cli(*args, '--dry-run')
+            self.assertIn(str(legacy), dry['warnings'][0])
+            current = legacy.with_name('product-idea-research')
+            self.assertFalse(current.exists())
+            result = self.cli(*args)
+            self.assertEqual(result['destination'], str(current.resolve()))
+            self.assertEqual((legacy / 'SKILL.md').read_bytes(), custom)
+            self.assertIn('name: product-idea-research', (current / 'SKILL.md').read_text(encoding='utf-8'))
+            self.assertEqual(result['warnings'], dry['warnings'])
+
     def test_installer_dry_run_idempotency_and_conflict(self):
         for target, dirname in [('codex', '.agents'), ('claude', '.claude')]:
             args = ['install', '--target', target, '--scope', 'project', '--directory', self.root]
             self.cli(*args, '--dry-run')
-            path = self.root / dirname / 'skills' / 'research-workbench'
+            path = self.root / dirname / 'skills' / 'product-idea-research'
             self.assertFalse(path.exists())
             self.cli(*args)
             self.assertTrue((path / 'SKILL.md').exists())
@@ -242,7 +284,7 @@ class AdditionalCLI(Harness):
             item = copy.deepcopy(batch()['interviews'][0])
             item['id'] = f'i{n}'
             path = self.write(f'b{n}.json', {'interviews': [item]})
-            commands.append(subprocess.Popen([sys.executable, '-m', 'research_workbench', 'ingest',
+            commands.append(subprocess.Popen([sys.executable, '-m', 'product_idea_research', 'ingest',
                             str(self.study), '--file', str(path)], cwd=self.root,
                             env=self.env, text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE))
         for process in commands:

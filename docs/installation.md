@@ -5,32 +5,72 @@ newer Python explicitly (for example `python3.12 -m venv .venv`). The CLI runtim
 uses only the standard library. Build tools and pytest are development dependencies.
 
 The skill and CLI are versioned together. Install the Python package, then run
-`research-workbench install` for the desired host. A wheel installation includes
+`product-idea-research install` for the desired host. A wheel installation includes
 the skill; running from the source directory is not necessary.
 
 | Host | User installation | Project installation |
 |---|---|---|
-| Codex | `~/.agents/skills/research-workbench/` | `<project>/.agents/skills/research-workbench/` |
-| Claude Code | `~/.claude/skills/research-workbench/` | `<project>/.claude/skills/research-workbench/` |
+| Codex | `~/.agents/skills/product-idea-research/` | `<project>/.agents/skills/product-idea-research/` |
+| Claude Code | `~/.claude/skills/product-idea-research/` | `<project>/.claude/skills/product-idea-research/` |
 
 `--directory` selects the project root and is only valid with `--scope project`.
 Existing identical files produce a no-op; differing files produce a conflict.
 The installer never edits other skills, agent settings, shell profiles or API keys.
 
+## Rename from Research Workbench (v0.2 and earlier)
+
+The public package, repository, command and skill are now `product-idea-research`.
+The Python module is `product_idea_research`. The new package also provides the
+old `research-workbench` command and `python -m research_workbench` as forwarding
+entry points; internal legacy Python submodules are not a supported API.
+
+For an existing checkout, update its remote and keep using the same local folder:
+
+```bash
+git remote set-url origin https://github.com/YichenBC/product-idea-research.git
+git pull --ff-only
+```
+
+In the environment where the old package was installed, uninstall the old package
+**before** installing the new one. Both distributions can otherwise own the old
+command, and uninstalling either afterwards can remove that shared executable.
+
+```bash
+python -m pip uninstall research-workbench
+python -m pip install .
+```
+
+For pipx/uv tool installations, uninstall the old tool with the same manager, then
+install this checkout with `pipx install .` or `uv tool install .`.
+
+Back up and move the old `research-workbench` skill folder outside the host's
+skill-discovery directory, preserving any custom edits. Install the renamed skill
+for your chosen host:
+
+```bash
+product-idea-research install --target codex --scope user
+product-idea-research install --target claude --scope user
+```
+
+The installer reports a warning if it finds the old folder; it never deletes or
+rewrites it. Restart the host if needed. New invocations are `$product-idea-research`
+in Codex and `/product-idea-research` in Claude Code. Existing studies and report
+snapshots require no data migration and remain readable.
+
 ## Update
 
 Update the Python package from a reviewed repository revision. Back up the existing
-installed `research-workbench` skill folder outside the host's skill-discovery
+installed `product-idea-research` skill folder outside the host's skill-discovery
 directory, then run install again. This explicit procedure preserves custom edits
 instead of silently replacing them. Do not leave an old copy with the same skill
 name inside a discovered skills directory.
 
 ## Uninstall
 
-Remove only the `research-workbench` skill folder from the host/location where you
+Remove only the `product-idea-research` skill folder from the host/location where you
 installed it. Uninstall the package using the same environment/tool used to install
-it (`python -m pip uninstall research-workbench`, `uv tool uninstall research-workbench`,
-or `pipx uninstall research-workbench`). Your study folders are separate and remain.
+it (`python -m pip uninstall product-idea-research`, `uv tool uninstall product-idea-research`,
+or `pipx uninstall product-idea-research`). Your study folders are separate and remain.
 
 ## Troubleshooting
 

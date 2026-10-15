@@ -1,6 +1,6 @@
 # Modular research, conclusions first
 
-Research Workbench helps a coding agent answer a question and deliver an actionable
+Product Idea Research helps a coding agent answer a question and deliver an actionable
 report. Users choose the work: start from an idea, a competitor, public discussions,
 provided materials or a user-defined interview method. Run one module or combine
 several; never invent unperformed research to fill report sections.

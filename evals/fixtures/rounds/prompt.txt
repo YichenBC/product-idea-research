@@ -1,2 +1,2 @@
-Use the research-workbench skill at the installed skill. CLI: research-workbench.
+Use the product-idea-research skill at the installed skill. CLI: product-idea-research.
 我想研究家庭家务分工工具。只做模拟访谈，不联网，不研究社媒或竞品。按“单人维护清单/两人共同维护清单”合成两个角色，每个角色三轮访谈，保留现有办法已经够用的情况。形成简洁中文报告，保存到 studies/chores。不要安装依赖、改源码或发布。

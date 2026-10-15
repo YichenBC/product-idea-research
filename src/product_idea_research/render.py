@@ -423,4 +423,8 @@ def render(directory: PathInput, report: JSONValue, output_format: str) -> JSONO
         finally:
             if temporary.exists():
                 shutil.rmtree(temporary)
-    return {'ok': True, 'directory': str(final.resolve()), 'revision': state['revision'], 'formats': list(formats)}
+    resolved = final.resolve()
+    artifacts = {f'{name}_{kind}': str(resolved / f'{name}.{kind}')
+                 for name in ('report', 'evidence') for kind in formats}
+    return {'ok': True, 'directory': str(resolved), 'revision': state['revision'],
+            'formats': list(formats), 'artifacts': artifacts}

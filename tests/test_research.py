@@ -226,7 +226,7 @@ class Research(Harness):
             b['sources'][0]['id'] = f's{n}'
             b['runs'][0].update(id=f'run{n}', source_ids=[f's{n}'])
             file = self.write(f'parallel{n}.json', b)
-            processes.append(subprocess.Popen([sys.executable, '-m', 'research_workbench', 'ingest',
+            processes.append(subprocess.Popen([sys.executable, '-m', 'product_idea_research', 'ingest',
                              str(self.study), '--file', str(file)], cwd=self.root, env=self.env,
                              text=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE))
         for process in processes:
@@ -253,7 +253,7 @@ class Research(Harness):
         self.assertEqual(len(a['duplicate_urls']), 1)
 
     def test_canonical_urls_preserve_query_values_paths_and_fragments(self):
-        from research_workbench.audit import canonical_url
+        from product_idea_research.audit import canonical_url
         self.assertEqual(canonical_url('HTTPS://EXAMPLE.COM:443/path?b=2&utm_source=x&a=1#reply'),
                          'https://example.com/path?a=1&b=2#reply')
         self.assertEqual(canonical_url('http://[::1]:80/a?gclid=x&id=1'), 'http://[::1]/a?id=1')
@@ -271,7 +271,7 @@ class Research(Harness):
         self.check_report({**research_report(), 'study_revision': 2})
 
     def test_nested_weird_json_values_never_escape_validation(self):
-        from research_workbench import validation as v
+        from product_idea_research import validation as v
         state = {'schema_version': 1, 'title': 'Stress test', 'revision': 1,
                  'recipe': None, 'personas': [], 'interviews': [], **research_batch()}
         r = research_report()
@@ -323,7 +323,7 @@ class Research(Harness):
         self.check_report(r, 1)
 
     def test_canonical_urls_preserve_repeated_semantic_key_order(self):
-        from research_workbench.audit import canonical_url
+        from product_idea_research.audit import canonical_url
         base = 'https://example.com/path?'
         for query, reverse in [('a=1&a=2', 'a=2&a=1'), ('a=1&%61=2', '%61=2&a=1')]:
             self.assertNotEqual(canonical_url(base + query), canonical_url(base + reverse))

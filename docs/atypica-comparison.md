@@ -13,7 +13,7 @@ Sources: [Atypica guides](https://atypica.ai/guides) and
 [feature overview](https://atypica.ai/features), accessed 2026-10-15. These are vendor
 descriptions, not independent verification of coverage or accuracy.
 
-| User need | Research Workbench target and evidence | Comparison boundary |
+| User need | Product Idea Research target and evidence | Comparison boundary |
 |---|---|---|
 | Choose one research activity or combine several | Skill routing and source-only/combined CLI tests; standalone and continuation model evaluations | We test our behavior rather than assume Atypica forces one sequence |
 | Inspect a conclusion's exact supporting material | Saved excerpts/turns, selected-source validation, linked evidence companion | Atypica also describes attribution; no claim it lacks provenance |

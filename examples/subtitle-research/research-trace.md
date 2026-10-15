@@ -1,6 +1,9 @@
 # Live research trace — 2026-10-15
 
-Scope: independent use of the packaged research-workbench skill for a Chinese research request about small-team translated-subtitle review. No API keys, login, trials, purchases, outreach or publication. Only this evaluation directory was written. This is an actual bounded web study, not a code review.
+This study ran before the rename from Research Workbench; the tool name below
+has been updated for readability, without changing the observations.
+
+Scope: independent use of the packaged product-idea-research skill for a Chinese research request about small-team translated-subtitle review. No API keys, login, trials, purchases, outreach or publication. Only this evaluation directory was written. This is an actual bounded web study, not a code review.
 
 ## What I actually did
 
@@ -35,7 +38,7 @@ The parent requested rendering once the concurrent renderer was ready, plus soci
 - Combined check/audit/render succeeded: reports/001.
 - Social-only check/audit/render succeeded: reports/002, selected 8 eligible discussion sources plus 3 access failures; no interviews selected.
 - Competitor-only check/audit/render succeeded: reports/003, selected 3 eligible official sources plus 3 access failures; no interviews selected.
-- One agent-authored shell invocation accidentally appended `/research-workbench --help` to the executable path and failed with `not a directory` (exit 127) after the competitor check had already passed. This was a command typo, not a CLI failure; the intended competitor audit/render was then run normally. No record or report was lost.
+- One agent-authored shell invocation accidentally appended `/product-idea-research --help` to the executable path and failed with `not a directory` (exit 127) after the competitor check had already passed. This was a command typo, not a CLI failure; the intended competitor audit/render was then run normally. No record or report was lost.
 - No research records changed while deriving module-only drafts. The initial combined report remains preserved as reports/001.
 
 Post-render artifact inspection: all three snapshots contain report/evidence Markdown and HTML plus study.json/report.json. Checked every main-report evidence anchor against its evidence companion in both formats: no broken anchors. Combined has 9 findings/2 interviews, social-only 5 findings/0 interviews, competitor-only 1 finding/0 interviews. Skimmed combined report Markdown; the scope caveat and evidence-type labels render as intended. No browser visual inspection was performed.

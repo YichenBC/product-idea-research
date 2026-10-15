@@ -1,0 +1,402 @@
+{
+  "schema_version": 1,
+  "title": "双语字幕交接审校 Web 产品：虚构材料综合研究",
+  "revision": 3,
+  "recipe": {
+    "id": "recipe-review",
+    "question": "仅据虚构验收材料，双语字幕交接审校 Web 产品是否值得做？哪些情境已有足够办法，哪些假设仍需检验？",
+    "method": "按责任组织方式合成两个假设角色；每人一次访谈、三组问答，依次检视当前任务、现有办法充分性、迁移或拒绝条件。由同一助手扮演双方，无子代理。",
+    "dimensions": [
+      {
+        "name": "责任组织",
+        "values": [
+          "单人负责",
+          "多人交接"
+        ]
+      }
+    ],
+    "constraints": [
+      "全部角色属性是场景假设或未知，非真实人物资料。",
+      "每个角色恰好三轮问答；跟进前一轮回答，允许拒绝新产品。",
+      "不虚构历史支付、测量结果或真实采用行为。"
+    ],
+    "persona_count": 2,
+    "language": "zh-CN"
+  },
+  "personas": [
+    {
+      "id": "p-solo",
+      "label": "单人负责：字幕制作与最终检查者（合成）",
+      "recipe_id": "recipe-review",
+      "traits": {
+        "责任组织": "单人负责"
+      },
+      "attributes": [
+        {
+          "name": "任务",
+          "value": "完成英上西下的双语字幕显示并自行检查。",
+          "basis": "assumed",
+          "rationale": "由 T1 第 6、8 行启发；将单审校场景设为一人承担制作与检查，不是对原作者身份的断言。"
+        },
+        {
+          "name": "现有流程",
+          "value": "桌面工具生成单一带样式文件，放入视频编辑器检查显示。",
+          "basis": "assumed",
+          "rationale": "借鉴 T1 与 LocalCaption 指南；不假定 T1 参与者实际使用该品牌。"
+        },
+        {
+          "name": "决策权限",
+          "value": "可选择自己的工作工具并检查最终输出；采购预算未知。",
+          "basis": "assumed",
+          "rationale": "为比较单人责任与多人交接而设定，不等同于真实购买权。"
+        },
+        {
+          "name": "接受及拒绝条件",
+          "value": "若单文件显示符合需求则继续使用；只有无法完成目标才重新比较方案。",
+          "basis": "assumed",
+          "rationale": "保留 T1 的满足情况，不预设 Web 优势。"
+        },
+        {
+          "name": "成本及准确率",
+          "value": "时间损失、翻译准确率、真实支付意愿均未知。",
+          "basis": "unknown",
+          "rationale": "材料没有可用测量或购买证据。"
+        }
+      ]
+    },
+    {
+      "id": "p-team",
+      "label": "多人交接：三人字幕交付协调者（合成）",
+      "recipe_id": "recipe-review",
+      "traits": {
+        "责任组织": "多人交接"
+      },
+      "attributes": [
+        {
+          "name": "任务",
+          "value": "三人交换字幕修订时弄清哪一版由谁确认。",
+          "basis": "assumed",
+          "rationale": "由 T2 第 19 行启发，合成协调者身份，不是实际受访者。"
+        },
+        {
+          "name": "现有流程",
+          "value": "邮件交换文件，并以共享变更日志追踪确认；假定上一个项目足够、下一项目适用性未知。",
+          "basis": "assumed",
+          "rationale": "保留 T2 第 21 行限定，不能推断日志一定会失效。"
+        },
+        {
+          "name": "候选替代",
+          "value": "尚未试用 ReviewHub；可把版本评论、比较、恢复和修改者历史纳入比较。",
+          "basis": "assumed",
+          "rationale": "T2 自述未试用，ReviewHub 指南描述功能；修改者不自动等于确认人。"
+        },
+        {
+          "name": "决策权限",
+          "value": "可提出流程变更；其他成员是否配合、采购权均未知。",
+          "basis": "assumed",
+          "rationale": "为交接协调角色设置有限权限，不假定能够强制团队迁移。"
+        },
+        {
+          "name": "接受及拒绝条件",
+          "value": "日志足够时维持；只有既有替代下仍难追溯确认且新增负担可接受才继续评估。",
+          "basis": "assumed",
+          "rationale": "用于检验最小差异与拒绝条件，非材料已验证需求。"
+        },
+        {
+          "name": "未知信息",
+          "value": "问题频率与成本、强制审校需求、预算、付费意愿、下一项目规模均未知。",
+          "basis": "unknown",
+          "rationale": "材料未提供。"
+        }
+      ]
+    }
+  ],
+  "interviews": [
+    {
+      "id": "i-solo",
+      "persona_id": "p-solo",
+      "synthetic": true,
+      "turns": [
+        {
+          "question": "在单人制作并检查的假设场景中，你要交付什么结果，目前会怎么做？",
+          "answer": "在这个场景里，我要的是英语在上、西班牙语在下的最终显示。我会先用桌面工具输出一个带样式的双语文件，再在视频编辑器中检查。双轨只是可能的实现办法，不是我一定要得到的交付物；我没有提供真实使用记录或效果测量。",
+          "assumptions": [
+            "合成角色一人负责制作和最终检查；这不是 T1 作者的已知身份。",
+            "视频编辑器能读取所需样式尚待验证，材料未给出兼容性测试。"
+          ]
+        },
+        {
+          "question": "如果这个单文件在编辑器里显示符合目标，现有办法还有什么必须更换的理由？若显示不符，你会先查什么？",
+          "answer": "如果显示符合目标，在这个单人场景里现有办法就足够，我不会仅为了云评论或审批状态更换工具。如果不符，我会先检查样式与编辑器兼容性；这还不能证明需要新的 Web 产品。材料没有说明我遇到这种兼容性故障，也没有时间损失数据。",
+          "assumptions": [
+            "以显示符合目标与不符两种条件作反事实追问，不声称故障已发生。"
+          ]
+        },
+        {
+          "question": "沿着“显示满足就继续使用”的判断，什么条件会让你重新考虑 Web 方案，又会因什么拒绝？",
+          "answer": "只有现有流程确实不能稳定交付目标、候选办法能完成同一输出，我才会重新比较。若候选办法增加导入导出或维护步骤却没有解决具体失败，我会拒绝；若原流程仍然足够，我就保留它。这里没有证明 Web 更好，也无法由我的模拟选择推断真实付费意愿。",
+          "assumptions": [
+            "导入导出与维护负担只是待比较的迁移成本假设，没有测量值。"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i-team",
+      "persona_id": "p-team",
+      "synthetic": true,
+      "turns": [
+        {
+          "question": "在三人交接字幕的假设场景中，你要追踪什么，共享变更日志目前处于什么位置？",
+          "answer": "在这个场景里，我要知道谁确认了哪一版，而不只是看谁修改过文件。我会沿用邮件与共享变更日志，因为假设中的上一个项目已够用；下一项目是否仍够用未知。我不能把担忧说成已经发生的失败，也没有损失成本的测量。",
+          "assumptions": [
+            "由 T2 合成协调者，不是复现真实访谈；将确认人与修订版对应作为任务解释。"
+          ]
+        },
+        {
+          "question": "既然日志曾经够用，下一次如何判断它是否仍够用？若考虑 ReviewHub，哪些已有能力与未知项会影响判断？",
+          "answer": "如果成员能从日志明确找到对应版本和确认人，我就继续用。若出现记录不一致，我才会比较替代办法。按给定虚构指南，ReviewHub 已描述版本评论、比较、恢复和修改者历史，应作为已有基线；但修改者不一定是确认人，可选 Review 步骤也不是强制另一个人批准。我没有试用证据，不能说它解决不了确认追溯，也不能说它已经解决。",
+          "assumptions": [
+            "记录不一致是假设触发条件，未声称下一项目出现过。",
+            "以可找到版本和确认人作为候选充分性标准，尚未经真实团队验证。"
+          ]
+        },
+        {
+          "question": "如果日志或 ReviewHub 的现有流程能让团队找到确认人和版本，你还需要新产品吗？什么残余问题才值得继续评估？",
+          "answer": "如果它们能做到，我就不需要新产品。只有在这些办法下仍无法明确确认对应哪一版、而且新增记录步骤能被团队接受时，我才会继续评估一个明确绑定版本与确认人的轻量办法。这个办法可能只是日志规则，不必成为独立 Web 产品；我无权假定所有人愿意迁移，也没有预算或真实支付意愿的依据。强制审校是否必要仍是未知。",
+          "assumptions": [
+            "轻量确认记录是研究假设，不是材料已提出的功能需求。",
+            "团队配合程度与迁移负担未知；未把流程约定视为强制权限。"
+          ]
+        }
+      ]
+    }
+  ],
+  "brief": {
+    "id": "brief-review",
+    "question": "仅据虚构验收材料，双语字幕交接审校 Web 产品是否值得做？哪些情境已有足够办法，哪些假设仍需检验？",
+    "language": "zh-CN",
+    "constraints": [
+      "只使用 materials.txt；只在当前工作区写研究产物。",
+      "无网络、外部服务、子代理、安装、源码修改、Git 提交或发布。",
+      "社媒分析与竞品研究后合成单人负责／多人交接两个角色，每人三轮模拟问答。",
+      "保留现有办法足够的情况；不预设应开发新产品；不推断真实付费意愿。",
+      "中文综合报告；最多一个下一步试验；主报告仅呈现访谈结论，完整问答在附件。"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s-t1-opening",
+      "title": "T1 开帖：双轨诉求",
+      "url": null,
+      "platform": "provided",
+      "source_type": "provided",
+      "published_at": "2026-10-01",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "thread-t1",
+      "context": "虚构讨论开帖，结合第 6 行作者澄清与第 8 行其他参与者回复阅读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I need two separate language tracks. My current bilingual subtitle file isn't giving me the output I want.",
+          "locator": "materials.txt 第 4 行；原始节标题：[Thread T1 opening / 2026-10-01]"
+        }
+      ],
+      "limitations": [
+        "仅为 materials.txt 中的虚构验收资料，不是真实用户、产品或市场证据。",
+        "仅访问所给摘录；未联网、未核验外部来源或实测产品。"
+      ]
+    },
+    {
+      "id": "s-t1-followup",
+      "title": "T1 作者澄清：显示布局",
+      "url": null,
+      "platform": "provided",
+      "source_type": "provided",
+      "published_at": "2026-10-02",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "thread-t1",
+      "context": "同一作者后续澄清，双轨是绕行办法，目标为英上西下的显示效果。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "The two tracks were just a workaround to style the text in my video editor. What I actually want is English at the top and Spanish below. A single file with that appearance would be ideal.",
+          "locator": "materials.txt 第 6 行；原始节标题：[Thread T1 author follow-up / 2026-10-02]"
+        }
+      ],
+      "limitations": [
+        "仅为 materials.txt 中的虚构验收资料，不是真实用户、产品或市场证据。",
+        "仅访问所给摘录；未联网、未核验外部来源或实测产品。"
+      ]
+    },
+    {
+      "id": "s-t1-sufficient",
+      "title": "T1 他人回复：现有桌面工具足够",
+      "url": null,
+      "platform": "provided",
+      "source_type": "provided",
+      "published_at": "2026-10-02",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "thread-t1",
+      "context": "同一讨论中另一参与者的虚构自述；未指明工具品牌，不将其等同于 LocalCaption 用户。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "My current desktop tool can keep both languages in one styled file, which is sufficient for our one-reviewer projects.",
+          "locator": "materials.txt 第 8 行；原始节标题：[Thread T1 other participant / 2026-10-02]"
+        }
+      ],
+      "limitations": [
+        "仅为 materials.txt 中的虚构验收资料，不是真实用户、产品或市场证据。",
+        "仅访问所给摘录；未联网、未核验外部来源或实测产品。"
+      ]
+    },
+    {
+      "id": "s-reviewhub",
+      "title": "ReviewHub 虚构官方指南：概览与版本管理",
+      "url": null,
+      "platform": "provided",
+      "source_type": "provided",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "guide-reviewhub",
+      "context": "两个相邻章节均已阅读；2026-10-15 是材料标注的检索日期，发布日期未知。属于虚构厂商声明，不是产品实测。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Teams can optionally enable a Review step. Another member should review the submitted subtitles. This describes a suggested workflow, not a hard permission requirement.",
+          "locator": "materials.txt 第 11 行；原始节标题：[ReviewHub fictional official guide / Overview / retrieved 2026-10-15]"
+        },
+        {
+          "id": "e2",
+          "text": "Subtitle notes record comments on each version. Members can compare two revisions and restore an earlier version. Activity history identifies who changed a file. No pricing or reviewer-seat rules are given in this excerpt.",
+          "locator": "materials.txt 第 13 行；原始节标题：[ReviewHub fictional official guide / Working with revisions / retrieved 2026-10-15]"
+        }
+      ],
+      "limitations": [
+        "仅为 materials.txt 中的虚构验收资料，不是真实用户、产品或市场证据。",
+        "仅访问所给摘录；未联网、未核验外部来源或实测产品。"
+      ]
+    },
+    {
+      "id": "s-localcaption",
+      "title": "LocalCaption 虚构官方指南",
+      "url": null,
+      "platform": "provided",
+      "source_type": "provided",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "guide-localcaption",
+      "context": "虚构厂商声明；2026-10-15 为材料标注的检索日期，发布日期未知。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "The desktop editor supports a single bilingual styled subtitle file. It has no built-in cloud comments or multi-user approval status. The supplied excerpt does not establish actual time saved or translation accuracy.",
+          "locator": "materials.txt 第 16 行；原始节标题：[LocalCaption fictional official guide / retrieved 2026-10-15]"
+        }
+      ],
+      "limitations": [
+        "仅为 materials.txt 中的虚构验收资料，不是真实用户、产品或市场证据。",
+        "仅访问所给摘录；未联网、未核验外部来源或实测产品。"
+      ]
+    },
+    {
+      "id": "s-t2-opening",
+      "title": "T2 开帖：邮件交接丢失确认人",
+      "url": null,
+      "platform": "provided",
+      "source_type": "provided",
+      "published_at": "2026-10-03",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "thread-t2",
+      "context": "三人邮件交接场景的虚构自述；连同后续共享日志足够的情况阅读。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "We lose track of who accepted a revision when three people exchange files by email. We have not tried ReviewHub and have not measured the cost of the problem.",
+          "locator": "materials.txt 第 19 行；原始节标题：[Thread T2 opening / 2026-10-03]"
+        }
+      ],
+      "limitations": [
+        "仅为 materials.txt 中的虚构验收资料，不是真实用户、产品或市场证据。",
+        "仅访问所给摘录；未联网、未核验外部来源或实测产品。"
+      ]
+    },
+    {
+      "id": "s-t2-followup",
+      "title": "T2 后续：共享变更日志足够一次",
+      "url": null,
+      "platform": "provided",
+      "source_type": "provided",
+      "published_at": "2026-10-04",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "thread-t2",
+      "context": "同一讨论后续自述；只声称一个项目足够，下一项目能否适用未知。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "We tried a shared change log on one project. It was enough for that project; I don't know whether it scales to our next one.",
+          "locator": "materials.txt 第 21 行；原始节标题：[Thread T2 follow-up / 2026-10-04]"
+        }
+      ],
+      "limitations": [
+        "仅为 materials.txt 中的虚构验收资料，不是真实用户、产品或市场证据。",
+        "仅访问所给摘录；未联网、未核验外部来源或实测产品。"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "run-social",
+      "module": "social",
+      "status": "complete",
+      "objective": "分析给定 T1/T2 讨论的任务、替代办法、摩擦与充分性。",
+      "method": "离线逐行阅读 materials.txt 第 3–8、18–21 行；按开帖、作者澄清、其他参与者区分，提取角色→触发→任务→现有办法→摩擦或满足→约束；同一线程仅算一个讨论家族。",
+      "queries": [],
+      "source_ids": [
+        "s-t1-opening",
+        "s-t1-followup",
+        "s-t1-sufficient",
+        "s-t2-opening",
+        "s-t2-followup"
+      ],
+      "limitations": [
+        "完成仅指所给虚构资料的分析覆盖。",
+        "两个虚构讨论家族；不代表独立真实客户样本、发生频率或支付行为。"
+      ]
+    },
+    {
+      "id": "run-competitor",
+      "module": "competitor",
+      "status": "complete",
+      "objective": "比较 ReviewHub、LocalCaption、共享日志与维持现有流程，核对最接近的已有能力。",
+      "method": "离线阅读 materials.txt 第 10–16 行两份虚构指南，核对 ReviewHub 的概览与版本管理章节，并结合 T1/T2 后续对照现有办法。比较显示布局、版本追踪、审校约束、使用成本证据；未访问或试用产品。",
+      "queries": [],
+      "source_ids": [
+        "s-reviewhub",
+        "s-localcaption",
+        "s-t1-sufficient",
+        "s-t2-opening",
+        "s-t2-followup"
+      ],
+      "limitations": [
+        "两份指南均为虚构摘录；价格、审校席位规则与真实效果未给出，保留未知。",
+        "没有实际强制权限测试或与真实竞品的比较；完整仅限所给资料。"
+      ]
+    }
+  ]
+}

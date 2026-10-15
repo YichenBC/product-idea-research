@@ -7,9 +7,9 @@ import unittest
 from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
-from research_workbench import store
-from research_workbench.install import install
-from research_workbench.render import evidence_document, render
+from product_idea_research import store
+from product_idea_research.install import install
+from product_idea_research.render import evidence_document, render
 from test_cli import batch, report
 from test_research import research_batch, research_report
 
@@ -30,7 +30,7 @@ class Recovery(unittest.TestCase):
         b = batch()
         item = b['interviews'][0]
         item['id'] = 'i2'
-        with patch('research_workbench.store.os.replace', side_effect=OSError('disk failure')):
+        with patch('product_idea_research.store.os.replace', side_effect=OSError('disk failure')):
             with self.assertRaises(OSError):
                 store.ingest(self.directory, {'interviews': [item]})
         self.assertEqual(path.read_bytes(), original)
@@ -39,7 +39,7 @@ class Recovery(unittest.TestCase):
 
     def test_interrupted_render_has_no_final_directory(self):
         original = (self.directory / 'research.json').read_bytes()
-        with patch('research_workbench.render.document', side_effect=OSError('disk failure')):
+        with patch('product_idea_research.render.document', side_effect=OSError('disk failure')):
             with self.assertRaises(OSError):
                 render(self.directory, report(), 'both')
         self.assertEqual(list((self.directory / 'reports').iterdir()), [])
@@ -51,7 +51,7 @@ class Recovery(unittest.TestCase):
     def test_failed_evidence_export_preserves_old_report_and_discards_staging(self):
         first = Path(render(self.directory, report(), 'both')['directory'])
         original = {p.name: p.read_bytes() for p in first.iterdir()}
-        with patch('research_workbench.render.evidence_document', side_effect=OSError('disk failure')):
+        with patch('product_idea_research.render.evidence_document', side_effect=OSError('disk failure')):
             with self.assertRaises(OSError):
                 render(self.directory, report(), 'both')
         self.assertEqual([p.resolve() for p in (self.directory / 'reports').iterdir()], [first])
@@ -71,7 +71,7 @@ class Recovery(unittest.TestCase):
                 raise OSError('Failed final companion')
             return evidence_document(state, report, kind)
 
-        with patch('research_workbench.render.evidence_document', side_effect=fail_html):
+        with patch('product_idea_research.render.evidence_document', side_effect=fail_html):
             with self.assertRaises(OSError):
                 render(self.directory, draft, 'both')
         self.assertEqual([p.resolve() for p in (self.directory / 'reports').iterdir()], [first])
@@ -81,11 +81,11 @@ class Recovery(unittest.TestCase):
 
     def test_user_install_uses_home_and_preserves_identical_files(self):
         home = Path(self.tmp.name) / 'home'
-        with patch('research_workbench.install.Path.home', return_value=home):
+        with patch('product_idea_research.install.Path.home', return_value=home):
             first = install('codex', 'user')
             second = install('codex', 'user')
         destination = Path(first['destination'])
-        self.assertEqual(destination, (home / '.agents' / 'skills' / 'research-workbench').resolve())
+        self.assertEqual(destination, (home / '.agents' / 'skills' / 'product-idea-research').resolve())
         self.assertEqual(second['action'], 'unchanged')
         self.assertTrue((destination / 'references' / 'data-contract.md').exists())
 

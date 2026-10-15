@@ -29,8 +29,8 @@ def install(target: str, scope: str, directory: PathInput | None = None,
             dry_run: bool = False) -> JSONObject:
     require(not (scope == 'user' and directory is not None), '--directory is only valid for project scope')
     base = Path.home() if scope == 'user' else Path(directory or Path.cwd())
-    destination = base / ('.agents' if target == 'codex' else '.claude') / 'skills' / 'research-workbench'
-    expected = resource_files(files('research_workbench').joinpath('skill'))
+    destination = base / ('.agents' if target == 'codex' else '.claude') / 'skills' / 'product-idea-research'
+    expected = resource_files(files('product_idea_research').joinpath('skill'))
     require('SKILL.md' in expected, 'Packaged skill is missing SKILL.md')
 
     def inspect() -> bool:
@@ -64,5 +64,12 @@ def install(target: str, scope: str, directory: PathInput | None = None,
                 finally:
                     if temporary.exists():
                         shutil.rmtree(temporary)
-    return {'ok': True, 'destination': str(destination.resolve()), 'dry_run': dry_run,
-            'action': 'unchanged' if exists else 'install'}
+    result = {'ok': True, 'destination': str(destination.resolve()), 'dry_run': dry_run,
+              'action': 'unchanged' if exists else 'install'}
+    legacy = destination.with_name('research-workbench')
+    if legacy.exists() or legacy.is_symlink():
+        result['warnings'] = [
+            f'Legacy skill remains at {legacy}. Back up custom edits and move it outside '
+            'the host skill-discovery directory to avoid loading both versions.'
+        ]
+    return result

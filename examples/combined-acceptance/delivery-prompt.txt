@@ -1,0 +1,1 @@
+Use the installed $product-idea-research skill and CLI. 只复用 studies/review 中已保存的研究和 report-draft.json，重新导出 Markdown 与 HTML。不要联网、做新研究、创建角色或访谈，不修改台账、已有报告或草稿。完成 check/audit/render 后，给我一句结论和可打开的主报告、证据附件链接。不要安装依赖、修改源码、提交或发布。

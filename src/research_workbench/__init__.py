@@ -1,3 +1,3 @@
-"""Local synthetic research records and reports."""
+"""Legacy module entry point; use product_idea_research for new integrations."""
 
-__version__ = '0.2.0'
+from product_idea_research import __version__

@@ -1,2 +1,2 @@
-Use the installed research-workbench skill. CLI: research-workbench.
+Use the installed product-idea-research skill. CLI: product-idea-research.
 只复用 studies/review-workflow 已保存的材料，输出一个只含社媒研究结论的中文报告。不要联网，不要新增研究、角色、访谈或修改台账；现有的竞品和模拟访谈不要选入此次报告。完成 check、audit、render，保留旧报告。

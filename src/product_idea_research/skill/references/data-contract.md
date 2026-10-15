@@ -9,25 +9,25 @@ Unknown fields are errors (except arbitrary keys in persona `traits`). IDs match
 
 ## Commands
 
-`research-workbench init DIR --title TEXT`
+`product-idea-research init DIR --title TEXT`
 
-`research-workbench ingest DIR --file BATCH.json`
+`product-idea-research ingest DIR --file BATCH.json`
 
-`research-workbench status DIR [--json]`
+`product-idea-research status DIR [--json]`
 
-`research-workbench check DIR [--report REPORT.json]`
+`product-idea-research check DIR [--report REPORT.json]`
 
-`research-workbench audit DIR [--report REPORT.json]`
+`product-idea-research audit DIR [--report REPORT.json]`
 
-`research-workbench render DIR --report REPORT.json [--format both|md|html]`
+`product-idea-research render DIR --report REPORT.json [--format both|md|html]`
 
-`research-workbench install --target codex|claude --scope user|project [--directory DIR] [--dry-run]`
+`product-idea-research install --target codex|claude --scope user|project [--directory DIR] [--dry-run]`
 
 All successful commands emit JSON (status --json is a convenience alias).
 Errors emit structured JSON to stderr with exit code 1; argparse usage errors use 2.
 Install project scope uses --directory or cwd; user scope uses the actual home and
-rejects --directory. Copy the same packaged skill into `.agents/skills/research-workbench`
-for Codex and `.claude/skills/research-workbench` for Claude. Existing identical
+rejects --directory. Copy the same packaged skill into `.agents/skills/product-idea-research`
+for Codex and `.claude/skills/product-idea-research` for Claude. Existing identical
 installation is a no-op; differing files are a conflict, never silently overwritten.
 
 ## Study and ingestion
@@ -361,3 +361,11 @@ unknown fields and missing refs; partial checkpoints; incorrect completeness;
 stale revision; safe HTML and Markdown; immutable snapshots; install idempotency
 and conflict; wheel includes skill; run outside source checkout. Test real behavior,
 not specific prose wording. Runtime standard library only, Python >=3.11.
+
+## Render result paths
+
+`render` returns the absolute numbered export `directory` plus an `artifacts`
+object mapping `report_md`, `report_html`, `evidence_md`, and `evidence_html` to
+absolute file paths. Only the requested formats are present. These paths refer to
+the published snapshot, not a temporary directory. Use them directly for local
+file links; keep relative links inside the generated report/evidence pair unchanged.

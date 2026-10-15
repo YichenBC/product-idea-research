@@ -77,6 +77,8 @@ Before export:
 6. Render a new numbered snapshot. Do not edit an exported report by hand while
    leaving its saved draft inconsistent; revise the draft and render again.
 
-Return a short answer and the main report links. Mention only material access or
+Return a short answer and the main report links using the absolute paths from
+`render.artifacts`. The CLI returns only the formats actually generated; use
+`report_md` / `report_html` and their `evidence_*` companions as available. Mention only material access or
 validation limits; details remain available behind the source links. Preserve the
 whole export folder when sharing a report with its evidence companion.

@@ -1,13 +1,13 @@
 ---
-name: research-workbench
+name: product-idea-research
 description: Research user needs and competing solutions from public discussions or supplied materials, optionally explore concepts with simulated interviews, and deliver a sourced decision report. Supports standalone modules, combined studies and continuation in Codex or Claude Code.
 ---
 
-# Research Workbench
+# Product Idea Research
 
 Answer a research question with conclusions the user can act on and evidence they
 can inspect. The host agent searches, reads, interprets and simulates; the local
-`research-workbench` CLI saves immutable checkpoints, checks citations, audits
+`product-idea-research` CLI saves immutable checkpoints, checks citations, audits
 coverage and exports Markdown/HTML. It does not browse or call a model.
 
 ## Choose the work, not a mandatory funnel
@@ -33,13 +33,13 @@ feedback export can be analyzed through the social module without live collectio
 
 ## Shared execution
 
-1. Locate `research-workbench --help` in the host terminal or documented project
+1. Locate `product-idea-research --help` in the host terminal or documented project
    environment. If absent, follow the project's installation instructions; do not
    pretend a prose answer has been saved/validated. Read [data contract](references/data-contract.md)
    before creating JSON. Use files as input, never shell interpolation of research text.
 2. Choose `studies/<topic>/` under the workspace unless the user provides a path.
-   For a new study run `research-workbench init DIR --title TITLE`. For continuation
-   read `research-workbench status DIR --json` and `DIR/research.json`; reuse saved
+   For a new study run `product-idea-research init DIR --title TITLE`. For continuation
+   read `product-idea-research status DIR --json` and `DIR/research.json`; reuse saved
    records. Do not overwrite a study or change its overall question silently.
 3. For social/competitor work, ingest a shared `brief`, then sources as each batch
    is read. Preserve exact short excerpts and locators, actual access depth,
@@ -55,12 +55,14 @@ feedback export can be analyzed through the social module without live collectio
 6. Read [reporting](references/reporting.md). Synthesize only selected runs and
    interviews into a single report draft; reconcile their disagreements. Add a
    comparison table or opportunity shortlist when useful, not to fill a template.
-7. Run `research-workbench check DIR --report FILE` and
-   `research-workbench audit DIR --report FILE`. Resolve broken references and
+7. Run `product-idea-research check DIR --report FILE` and
+   `product-idea-research audit DIR --report FILE`. Resolve broken references and
    inspect duplicates/coverage; auditing is not a truth or market-validation score.
-   Then `research-workbench render DIR --report FILE --format both`.
-8. Return the main answer, material uncertainty and absolute links to the main
-   report. Detailed sources and transcripts live in its evidence companion.
+   Then `product-idea-research render DIR --report FILE --format both`.
+8. Return the main answer, material uncertainty and links using the exact absolute
+   paths in `render`'s `artifacts` object (`report_md`, `report_html`, and evidence
+   counterparts). Do not shorten these to workspace-relative paths. Detailed
+   sources and transcripts live in the evidence companion.
    Share the full export directory to preserve cross-file links.
 
 For report-only, read existing evidence and synthesize without new collection or

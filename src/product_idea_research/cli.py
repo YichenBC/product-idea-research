@@ -22,7 +22,7 @@ class Parser(argparse.ArgumentParser):
 
 
 def parser() -> Parser:
-    p = Parser(prog='research-workbench')
+    p = Parser(prog='product-idea-research')
     p.add_argument('--version', action='version', version=__version__)
     sub = p.add_subparsers(dest='command', required=True)
     init = sub.add_parser('init', help='Create a local study')

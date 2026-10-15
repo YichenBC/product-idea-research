@@ -9,7 +9,7 @@ Add behavioral regression tests for data loss, invalid references, rendering or
 installation bugs. For skill changes, also run a realistic agent task: a schema
 test cannot tell whether a simulated interviewer asks useful follow-up questions.
 
-The canonical skill is `src/research_workbench/skill/`. The same files are packaged
+The canonical skill is `src/product_idea_research/skill/`. The same files are packaged
 and installed for both hosts. Keep the bundled contract synchronized with
 `docs/contract.md`; avoid platform-specific tool names in the shared instructions.
 

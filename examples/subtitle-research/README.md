@@ -37,19 +37,19 @@ exports; the trace describes earlier local exports, which are not bundled here.
 From the repository root after installing the CLI:
 
 ```bash
-research-workbench init studies/subtitle-replay --title "Translated-subtitle review"
-research-workbench ingest studies/subtitle-replay --file examples/subtitle-research/inputs/brief.json
-research-workbench ingest studies/subtitle-replay --file examples/subtitle-research/inputs/sources.json
-research-workbench ingest studies/subtitle-replay --file examples/subtitle-research/inputs/roles.json
-research-workbench ingest studies/subtitle-replay --file examples/subtitle-research/inputs/interview-template.json
-research-workbench ingest studies/subtitle-replay --file examples/subtitle-research/inputs/interview-coordinator.json
-research-workbench ingest studies/subtitle-replay --file examples/subtitle-research/inputs/runs.json
-research-workbench ingest studies/subtitle-replay --file examples/subtitle-research/inputs/correction-batch.json
-research-workbench check studies/subtitle-replay --report examples/subtitle-research/combined-draft.json
-research-workbench audit studies/subtitle-replay --report examples/subtitle-research/combined-draft.json
-research-workbench render studies/subtitle-replay --report examples/subtitle-research/combined-draft.json
-research-workbench render studies/subtitle-replay --report examples/subtitle-research/social-draft.json
-research-workbench render studies/subtitle-replay --report examples/subtitle-research/competitor-draft.json
+product-idea-research init studies/subtitle-replay --title "Translated-subtitle review"
+product-idea-research ingest studies/subtitle-replay --file examples/subtitle-research/inputs/brief.json
+product-idea-research ingest studies/subtitle-replay --file examples/subtitle-research/inputs/sources.json
+product-idea-research ingest studies/subtitle-replay --file examples/subtitle-research/inputs/roles.json
+product-idea-research ingest studies/subtitle-replay --file examples/subtitle-research/inputs/interview-template.json
+product-idea-research ingest studies/subtitle-replay --file examples/subtitle-research/inputs/interview-coordinator.json
+product-idea-research ingest studies/subtitle-replay --file examples/subtitle-research/inputs/runs.json
+product-idea-research ingest studies/subtitle-replay --file examples/subtitle-research/inputs/correction-batch.json
+product-idea-research check studies/subtitle-replay --report examples/subtitle-research/combined-draft.json
+product-idea-research audit studies/subtitle-replay --report examples/subtitle-research/combined-draft.json
+product-idea-research render studies/subtitle-replay --report examples/subtitle-research/combined-draft.json
+product-idea-research render studies/subtitle-replay --report examples/subtitle-research/social-draft.json
+product-idea-research render studies/subtitle-replay --report examples/subtitle-research/competitor-draft.json
 ```
 
 Use a new study directory. The seven batches recreate revision 7; repeating an

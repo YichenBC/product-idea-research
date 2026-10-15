@@ -1,4 +1,4 @@
-# Research Workbench
+# Product Idea Research
 
 **From public discussions and competing products to a research report you can inspect and act on.**
 
@@ -31,6 +31,8 @@ Research is general across work and everyday life. A module is a choice, not a
 mandatory stage. Explicit counts, methods, network restrictions and exclusions
 are respected. A blocked requested channel remains a documented gap.
 
+Previously **Research Workbench**. Existing users: follow the [rename migration](docs/installation.md#rename-from-research-workbench-v02-and-earlier) before installing; the old CLI remains a compatibility alias.
+
 ## Install
 
 Requires Python 3.11+, Git, and Codex or Claude Code with terminal/file access.
@@ -38,28 +40,28 @@ Live research also needs the host's available search/browser tools or supplied
 materials; this package does not provide proprietary social-platform access.
 
 ```bash
-git clone https://github.com/YichenBC/research-workbench.git
-cd research-workbench
+git clone https://github.com/YichenBC/product-idea-research.git
+cd product-idea-research
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install .
 
 # Choose either or both; existing differing skills are never overwritten.
-research-workbench install --target codex --scope user
-research-workbench install --target claude --scope user
+product-idea-research install --target codex --scope user
+product-idea-research install --target claude --scope user
 ```
 
 On Windows activate with `.venv\Scripts\Activate.ps1`. Keep the environment active
 when launching your agent, or use `pipx install .` / `uv tool install .`. No PyPI
 publication is required. Restart a running agent if it has not discovered the skill.
 For project-only installation add `--scope project --directory /path/to/project`
-instead of `--scope user`. Codex receives `.agents/skills/research-workbench/`;
-Claude Code receives `.claude/skills/research-workbench/`. Both use the same package.
+instead of `--scope user`. Codex receives `.agents/skills/product-idea-research/`;
+Claude Code receives `.claude/skills/product-idea-research/`. Both use the same package.
 See [updates/uninstall](docs/installation.md).
 
 ## Use it
 
-In Codex invoke `$research-workbench`; in Claude Code invoke `/research-workbench`.
+In Codex invoke `$product-idea-research`; in Claude Code invoke `/product-idea-research`.
 For example:
 
 > Research whether a small Web product could help video teams review translated
@@ -123,10 +125,10 @@ The host must still verify that each excerpt supports its interpretation.
 This replays the original hand-authored simulation example:
 
 ```bash
-research-workbench init studies/demo --title "Scheduling concept"
-research-workbench ingest studies/demo --file examples/scheduling/batch.json
-research-workbench check studies/demo --report examples/scheduling/report-draft.json
-research-workbench render studies/demo --report examples/scheduling/report-draft.json
+product-idea-research init studies/demo --title "Scheduling concept"
+product-idea-research ingest studies/demo --file examples/scheduling/batch.json
+product-idea-research check studies/demo --report examples/scheduling/report-draft.json
+product-idea-research render studies/demo --report examples/scheduling/report-draft.json
 ```
 
 [Scheduling report](examples/scheduling/report.md) ·
@@ -156,6 +158,6 @@ python -m build
 ```
 
 Runtime is Python standard library only. The canonical skill is packaged from
-`src/research_workbench/skill/`; keep its data-contract reference identical to
+`src/product_idea_research/skill/`; keep its data-contract reference identical to
 `docs/contract.md`. See [contributing](CONTRIBUTING.md) and [eval cases](evals/cases.md).
 MIT licensed. Fictional fixtures and any live-source examples are labeled separately.

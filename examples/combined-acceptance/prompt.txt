@@ -1,0 +1,2 @@
+Use $product-idea-research installed in this workspace. The product-idea-research CLI is on PATH. Work only in this directory; no network, external services, subagents, package installation, source edits, Git commits or publishing.
+只使用 materials.txt 中的虚构验收资料，研究双语字幕交接审校 Web 产品是否值得做：做社媒分析、竞品研究，再按“单人负责／多人交接”合成两个角色，每个角色三轮模拟访谈。保留现有办法足够的情况；不要假设应该做新产品。输出一份中文综合报告，最多一个下一步试验。把材料自述、研究推断、模拟结论分清，不推断真实付费意愿。保存到 studies/review，完成 check、audit、render，主报告只展示访谈结论，完整问答放附件。

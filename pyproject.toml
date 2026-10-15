@@ -3,24 +3,25 @@ requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "research-workbench"
-version = "0.2.0"
+name = "product-idea-research"
+version = "0.3.0"
 description = "Composable, evidence-backed research workflows for coding agents"
 readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
-authors = [{name = "Research Workbench contributors"}]
+authors = [{name = "Product Idea Research contributors"}]
 dependencies = []
 
 [project.optional-dependencies]
 dev = ["build>=1.2", "pytest>=8"]
 
 [project.scripts]
-research-workbench = "research_workbench.cli:main"
+product-idea-research = "product_idea_research.cli:main"
+research-workbench = "product_idea_research.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["research_workbench*"]
+include = ["product_idea_research*", "research_workbench"]
 
 [tool.setuptools.package-data]
-research_workbench = ["skill/*", "skill/**/*"]
+product_idea_research = ["skill/*", "skill/**/*"]

@@ -1,4 +1,4 @@
-# Research Workbench
+# Product Idea Research
 
 **让 Codex / Claude Code 从公开讨论、竞品和模拟访谈中形成有依据、可复查的研究结论。**
 
@@ -26,20 +26,22 @@ Agent 负责搜索、阅读、分析与模拟；CLI 负责保存证据、检查�
 模块由用户选择，不强制从头跑完整流程。适用于工作与生活场景，不限于某个行业。
 明确指定的数量、渠道、语言和研究方法会保留；访问受限时说明缺口，不虚构材料补数。
 
+原名 **Research Workbench**。已有用户请先按[更名迁移说明](docs/installation.md#rename-from-research-workbench-v02-and-earlier)更新；旧 CLI 命令保留兼容，研究数据无需迁移。
+
 ## 安装
 
 需要 Python 3.11+、Git，以及能使用终端和文件的 Codex / Claude Code。
 在线调研还需要宿主提供搜索或浏览工具；也可以直接使用你提供的材料。
 
 ```bash
-git clone https://github.com/YichenBC/research-workbench.git
-cd research-workbench
+git clone https://github.com/YichenBC/product-idea-research.git
+cd product-idea-research
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install .
 
-research-workbench install --target codex --scope user
-research-workbench install --target claude --scope user
+product-idea-research install --target codex --scope user
+product-idea-research install --target claude --scope user
 ```
 
 Windows 用 `.venv\Scripts\Activate.ps1` 激活。启动 Agent 时保持环境激活，
@@ -49,7 +51,7 @@ Windows 用 `.venv\Scripts\Activate.ps1` 激活。启动 Agent 时保持环境�
 
 ## 怎么用
 
-Codex 使用 `$research-workbench`，Claude Code 使用 `/research-workbench`。
+Codex 使用 `$product-idea-research`，Claude Code 使用 `/product-idea-research`。
 接着自然描述任务：
 
 > 调研视频团队审校翻译字幕的流程。看看公开讨论和已有工具，再用两个模拟角色
