@@ -137,17 +137,20 @@ must verify that cited turns actually support each statement.
 ## Rendering and recovery
 
 Render validates first, freezes a coherent study + report snapshot, and creates a
-new reports/NNN directory containing report.md and/or report.html, study.json and
-report.json. Never overwrite previous reports. If interrupted during rendering,
+new reports/NNN directory containing report.md + evidence.md and/or report.html +
+evidence.html, study.json and report.json. Never overwrite previous reports. If interrupted during rendering,
 no final report directory should appear; intermediate study records remain usable.
 Hold the study lock during snapshot/render commit to prevent races.
 
-Include a prominent synthetic-research notice, method, actual/planned persona
-counts, completion status, role cards and assumptions, findings with links to
-specific interview turns, counterevidence, limitations, real-world next steps,
-and full transcripts. All user strings are escaped for both HTML and Markdown.
+The main report leads with conclusions, findings, counterevidence and next steps,
+plus a brief question/coverage/status statement, synthetic-research notice and
+limitations. Detailed methods, role cards and complete transcripts appear only in
+the evidence companion. Main-report citations link to generated relative paths
+`evidence.md#...` or `evidence.html#...` pointing to exact turn anchors. Evidence
+persona links are internal. Do not display internal revision/recipe IDs in the main
+report. All user strings are escaped for both HTML and Markdown.
 HTML is self-contained with inline CSS and no external assets/scripts. Its links
-use generated internal IDs only. Display language follows recipe.language for
+use generated file paths and anchor IDs only. Display language follows recipe.language for
 built-in labels (zh* Chinese, otherwise English); content is supplied by the Agent.
 Reports are local; render never uploads, publishes, or runs code from input.
 

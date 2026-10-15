@@ -42,6 +42,16 @@ This is one synthetic study from one host. It demonstrates the workflow, not the
 validity of simulated consumer preferences. The same Agent generated all roles and
 answers; these are not independent empirical respondents.
 
+### v0.1.1 report presentation update
+
+The same saved interviews are re-rendered into a conclusion-first report and a
+separate evidence companion. This is a renderer/skill presentation update, not
+a new model study. The public household example's summary and limitations were shortened editorially
+to lead with the substantive conclusion; original interview records are unchanged.
+The earlier v0.1.0 release preserves the original report. Regression tests verify
+that the main document omits role cards and raw Q&A while citations resolve to the
+full transcripts in `evidence.md` / `evidence.html`.
+
 ## Deterministic checks
 
 The automated suite covers idempotent ingestion, atomic failed batches, strict

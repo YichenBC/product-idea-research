@@ -1,8 +1,14 @@
 # Research Workbench
 
-**Your research method → synthetic personas → simulated interviews → a traceable report.**
+**A research workbench for coding agents, with conclusions you can act on and evidence you can inspect.**
 
 A shared skill for **Codex and Claude Code**, backed by a small local Python CLI.
+The first implemented module is simulated interviewing. The broader design combines
+social research, competitor research, supplied-material analysis and optional
+simulated interviews into a report tailored to the user's question. Those other
+modules are planned, not shipped features.
+See [product direction](docs/product-direction.md) for the module boundaries and
+the distinction between conclusions and research evidence.
 The Agent creates the personas, asks follow-up questions and interprets answers.
 The CLI saves checkpoints, checks references and exports Markdown and standalone HTML.
 
@@ -78,14 +84,18 @@ studies/scheduling/
   reports/001/
     report.md
     report.html          # self-contained; no scripts or remote assets
+    evidence.md          # detailed method, role cards and full interviews
+    evidence.html        # linked evidence companion; keep beside report.html
     study.json           # frozen study snapshot
     report.json          # frozen report draft
 ```
 
-The report includes the method, role assumptions, findings, counterarguments,
-links to exact interview turns, limitations, real-world next steps and full
-transcripts. Every report carries a synthetic-research notice. A new render creates
-a new numbered directory, preserving earlier reports.
+The main report leads with conclusions, disagreements and next steps. It gives
+only enough scope and limitations to interpret them. Detailed methods, role cards
+and transcripts live in a separate evidence companion, linked from each finding.
+Every report carries a concise synthetic-research notice. A new render creates
+a new numbered directory, preserving earlier reports. Share the directory when
+readers need working evidence links; the main report itself is readable on its own.
 
 ## Replay the included example without a model
 

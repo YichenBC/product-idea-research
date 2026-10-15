@@ -2,7 +2,7 @@
   "title": "Household shared shopping list: when a note is enough",
   "study_revision": 4,
   "status": "complete",
-  "summary": "This completed simulation covers exactly two personas and three turns per persona. Both roles retain a sufficient note-based baseline. The shared-household planner offers a conditional reason to explore explicit item handoffs, provided both adults participate and there is only one list to maintain. The spontaneous solo shopper finds no value in sharing itself and would consider a private mode only for demonstrably easier capture. These are hypotheses generated from assumed scenarios, not evidence of demand or actual shopping behavior.",
+  "summary": "Explore clearer handoffs for shared households before building a general-purpose shared shopping app. The simulated planner sees conditional value in item ownership and acknowledgment on one list, while the solo shopper would retain a sufficient private note. Whether real households encounter enough handoff friction to justify switching remains untested.",
   "interview_ids": [
     "interview-planner",
     "interview-solo"
@@ -103,12 +103,9 @@
     "If a later study needs to separate decision style from coordination, include weekly solo planners and spontaneous shared-household shoppers. Those two combinations are intentionally absent from this two-persona run."
   ],
   "limitations": [
-    "All personas and answers are newly generated synthetic content from the same agent. They are not independent empirical samples, real interviews or observed customer evidence.",
-    "Exactly two of four dimension combinations were requested: weekly planner/shared household and spontaneous shopper/solo. Both dimensions change together, so no causal or independent effect can be attributed to either dimension.",
-    "Each interview contains exactly three turns. Follow-ups use the previous answer's sufficiency conditions, workaround or capture trade-off; the short format cannot explore every household or usability condition.",
-    "No purchase history, actual spending, customer statistics or source evidence was invented. No browsing, external services, subagents or package installation were used.",
-    "The planner's late-change frequency and the solo shopper's device and accessibility needs remain explicitly unknown. No willingness to pay, adoption, retention, market prevalence or measured benefit is established.",
-    "Assignment, acknowledgment and private mode are hypothetical variants introduced for discussion, not specified or tested product capabilities.",
-    "Complete means both requested synthetic personas were interviewed, not that the concept was validated with real users. CLI validation checks structure and references; it cannot establish the truth of generated prose."
+    "All personas and answers are synthetic, not independent samples or observed customer evidence.",
+    "The two scenarios change both planning style and household coordination together, so their independent effects cannot be separated. Three-turn interviews leave many conditions unexplored.",
+    "Late-change frequency, device and accessibility needs remain unknown. Willingness to pay, adoption, retention and measured benefit have not been established.",
+    "Assignment, acknowledgment and private mode are hypothetical variants, not tested product capabilities."
   ]
 }

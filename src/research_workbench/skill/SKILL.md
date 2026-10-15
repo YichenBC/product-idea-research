@@ -6,8 +6,10 @@ description: Build synthetic personas from a user-defined research method, run s
 # Research Workbench
 
 Turn a research question and method into role cards, multi-turn simulated
-interviews, and an inspectable Markdown/HTML report. Use the user's language.
-This release handles simulation only. A persona library and data collectors are
+interviews, and a conclusion-first Markdown/HTML report. Detailed role cards and
+transcripts are separate evidence attachments, not the main report. Use the user's
+language. Simulation is the first implemented module of the research workbench;
+this release handles simulation only. A persona library and data collectors are
 not required or included. The host Agent generates content; the local CLI saves,
 checks, and renders it. It does not call a model.
 

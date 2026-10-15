@@ -1,6 +1,7 @@
 import copy
 import json
 import os
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -133,16 +134,45 @@ class CLI(Harness):
         old = {p.name: p.read_bytes() for p in first.iterdir()}
         html = (first / 'report.html').read_text(encoding='utf-8')
         md = (first / 'report.md').read_text(encoding='utf-8')
+        evidence_html = (first / 'evidence.html').read_text(encoding='utf-8')
+        evidence_md = (first / 'evidence.md').read_text(encoding='utf-8')
         self.assertNotIn('<script>', html)
         self.assertNotIn('<img src=', html)
-        self.assertIn('&lt;img', html)
-        self.assertIn('Existing sheet', html)
-        self.assertIn('href="#turn-', html)
-        self.assertNotIn('[click](https://evil.test)', md)
-        self.assertIn('Existing sheet', md)
-        self.cli('render', self.study, '--report', rp, '--format', 'md')
-        self.assertTrue((self.study / 'reports' / '002' / 'report.md').exists())
-        self.assertFalse((self.study / 'reports' / '002' / 'report.html').exists())
+        for main, next_heading in ((html, 'Real-world next steps'), (md, 'Real&#45;world next steps')):
+            for raw_material in ('Why?', 'Alternative?', 'Existing sheet', 'workflow', 'Scenario',
+                                 'Compare roles', 'No browsing', 'Revision', 'Role cards',
+                                 'Full simulated transcripts'):
+                self.assertNotIn(raw_material, main)
+            self.assertLess(main.index('Summary'), main.index('Findings'))
+            self.assertLess(main.index('Summary'), main.index('Question'))
+            self.assertLess(main.index('Findings'), main.index(next_heading))
+            self.assertLess(main.index(next_heading), main.rindex('Limitations'))
+        self.assertLess(html.index('Real-world next steps'), html.rindex('Limitations'))
+        self.assertIn('&lt;img', evidence_html)
+        self.assertNotIn('<img src=', evidence_html)
+        self.assertIn('Why?', evidence_html)
+        self.assertIn('Alternative?', evidence_html)
+        self.assertIn('Existing sheet', evidence_html)
+        self.assertIn('Compare roles', evidence_html)
+        self.assertIn('workflow', evidence_html)
+        self.assertNotIn('[click](https://evil.test)', evidence_md)
+        self.assertIn('&#91;click&#93;', evidence_md)
+        self.assertIn('Existing sheet', evidence_md)
+        self.assertEqual(json.loads((first / 'report.json').read_text()), report())
+        self.assertEqual((first / 'study.json').read_bytes(), (self.study / 'research.json').read_bytes())
+        for kind, main, evidence in [('html', html, evidence_html), ('md', md, evidence_md)]:
+            targets = re.findall(r'evidence\.' + kind + r'#(turn-[a-z0-9-]+)', main)
+            self.assertEqual(targets, ['turn-interview-1-1', 'turn-interview-1-2'])
+            for target in targets:
+                self.assertIn(f'id="{target}"', evidence)
+            persona_targets = re.findall(r'#(persona-[0-9]+)', evidence)
+            self.assertEqual(persona_targets, ['persona-1'])
+            self.assertIn('id="persona-1"', evidence)
+        for number, kind in [(2, 'md'), (3, 'html')]:
+            self.cli('render', self.study, '--report', rp, '--format', kind)
+            destination = self.study / 'reports' / f'{number:03d}'
+            self.assertEqual({p.name for p in destination.iterdir()},
+                             {f'report.{kind}', f'evidence.{kind}', 'study.json', 'report.json'})
         self.assertEqual(old, {p.name: p.read_bytes() for p in first.iterdir()})
 
     def test_malformed_json_and_missing_study(self):
@@ -229,8 +259,10 @@ class AdditionalCLI(Harness):
         self.ingest(b)
         self.cli('render', self.study, '--report', self.write('r.json', report()))
         html = (self.study / 'reports' / '001' / 'report.html').read_text(encoding='utf-8')
-        self.assertIn('完整模拟访谈', html)
-        self.assertIn('合成研究', html)
+        evidence = (self.study / 'reports' / '001' / 'evidence.html').read_text(encoding='utf-8')
+        self.assertNotIn('完整模拟访谈', html)
+        self.assertIn('完整模拟访谈', evidence)
+        self.assertIn('模拟', html)
         self.assertIn('lang="zh"', html)
 
     def test_corrected_persona_retains_history_and_selected_active_cards(self):
@@ -256,7 +288,7 @@ class AdditionalCLI(Harness):
         r['findings'][0]['counterevidence'][0]['interview_id'] = 'i3'
         self.cli('render', self.study, '--report', self.write('after.json', r))
         self.assertEqual((self.study / 'reports' / '001' / 'study.json').read_bytes(), old)
-        html = (self.study / 'reports' / '002' / 'report.html').read_text(encoding='utf-8')
+        html = (self.study / 'reports' / '002' / 'evidence.html').read_text(encoding='utf-8')
         self.assertIn('Corrected active persona', html)
         self.assertNotIn('User (p1)', html)
         state = json.loads((self.study / 'reports' / '002' / 'study.json').read_text(encoding='utf-8'))

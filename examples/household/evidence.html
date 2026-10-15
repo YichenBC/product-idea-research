@@ -1,0 +1,122 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Household shared shopping list: when a note is enough</title><style>body{max-width:960px;margin:auto;padding:2rem;font:16px/1.6 system-ui,sans-serif;color:#162333}h1,h2,h3{line-height:1.25}h2{margin-top:2.5rem;border-bottom:1px solid #ccd3dc}p,li{overflow-wrap:anywhere;white-space:pre-wrap}a{color:#075eb5}.notice{padding:1rem;background:#fff2cd;border:2px solid #947000;border-radius:6px}</style></head><body>
+
+<h1>Household shared shopping list: when a note is enough — Evidence appendix</h1>
+
+<p class="notice">Synthetic research: All personas and interviews are simulations. These are hypotheses, not evidence of real customer demand.</p>
+
+<p>Status: complete | Revision: 4</p>
+
+<p>Personas: stored / planned / covered by selected interviews: 2 / 2 / 2</p>
+
+<h2>Method</h2>
+
+<p>Recipe: household-recipe</p>
+
+<p>Question: Under what conditions would a household shared-shopping-list concept improve on an already sufficient alternative, and when would it be rejected?</p>
+
+<p>Contrast decision style (weekly planner versus spontaneous shopper) and coordination (shared household versus solo), using exactly two synthetic roles: a weekly planner in a shared household and a spontaneous solo shopper. Conduct exactly three turns per role, following each answer with a question about its specific workflow, sufficiency or rejection conditions. This diagonal contrast cannot isolate the effects of the two dimensions.</p>
+
+<h3>Dimensions</h3>
+
+<ul><li>decision_style: weekly planner, spontaneous shopper</li><li>coordination: shared household, solo</li></ul>
+
+<h3>Constraints</h3>
+
+<ul><li>Exactly two personas, using only the two requested dimension combinations.</li><li>Exactly three simulated question-answer turns per persona, with answer-dependent follow-ups.</li><li>Include an already sufficient current alternative; do not force adoption of the concept.</li><li>All role attributes and responses are synthetic assumptions or explicit unknowns; include at least one unknown attribute per persona.</li><li>Do not invent purchase history, actual spending, measured outcomes, demographics or source evidence.</li><li>Generate fresh content locally; no browsing, external services, subagents, package installation or reuse of existing reports.</li><li>Save recipe, role cards and completed interviews incrementally using the installed CLI; validate and render Markdown and HTML under studies/household.</li><li>English report and study content. Unselected dimension combinations are outside this run&#x27;s scope.</li></ul>
+
+<h2>Role cards</h2>
+
+<h3 id="persona-1">Weekly planner coordinating a shared household (planner-shared)</h3>
+
+<p>Recipe: household-recipe</p>
+
+<ul><li>decision_style: weekly planner</li><li>coordination: shared household</li></ul>
+
+<p>Attributes and assumptions</p>
+
+<ul><li>task: In this scenario, prepare a weekly list after checking household supplies and collecting another adult&#x27;s requests. [assumed] — Makes the user-specified weekly planning and shared coordination dimensions concrete without claiming observed behavior.</li><li>current_alternative: An editable shared phone note is already sufficient when requests are settled before one designated shopper leaves. [assumed] — Provides a credible sufficient baseline against which the concept must earn a reason to switch.</li><li>authority: Can prepare the list and propose a tool, but cannot require the other adult to maintain a second list. [assumed] — Shared adoption depends on cooperation rather than the planner&#x27;s preference alone.</li><li>desired_outcome: Keep additions and responsibility clear if shopping plans change after the weekly list is prepared. [assumed] — Explores coordination at handoffs as a conditional need, not a claimed recurring incident.</li><li>rejection_condition: Would reject a separate app if it duplicates the note or requires both adults to perform extra routine updates. [assumed] — Tests whether coordination benefits could outweigh maintenance effort.</li><li>late_change_frequency: Unknown: how often requests or shopper responsibility change after departure. [unknown] — No household observation or purchase history was supplied; frequency cannot be inferred from the scenario.</li></ul>
+
+<h3 id="persona-2">Spontaneous solo shopper with no household handoff (spontaneous-solo)</h3>
+
+<p>Recipe: household-recipe</p>
+
+<ul><li>decision_style: spontaneous shopper</li><li>coordination: solo</li></ul>
+
+<p>Attributes and assumptions</p>
+
+<ul><li>task: In this scenario, choose whether to shop when convenient and decide optional items at the store. [assumed] — Expresses the requested spontaneous decision style without inventing a past shopping trip.</li><li>current_alternative: A short private phone note for essentials is already sufficient; optional choices can remain undecided. [assumed] — Creates a satisfied baseline with no assumed need for household sharing.</li><li>authority: Chooses and maintains personal tools independently, with no other household shopper to update. [assumed] — Makes the solo coordination dimension operational and distinct from the shared role.</li><li>desired_outcome: Capture an essential quickly while preserving freedom to choose the rest in the moment. [assumed] — Separates remembering essentials from planning an entire shopping trip.</li><li>rejection_condition: Would reject household setup, invitations or detailed planning as prerequisites for keeping a personal list. [assumed] — Tests the relevance and burden of a household-oriented concept for a solo user.</li><li>capture_accessibility_needs: Unknown: device, accessibility requirements and preferred input method. [unknown] — The prompt supplies none of these details; no particular interface can be presumed usable or faster.</li></ul>
+
+<h2>Full simulated transcripts</h2>
+
+<h3 id="interview-1">Interview: interview-planner</h3>
+
+<p>Provenance</p>
+
+<a href="#persona-1">Persona: Weekly planner coordinating a shared household (planner-shared)</a>
+
+<h4 id="turn-interview-1-1">Turn 1</h4>
+
+<p>Question: Imagine preparing your weekly household shopping list. How would you collect requests and decide that the list is ready, using your current alternative?</p>
+
+<p>Answer: In this scenario, I would check supplies, put essentials in the shared phone note and ask the other adult to add requests before the designated shopper leaves. If one person shops and the requests are settled, that note is already sufficient. I would not need another app just to display the same items.</p>
+
+<p>Assumptions</p>
+
+<ul><li>Both adults can edit the same phone note.</li><li>The baseline task has one designated shopper and requests settled before departure; this is a hypothetical workflow, not a reported purchase history.</li></ul>
+
+<h4 id="turn-interview-1-2">Turn 2</h4>
+
+<p>Question: You said the note is sufficient with one shopper and settled requests. Suppose the other adult offers to pick up an item after you have left: how would you handle that handoff, and could the note still be enough?</p>
+
+<p>Answer: I would ask them to mark their initials next to that item and send a direct confirmation before either of us treats it as assigned. The note could still be enough if we both follow that convention. A shared-list tool might help only if assignment and acknowledgment were clearer without maintaining a second copy. I do not know how often such handoffs would happen, so I cannot claim this deserves a dedicated app.</p>
+
+<p>Assumptions</p>
+
+<ul><li>A second adult offers to collect one item after departure solely as a hypothetical stress test.</li><li>Initials in the note plus a direct confirmation are available as a possible workaround; their reliability has not been observed.</li></ul>
+
+<h4 id="turn-interview-1-3">Turn 3</h4>
+
+<p>Question: Your workaround needs initials and direct confirmation, and you would consider clearer assignment only without a second copy. What would make you try a shared-list prototype, and what would make you keep the note?</p>
+
+<p>Answer: Hypothetically, I would try one canonical list with optional item assignment and a visible acknowledgment during a handoff, provided the other adult also agrees to use it. I would keep the note if initials and confirmation remain clear enough, or if the new tool adds mandatory updates for every item. A clearer status on my screen is not useful if the other person never acknowledges it. I would need to see real handoffs before deciding whether switching is worthwhile.</p>
+
+<p>Assumptions</p>
+
+<ul><li>The proposed canonical list, optional assignment and acknowledgment are prototype ideas, not verified product capabilities.</li><li>Participation by the other adult is conditional and has not been established.</li></ul>
+
+<h3 id="interview-2">Interview: interview-solo</h3>
+
+<p>Provenance</p>
+
+<a href="#persona-2">Persona: Spontaneous solo shopper with no household handoff (spontaneous-solo)</a>
+
+<h4 id="turn-interview-2-1">Turn 1</h4>
+
+<p>Question: Imagine deciding to stop at a store when convenient, without a weekly plan. How would you remember essentials and decide what else to get using your current alternative?</p>
+
+<p>Answer: In this scenario, I would glance at a short private phone note for essentials and leave optional choices open until I am there. That is already sufficient: I am the only person who needs to see or update it. A household shared list would not solve a handoff for me because there is no other shopper to coordinate with.</p>
+
+<p>Assumptions</p>
+
+<ul><li>A private phone note is available for the hypothetical task.</li><li>The imagined store stop and choices are a task scenario, not an account of actual purchases.</li></ul>
+
+<h4 id="turn-interview-2-2">Turn 2</h4>
+
+<p>Question: You said a short private note is enough and optional choices should stay open. Suppose you remember an essential just before entering the store: would adding it expose a gap, or would the note still suffice?</p>
+
+<p>Answer: I would add a short line to the note. It would still suffice if I can reach it easily; I would not need a full plan or a shared household. If capture were awkward, I might compare a quicker personal capture option, but that is a usability question. My device and input needs are unknown here, so I cannot say a new app would be quicker.</p>
+
+<p>Assumptions</p>
+
+<ul><li>Remembering an essential just before entry is a hypothetical prompt, not an observed incident.</li><li>Easy access to the note is a condition of sufficiency, not a measured interface property.</li></ul>
+
+<h4 id="turn-interview-2-3">Turn 3</h4>
+
+<p>Question: You would compare personal capture only if adding a line were awkward. If this shared-list concept offered a private mode, what would justify trying it, and what would make you reject it?</p>
+
+<p>Answer: Hypothetically, I would consider a private mode only if it made capturing essentials easier on my actual device and let me leave the rest unplanned. I would reject mandatory household setup, invitations or detailed item fields. Sharing alone gives me no reason to switch. If the note stays easy to reach, I would keep it even if private mode exists; an extra app is not an improvement by itself.</p>
+
+<p>Assumptions</p>
+
+<ul><li>Private mode is a hypothetical concept variant, not a confirmed feature.</li><li>No capture comparison has been performed on an actual device.</li></ul>
+</body></html>

@@ -1,4 +1,4 @@
-"""Safe standalone reports with frozen provenance and complete transcripts."""
+"""Conclusion reports with linked evidence appendices and frozen provenance."""
 
 from __future__ import annotations
 
@@ -23,11 +23,15 @@ ZH = {
     'Status': '完成状态', 'partial': '部分完成', 'complete': '完整', 'Revision': '修订号',
     'Personas: stored / planned / covered by selected interviews': '画像：已存储 / 计划 / 所选访谈覆盖',
     'Summary': '摘要', 'Role cards': '角色卡', 'Traits': '维度', 'Attributes and assumptions': '属性与假设',
-    'assumed': '假设', 'unknown': '未知', 'Findings': '模拟发现', 'Support': '支持材料',
+    'assumed': '假设', 'unknown': '未知', 'Findings': '研究发现', 'Support': '支持材料',
     'Counterevidence': '反向材料', 'Limitations': '局限', 'Real-world next steps': '现实验证下一步',
     'Full simulated transcripts': '完整模拟访谈', 'Interview': '访谈', 'Persona': '画像',
     'Turn': '轮次', 'Answer': '回答', 'Assumptions': '假设', 'None supplied': '未提供',
     'Recipe': '研究方案', 'Provenance': '来源追溯', 'simulation': '模拟',
+    'Evidence appendix': '研究材料附录',
+    'Selected interviews / personas covered / planned': '所选访谈 / 覆盖画像 / 计划画像',
+    'Interview evidence is simulated; conclusions remain hypotheses for real-world validation.':
+    '访谈材料为模拟生成；结论仍是假设，需要现实验证。',
 }
 
 
@@ -83,12 +87,14 @@ class Document:
         else:
             self.parts.append('\n'.join('- ' + self.escape(t) for t in texts))
 
-    def links(self, label: str, refs: Iterable[tuple[str, str]]) -> None:
+    def links(self, label: str, refs: Iterable[tuple[str, str]], filename: str = '') -> None:
         self.paragraph(self.tr(label))
         links = []
         for anchor, text in refs:
             safe = self.escape(text)
-            links.append(f'<a href="#{anchor}">{safe}</a>' if self.kind == 'html' else f'[{safe}](#{anchor})')
+            # Both filename and anchor are generated here, never taken from user IDs.
+            target = f'{filename}#{anchor}'
+            links.append(f'<a href="{target}">{safe}</a>' if self.kind == 'html' else f'[{safe}]({target})')
         self.parts.append((' · '.join(links)) if links else self.escape(self.tr('None supplied')))
 
     def finish(self) -> str:
@@ -96,15 +102,52 @@ class Document:
 
 
 def document(state: Study, report: JSONObject, kind: str) -> str:
+    """Keep the primary reading path focused on conclusions and decisions."""
     rec = state['recipe']
     doc = Document(kind, report['title'], rec['language'].lower().startswith('zh'))
     tr = doc.tr
+    selected = selected_interviews(state, report)
+    positions = {item['id']: index for index, item in enumerate(selected, 1)}
+    doc.heading(1, report['title'])
+    doc.paragraph(tr('Interview evidence is simulated; conclusions remain hypotheses for real-world validation.'), notice=True)
+    doc.heading(2, tr('Summary'))
+    doc.paragraph(report['summary'])
+    doc.paragraph(f'{tr("Question")}: {rec["question"]}')
+    doc.paragraph(f'{tr("Status")}: {tr(report["status"])}')
+    covered = len({i['persona_id'] for i in selected})
+    doc.paragraph(f'{tr("Selected interviews / personas covered / planned")}: '
+                  f'{len(selected)} / {covered} / {rec["persona_count"]}')
+    doc.heading(2, tr('Findings'))
+    for n, finding in enumerate(report['findings'], 1):
+        doc.heading(3, f'{n}. {finding["statement"]}', f'finding-{n}')
+        for key, label in (('support', 'Support'), ('counterevidence', 'Counterevidence')):
+            doc.links(label, [(f'turn-interview-{positions[r["interview_id"]]}-{r["turn"]}',
+                              f'{tr("Interview")} {positions[r["interview_id"]]} · {tr("Turn")} {r["turn"]}')
+                             for r in finding[key]], filename=f'evidence.{kind}')
+        doc.paragraph(tr('Limitations'))
+        doc.items(finding['limitations'])
+    doc.heading(2, tr('Real-world next steps'))
+    doc.items(report['next_steps'])
+    doc.heading(2, tr('Limitations'))
+    doc.items(report['limitations'])
+    return doc.finish()
+
+
+def selected_interviews(state: Study, report: JSONObject) -> list[JSONObject]:
     interviews = {i['id']: i for i in state['interviews']}
-    selected = [interviews[i] for i in report['interview_ids']]
+    return [interviews[i] for i in report['interview_ids']]
+
+
+def evidence_document(state: Study, report: JSONObject, kind: str) -> str:
+    """Retain complete selected research material behind exact-turn citations."""
+    rec = state['recipe']
+    doc = Document(kind, report['title'], rec['language'].lower().startswith('zh'))
+    tr = doc.tr
+    selected = selected_interviews(state, report)
     people = {p['id']: p for p in state['personas']}
     anchors = {item['id']: f'interview-{index}' for index, item in enumerate(selected, 1)}
     person_anchors = {p['id']: f'persona-{index}' for index, p in enumerate(state['personas'], 1)}
-    doc.heading(1, report['title'])
+    doc.heading(1, report['title'] + ' — ' + tr('Evidence appendix'))
     doc.paragraph(tr('Synthetic research') + ': ' + tr('All personas and interviews are simulations. These are hypotheses, not evidence of real customer demand.'), notice=True)
     doc.paragraph(f'{tr("Status")}: {tr(report["status"])} | {tr("Revision")}: {state["revision"]}')
     covered = len({i['persona_id'] for i in selected})
@@ -118,8 +161,6 @@ def document(state: Study, report: JSONObject, kind: str) -> str:
     doc.items(f'{d["name"]}: ' + ', '.join(d['values']) for d in rec['dimensions'])
     doc.heading(3, tr('Constraints'))
     doc.items(rec['constraints'])
-    doc.heading(2, tr('Summary'))
-    doc.paragraph(report['summary'])
     doc.heading(2, tr('Role cards'))
     selected_personas = {item['persona_id'] for item in selected}
     for p in state['personas']:
@@ -130,19 +171,6 @@ def document(state: Study, report: JSONObject, kind: str) -> str:
         doc.items(f'{k}: {val}' for k, val in p['traits'].items())
         doc.paragraph(tr('Attributes and assumptions'))
         doc.items(f'{a["name"]}: {a["value"]} [{tr(a["basis"])}] — {a["rationale"]}' for a in p['attributes'])
-    doc.heading(2, tr('Findings'))
-    for n, finding in enumerate(report['findings'], 1):
-        doc.heading(3, f'{n}. {finding["statement"]}', f'finding-{n}')
-        doc.paragraph(f'{finding["id"]} · {tr("simulation")}')
-        for key, label in (('support', 'Support'), ('counterevidence', 'Counterevidence')):
-            doc.links(label, [(f'turn-{anchors[r["interview_id"]]}-{r["turn"]}',
-                              f'{r["interview_id"]} · {tr("Turn")} {r["turn"]}') for r in finding[key]])
-        doc.paragraph(tr('Limitations'))
-        doc.items(finding['limitations'])
-    doc.heading(2, tr('Limitations'))
-    doc.items(report['limitations'])
-    doc.heading(2, tr('Real-world next steps'))
-    doc.items(report['next_steps'])
     doc.heading(2, tr('Full simulated transcripts'))
     for item in selected:
         doc.heading(3, f'{tr("Interview")}: {item["id"]}', anchors[item['id']])
@@ -174,10 +202,11 @@ def render(directory: PathInput, report: JSONValue, output_format: str) -> JSONO
             store.write_json(temporary / 'report.json', report)
             formats = ('md', 'html') if output_format == 'both' else (output_format,)
             for kind in formats:
-                with (temporary / f'report.{kind}').open('w', encoding='utf-8') as handle:
-                    handle.write(document(state, report, kind))
-                    handle.flush()
-                    os.fsync(handle.fileno())
+                for name, build in (('report', document), ('evidence', evidence_document)):
+                    with (temporary / f'{name}.{kind}').open('w', encoding='utf-8') as handle:
+                        handle.write(build(state, report, kind))
+                        handle.flush()
+                        os.fsync(handle.fileno())
             v.require(not final.exists(), f'Report directory already exists: {final}')
             os.rename(temporary, final)
         finally:

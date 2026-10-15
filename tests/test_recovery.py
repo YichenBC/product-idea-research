@@ -47,6 +47,16 @@ class Recovery(unittest.TestCase):
         self.assertEqual(Path(result['directory']).name, '001')
         self.assertEqual(store.load(self.directory)['revision'], 1)
 
+    def test_failed_evidence_export_preserves_old_report_and_discards_staging(self):
+        first = Path(render(self.directory, report(), 'both')['directory'])
+        original = {p.name: p.read_bytes() for p in first.iterdir()}
+        with patch('research_workbench.render.evidence_document', side_effect=OSError('disk failure')):
+            with self.assertRaises(OSError):
+                render(self.directory, report(), 'both')
+        self.assertEqual([p.resolve() for p in (self.directory / 'reports').iterdir()], [first])
+        self.assertEqual({p.name: p.read_bytes() for p in first.iterdir()}, original)
+        self.assertEqual(Path(render(self.directory, report(), 'both')['directory']).name, '002')
+
     def test_user_install_uses_home_and_preserves_identical_files(self):
         home = Path(self.tmp.name) / 'home'
         with patch('research_workbench.install.Path.home', return_value=home):

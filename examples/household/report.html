@@ -2,67 +2,29 @@
 
 <h1>Household shared shopping list: when a note is enough</h1>
 
-<p class="notice">Synthetic research: All personas and interviews are simulations. These are hypotheses, not evidence of real customer demand.</p>
-
-<p>Status: complete | Revision: 4</p>
-
-<p>Personas: stored / planned / covered by selected interviews: 2 / 2 / 2</p>
-
-<h2>Method</h2>
-
-<p>Recipe: household-recipe</p>
-
-<p>Question: Under what conditions would a household shared-shopping-list concept improve on an already sufficient alternative, and when would it be rejected?</p>
-
-<p>Contrast decision style (weekly planner versus spontaneous shopper) and coordination (shared household versus solo), using exactly two synthetic roles: a weekly planner in a shared household and a spontaneous solo shopper. Conduct exactly three turns per role, following each answer with a question about its specific workflow, sufficiency or rejection conditions. This diagonal contrast cannot isolate the effects of the two dimensions.</p>
-
-<h3>Dimensions</h3>
-
-<ul><li>decision_style: weekly planner, spontaneous shopper</li><li>coordination: shared household, solo</li></ul>
-
-<h3>Constraints</h3>
-
-<ul><li>Exactly two personas, using only the two requested dimension combinations.</li><li>Exactly three simulated question-answer turns per persona, with answer-dependent follow-ups.</li><li>Include an already sufficient current alternative; do not force adoption of the concept.</li><li>All role attributes and responses are synthetic assumptions or explicit unknowns; include at least one unknown attribute per persona.</li><li>Do not invent purchase history, actual spending, measured outcomes, demographics or source evidence.</li><li>Generate fresh content locally; no browsing, external services, subagents, package installation or reuse of existing reports.</li><li>Save recipe, role cards and completed interviews incrementally using the installed CLI; validate and render Markdown and HTML under studies/household.</li><li>English report and study content. Unselected dimension combinations are outside this run&#x27;s scope.</li></ul>
+<p class="notice">Interview evidence is simulated; conclusions remain hypotheses for real-world validation.</p>
 
 <h2>Summary</h2>
 
-<p>This completed simulation covers exactly two personas and three turns per persona. Both roles retain a sufficient note-based baseline. The shared-household planner offers a conditional reason to explore explicit item handoffs, provided both adults participate and there is only one list to maintain. The spontaneous solo shopper finds no value in sharing itself and would consider a private mode only for demonstrably easier capture. These are hypotheses generated from assumed scenarios, not evidence of demand or actual shopping behavior.</p>
+<p>Explore clearer handoffs for shared households before building a general-purpose shared shopping app. The simulated planner sees conditional value in item ownership and acknowledgment on one list, while the solo shopper would retain a sufficient private note. Whether real households encounter enough handoff friction to justify switching remains untested.</p>
 
-<h2>Role cards</h2>
+<p>Question: Under what conditions would a household shared-shopping-list concept improve on an already sufficient alternative, and when would it be rejected?</p>
 
-<h3 id="persona-1">Weekly planner coordinating a shared household (planner-shared)</h3>
+<p>Status: complete</p>
 
-<p>Recipe: household-recipe</p>
-
-<ul><li>decision_style: weekly planner</li><li>coordination: shared household</li></ul>
-
-<p>Attributes and assumptions</p>
-
-<ul><li>task: In this scenario, prepare a weekly list after checking household supplies and collecting another adult&#x27;s requests. [assumed] — Makes the user-specified weekly planning and shared coordination dimensions concrete without claiming observed behavior.</li><li>current_alternative: An editable shared phone note is already sufficient when requests are settled before one designated shopper leaves. [assumed] — Provides a credible sufficient baseline against which the concept must earn a reason to switch.</li><li>authority: Can prepare the list and propose a tool, but cannot require the other adult to maintain a second list. [assumed] — Shared adoption depends on cooperation rather than the planner&#x27;s preference alone.</li><li>desired_outcome: Keep additions and responsibility clear if shopping plans change after the weekly list is prepared. [assumed] — Explores coordination at handoffs as a conditional need, not a claimed recurring incident.</li><li>rejection_condition: Would reject a separate app if it duplicates the note or requires both adults to perform extra routine updates. [assumed] — Tests whether coordination benefits could outweigh maintenance effort.</li><li>late_change_frequency: Unknown: how often requests or shopper responsibility change after departure. [unknown] — No household observation or purchase history was supplied; frequency cannot be inferred from the scenario.</li></ul>
-
-<h3 id="persona-2">Spontaneous solo shopper with no household handoff (spontaneous-solo)</h3>
-
-<p>Recipe: household-recipe</p>
-
-<ul><li>decision_style: spontaneous shopper</li><li>coordination: solo</li></ul>
-
-<p>Attributes and assumptions</p>
-
-<ul><li>task: In this scenario, choose whether to shop when convenient and decide optional items at the store. [assumed] — Expresses the requested spontaneous decision style without inventing a past shopping trip.</li><li>current_alternative: A short private phone note for essentials is already sufficient; optional choices can remain undecided. [assumed] — Creates a satisfied baseline with no assumed need for household sharing.</li><li>authority: Chooses and maintains personal tools independently, with no other household shopper to update. [assumed] — Makes the solo coordination dimension operational and distinct from the shared role.</li><li>desired_outcome: Capture an essential quickly while preserving freedom to choose the rest in the moment. [assumed] — Separates remembering essentials from planning an entire shopping trip.</li><li>rejection_condition: Would reject household setup, invitations or detailed planning as prerequisites for keeping a personal list. [assumed] — Tests the relevance and burden of a household-oriented concept for a solo user.</li><li>capture_accessibility_needs: Unknown: device, accessibility requirements and preferred input method. [unknown] — The prompt supplies none of these details; no particular interface can be presumed usable or faster.</li></ul>
+<p>Selected interviews / personas covered / planned: 2 / 2 / 2</p>
 
 <h2>Findings</h2>
 
 <h3 id="finding-1">1. A new list display alone gives neither simulated role a reason to switch: the shared note is sufficient for settled requests and one shopper, while the private note is sufficient for the solo role&#x27;s essentials and open-ended choices.</h3>
 
-<p>sufficient-baselines · simulation</p>
-
 <p>Support</p>
 
-<a href="#turn-interview-1-1">interview-planner · Turn 1</a> · <a href="#turn-interview-2-1">interview-solo · Turn 1</a>
+<a href="evidence.html#turn-interview-1-1">Interview 1 · Turn 1</a> · <a href="evidence.html#turn-interview-2-1">Interview 2 · Turn 1</a>
 
 <p>Counterevidence</p>
 
-<a href="#turn-interview-1-2">interview-planner · Turn 2</a> · <a href="#turn-interview-2-2">interview-solo · Turn 2</a>
+<a href="evidence.html#turn-interview-1-2">Interview 1 · Turn 2</a> · <a href="evidence.html#turn-interview-2-2">Interview 2 · Turn 2</a>
 
 <p>Limitations</p>
 
@@ -70,15 +32,13 @@
 
 <h3 id="finding-2">2. For the simulated shared planner, optional item assignment and visible acknowledgment on one canonical list are a candidate handoff benefit, conditional on the other adult participating and avoiding duplicate maintenance.</h3>
 
-<p>conditional-handoff-value · simulation</p>
-
 <p>Support</p>
 
-<a href="#turn-interview-1-2">interview-planner · Turn 2</a> · <a href="#turn-interview-1-3">interview-planner · Turn 3</a>
+<a href="evidence.html#turn-interview-1-2">Interview 1 · Turn 2</a> · <a href="evidence.html#turn-interview-1-3">Interview 1 · Turn 3</a>
 
 <p>Counterevidence</p>
 
-<a href="#turn-interview-1-1">interview-planner · Turn 1</a> · <a href="#turn-interview-1-2">interview-planner · Turn 2</a>
+<a href="evidence.html#turn-interview-1-1">Interview 1 · Turn 1</a> · <a href="evidence.html#turn-interview-1-2">Interview 1 · Turn 2</a>
 
 <p>Limitations</p>
 
@@ -86,99 +46,23 @@
 
 <h3 id="finding-3">3. The simulated spontaneous solo shopper rejects sharing as a switching reason and rejects mandatory household setup or detailed planning. A private mode would be worth comparing only if capture becomes easier on the person&#x27;s actual device while optional choices remain open.</h3>
 
-<p>solo-rejection · simulation</p>
-
 <p>Support</p>
 
-<a href="#turn-interview-2-2">interview-solo · Turn 2</a> · <a href="#turn-interview-2-3">interview-solo · Turn 3</a>
+<a href="evidence.html#turn-interview-2-2">Interview 2 · Turn 2</a> · <a href="evidence.html#turn-interview-2-3">Interview 2 · Turn 3</a>
 
 <p>Counterevidence</p>
 
-<a href="#turn-interview-2-1">interview-solo · Turn 1</a> · <a href="#turn-interview-2-3">interview-solo · Turn 3</a>
+<a href="evidence.html#turn-interview-2-1">Interview 2 · Turn 1</a> · <a href="evidence.html#turn-interview-2-3">Interview 2 · Turn 3</a>
 
 <p>Limitations</p>
 
 <ul><li>The cited counterevidence limits any private-mode opportunity: the role would keep the already sufficient note when access stays easy.</li><li>Device, accessibility requirements and input method are explicit unknowns. No interface comparison or measured speed advantage exists.</li></ul>
 
-<h2>Limitations</h2>
-
-<ul><li>All personas and answers are newly generated synthetic content from the same agent. They are not independent empirical samples, real interviews or observed customer evidence.</li><li>Exactly two of four dimension combinations were requested: weekly planner/shared household and spontaneous shopper/solo. Both dimensions change together, so no causal or independent effect can be attributed to either dimension.</li><li>Each interview contains exactly three turns. Follow-ups use the previous answer&#x27;s sufficiency conditions, workaround or capture trade-off; the short format cannot explore every household or usability condition.</li><li>No purchase history, actual spending, customer statistics or source evidence was invented. No browsing, external services, subagents or package installation were used.</li><li>The planner&#x27;s late-change frequency and the solo shopper&#x27;s device and accessibility needs remain explicitly unknown. No willingness to pay, adoption, retention, market prevalence or measured benefit is established.</li><li>Assignment, acknowledgment and private mode are hypothetical variants introduced for discussion, not specified or tested product capabilities.</li><li>Complete means both requested synthetic personas were interviewed, not that the concept was validated with real users. CLI validation checks structure and references; it cannot establish the truth of generated prose.</li></ul>
-
 <h2>Real-world next steps</h2>
 
 <ul><li>With consenting real shared households, observe how settled lists and late handoffs work using their current tools. Establish whether ownership ambiguity occurs and how often before prioritizing assignment features.</li><li>Compare a shared note with initials and direct confirmation against a single-list prototype with optional assignment and acknowledgment. Observe whether both adults can identify responsibility and whether maintenance effort increases; do not assume the prototype wins.</li><li>With real solo shoppers, compare adding an essential to their existing note against a private capture prototype on their own devices, accounting for accessibility needs. Ask whether leaving optional choices unplanned remains possible and accept retaining the note as a valid outcome.</li><li>If a later study needs to separate decision style from coordination, include weekly solo planners and spontaneous shared-household shoppers. Those two combinations are intentionally absent from this two-persona run.</li></ul>
 
-<h2>Full simulated transcripts</h2>
+<h2>Limitations</h2>
 
-<h3 id="interview-1">Interview: interview-planner</h3>
-
-<p>Provenance</p>
-
-<a href="#persona-1">Persona: Weekly planner coordinating a shared household (planner-shared)</a>
-
-<h4 id="turn-interview-1-1">Turn 1</h4>
-
-<p>Question: Imagine preparing your weekly household shopping list. How would you collect requests and decide that the list is ready, using your current alternative?</p>
-
-<p>Answer: In this scenario, I would check supplies, put essentials in the shared phone note and ask the other adult to add requests before the designated shopper leaves. If one person shops and the requests are settled, that note is already sufficient. I would not need another app just to display the same items.</p>
-
-<p>Assumptions</p>
-
-<ul><li>Both adults can edit the same phone note.</li><li>The baseline task has one designated shopper and requests settled before departure; this is a hypothetical workflow, not a reported purchase history.</li></ul>
-
-<h4 id="turn-interview-1-2">Turn 2</h4>
-
-<p>Question: You said the note is sufficient with one shopper and settled requests. Suppose the other adult offers to pick up an item after you have left: how would you handle that handoff, and could the note still be enough?</p>
-
-<p>Answer: I would ask them to mark their initials next to that item and send a direct confirmation before either of us treats it as assigned. The note could still be enough if we both follow that convention. A shared-list tool might help only if assignment and acknowledgment were clearer without maintaining a second copy. I do not know how often such handoffs would happen, so I cannot claim this deserves a dedicated app.</p>
-
-<p>Assumptions</p>
-
-<ul><li>A second adult offers to collect one item after departure solely as a hypothetical stress test.</li><li>Initials in the note plus a direct confirmation are available as a possible workaround; their reliability has not been observed.</li></ul>
-
-<h4 id="turn-interview-1-3">Turn 3</h4>
-
-<p>Question: Your workaround needs initials and direct confirmation, and you would consider clearer assignment only without a second copy. What would make you try a shared-list prototype, and what would make you keep the note?</p>
-
-<p>Answer: Hypothetically, I would try one canonical list with optional item assignment and a visible acknowledgment during a handoff, provided the other adult also agrees to use it. I would keep the note if initials and confirmation remain clear enough, or if the new tool adds mandatory updates for every item. A clearer status on my screen is not useful if the other person never acknowledges it. I would need to see real handoffs before deciding whether switching is worthwhile.</p>
-
-<p>Assumptions</p>
-
-<ul><li>The proposed canonical list, optional assignment and acknowledgment are prototype ideas, not verified product capabilities.</li><li>Participation by the other adult is conditional and has not been established.</li></ul>
-
-<h3 id="interview-2">Interview: interview-solo</h3>
-
-<p>Provenance</p>
-
-<a href="#persona-2">Persona: Spontaneous solo shopper with no household handoff (spontaneous-solo)</a>
-
-<h4 id="turn-interview-2-1">Turn 1</h4>
-
-<p>Question: Imagine deciding to stop at a store when convenient, without a weekly plan. How would you remember essentials and decide what else to get using your current alternative?</p>
-
-<p>Answer: In this scenario, I would glance at a short private phone note for essentials and leave optional choices open until I am there. That is already sufficient: I am the only person who needs to see or update it. A household shared list would not solve a handoff for me because there is no other shopper to coordinate with.</p>
-
-<p>Assumptions</p>
-
-<ul><li>A private phone note is available for the hypothetical task.</li><li>The imagined store stop and choices are a task scenario, not an account of actual purchases.</li></ul>
-
-<h4 id="turn-interview-2-2">Turn 2</h4>
-
-<p>Question: You said a short private note is enough and optional choices should stay open. Suppose you remember an essential just before entering the store: would adding it expose a gap, or would the note still suffice?</p>
-
-<p>Answer: I would add a short line to the note. It would still suffice if I can reach it easily; I would not need a full plan or a shared household. If capture were awkward, I might compare a quicker personal capture option, but that is a usability question. My device and input needs are unknown here, so I cannot say a new app would be quicker.</p>
-
-<p>Assumptions</p>
-
-<ul><li>Remembering an essential just before entry is a hypothetical prompt, not an observed incident.</li><li>Easy access to the note is a condition of sufficiency, not a measured interface property.</li></ul>
-
-<h4 id="turn-interview-2-3">Turn 3</h4>
-
-<p>Question: You would compare personal capture only if adding a line were awkward. If this shared-list concept offered a private mode, what would justify trying it, and what would make you reject it?</p>
-
-<p>Answer: Hypothetically, I would consider a private mode only if it made capturing essentials easier on my actual device and let me leave the rest unplanned. I would reject mandatory household setup, invitations or detailed item fields. Sharing alone gives me no reason to switch. If the note stays easy to reach, I would keep it even if private mode exists; an extra app is not an improvement by itself.</p>
-
-<p>Assumptions</p>
-
-<ul><li>Private mode is a hypothetical concept variant, not a confirmed feature.</li><li>No capture comparison has been performed on an actual device.</li></ul>
+<ul><li>All personas and answers are synthetic, not independent samples or observed customer evidence.</li><li>The two scenarios change both planning style and household coordination together, so their independent effects cannot be separated. Three-turn interviews leave many conditions unexplored.</li><li>Late-change frequency, device and accessibility needs remain unknown. Willingness to pay, adoption, retention and measured benefit have not been established.</li><li>Assignment, acknowledgment and private mode are hypothetical variants, not tested product capabilities.</li></ul>
 </body></html>

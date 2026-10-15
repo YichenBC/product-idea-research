@@ -1,8 +1,18 @@
 # Report from the actual transcripts
 
-Use the data contract for report JSON. The CLI supplies the layout, synthetic
-notice, role table, method, full transcript appendix and internal source links.
-You supply the meaning: concise summary, findings, limitations and next steps.
+Use the data contract for report JSON. The main report is a decision-oriented
+deliverable: answer the user's research question first, then explain findings,
+disagreements, implications and next steps. Summarize what the interviews imply;
+do not organize the report as one interview recap per persona. Do not fill the
+summary with execution counts, filenames, schema checks or other implementation
+details. A short coverage statement is supplied by the renderer.
+
+The CLI puts detailed methods, role cards and complete transcripts in a separate
+evidence companion; findings link to its exact turns. You supply the concise
+summary, synthesized findings, limitations and next steps. Keep the simulation
+notice and relevant uncertainty, without repeating the same caveat in every
+sentence. This release's interview conclusions are one input to the broader
+research workbench; don't fabricate social or competitor research not performed.
 
 For each finding:
 
