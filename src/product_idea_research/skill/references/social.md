@@ -58,6 +58,14 @@ counting; `audit` flags mechanical duplicates but cannot detect every paraphrase
 A reported pain, an actual workaround, a claimed payment and a seller quotation
 have different meanings even when they appear in the same thread.
 
+Report collection coverage using `audit.selected.citable_social_families` for
+accessible posts/comments/reviews, with vendor documents and blocked leads stated
+separately. The legacy `discussion_families` field counts **all** material groups,
+including official pages and inaccessible records. Neither count establishes
+independent buyers: inspect supplied grouping, author roles and promotional context.
+Provided feedback exports need their own described sampling unit rather than being
+silently counted as public social threads.
+
 ## From materials to opportunities
 
 Extract the decision-relevant chain: actor → trigger → desired task → current

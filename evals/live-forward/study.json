@@ -1,0 +1,1468 @@
+{
+  "schema_version": 1,
+  "title": "小语种 AI 视频：个人产品机会实证初筛",
+  "revision": 9,
+  "recipe": {
+    "id": "recipe",
+    "question": "哪些交付边界和拒绝条件值得用真实客户任务验证？",
+    "method": "3个合成角色各3轮问答；从当前工作流到反证、再到付费测试条件；不生成虚构历史付款。",
+    "dimensions": [
+      {
+        "name": "role",
+        "values": [
+          "regional_producer",
+          "course_vendor",
+          "welsh_teacher"
+        ]
+      }
+    ],
+    "constraints": [
+      "所有角色/回答都是AI合成假设",
+      "预算、采买权和任务频率未知；不当真实访谈"
+    ],
+    "persona_count": 3,
+    "language": "zh-CN"
+  },
+  "personas": [
+    {
+      "id": "p1",
+      "label": "假设角色：Tamil 教学视频发布者",
+      "recipe_id": "recipe",
+      "traits": {
+        "role": "regional_producer"
+      },
+      "attributes": [
+        {
+          "name": "task",
+          "value": "将自有英语教程交付Tamil，源语会英语但不懂Tamil",
+          "basis": "assumed",
+          "rationale": "压力测试不懂目标语的验收边界，非某一真实作者画像"
+        },
+        {
+          "name": "authority",
+          "value": "可决定小额试单，金额未知",
+          "basis": "assumed",
+          "rationale": "用于模拟个人买方；未验证支付权"
+        },
+        {
+          "name": "reviewer",
+          "value": "是否能找到母语审阅者未知",
+          "basis": "unknown",
+          "rationale": "研究未获得审阅者报价/可用性"
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "label": "假设角色：小型课程制作代理",
+      "recipe_id": "recipe",
+      "traits": {
+        "role": "course_vendor"
+      },
+      "attributes": [
+        {
+          "name": "task",
+          "value": "多语言MP4/VTT文件交付客户LMS，客户会重剪",
+          "basis": "assumed",
+          "rationale": "以公开文件管理场景构造任务，不照搬真实身份"
+        },
+        {
+          "name": "alternative",
+          "value": "已有文件夹、表格与客户母语审稿流程",
+          "basis": "assumed",
+          "rationale": "必须测试现有方案是否足够"
+        },
+        {
+          "name": "budget",
+          "value": "未知",
+          "basis": "unknown",
+          "rationale": "没有客户报价或采购材料"
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "label": "假设角色：Welsh 教师，满意免费组件",
+      "recipe_id": "recipe",
+      "traits": {
+        "role": "welsh_teacher"
+      },
+      "attributes": [
+        {
+          "name": "task",
+          "value": "偶尔制作60秒课程视频，可自行录音",
+          "basis": "assumed",
+          "rationale": "故意设置低频和可自助的拒绝场景"
+        },
+        {
+          "name": "alternative",
+          "value": "自录音或Techiaith加普通视频编辑器",
+          "basis": "assumed",
+          "rationale": "官方免费组件启发的场景，不代表实际使用史"
+        },
+        {
+          "name": "procurement",
+          "value": "学校采购权与预算未知",
+          "basis": "unknown",
+          "rationale": "不能从教师兴趣推断学校采购"
+        }
+      ]
+    }
+  ],
+  "interviews": [
+    {
+      "id": "i1",
+      "persona_id": "p1",
+      "synthetic": true,
+      "turns": [
+        {
+          "question": "假设明天要交付一条英语转Tamil教程，你怎样判断可以发布？",
+          "answer": "在这个假设场景里，我会先让工具出音轨和字幕，再请懂Tamil的人对照原稿检查数字、专有名词和语气。我自己不能仅凭回译判断发音正确。",
+          "assumptions": [
+            "拥有视频与声音授权",
+            "能得到原始脚本"
+          ]
+        },
+        {
+          "question": "如果HeyGen的脚本审核与术语表已经够用，额外产品还有必要吗？",
+          "answer": "未必。只有能把有问题片段交给可信母语审阅者、标记每次修订并连同最终文件一次交齐，才可能省我的协调时间。单纯再包一层翻译按钮没有吸引力。",
+          "assumptions": [
+            "第三方审阅者可被找到但尚未验证"
+          ]
+        },
+        {
+          "question": "什么结果会让你拒绝付费试单？",
+          "answer": "如果样片里数字或名称仍错，或者审阅花费和我自己找译者一样，我会拒绝。模拟不能给出我的真实预算；必须拿真实视频报价并让真实负责人决定。",
+          "assumptions": []
+        }
+      ]
+    },
+    {
+      "id": "i2",
+      "persona_id": "p2",
+      "synthetic": true,
+      "turns": [
+        {
+          "question": "假设客户把已做九种语言的课程重剪，你先做什么？",
+          "answer": "我会找出哪些源片段变了，核对所有对应MP4、字幕和审核记录。最怕把旧版文件当新版交出去。",
+          "assumptions": [
+            "源片发生局部改动",
+            "交付仍需独立MP4/VTT"
+          ]
+        },
+        {
+          "question": "文件夹和表格为何不能继续完成？",
+          "answer": "如果只有几个视频并且先锁片，完全可以继续。我的假设需求只有在反复重剪、多人校对且文件量大时才出现；也可能现有LMS或Rask已经解决。",
+          "assumptions": [
+            "保留当前方案足够的拒绝条件"
+          ]
+        },
+        {
+          "question": "怎样比较一个新工具和现有流程？",
+          "answer": "用一个真实历史改版项目盲查新旧文件，比较协调分钟数、错版数和遗漏数；若不能至少省一半协调时间或出现错版，就不迁移。这个一半是测试门槛假设，不是测量结果。",
+          "assumptions": [
+            "50%为拟议验证门槛"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "i3",
+      "persona_id": "p3",
+      "synthetic": true,
+      "turns": [
+        {
+          "question": "假设每月只做一条Welsh小课视频，你会怎样做？",
+          "answer": "我会自己录音或用免费Welsh语音组件，再配已有图片；不一定需要生成式对白或口型。",
+          "assumptions": [
+            "角色能讲Welsh",
+            "产量每月一条为假设"
+          ]
+        },
+        {
+          "question": "如果有自动生成画面和配音的一体工具，你会买吗？",
+          "answer": "在这个情景里不会立刻买。免费方案已足够，而且我需要检查词汇和方言。学校是否有采购预算未知，不能拿我的兴趣当学校承诺。",
+          "assumptions": []
+        },
+        {
+          "question": "什么变化才值得重新测试？",
+          "answer": "只有学校需要稳定批量交付、多人审核或无障碍字幕，而且样片通过老师复核，我才会把方案带给实际采购人。否则一次性模板或培训比订阅更合理。",
+          "assumptions": [
+            "是否存在批量需求待真实访谈"
+          ]
+        }
+      ]
+    }
+  ],
+  "brief": {
+    "id": "brief",
+    "question": "具体语言×任务上，个人借助 agent 构建并销售小语种 AI 视频外部产品的可验证机会是什么？涵盖生成、配音、字幕、多语言交付。",
+    "language": "zh-CN",
+    "constraints": [
+      "只用公开可读真实来源；不登录、不购买、不发布、不外联",
+      "不把 non-English 统称 low-resource；不把卖方推广当买方付费意愿",
+      "目标20–30讨论家族及5–7官方替代品，无法覆盖保留partial",
+      "3个明确合成场景角色，每角色3轮问答，不能充当需求证据"
+    ]
+  },
+  "sources": [
+    {
+      "id": "s01",
+      "title": "印度创作者询问区域语言配音",
+      "url": "https://www.reddit.com/r/indianyoutubers/comments/1tr310s/are_any_of_you_dubbing_your_videos_into_other/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-05-29",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s01-thread",
+      "context": "正文与空评论区；询问者印象，未提供实际付费或增长数据。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I've seen a few international tools (HeyGen, ElevenLabs etc.) but they feel very Western-dataset trained. The Hindi output especially sounds off to me.",
+          "locator": "正文 L19-31"
+        }
+      ],
+      "limitations": [
+        "公开便利样本；无法确认身份、经历或付费；只读文本与可见回复"
+      ]
+    },
+    {
+      "id": "s02",
+      "title": "越南语学习字幕与音轨不匹配",
+      "url": "https://www.reddit.com/r/learnvietnamese/comments/1u2zj1v/does_it_drive_anyone_else_crazy_when_vietnamese/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-06-11",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s02-thread",
+      "context": "读正文与多条回复；原作者在开发扩展，回复者反对 AI 猜词；另有 Netflix 隐藏字幕轨的免费替代建议。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I just don't trust AI like that in a situation where I can't verify whether what it says makes sense.",
+          "locator": "评论 L77-102"
+        }
+      ],
+      "limitations": [
+        "公开便利样本；无法确认身份、经历或付费；只读文本与可见回复"
+      ]
+    },
+    {
+      "id": "s03",
+      "title": "不会泰米尔语的发布者求校验",
+      "url": "https://www.reddit.com/r/southindia_/comments/1tm5z8m/can_anyone_please_confirm_if_the_telugu_spoken_is/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-05-24",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s03-thread",
+      "context": "读正文和可见回复；原帖把 Tamil 写成 Telugu 后纠正；视频不可播放，后续部分回复折叠。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Yes Tamil. Is Tamil dub making sense? I have zero clue what it’s dubbing.",
+          "locator": "评论 L126"
+        }
+      ],
+      "limitations": [
+        "公开便利样本；无法确认身份、经历或付费；只读文本与可见回复"
+      ]
+    },
+    {
+      "id": "s04",
+      "title": "斯瓦希里语创作者免费方案反证",
+      "url": "https://www.reddit.com/r/Tanzanias/comments/1tyayef/found_a_better_ai_voice_over_solution/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-06-06",
+      "accessed_at": "2026-10-15",
+      "language": "sw-en",
+      "access": "excerpt",
+      "group_id": "s04-thread",
+      "context": "正文称换用 Google AI Studio 更好且免费；回复涉及肯尼亚口音；使用年份与产品名可能混淆，保留为自述而非功能事实。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Yeah, Google AI Studio ni slightly better kwa Kiswahili. Been using it since 2021. Shida it has a slightly Kenyan accent.",
+          "locator": "评论 L83"
+        }
+      ],
+      "limitations": [
+        "公开便利样本；无法确认身份、经历或付费；只读文本与可见回复"
+      ]
+    },
+    {
+      "id": "s05",
+      "title": "Telugu 社区反感默认自动配音",
+      "url": "https://www.reddit.com/r/tollywood/comments/1rilzr9/who_else_is_hating_the_auto_translate_feature_of/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-03-02",
+      "accessed_at": "2026-10-15",
+      "language": "te-Latn-en",
+      "access": "excerpt",
+      "group_id": "s05-thread",
+      "context": "读正文和可见回复；反感强制切换音轨，不等于反对所有本地化。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I hate the auto translate on YouTube bro, kastha - unda ra babu, naku avasaram aithe translated audio adugutanu😭",
+          "locator": "评论 L70"
+        }
+      ],
+      "limitations": [
+        "公开便利样本；无法确认身份、经历或付费；只读文本与可见回复"
+      ]
+    },
+    {
+      "id": "s06",
+      "title": "威尔士语教师视频生成失败",
+      "url": "https://www.reddit.com/r/MLQuestions/comments/1r88kx3/ai_videos_in_languages_other_than_english/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-02-18",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s06-thread",
+      "context": "读正文与可见回复；教师协作者自述，未测试其视频；语言模型会写不代表视频模型会说。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I haven’t found a way to get Veo3 or any others to do it even remotely well.",
+          "locator": "正文 L21-24"
+        }
+      ],
+      "limitations": [
+        "自述便利样本，未独立验证；不是生产工具付费承诺"
+      ]
+    },
+    {
+      "id": "s07",
+      "title": "多语言字幕改版破坏时间轴",
+      "url": "https://www.reddit.com/r/editors/comments/1s2mgg1/managing_srtvtt_files_across_multiple_languages/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-03-24",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s07-thread",
+      "context": "可见回复建议先锁片或用 Rev；AutoCut 推荐者自称创始人，不能算客户证词。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "When the video gets re-cut, all the subtitle timing breaks. How do you update without redoing everything?",
+          "locator": "正文 L23-26"
+        }
+      ],
+      "limitations": [
+        "自述便利样本，未独立验证；不是生产工具付费承诺"
+      ]
+    },
+    {
+      "id": "s08",
+      "title": "Darija 在线学校需要吉祥物视频",
+      "url": "https://www.reddit.com/r/generativeAI/comments/1wvxdmf/looking_for_an_ai_video_tool_for_my_online_school/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s08-thread",
+      "context": "读正文与回复；首条长答明确是自动 bot，其他回复有产品推广；仅用原帖需求，不用回复作质量事实；相关重复同题链接归一家。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "One thing that’s particularly important for me is Arabic voice support. I’m based in North Africa, so I’d like to create some content in Darija.",
+          "locator": "正文 L24-26"
+        }
+      ],
+      "limitations": [
+        "自述便利样本，未独立验证；不是生产工具付费承诺"
+      ]
+    },
+    {
+      "id": "s09",
+      "title": "沙特方言视频生成提问",
+      "url": "https://www.reddit.com/r/generativeAI/comments/1txqeg5/video_generator_with_a_good_saudi_arabia_dialect/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-06-05",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s09-thread",
+      "context": "唯一实质回复标注自动 bot；原帖语言分类是作者说法，不作为语言学结论。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Obviously not all arabic dialects are the same, and there is no such thing as \"Khaleeji dialect\" so I was wondering if there is a video generator which got the Saudi dialect right?",
+          "locator": "正文 L21"
+        }
+      ],
+      "limitations": [
+        "自述便利样本，未独立验证；不是生产工具付费承诺"
+      ]
+    },
+    {
+      "id": "s10",
+      "title": "越南语多角色配音购买后失望",
+      "url": "https://www.reddit.com/r/asiandrama/comments/1njgtx1/where_can_u_watch_asian_series_with_vietnamese/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2025-09-17",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s10-thread",
+      "context": "正文与回复可读；评论自述为母亲购买年费期待多演员配音却遇单人旁白并取消续订，付费是流媒体内容而非生产工具。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I made the mistake of signing up for an iQIYI VIP Premium subscription for all the bells and whistles at full price of $119.99 USD",
+          "locator": "评论 L102"
+        }
+      ],
+      "limitations": [
+        "自述便利样本，未独立验证；不是生产工具付费承诺"
+      ]
+    },
+    {
+      "id": "blocked-x",
+      "title": "X Tamil AI dubbing 搜索",
+      "url": "https://x.com/search?q=Tamil%20AI%20dubbing&src=typed_query",
+      "platform": "X",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "zh-en",
+      "access": "unavailable",
+      "group_id": "blocked-x",
+      "context": "公开检索和直接打开均已尝试，未登录或绕过访问限制",
+      "excerpts": [],
+      "limitations": [
+        "公开搜索页403；搜索引擎无可用原帖"
+      ]
+    },
+    {
+      "id": "blocked-xhs",
+      "title": "小红书小语种视频配音",
+      "url": "https://www.xiaohongshu.com/search_result?keyword=小语种视频配音",
+      "platform": "小红书",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "zh-en",
+      "access": "unavailable",
+      "group_id": "blocked-xhs",
+      "context": "公开检索和直接打开均已尝试，未登录或绕过访问限制",
+      "excerpts": [],
+      "limitations": [
+        "公开搜索页工具无法访问；站点搜索只返回开发文档和卖方页面"
+      ]
+    },
+    {
+      "id": "blocked-pantip1",
+      "title": "Thai TTS 中文名读音",
+      "url": "https://pantip.com/topic/43652269",
+      "platform": "Pantip",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "th",
+      "access": "unavailable",
+      "group_id": "blocked-pantip1",
+      "context": "公开检索和直接打开均已尝试，未登录或绕过访问限制",
+      "excerpts": [],
+      "limitations": [
+        "正文跳转到拒绝访问页，只见搜索摘要，未作为证据"
+      ]
+    },
+    {
+      "id": "blocked-pantip2",
+      "title": "YouTube 自动配音等待",
+      "url": "https://pantip.com/topic/43530348",
+      "platform": "Pantip",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "th",
+      "access": "unavailable",
+      "group_id": "blocked-pantip2",
+      "context": "公开检索和直接打开均已尝试，未登录或绕过访问限制",
+      "excerpts": [],
+      "limitations": [
+        "正文不可访问，搜索摘要不作证据"
+      ]
+    },
+    {
+      "id": "blocked-pantip3",
+      "title": "AI 图像与人声选择",
+      "url": "https://pantip.com/topic/43495476",
+      "platform": "Pantip",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "th",
+      "access": "unavailable",
+      "group_id": "blocked-pantip3",
+      "context": "公开检索和直接打开均已尝试，未登录或绕过访问限制",
+      "excerpts": [],
+      "limitations": [
+        "正文Unicode解码错误，只见搜索摘要"
+      ]
+    },
+    {
+      "id": "c01",
+      "title": "HeyGen 新版 UI 月费与积分",
+      "url": "https://help.heygen.com/en/articles/15125761-heygen-credit-based-pricing-plans-subscriptions-explained",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c01-doc",
+      "context": "Creator 月付 $29/600 credits；Pro 起 $49/1000；Business $149/1500，额外席位$20不增额度。UI套餐不等于 API。Creator/Pro不能单次加购，Business额外$0.05/credit。翻译Audio Only/Speed/Precision每输出分钟分别4/6/10 credits。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Creator includes 600 credits per month for $29/month.",
+          "locator": "L69"
+        },
+        {
+          "id": "e2",
+          "text": "Pro starts at 1,000 credits per month for $49/month",
+          "locator": "L101"
+        }
+      ],
+      "limitations": [
+        "官方文档声明，未注册或实测；报价及功能可能更新；总摘录控制25词内"
+      ]
+    },
+    {
+      "id": "c02",
+      "title": "HeyGen 翻译输入、审核与交付",
+      "url": "https://help.heygen.com/en/articles/10029081-how-to-get-started-with-video-translation",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c02-doc",
+      "context": "已读L30–136。输入必须单一语言；单任务最多10目标语；有Brand Glossary和Pro以上Review & Edit。输入SRT会再翻译，Proofread输出SRT才逐字读；Dynamic Duration默认可±20%；只导出SRT；画面内已烧录文字不翻译；不能概括为没有人工校对或术语表。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Caption files export as .srt only (no VTT, ASS, or custom styling options).",
+          "locator": "L123"
+        },
+        {
+          "id": "e2",
+          "text": "Your source video must be a single language",
+          "locator": "L32"
+        }
+      ],
+      "limitations": [
+        "官方文档声明，未注册或实测；报价及功能可能更新；总摘录控制25词内"
+      ]
+    },
+    {
+      "id": "c03",
+      "title": "HeyGen 翻译语言与区域变体",
+      "url": "https://help.heygen.com/en/articles/11391941-video-translation-languages-we-support",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": "2026-08-20",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c03-doc",
+      "context": "2026-08-20列表明确适用于audio-only与lip-sync；Arabic含Morocco/Saudi Arabia，Swahili含Kenya/Tanzania，Tamil含India/Malaysia/Singapore/Sri Lanka；含Telugu、Thai、Vietnamese、Welsh。支持清单并非实际质量验证，也不能外推所有生成引擎。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Swahili (Kenya, Tanzania)",
+          "locator": "L93"
+        },
+        {
+          "id": "e2",
+          "text": "Tamil (India, Malaysia, Singapore, Sri Lanka)",
+          "locator": "L95"
+        },
+        {
+          "id": "e3",
+          "text": "Vietnamese (Vietnam)",
+          "locator": "L102"
+        },
+        {
+          "id": "e4",
+          "text": "Welsh (United Kingdom)",
+          "locator": "L103"
+        }
+      ],
+      "limitations": [
+        "官方文档声明，未注册或实测；报价及功能可能更新；总摘录控制25词内"
+      ]
+    },
+    {
+      "id": "c04",
+      "title": "Rask 月费冲突、克隆与审核",
+      "url": "https://www.rask.ai/pricing",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c04-doc",
+      "context": "已读定价卡/比较表/FAQ。卡片Creator$39月付25分钟、Creator Pro$99/100分钟、Business$249/250分钟；同页FAQ仍写$60/$150等旧数，不能作确定报价。翻译每输出分钟1额度，标准口型另1、增强口型另3（beta）。135+翻译但克隆仅32语，含Tamil/Vietnamese/Indonesian/Arabic，不含Welsh/Swahili/Thai/Telugu。页面有术语表、批量、reviewer approval、SRT进出，具体套餐列对齐需产品内确认。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "25 minutes per month included",
+          "locator": "L65；卡片价格L59为39"
+        },
+        {
+          "id": "e2",
+          "text": "25 minutes ($60/month - monthly billing, $50/month - yearly billing)",
+          "locator": "L546"
+        },
+        {
+          "id": "e3",
+          "text": "Reviewer roles and approval",
+          "locator": "L447"
+        }
+      ],
+      "limitations": [
+        "官方文档声明，未注册或实测；报价及功能可能更新；总摘录控制25词内"
+      ]
+    },
+    {
+      "id": "c05",
+      "title": "ElevenLabs UI 订阅及旧配音积分",
+      "url": "https://elevenlabs.io/pricing",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c05-doc",
+      "context": "常规月付Starter$6/30k credits、Creator$22/121k（首月$11）、Pro$99/600k；税另计。FAQ自动配音水印/无水印2000/3000积分每分钟，Studio5000/10000；另文说明这些watermark折扣是v1旧路径，不能给v2定价。页面临时首月促销不是常规价。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Creator $22 (121,000 credits, $11 for the first month)",
+          "locator": "L362"
+        },
+        {
+          "id": "e2",
+          "text": "Dubbing 2,000 credits per minute (automatic with watermark), 3,000 (automatic without watermark)",
+          "locator": "L372"
+        }
+      ],
+      "limitations": [
+        "官方文档声明，未注册或实测；报价及功能可能更新；总摘录控制25词内"
+      ]
+    },
+    {
+      "id": "c06",
+      "title": "ElevenLabs Dubbing v2/v1 区别",
+      "url": "https://elevenlabs.io/docs/overview/capabilities/dubbing",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c06-doc",
+      "context": "已读完整语言表与Usage/Key facts。v2 Alpha90+，Welsh cy、Yoruba yo、Swahili sw、Tamil ta、Telugu te、Thai th、Vietnamese vi；Arabic仅ar和ar-EG明确方言码，无ar-MA/Saudi。v1不支持方言tag；Studio仅v1且维护模式。v2 API编辑再生成仅Enterprise。App上限180分钟/1GB；self-serve并发3。输出视频预览通常1080p，需拿配音重新合原片，不保留5.1。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Arabic  | `ar`  | `ar-EG`",
+          "locator": "语言表L68"
+        },
+        {
+          "id": "e2",
+          "text": "Welsh  | `cy`  | —",
+          "locator": "L154"
+        },
+        {
+          "id": "e3",
+          "text": "For Dubbing v2, transcript editing and audio regeneration via the API are available on Enterprise plans only.",
+          "locator": "L54"
+        }
+      ],
+      "limitations": [
+        "官方文档声明，未注册或实测；报价及功能可能更新；总摘录控制25词内"
+      ]
+    },
+    {
+      "id": "s11",
+      "title": "L&D 多语言文件管理",
+      "url": "https://www.reddit.com/r/elearning/comments/1rwibgr/for_enterprise_ld_teams_how_do_you_manage/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s11-thread",
+      "context": "正文与回复可见：Docebo、SCORM、MP4/VTT；另有自制6语言工具足够的反证；Vidocu回复自称开发者。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "For one course, I could have up to 500 separate files (each lesson in nine different languages).",
+          "locator": "原帖作者回复 L95"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s12",
+      "title": "Kiswahili 配音与自动字幕求助",
+      "url": "https://www.jamiiforums.com/threads/msaada-juu-ya-swahili-voice-over-ai.2331068/",
+      "platform": "JamiiForums",
+      "source_type": "post",
+      "published_at": "2025-04-21",
+      "accessed_at": "2026-10-15",
+      "language": "sw",
+      "access": "excerpt",
+      "group_id": "s12-thread",
+      "context": "已读#1–14：原帖求配音，回复另问原生斯瓦希里音频转字幕而非英译斯瓦希里；#12自述试过准确率超过90%但贵，未给产品名/测法；#14关于Whisper不支持的说法不当技术事实。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Namaanisha autocaption.",
+          "locator": "#9 L317"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s13",
+      "title": "专业剪辑多语言字幕反复修改",
+      "url": "https://forum.logik.tv/t/ai-subtitles/11216",
+      "platform": "Logik",
+      "source_type": "post",
+      "published_at": "2024-08-13",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s13-thread",
+      "context": "读完整线程；12语200剪辑、几十轮SRT、品牌审阅；金额用Danish Waffles明显戏谑，绝不可当真实收入。后续回复介绍Subtitle Edit免费质检与客户先审稿成功案例。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Another 2 weeks for making the timing of the subs better.",
+          "locator": "#1 L22"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s14",
+      "title": "Subtitle Edit 时间轴工作流",
+      "url": "https://github.com/SubtitleEdit/subtitleedit/discussions/7344",
+      "platform": "GitHub Discussions",
+      "source_type": "post",
+      "published_at": "2023-09-07",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s14-thread",
+      "context": "原帖4小时修1小时，回复日语8小时；作者后澄清主要英语播客，不能作为小语种专属痛点。建议stable-ts；买方重剪仍会影响。旧样本不代表2026模型。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I transcribe English audio into English subs. Mostly for podcasts.",
+          "locator": "作者澄清 L172"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s15",
+      "title": "HeyGen 个人付费额度耗尽",
+      "url": "https://www.reddit.com/r/heygen/comments/1vszehi/how_to_be_cost_effective_with_heygen/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s15-thread",
+      "context": "读正文和可见回复，想做商业视频副业但没有报告获客或营收；多为avatar外观修改不是语言错误。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I bought PRO with 1000 monthly credit, but nearly used them all within a week.",
+          "locator": "正文 L21"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s16",
+      "title": "批量多语言配音 API 询问",
+      "url": "https://www.reddit.com/r/LanguageTechnology/comments/1w47c33/any_api_to_dub_videos_into_multiple_languages/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s16-thread",
+      "context": "可见回复中ElevenLabs员工明确披露 affiliation；其他音轨推荐疑似推广不可作独立购买行为；原帖未披露具体语言或预算。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "What I'm really trying to find is an API that handles video dubbing at scale, something we can pipe into our existing pipeline without rebuilding everything from scratch.",
+          "locator": "正文 L19"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s17",
+      "title": "HeyGen API 客户稳定性投诉",
+      "url": "https://www.reddit.com/r/heygen/comments/1qgz3vp/i_am_honestly_done_with_heygen_right_now_we_are/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s17-thread",
+      "context": "正文题目自述API Scale约$330/月；后续200视频/月。其他回复有竞争产品创始人推广；没有独立账单验证；问题可能版本相关。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "current output is \"only\" 200 videos/month scaling to 10/day in the next week.",
+          "locator": "作者后续 L154"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s18",
+      "title": "威尔士语免费单词音频集",
+      "url": "https://www.reddit.com/r/learnwelsh/comments/1ppul90/welsh_word_audio_clips/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2025-12-18",
+      "accessed_at": "2026-10-15",
+      "language": "en-cy",
+      "access": "excerpt",
+      "group_id": "s18-thread",
+      "context": "作者生成17k词元North Wales男声并免费分享，回复说使用Techiaith API；是公益/自用创造者，不是付费需求；句子和教学视频能力未验证。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I have spent many, many hours refining these clips and quality-checking the results to ensure the files are as clean, authentic and accurate as possible.",
+          "locator": "正文 L32"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s19",
+      "title": "多语言自动音轨误识别与免费扩展",
+      "url": "https://www.reddit.com/r/Hololive/comments/1sjs5z7/ai_dubbing_is_on_by_default_for_holoen/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-04-12",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s19-thread",
+      "context": "读评论：有些用户从未遇问题，另有英文误标Indonesian、免费扩展强制原声；反感自动切换不能归因为所有配音质量。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "I actually do appreciate the Auto dubbing on informative videos, but it should never be force enabled.",
+          "locator": "评论 L250"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s20",
+      "title": "泰语生成预告片发音问题",
+      "url": "https://www.reddit.com/user/Priyaphat_Noey/comments/1vpl2j0/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "th",
+      "access": "excerpt",
+      "group_id": "s20-thread",
+      "context": "读原帖正文；作者自述休闲试做泰国高中预告片，整体超预期但两个辅音不清；未播放验证，未披露使用模型。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "ผลลัพธ์ออกมาเนียนกว่าที่คิด (แต่แกออกเสียง ฝ กับ ข ฉันไม้ชัดนะ!!!)",
+          "locator": "正文 L19"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s21",
+      "title": "越南语是否够自然决定购买",
+      "url": "https://appsumo.com/products/vocallab-ai/questions/does-vocallab-ai-support-vietnamese-voic-1547316/",
+      "platform": "AppSumo",
+      "source_type": "post",
+      "published_at": "2026-09-09",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s21-thread",
+      "context": "已读完整问答。买方询问越南语voice cloning/dubbing自然度，明确是购买考量非已购；创始人答Studio支持克隆但professional library无越南语且发音不完全自然。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "This is an important factor in my decision to purchase the lifetime license.",
+          "locator": "提问 L29"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "s22",
+      "title": "客户端多语字幕切换的层级混淆",
+      "url": "https://community.adobe.com/questions-729/bilingual-video-toggle-1400895",
+      "platform": "Adobe Community",
+      "source_type": "post",
+      "published_at": "2023-06-22",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s22-thread",
+      "context": "买方任务法语/西语，原语英语；用户问Premiere能否输出交互切换，回答属于播放器。此例只支持交付工作流，不归入低资源语言。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "the fact that you can choose your language and/or subtitles is something that is arranged at the app-level.",
+          "locator": "正确答案 L34"
+        }
+      ],
+      "limitations": [
+        "便利样本、自述未验证；文本可见不等于音视频实测"
+      ]
+    },
+    {
+      "id": "c07",
+      "title": "Synthesia 定价卡与消耗单位",
+      "url": "https://www.synthesia.io/pricing",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c07-doc",
+      "context": "月付Starter$29/1250 credits，Pro$89/6000；定价计算器video约100 credits/min，dubbing76 credits/min；有免费基础额度但主卡和计算器存在字段不一致，按主卡保守比较，不承诺实际账单。Enterprise自定义，翻译140+与SCORM在Enterprise展示。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "$29 per month",
+          "locator": "Starter卡L145"
+        },
+        {
+          "id": "e2",
+          "text": "1,250 credits / month",
+          "locator": "L147"
+        },
+        {
+          "id": "e3",
+          "text": "76 credits per minute",
+          "locator": "配音计算器L454"
+        }
+      ],
+      "limitations": [
+        "官方声明未产品实测；网页动态变化；具体生产报价须验证"
+      ]
+    },
+    {
+      "id": "c08",
+      "title": "Synthesia 配音语言、审核和批处理",
+      "url": "https://docs.synthesia.io/docs/video-dubbing",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c08-doc",
+      "context": "配音self-serve包含Welsh/Swahili/Tamil/Telugu/Thai/Vietnamese/普通Arabic；Enterprise另含Arabic Morocco/Saudi等区域locale共135。Basic不含口型；lip-sync双倍credits；编辑原稿/译稿仅Enterprise。术语自动用但发音规则对dubbing无效；重译全片会丢先前手动译稿；10片批量、API/Excel；上传限制5GB/2.5h。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Transcript editing is an Enterprise feature.",
+          "locator": "L83"
+        },
+        {
+          "id": "e2",
+          "text": "Pronunciation rules have no effect on dubbing.",
+          "locator": "L30"
+        },
+        {
+          "id": "e3",
+          "text": "Self-serve plans (Basic, Starter, Pro) support the following target languages:",
+          "locator": "L228"
+        }
+      ],
+      "limitations": [
+        "官方声明未产品实测；网页动态变化；具体生产报价须验证"
+      ]
+    },
+    {
+      "id": "c09",
+      "title": "YouTube 自动配音方向性与限制",
+      "url": "https://support.google.com/youtube/answer/15569972?hl=en",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c09-doc",
+      "context": "逐项读支持矩阵：English可输出Tamil/Telugu/Indonesian等但本次列表无Welsh/Swahili/Thai/Vietnamese输出；Swahili/Thai/Vietnamese可输入至English。覆盖按channel/video渐进开放。>120分钟、源语言未识别等可能不适用；不能编辑自动音轨，可审核发布/撤销；页面未列每分钟价格，不能给外部批量API成本。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "You cannot edit automatic dubs.",
+          "locator": "L41"
+        },
+        {
+          "id": "e2",
+          "text": "Swahili  | English",
+          "locator": "L79"
+        },
+        {
+          "id": "e3",
+          "text": "Thai  | English",
+          "locator": "L82"
+        },
+        {
+          "id": "e4",
+          "text": "Vietnamese  | English",
+          "locator": "L86"
+        }
+      ],
+      "limitations": [
+        "官方声明未产品实测；网页动态变化；具体生产报价须验证"
+      ]
+    },
+    {
+      "id": "c10",
+      "title": "Techiaith 免费 Welsh/English API",
+      "url": "https://api.techiaith.cymru/",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c10-doc",
+      "context": "官方免费API说明，限fair and sensible usage、需更高配额联系但无公开金额。Welsh/English ASR可SRT/VTT；TTS有男/女、北/南Wales口音，双语；文字翻译英威双向。是底层组件，非完整视频生成/审核交付系统。未验证服务限额和实际声音。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Free language technology APIs",
+          "locator": "标题L0"
+        },
+        {
+          "id": "e2",
+          "text": "Add a male, female, north or south Wales accented voices with our text-to-speech API.",
+          "locator": "L32"
+        }
+      ],
+      "limitations": [
+        "官方声明未产品实测；网页动态变化；具体生产报价须验证"
+      ]
+    },
+    {
+      "id": "c11",
+      "title": "Google Gemini API Veo 每秒价格",
+      "url": "https://ai.google.dev/gemini-api/docs/pricing",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c11-doc",
+      "context": "读取Veo3.1区，付费USD/输出秒：Standard含音频720/1080p$0.40，4k$0.60；Fast720p$0.10/1080p$0.12/4k$0.30；Lite720p$0.05/1080p$0.08无4k，无免费层。此处是Gemini API preview型号，不能混用Cloud fixed quota条款。本轮不使用搜索摘要中的旧数。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Paid Tier, per second in USD",
+          "locator": "L1233"
+        },
+        {
+          "id": "e2",
+          "text": "$0.40 (720p and 1080p)",
+          "locator": "Standard L1235"
+        },
+        {
+          "id": "e3",
+          "text": "$0.05 (720p)",
+          "locator": "Lite L1240"
+        }
+      ],
+      "limitations": [
+        "官方声明未产品实测；网页动态变化；具体生产报价须验证"
+      ]
+    },
+    {
+      "id": "c12",
+      "title": "Veo 3.1 生成能力与提示语言",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/veo/3-1-generate?hl=en",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c12-doc",
+      "context": "Cloud官方Veo3.1 generate-001：文本/图像生成视频，4/6/8秒，支持声音生成；提示语言English。这里的提示语言不能推断所有输出对白只会英语；本页未提供Welsh/Darija/Thai对白质量或逐语言保证。Cloud型号和Gemini API preview需分开，不能把价格/配额交叉使用。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Video lengths: 4, 6, or 8 seconds; reference image to video only supports 8 seconds.",
+          "locator": "L587"
+        },
+        {
+          "id": "e2",
+          "text": "English",
+          "locator": "Prompt languages L595–597"
+        }
+      ],
+      "limitations": [
+        "官方声明未产品实测；网页动态变化；具体生产报价须验证"
+      ]
+    },
+    {
+      "id": "s02-detail",
+      "title": "越南语字幕任务与免费替代补充",
+      "url": "https://www.reddit.com/r/learnvietnamese/comments/1u2zj1v/does_it_drive_anyone_else_crazy_when_vietnamese/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-06-11",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s02-thread",
+      "context": "此前已读文本补录；作者开发工具与真实回复分开；免费建议未测试。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "the official subtitles almost never match what the actors are actually saying.",
+          "locator": "正文L21"
+        },
+        {
+          "id": "e2",
+          "text": "In Netflix, they usually have a separate, inexplicably secret, track which matches the dub script. The subadub extension will reveal it.",
+          "locator": "评论L102"
+        }
+      ],
+      "limitations": [
+        "同来源补录，不增加独立讨论数；未实测"
+      ]
+    },
+    {
+      "id": "s07-detail",
+      "title": "剪辑锁片反证补录",
+      "url": "https://www.reddit.com/r/editors/comments/1s2mgg1/managing_srtvtt_files_across_multiple_languages/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": "2026-03-24",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s07-thread",
+      "context": "同一家族，重复URL是不可变记录追加，不新增独立讨论。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Don’t do the subtitles until it’s signed off (or caveat that the subs are placeholder until lock)",
+          "locator": "回复L76"
+        }
+      ],
+      "limitations": [
+        "同来源补录，不增加独立讨论数；未实测"
+      ]
+    },
+    {
+      "id": "s11-detail",
+      "title": "L&D 当前方案已足够补录",
+      "url": "https://www.reddit.com/r/elearning/comments/1rwibgr/for_enterprise_ld_teams_how_do_you_manage/",
+      "platform": "Reddit",
+      "source_type": "post",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s11-thread",
+      "context": "同帖；自建工具满意与原帖文件管理需求都保留。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Recently vibe coded a multilingual caption generator (6 languages); outputs to .vtt. Works well for me (so far).",
+          "locator": "回复L49"
+        },
+        {
+          "id": "e2",
+          "text": "We even embed into SCORM but still need to manage the MP4s & VTTs for now.",
+          "locator": "作者L109"
+        }
+      ],
+      "limitations": [
+        "同来源补录，不增加独立讨论数；未实测"
+      ]
+    },
+    {
+      "id": "s12-detail",
+      "title": "Kiswahili 费用障碍原文补录",
+      "url": "https://www.jamiiforums.com/threads/msaada-juu-ya-swahili-voice-over-ai.2331068/",
+      "platform": "JamiiForums",
+      "source_type": "post",
+      "published_at": "2025-04-21",
+      "accessed_at": "2026-10-15",
+      "language": "sw",
+      "access": "excerpt",
+      "group_id": "s12-thread",
+      "context": "同一家族；用户称费用太高，具体金额未知；这里是识别原生Swahili字幕，并非英译Swahili。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Tatizo ilikuwa ni gharama kubwa sana.",
+          "locator": "#12 L402"
+        },
+        {
+          "id": "e2",
+          "text": "Yaani video ya kiswahili AI inadetect ninachsema na kuweka caption automatically kwenye video KWA kiswahili.",
+          "locator": "#9 L318"
+        }
+      ],
+      "limitations": [
+        "同来源补录，不增加独立讨论数；未实测"
+      ]
+    },
+    {
+      "id": "s21-detail",
+      "title": "Vocallab 创始人承认越南语自然度不足",
+      "url": "https://appsumo.com/products/vocallab-ai/questions/does-vocallab-ai-support-vietnamese-voic-1547316/",
+      "platform": "AppSumo",
+      "source_type": "post",
+      "published_at": "2026-09-09",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "s21-thread",
+      "context": "与s21为同页，二者英文总引用24词；供应商说法，不是盲测。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Vietnamese pronunciation and intonation may not yet sound fully natural",
+          "locator": "答复L43"
+        }
+      ],
+      "limitations": [
+        "同来源补录，不增加独立讨论数；未实测"
+      ]
+    },
+    {
+      "id": "c04-detail",
+      "title": "Rask 卡片39美元与克隆限制补录",
+      "url": "https://www.rask.ai/pricing",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": null,
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c04-doc",
+      "context": "同页卡片月付Creator39美元，FAQ仍60；只补录39字段，结合原c04的25分钟与月付限定。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "39",
+          "locator": "Creator月付卡L59"
+        }
+      ],
+      "limitations": [
+        "同来源补录，不增加独立讨论数；未实测"
+      ]
+    },
+    {
+      "id": "c03-detail",
+      "title": "HeyGen Arabic 区域变体补录",
+      "url": "https://help.heygen.com/en/articles/11391941-video-translation-languages-we-support",
+      "platform": "official",
+      "source_type": "official",
+      "published_at": "2026-08-20",
+      "accessed_at": "2026-10-15",
+      "language": "en",
+      "access": "excerpt",
+      "group_id": "c03-doc",
+      "context": "同页累计21英文词；清单存在Morocco/Saudi，不保证自然度。",
+      "excerpts": [
+        {
+          "id": "e1",
+          "text": "Libya, Morocco, Oman, Qatar, Saudi Arabia",
+          "locator": "Arabic列表L23"
+        }
+      ],
+      "limitations": [
+        "同来源补录，不增加独立讨论数；未实测"
+      ]
+    }
+  ],
+  "runs": [
+    {
+      "id": "social-live",
+      "module": "social",
+      "status": "partial",
+      "objective": "真实公开社媒/社区研究具体语言×生成/配音/字幕/多语交付的需求及反证",
+      "method": "web搜索先作线索，再open原始帖子，读取正文和可见评论；22个讨论家族，补录共用group_id；不播放音视频、不验证身份；原语保留Swahili/Thai/罗马化Telugu，英文占多数。讨论中的卖方/bot回复明确标注。搜索结果有相关性噪声被排除。",
+      "queries": [
+        "site.reddit.com dubbing video Telugu Tamil AI translation quality",
+        "site.reddit.com video subtitles Vietnamese Thai transcription AI",
+        "site.reddit.com Swahili Yoruba video AI voice",
+        "site.reddit.com Thai subtitle video AI capcut wrong",
+        "site.reddit.com Welsh Irish AI voice video",
+        "site.reddit.com Arabic dialect AI dubbing video client",
+        "site.reddit.com localization video client subtitle dubbing workflow",
+        "site.reddit.com \"Thai\" \"subtitles\" \"CapCut\"",
+        "site.reddit.com \"Vietnamese\" \"dubbing\" AI",
+        "site.reddit.com \"Welsh\" \"text to speech\"",
+        "site.reddit.com \"Indonesian\" \"AI\" \"dubbing\"",
+        "site.pantip.com \"AI\" \"พากย์\" \"ภาษาไทย\"",
+        "site.reddit.com \"phụ đề\" \"AI\"",
+        "site.x.com \"dubbing\" \"Tamil\" \"AI\"",
+        "site.xiaohongshu.com 小语种 视频 配音 字幕",
+        "site.pantip.com/topic เสียง AI พากย์",
+        "site.reddit.com/r/VideoEditing \"language\" \"client\" \"subtitles\"",
+        "site.reddit.com \"Swahili\" \"voice\" \"AI\" video",
+        "site.reddit.com \"Tamil\" \"HeyGen\" \"quality\""
+      ],
+      "source_ids": [
+        "s01",
+        "s02",
+        "s03",
+        "s04",
+        "s05",
+        "s06",
+        "s07",
+        "s08",
+        "s09",
+        "s10",
+        "s11",
+        "s12",
+        "s13",
+        "s14",
+        "s15",
+        "s16",
+        "s17",
+        "s18",
+        "s19",
+        "s20",
+        "s21",
+        "s22",
+        "s02-detail",
+        "s07-detail",
+        "s11-detail",
+        "s12-detail",
+        "s21-detail",
+        "blocked-x",
+        "blocked-xhs",
+        "blocked-pantip1",
+        "blocked-pantip2",
+        "blocked-pantip3"
+      ],
+      "limitations": [
+        "X公开搜索403，小红书工具不可访问，Pantip拒绝/解码失败，无法覆盖其原帖",
+        "Welsh工作TTS帖两次timeout、两条VideoEditing旧帖打开失败；不计入22个可读家族",
+        "22家族并非22买家；多为英文，只有少量原语材料，不能声称覆盖所有地区",
+        "原帖含bot、开发者推广、消费者愿望和旧版本经验，分别处理"
+      ]
+    },
+    {
+      "id": "competitor-live",
+      "module": "competitor",
+      "status": "partial",
+      "objective": "官方核查7个替代方案的任务、具体语言限制、价格单位与最强重叠功能",
+      "method": "直接打开官方定价/帮助/语言列表，读相关段落后保存短引文和中文上下文；HeyGen/Rask/Eleven/Synthesia/YouTube/Techiaith/Veo共7方案。未登录产品或调用生成API。Gemini TTS也检索阅读但未作为第8个正式对照，不与Veo能力混用。",
+      "queries": [
+        "site.heygen.com pricing video translation credits languages proofread",
+        "site.elevenlabs.io dubbing supported languages pricing credits",
+        "site.rask.ai pricing languages translation minutes",
+        "site.synthesia.io pricing languages translation credits",
+        "site.docs.synthesia.io dubbing supported languages Welsh Arabic",
+        "site.ai.google.dev gemini speech generation supported languages Swahili pricing",
+        "site.techiaith.cymru text to speech API free Welsh",
+        "site.cloud.google.com vertex ai veo 3.1 language support English prompt audio",
+        "site.ai.google.dev gemini veo 3.1 pricing $0.40 second"
+      ],
+      "source_ids": [
+        "c01",
+        "c02",
+        "c03",
+        "c04",
+        "c05",
+        "c06",
+        "c07",
+        "c08",
+        "c09",
+        "c10",
+        "c11",
+        "c12",
+        "c04-detail",
+        "c03-detail"
+      ],
+      "limitations": [
+        "Rask卡片与FAQ价格冲突；Synthesia部分计算器字段与主卡不一致；没有真实结算确认",
+        "Eleven v2按USD/分钟而UI价格页FAQ包含v1水印credits，未取得可清楚对应v2的费率；不能用旧credits推算v2",
+        "YouTube本页无单独每分钟价格/外部API承诺；Techiaith无明确高配额价格或SLA",
+        "官方支持清单不证明具体方言、课程术语或自然对白质量；生产环境授权/API成本未完整验证"
+      ]
+    }
+  ]
+}

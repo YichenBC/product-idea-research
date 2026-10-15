@@ -1,0 +1,238 @@
+{
+  "title": "一个人做多语视频交付 Web 产品：先验证窄流程",
+  "study_revision": 9,
+  "status": "partial",
+  "run_ids": [
+    "social-live",
+    "competitor-live"
+  ],
+  "interview_ids": [],
+  "summary": "有条件值得试一个接入现有生成服务的窄原型，但材料尚不能确认你能独立、盈利地交付完整产品。优先验证“已锁片视频→多语版本→人工审核→可追溯交付”，再决定是否接入局部配音重生成。后者有明确的供应商 API 套餐门槛；技术可接入、返工后成本、真实团队是否付费均未验证。不要先做覆盖所有语言、口型和复杂音轨的通用平台。",
+  "findings": [
+    {
+      "id": "workflow",
+      "kind": "inference",
+      "statement": "存在值得核实的制作流程问题：有人自述重剪会破坏字幕时间轴，有课程作者称一个课程可产生多达500个文件，还有人明确寻找可接入现有流程的规模化配音 API。这支持把“版本、审核、交付”作为候选切口，却不证明这些是同一类客户，也不证明他们需要另一套 Web 工作台。",
+      "support": [
+        {
+          "source_id": "s07",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s16",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "s07-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s11-detail",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "均为公开自述，未验证身份、频率、预算；API需求者可能偏好接口而非上传式Web产品。"
+      ]
+    },
+    {
+      "id": "gate",
+      "kind": "inference",
+      "statement": "ElevenLabs 保存的官方说明明确：Dubbing v2 的 API 译稿编辑与音频重生成仅向 Enterprise 开放。Synthesia 的官方摘录也把译稿编辑列为 Enterprise 功能，但这条摘录本身没有证明它提供你需要的局部重生成 API。因此不能用普通 UI 订阅价格，推出自助 Web 产品的接入资格或单位成本。",
+      "support": [
+        {
+          "source_id": "c06",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c08",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "2026-10-15采集的供应商声明，未调用API；v2为Alpha的版本背景保留在来源上下文。Enterprise报价、商用接入条款、局部粒度、并发和实际输出未验证。"
+      ]
+    },
+    {
+      "id": "alternatives",
+      "kind": "inference",
+      "statement": "“加上审核”不足以成立：Rask 官方已有审核角色与批准功能；现有流程也有先锁片再做字幕的建议，另有人称自建六语言VTT生成器目前够用。你的机会应是对具体客户减少审核往返和交付遗漏；如果客户用现成产品或锁片流程已经足够，就不应另建平台。",
+      "support": [
+        {
+          "source_id": "c04",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "s07-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s11-detail",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "s11-detail",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "s07",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "保存的HeyGen上下文还记载Pro以上Review & Edit、术语表，Rask上下文记载批量功能；不能把这些当作竞争空白。相应逐项套餐/API细节没有完整的精确摘录，本轮不据此承诺功能或价格。"
+      ]
+    },
+    {
+      "id": "quality",
+      "kind": "inference",
+      "statement": "质量验收必须落到具体语言和客户：一名发布者说自己完全不知道Tamil配音是否说得通；Vocallab创始人承认越南语发音和语调可能尚不自然。支持列表不足以替代母语审核。没有可靠审校者，或每轮修改都需要你手工救火，一人运营的路径就可能不成立。",
+      "support": [
+        {
+          "source_id": "s03",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s21-detail",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "Tamil是原作者更正后的语言，不是Telugu；越南语陈述仅针对该供应商，不能外推全部模型。运营判断是推断，未测审校工时或返工成本。"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "alternative": "Rask",
+      "category": "direct",
+      "dimension": "现成审核能力",
+      "assessment": "官方摘录明确有Reviewer roles and approval，是验证新工作台时必须对照的基线；不能从该行确定可用套餐或API。",
+      "support": [
+        {
+          "source_id": "c04",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c04",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c04-detail",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "月付Creator卡片与FAQ分别记载39美元与60美元，报价冲突未解决；不拿低价推算利润。"
+      ]
+    },
+    {
+      "alternative": "YouTube自动配音",
+      "category": "indirect",
+      "dimension": "可编辑与交付边界",
+      "assessment": "官方明确自动配音不能编辑。若客户必须改译文，则这一点不满足要求；若只发布且能接受原结果，则是否需要外部产品仍须验证。",
+      "support": [
+        {
+          "source_id": "c09",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "不能由此推导外部批量API或导出能力；语言方向与频道开放条件也不能省略。"
+      ]
+    },
+    {
+      "alternative": "锁片后字幕制作／已有六语VTT脚本",
+      "category": "manual",
+      "dimension": "是否足够便宜和省事",
+      "assessment": "现有回复建议先签字锁片，另有作者表示自建六语言字幕工具目前好用。低改动、只需字幕的任务可能已足够。",
+      "support": [
+        {
+          "source_id": "s07-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s11-detail",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "两个不同讨论中的办法；未做同任务实测，不能保证适合配音或客户交付。"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "优先：小范围审核与交付工作台",
+      "audience": "已有多语课程或客户视频交付任务的小团队",
+      "problem": "多版本文件管理和后期修改可能带来返工",
+      "alternative": "锁片流程、现成配音平台、VTT脚本与现有文件管理",
+      "proposal": "先限定一种视频格式、已锁片素材和少数客户语言；接入已有产物，试做译文审核、版本标记及交付清单。上传与批处理作为原型假设，不宣称需求已成立。",
+      "priority": "test_now",
+      "rationale": "文件规模和重剪问题有直接自述支持；先检验管理环节能否省工，比先承诺全自动配音交付更容易界定成败。这是试验顺序判断。",
+      "support": [
+        {
+          "source_id": "s11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s07",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c04",
+          "excerpt_id": "e3"
+        }
+      ],
+      "risks": [
+        "现成审核功能已足够；客户真正需要API而非Web界面；锁片后问题消失。"
+      ],
+      "validation": "与有真实待交付任务的团队对照同一批素材：现有方案与原型各完成一次审核交付；记录人工分钟、遗漏和返工。若没有可重复节省，或团队不愿继续用并付费，停止工作台方向。"
+    },
+    {
+      "title": "条件满足后：配音API编排与局部重生成",
+      "audience": "必须交付可修改配音且有稳定批量任务的团队",
+      "problem": "既要规模生成，又要在客户修改后重做局部内容",
+      "alternative": "供应商Enterprise方案或现有生产流程",
+      "proposal": "先验证一个具体供应商版本、语言方向及套餐能否完成改稿→局部重生成→合回原视频，再讨论完整Web产品。",
+      "priority": "watch",
+      "rationale": "规模化API需求存在，但最贴近的官方摘录将v2编辑和重生成API放在Enterprise；材料不足以判断个人是否承担得起。",
+      "support": [
+        {
+          "source_id": "s16",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c06",
+          "excerpt_id": "e3"
+        }
+      ],
+      "risks": [
+        "没有可用商业接入或Enterprise最低成本过高；局部修改仍需全片返工；母语质检占用过多人力。"
+      ],
+      "validation": "后续获得接入条款后，用获授权的真实素材核验接口粒度、失败重试、导出质量与账单；计入每种目标语言的生成、修改、审校和支持工时。若客户可接受报价不能覆盖这些成本，或需要无法提供的质量保证，停止。"
+    }
+  ],
+  "next_steps": [
+    "下一步先找有正在交付项目的团队观察一次真实流程，明确购买者、目标语言、交付格式和修改频次；本次没有外联。优先以Rask现有审核、HeyGen保存上下文中的Review & Edit及团队现有流程作为基线，不能只与手工最差情形比较。",
+    "只有确认管理环节值得替换，才验证生成API。不要用UI积分、旧版配音费率或Veo生成秒价估算这套既有视频多语交付产品；当前材料无法给出可靠开发工期、月毛利或你个人的实现能力判断。"
+  ],
+  "limitations": [
+    "材料覆盖：本次只读取2026-10-15已保存的冻结材料，无新联网、产品试用或访谈。选取原有social与competitor两个partial轮次，保留访问缺口，报告仍为partial。",
+    "共46条来源记录：41条可引用摘录，归属34个可读材料家族（22个公开讨论家族、12个官方文档家族）；另5条为不可访问记录。补录共用原家族，不是新增独立客户。官方材料涉及7个替代方案：HeyGen、Rask、ElevenLabs、Synthesia、YouTube、Techiaith、Veo；本报告按现有视频交付任务重点比较相关方案，没有把Veo短片生成当作视频本地化。",
+    "X公开搜索403，小红书访问失败，3个Pantip候选拒绝访问或解码失败；另有Welsh TTS帖及2个旧VideoEditing帖打开失败，未计入22个可读讨论家族。搜索摘要未作证据。",
+    "讨论以英文为主，只有少量Swahili、Thai及罗马化Telugu材料；不能声称覆盖各地区或所有目标语言。未播放视频、独立验证身份与账单；消费者内容订阅、卖方推广及bot回复不等于制作团队付费需求。",
+    "保存数据另含3个合成角色、3份已有合成访谈，本报告全部排除，也没有新增模拟访谈。只使用真实来源记录仍不等于完成真实客户访谈或需求验证。",
+    "成本与能力证据不完整：Rask同页报价冲突、Synthesia主卡与计算器字段不一致、ElevenLabs旧版积分不能用于v2。生产API授权、数据处理条件、商业再交付资格和真实结算均未完整验证；现有材料不能证明“一个人可盈利运营”。"
+  ]
+}

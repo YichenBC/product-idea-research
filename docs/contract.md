@@ -324,6 +324,15 @@ access depth and discussion group counts, not unique customers or market share.
 Warnings cover duplicate canonical URLs, normalized duplicate excerpts and partial
 runs. The JSON is diagnostic; no truth/quality score and no automatic deletion.
 
+Both `stored` and `selected` include `citable_sources` (full/excerpt records),
+`citable_material_families` (their distinct group IDs), `citable_social_families`
+(those groups with a full/excerpt post, comment or review), and `source_types`
+(all records by type). The legacy `discussion_families` counts **all** material
+groups, including official documents and unavailable leads. Social counts depend
+on supplied classifications/grouping and can include promotional posts; they are
+not verified buyers. `provided` feedback exports remain material, not public social
+threads, and need their sampling unit described by the researcher.
+
 Canonical URL comparison normalizes scheme/hostname/default ports and query order,
 removes utm_* / fbclid / gclid tracking parameters, and preserves meaningful query
 values, paths and fragments. Queries with repeated semantic keys retain their

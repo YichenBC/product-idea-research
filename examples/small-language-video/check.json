@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "title": "小语种 AI 视频：个人产品机会实证初筛",
+  "revision": 11,
+  "recipe_id": "recipe",
+  "personas": 3,
+  "planned_personas": 3,
+  "interviews": 3,
+  "interviewed_personas": 3,
+  "brief_id": "brief",
+  "sources": 50,
+  "runs": 4,
+  "modules": {
+    "competitor": 2,
+    "social": 2
+  }
+}

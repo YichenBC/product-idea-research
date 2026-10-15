@@ -79,7 +79,9 @@ Or offline:
 > Analyze this exported feedback without browsing. Keep contradictory statements.
 > Do not fabricate missing context; give me a report and a next validation step.
 
-## A live example
+## Live examples
+
+[Small-language AI video](examples/small-language-video/README.md): 25 real social/community families, seven software/platform alternatives, human-service counterexamples and a Chinese opportunity report. Includes disclosed access gaps and [evaluation-driven improvements](evals/README.md).
 
 [Subtitle research](examples/subtitle-research/README.md): [combined report](examples/subtitle-research/combined/report.md), [social only](examples/subtitle-research/social/report.md), [competitors only](examples/subtitle-research/competitor/report.md). Includes evidence, review corrections and offline replay inputs.
 

@@ -76,7 +76,7 @@ class ResearchRender(Harness):
                     main, evidence = self.assert_citations(directory, kind)
                     self.assertIn(module, main)
                     self.assertIn('Source', main)
-                    self.assertIn('Discussion groups', main)
+                    self.assertIn('All material families', main)
                     self.assertNotIn('simulat', main.lower())
                     self.assertNotIn('Synthetic research', evidence)
                     self.assertNotIn('UNSELECTED MATERIAL', evidence)
@@ -223,7 +223,7 @@ class ResearchRender(Harness):
             self.assertIn(f'evidence.{kind}#source-1-excerpt-1', main)
             self.assertIn('Source 2 · Excerpt 2', main)
             self.assertIn('Sources: 2', html.unescape(main))
-            self.assertIn('Discussion groups (material families): 2', html.unescape(main))
+            self.assertIn('All material families (including unread): 2', html.unescape(main))
             anchor_start = evidence.index('id="source-2-excerpt-2"')
             self.assertIn('Exact second excerpt', evidence[anchor_start:])
             self.assertEqual(evidence.count('Exact second excerpt'), 1)
@@ -240,6 +240,37 @@ class ResearchRender(Harness):
         self.assertEqual(urlsplit(html.unescape(destination)).hostname, '::1')
         self.assertEqual(unquote(html.unescape(destination)), url)
 
+    def test_render_identifies_accessible_social_sample_separately(self):
+        b = research_batch()
+        b['sources'] += [source('reply', source_type='comment'),
+                         source('docs', source_type='official', group_id='docs'),
+                         source('blocked', access='unavailable', excerpts=[], group_id='blocked',
+                                limitations=['Login required'])]
+        b['runs'][0].update(source_ids=['s1', 'reply', 'docs', 'blocked'], status='partial')
+        self.prepare(b)
+        r = research_report()
+        r['status'] = 'partial'
+        directory = self.export(r)
+        for kind in ('md', 'html'):
+            main = html.unescape((directory / f'report.{kind}').read_text(encoding='utf-8'))
+            self.assertIn('Readable social families: 1', main)
+            self.assertIn('Readable material families: 2', main)
+            self.assertIn('All material families (including unread): 3', main)
+
+    def test_finding_statement_is_body_text_not_an_unbounded_heading(self):
+        self.prepare()
+        r = research_report()
+        statement = 'A detailed finding. ' * 30
+        r['findings'][0]['statement'] = statement
+        directory = self.export(r)
+        markup = (directory / 'report.html').read_text(encoding='utf-8')
+        self.assertIn('<p>' + statement + '</p>', markup)
+        self.assertIn('id="finding-1"', markup)
+        self.assertNotIn(statement, ''.join(re.findall(r'<h3[^>]*>(.*?)</h3>', markup)))
+        markdown = html.unescape((directory / 'report.md').read_text(encoding='utf-8'))
+        self.assertIn(statement, markdown)
+        self.assertFalse(any(statement in line for line in markdown.splitlines() if line.startswith('#')))
+
     def test_coverage_separates_read_sources_from_blocked_leads_and_notice_is_once(self):
         b = research_batch()
         b['sources'].append(source('blocked', access='unavailable', excerpts=[],
@@ -255,7 +286,7 @@ class ResearchRender(Harness):
             self.assertIn('Sources: 2', main)
             self.assertIn('Read sources (full / excerpt): 1', main)
             self.assertIn('Snippet / unavailable: 1', main)
-            self.assertIn('Discussion groups (material families): 2', main)
+            self.assertIn('All material families (including unread): 2', main)
             self.assertEqual(main.count('Source statements reflect saved material, not independently verified facts.'), 1)
             self.assertEqual(main.count('Evidence type: Source statement'), 2)
             self.assertEqual(main.count('One discussion'), 2)

@@ -14,6 +14,7 @@ from urllib.parse import quote, urlsplit
 
 from . import store
 from . import validation as v
+from .audit import coverage
 from .types import JSONObject, JSONValue, PathInput, Study
 
 ZH = {
@@ -34,7 +35,10 @@ ZH = {
     'Discussion groups': '讨论组', 'Selected interviews': '所选访谈',
     'Read sources (full / excerpt)': '已读来源（全文／摘录）',
     'Snippet / unavailable': '仅摘要／无法访问',
-    'Discussion groups (material families)': '讨论组（材料组）',
+    'All material families (including unread)': '全部材料组（含未读）',
+    'Readable material families': '可引用材料组',
+    'Readable social families': '可引用社媒讨论组',
+    'Finding': '发现',
     'Source': '来源', 'Excerpt': '摘录', 'Run': '研究轮次', 'Module': '模块',
     'social': '社媒调研', 'competitor': '竞品调研', 'Objective': '目标', 'Queries': '检索词',
     'Source statement': '来源陈述', 'Inference': '推断', 'Simulation': '模拟', 'Mixed': '混合',
@@ -257,11 +261,14 @@ def document(state: Study, report: JSONObject, kind: str) -> str:
     if selected.runs:
         doc.paragraph(tr('Selected modules') + ': ' + '; '.join(
             f'{tr(run["module"])} ({tr(run["status"])})' for run in selected.runs))
-        read_count = sum(source['access'] in ('full', 'excerpt') for source in selected.sources)
+        counts = coverage(selected.sources, selected.runs, selected.interviews)
+        read_count = counts['citable_sources']
         doc.paragraph(f'{tr("Sources")}: {len(selected.sources)} | '
                       f'{tr("Read sources (full / excerpt)")}: {read_count} | '
                       f'{tr("Snippet / unavailable")}: {len(selected.sources) - read_count} | '
-                      f'{tr("Discussion groups (material families)")}: {len({s["group_id"] for s in selected.sources})} | '
+                      f'{tr("All material families (including unread)")}: {counts["discussion_families"]} | '
+                      f'{tr("Readable material families")}: {counts["citable_material_families"]} | '
+                      f'{tr("Readable social families")}: {counts["citable_social_families"]} | '
                       f'{tr("Selected interviews")}: {len(selected.interviews)}')
         doc.paragraph(tr('Discussion groups are material families, not independent customers.'))
     if selected.interviews:
@@ -275,7 +282,8 @@ def document(state: Study, report: JSONObject, kind: str) -> str:
         doc.paragraph(tr('Source statements reflect saved material, not independently verified facts.'))
     labels = {'source': 'Source statement', 'inference': 'Inference', 'simulation': 'Simulation', 'mixed': 'Mixed'}
     for n, finding in enumerate(report['findings'], 1):
-        doc.heading(3, f'{n}. {finding["statement"]}', f'finding-{n}')
+        doc.heading(3, f'{tr("Finding")} {n}', f'finding-{n}')
+        doc.paragraph(finding['statement'])
         doc.paragraph(f'{tr("Evidence type")}: {tr(labels[finding["kind"]])}')
         if finding['kind'] == 'mixed':
             doc.paragraph(tr('Mixed reasoning combines source material and explicitly identified simulated responses.'))

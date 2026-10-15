@@ -1,0 +1,737 @@
+{
+  "title": "小语种 AI 视频产品机会：先解决真实交付，再考虑全自动生成",
+  "study_revision": 11,
+  "status": "partial",
+  "summary": "优先验证“英语→越南语客户定稿字幕的对齐与交付工作台”，次选“已有多语课程的改版检查”。它们可以先做成个人能维护的 Web 工具，不必训练模型；前者必须证明比客户现有剪辑流程省时，后者仍缺小语种客户验证。Welsh教学模板和Darija吉祥物短课先观察。泛小语种一键生成、通用术语表或普通审核界面缺少足够差异。当前证据支持拿真实项目做付费试验，尚未证明盈利或订阅意愿；跨平台和部分价格资料仍有缺口。",
+  "run_ids": [
+    "social-live",
+    "competitor-live",
+    "social-buyer-followup",
+    "competitor-manual"
+  ],
+  "interview_ids": [
+    "i1",
+    "i2",
+    "i3"
+  ],
+  "findings": [
+    {
+      "id": "f1",
+      "kind": "inference",
+      "statement": "语言必须与任务、方向和区域拆开。南印度语言相关配音、Vietnamese的逐字字幕、Welsh的有声教学、Darija的吉祥物对白是不同问题；它们都不是英语，并不因此同属同一种“低资源”状态。本研究没有建立语言资源等级。HeyGen已经列出Welsh、Vietnamese、Tamil区域变体和Kenya/Tanzania Swahili；YouTube则明确有Swahili/Thai/Vietnamese→English的方向，不能反推English→这些语言都已开放。",
+      "support": [
+        {
+          "source_id": "s01",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s02-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s06",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s08",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c03",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c03",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c03",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c03",
+          "excerpt_id": "e4"
+        },
+        {
+          "source_id": "c09",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c09",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c09",
+          "excerpt_id": "e4"
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "支持列表不是同等质量保证；多个方言名称仍需由当地审阅者确认，不以非英语或用户数量判断资源等级。"
+      ]
+    },
+    {
+      "id": "f-commercial-followup",
+      "kind": "inference",
+      "statement": "补查找到更贴近小语种生产的实际任务：一位剪辑师自述接到越南语字幕急单，并换入客户提供的越南语稿；这使“已定稿字幕的对齐与交付”比泛语言质量平台更值得先测。但他已经能用现有流程交付，没有说要买新软件。另一个产品方要把网红本地语宣传片转成英语并对口型，语言未指定，不能擅自记为英语→Tamil需求。阿拉伯语求助者随后澄清只要免费字幕，不能算配音或付费客户。",
+      "support": [
+        {
+          "source_id": "audit-vietnamese-delivery",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "audit-vietnamese-delivery",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "audit-buyer-reel",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "audit-arabic-free",
+          "excerpt_id": "e2"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "audit-human-service",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "audit-arabic-free",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "职业作者自述兼工作展示，未核验订单；已完成的现有流程是强替代，尚无软件采购或切换承诺。"
+      ]
+    },
+    {
+      "id": "f2",
+      "kind": "inference",
+      "statement": "最接近可触达商业任务的是文件和修订管理：课程制作方提到一个课程可能有500个文件、9种语言；剪辑师遇到重剪破坏字幕时间轴。对个人开发者，更窄的外部产品可以检查旧版混入、缺失语种、字幕/音轨/源片版本关系，并导出可交付包。该问题并非小语种专属，不能把英语/法语/西语案例包装成Tamil或Welsh已验证需求。",
+      "support": [
+        {
+          "source_id": "s11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s11-detail",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "s07",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s22",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "s07-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s11-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c04",
+          "excerpt_id": "e3"
+        }
+      ],
+      "limitations": [
+        "先锁片、自制工具及现有审阅系统可能已够用；具体小语种买方、重复频率与支付尚未知。"
+      ]
+    },
+    {
+      "id": "f3",
+      "kind": "inference",
+      "statement": "Tamil发布者承认无法验收目标语；AppSumo提问者说Vietnamese自然度影响购买许可证，供应商也承认尚未完全自然。这说明自动语言质量承诺风险高，不能仅凭回译验收。对个人开发者，可先把客户已定稿的译文整理成可审核交付物；带母语复核的配音服务是另一种更重的业务，不能当成无人维护的软件。",
+      "support": [
+        {
+          "source_id": "s03",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s21",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s21-detail",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "c03",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "s04",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "Tamil求助者商业身份未知；Vietnamese是购买考量而非成交；没有母语盲测、质量阈值或审阅员可用性数据。"
+      ]
+    },
+    {
+      "id": "f4",
+      "kind": "source",
+      "statement": "存在强烈的“当前方案足够”与“不想要”的反证：Kiswahili创作者讨论Google AI Studio更好且有口音差异；Welsh作者自己生成并免费分享单词音频，同时投入很多人工质检；多语课程回复者自制VTT工具自述足够；观众有时欣赏信息视频配音，但不希望默认强制切换。不能把所有抱怨都解释成需要一个新订阅。",
+      "support": [
+        {
+          "source_id": "s04",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s18",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s11-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s19",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "s12-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s06",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "免费工具体验是用户自述且版本可变；Welsh单词音频不等于长句教学视频；Swahili价格痛点没有金额。"
+      ]
+    },
+    {
+      "id": "f5",
+      "kind": "source",
+      "statement": "有一位越南语影视观众自述花$119.99购买iQIYI VIP Premium后不满单人旁白。这是内容消费付款，不能作为配音软件、API或生产服务的付款证据。越南语学习者要求逐字字幕，也有回复建议使用既有隐藏字幕轨；学习和无障碍阅读的字幕要求不应混为一谈。",
+      "support": [
+        {
+          "source_id": "s10",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s02-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s02",
+          "excerpt_id": "e1"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "s02-detail",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "账单、退款及内容比例未独立验证；版权、发行关系和影视采购无法由一个观众案例推出。"
+      ]
+    },
+    {
+      "id": "f6",
+      "kind": "inference",
+      "statement": "泛化审核界面和“多支持一种语言”都不足以构成差异：Rask已有reviewer approval；Synthesia把原稿编辑设为Enterprise能力；ElevenLabs把v2 API编辑/再生成设为Enterprise能力；HeyGen的输出SRT和单源语言约束提示交付/混语处理仍需具体测试。候选产品应与这些最强现成功能比较，而非与只按一次按钮的弱基线比较。",
+      "support": [
+        {
+          "source_id": "c04",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c08",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c06",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c02",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c02",
+          "excerpt_id": "e2"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "c03-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c03",
+          "excerpt_id": "e4"
+        }
+      ],
+      "limitations": [
+        "本轮只读官方资料，没有操作产品；Enterprise价格不透明，缺少公开功能不能推断不存在。"
+      ]
+    },
+    {
+      "id": "f7",
+      "kind": "inference",
+      "statement": "完整生成视频的成本和可控性更不适合用“低价无限生成”作起点。付费HeyGen用户抱怨1000积分一周用完；另有API用户自述有每月约200条的生产规模。Veo的价格按输出秒计，英语提示支持也不等于对Welsh/Darija对白的质量保证。先将画面、原声/合成语音、字幕、最终交付拆开，才可量出哪一步值得付费。",
+      "support": [
+        {
+          "source_id": "s15",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s17",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c12",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c12",
+          "excerpt_id": "e2"
+        }
+      ],
+      "counterevidence": [
+        {
+          "source_id": "s20",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c10",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "付费用户为自述；生成视频失败率和重试率未实测；预算见下文仅为测试假设。"
+      ]
+    },
+    {
+      "id": "f8",
+      "kind": "simulation",
+      "statement": "三位合成角色暴露的拒绝条件是：不懂目标语时无法仅凭回译验收；文件量少或能锁片时无需新管理工具；低频Welsh教师可以自录音或用免费组件。它们只用于设计测试，不增加任何客户数、需求置信度或支付证据。",
+      "support": [
+        {
+          "interview_id": "i1",
+          "turn": 1
+        },
+        {
+          "interview_id": "i2",
+          "turn": 2
+        },
+        {
+          "interview_id": "i3",
+          "turn": 2
+        }
+      ],
+      "counterevidence": [],
+      "limitations": [
+        "全部角色与回答由同一Agent生成，3角色×3轮，不是真实访谈。"
+      ]
+    }
+  ],
+  "comparisons": [
+    {
+      "alternative": "HeyGen",
+      "category": "direct",
+      "dimension": "语言、输入与UI订阅",
+      "assessment": "官方列Welsh/Vietnamese、Tamil多区域、Swahili Kenya/Tanzania及Morocco/Saudi Arabic。翻译要求单一源语言，字幕只导出SRT。Creator月付$29/600 credits，Pro起$49/1000；这是UI订阅，不能当API转售成本。",
+      "support": [
+        {
+          "source_id": "c01",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c01",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c02",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c02",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c03",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c03",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c03",
+          "excerpt_id": "e4"
+        },
+        {
+          "source_id": "c03-detail",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c03",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "未验证实际自然度；具体单位消耗在证据上下文保存，不能把credits当免费无限分钟；生成和翻译覆盖不可互相外推。"
+      ]
+    },
+    {
+      "alternative": "ElevenLabs",
+      "category": "direct",
+      "dimension": "目标方言、API编辑与订阅单位",
+      "assessment": "Dubbing v2语言表有Welsh；Arabic明确方言码是ar-EG，未从此页确立Morocco/Saudi码。v2 API编辑/再生成为Enterprise。Creator常规月付$22/121k credits，首月$11；价格FAQ自动配音2000/3000 credits分钟属于需与v1/v2分清的旧口径，本报告不以其计算v2价格。",
+      "support": [
+        {
+          "source_id": "c06",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c06",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c06",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c05",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c05",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "完整其他语言与v1/v2限制见证据上下文；最新v2 USD/min未确认，作为必填缺口保留。"
+      ]
+    },
+    {
+      "alternative": "Rask",
+      "category": "direct",
+      "dimension": "分钟、报价冲突与审核",
+      "assessment": "Creator卡片为$39/月25分钟，但同页FAQ仍给25分钟$60月付/$50年付月均，报价冲突未消除；不能选择低价计算利润。有reviewer approval，普通审核界面不是新工具独有。",
+      "support": [
+        {
+          "source_id": "c04",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c04",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c04",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c04-detail",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "未实测；此处删去首版仅由上下文承载的精确语言数量。具体采购需核对同一功能、套餐与结算页，未知不等于缺失。"
+      ]
+    },
+    {
+      "alternative": "Synthesia",
+      "category": "direct",
+      "dimension": "配音单位与审阅门槛",
+      "assessment": "月付Starter主卡$29/1250 credits，配音计算器76 credits/min。原稿编辑是Enterprise，发音规则对dubbing无效；self-serve有独立目标语言清单，Enterprise区域locale不可直接外推给低价套餐。",
+      "support": [
+        {
+          "source_id": "c07",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c07",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c07",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c08",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c08",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c08",
+          "excerpt_id": "e3"
+        }
+      ],
+      "limitations": [
+        "主卡与部分计算器字段不同；不能把140+一键翻译自动等同外部视频配音，完整方向列表见证据上下文。"
+      ]
+    },
+    {
+      "alternative": "YouTube 自动配音",
+      "category": "indirect",
+      "dimension": "方向与可编辑性",
+      "assessment": "支持列表明确Swahili、Thai、Vietnamese输入至English；不能编辑自动配音。用于YouTube分发的现成路径会压低泛配音工具价值，但本页未给外部API或按分钟报价，不能承诺它是外部交付引擎。",
+      "support": [
+        {
+          "source_id": "c09",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c09",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c09",
+          "excerpt_id": "e3"
+        },
+        {
+          "source_id": "c09",
+          "excerpt_id": "e4"
+        }
+      ],
+      "limitations": [
+        "可用性因频道/视频而异；本次所读页面未列单独费率，成本不是已验证为零。"
+      ]
+    },
+    {
+      "alternative": "Techiaith",
+      "category": "indirect",
+      "dimension": "Welsh/English 专用基础组件",
+      "assessment": "官方提供免费语言API及北/南Wales男女声TTS，是Welsh语音产品的强基线。它可以削弱“终于能说Welsh”这个卖点，仍需把画面、字幕、审阅和导出组织起来。",
+      "support": [
+        {
+          "source_id": "c10",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c10",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "fair-use限制与高配额报价不明确，未实测；免费组件不等于有商业SLA的完整视频服务。"
+      ]
+    },
+    {
+      "alternative": "Veo 3.1",
+      "category": "indirect",
+      "dimension": "生成画面与单次成本",
+      "assessment": "Cloud文档的生成长度为4/6/8秒，提示语言English；没有从这里确立Welsh/Darija对白质量。另查Gemini API定价：Standard含音频720/1080p为$0.40/秒，Lite720p为$0.05/秒。",
+      "support": [
+        {
+          "source_id": "c12",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c12",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c11",
+          "excerpt_id": "e2"
+        },
+        {
+          "source_id": "c11",
+          "excerpt_id": "e3"
+        }
+      ],
+      "limitations": [
+        "Cloud generate-001与Gemini API preview是不同端点/计费条件，只做能力与价格分栏比较，不能交叉套用配额。"
+      ]
+    },
+    {
+      "alternative": "客户定稿＋现有剪辑流程（作者自述）",
+      "category": "manual",
+      "dimension": "越南语字幕交付的现成基线",
+      "assessment": "剪辑师已经接下越南语字幕急单并换入客户提供的译稿。新工具必须量出比这套流程少花多少对齐、修改和确认时间，不能把“能输出越南语字幕”当独有功能。",
+      "support": [
+        {
+          "source_id": "audit-vietnamese-delivery",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "audit-vietnamese-delivery",
+          "excerpt_id": "e2"
+        }
+      ],
+      "limitations": [
+        "职业社媒自述，工具组合详见原帖上下文；无节时测量、软件采购或切换承诺。"
+      ]
+    },
+    {
+      "alternative": "Voice Talent Online 人工字幕服务",
+      "category": "manual",
+      "dimension": "客户批准后烧录字幕",
+      "assessment": "供应商案例已包含客户批准后将字幕烧入视频的交付流程，说明人工服务也是现成替代。独立产品需要在速度、返工或沟通成本上胜出。",
+      "support": [
+        {
+          "source_id": "audit-human-service",
+          "excerpt_id": "e1"
+        }
+      ],
+      "limitations": [
+        "供应商自己的案例，费用、日期和客户实际评价未知；不是独立交易验证。"
+      ]
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "英语→越南语定稿字幕对齐与交付工作台",
+      "audience": "已有英语宣传片/产品演示，客户提供越南语定稿和审阅人的独立剪辑师、小制作团队。可从展示此类交付案例的职业社媒、剪辑社区及现有客户转介自愿招募；这是获客假设，尚未联系。",
+      "problem": "商业字幕交付任务已出现，但是否反复发生、现有对齐与修改耗时多少、谁会购买软件还不明确。切入点是技术交付，不承担无人复核的翻译质量承诺。",
+      "alternative": "原帖已完成的客户译稿＋剪辑软件工作流；直接找人工字幕服务；保持现状。",
+      "proposal": "一个小 Web 工作台：导入授权源片/源语SRT和客户越南语定稿，建议逐段对应关系与时间轴；客户确认后生成目标语SRT/VTT及预览，检查漏段、数字变动、越界时间和显示问题，导出已确认的交付包。Agent负责候选对齐和变更解释；语义、断句与读速仍由客户母语审阅。第一版不接配音、克隆声音或自动口型。",
+      "priority": "test_now",
+      "rationale": "补查有越南语实际商业任务，本拟议版本限定客户提供定稿和母语审阅人，比全自动配音更符合个人交付能力。它仍是可证伪假设：作者没有表达软件购买意愿。10分钟单目标语试单的假设成本：存储/计算/模型$1–5，支持0.5小时×$25=$12.5，合计$13.5–17.5；拟用$49/项目测支付。客户自身审阅时间也要纳入总节时比较；未计获客、开发、税和退款，不是利润预测。",
+      "support": [
+        {
+          "source_id": "audit-vietnamese-delivery",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "audit-vietnamese-delivery",
+          "excerpt_id": "e2"
+        }
+      ],
+      "risks": [
+        "现有剪辑软件已经足够，可能没有值得迁移的差异。",
+        "客户若没有定稿或母语审阅人，此MVP不适用；不能用Agent回译代替验收。",
+        "各客户格式定制和人工支持可能吃掉毛余；对齐错误不能被“自动通过”。",
+        "英语→越南语是拟议测试范围；当前短摘录证实越南语字幕和客户译稿，方向细节来自原帖上下文，尚未获得此细分重复订单证据。"
+      ],
+      "validation": "两周招募5个最近确实做过越南语字幕交付的制作方，用同一段获授权的60–90秒样片比较旧流程和原型。记录对齐、修改、客户确认的总用时与关键漏错；至少2方支付真实项目试单、总协调时间降40%且无新增关键错误才继续。若多数项目低频、现有流程足够、需开发者逐单纠错或客户不愿付费，停止独立订阅，最多保留内部脚本。"
+    },
+    {
+      "title": "多语言课程改版与交付检查器（相邻市场假设）",
+      "audience": "已有真实多语MP4/VTT交付的小型课程代理或独立制作者；通过公开作品目录、LMS实施商转介或专业剪辑社区自愿招募，尚未外联。语言从客户现有项目选择，优先核验是否真的包含Thai/Vietnamese等目标语。",
+      "problem": "源片重剪后，多版本音轨/字幕/源文件关系、缺件和旧版混入难检查；真实商业任务可见，但小语种独有需求未证实。",
+      "alternative": "先锁片、表格文件夹、自制VTT脚本、Rask reviewer workflow、现有LMS。",
+      "proposal": "个人可做的MVP：本地导入文件和manifest，按源片哈希/版本标记关联各语种，检测缺件/重叠/时长漂移/错版，导出ZIP和审阅清单；agent负责差异解释及文件编排，不自动宣告翻译正确。不先做新配音模型或完整LMS。",
+      "priority": "watch",
+      "rationale": "工程实现清楚且有B2B文件管理场景，但目前最强案例不是指定小语种，故先观察，不能因为好开发就把它排成已发现的小语种市场。最清楚的B2B交付场景且可先离线工具化，现成方案强，因此只卖减少返工的结果。拟议单项目成本假设：存储/运算$5、支持1小时×$25、两个10分钟审阅×$20/小时≈$6.7，总约$36.7；以$79一次试单探价，不是市场价格/利润预测，尚未计税、获客、固定开发。",
+      "support": [
+        {
+          "source_id": "s11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s07",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s11-detail",
+          "excerpt_id": "e2"
+        }
+      ],
+      "risks": [
+        "语言质检依赖客户或母语审阅者；文件检查不能保证语义",
+        "Rask/现有LMS/锁片就足够，迁移成本可能超过节省",
+        "若需每客户定制对接，个人支持负担可能不成立"
+      ],
+      "validation": "两周内与5个真实制作方讨论最近一次改版，取得经授权的去敏历史交付样本；离线与其表格流程对比。至少2方愿付真实试单且协调时间降50%、零旧版误交才继续。若没有最近重复改版、3方认为现有系统够用或支持耗时不降，停止做独立订阅。"
+    },
+    {
+      "title": "Welsh教学视频组装模板",
+      "audience": "Welsh课程内容制作者/教师；真正采购人可能是学校或出版方，目前未知，教师兴趣不等于预算。",
+      "problem": "教师协作者自述Veo等无法产生满意Welsh语音；这是生成工作流问题，已有Welsh TTS并不缺席。",
+      "alternative": "自录音、Techiaith免费语音API、普通编辑器、HeyGen已支持Welsh。",
+      "proposal": "只做可复用教学模板：用户定稿Welsh文案或自录音，生成无对白画面/静态图，后配语音和逐句字幕，导出短视频；提供教师复核，不训练语言模型、不承诺无人审核。",
+      "priority": "watch",
+      "rationale": "具体任务真实但可能低频和免费可解。假设1分钟视频只需8秒生成素材，3次尝试×8秒×Veo Standard$0.40=$9.6；母语审稿30分钟×$20=$10，组装30分钟×$25=$12.5，合计$32.1另加托管与配额；$59一次模板试交仅为验证报价。整分钟全生成的3轮成本已$72，不适合相同售价。",
+      "support": [
+        {
+          "source_id": "s06",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c10",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c11",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c11",
+          "excerpt_id": "e2"
+        }
+      ],
+      "risks": [
+        "免费替代与自录音足够，订阅频率可能不成立",
+        "教师未必有采购权；教育术语和方言必须母语复核",
+        "合成声音/画面不能替代教学效果评估"
+      ],
+      "validation": "先与3名教师和1名真正采购方验证每月批量需求，对同一课用自录音+免费组件作基线。只有每月≥10条的真实工作量、2个机构愿付试单且备课时间降一半才升级；否则保留一次模板/培训或放弃订阅。"
+    },
+    {
+      "title": "Darija吉祥物短课分步生成",
+      "audience": "北非已有在线学校、具备自有吉祥物与Darija授课能力的经营者；证据仅一条原帖，相关重复发帖归为一家族。",
+      "problem": "作者要用自有吉祥物做课，认为Darija语音机械。Arabic一般支持不等于摩洛哥方言效果；沙特方言也不能替代Darija。",
+      "alternative": "自己录Darija音频再做角色动画；HeyGen已有Morocco变体；Synthesia Enterprise区域locale；现有视频编辑器。",
+      "proposal": "先做人工服务原型而非SaaS：客户定稿并自录Darija，agent拆镜头、生成统一吉祥物画面、编排口型工具和字幕；口型效果不佳就用旁白式画面，不自动把MSA改写当真实Darija。",
+      "priority": "watch",
+      "rationale": "是具体业务任务，但没有独立第二买家、支付和输出验证。假设60秒服务需本地审阅30分钟×$20=$10、组装1小时×$25=$25、画面/动画/重试预算上限$20，总$55另加税获客；拟$99试单，只测是否省经营者时间，不推年收入。",
+      "support": [
+        {
+          "source_id": "s08",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "s09",
+          "excerpt_id": "e1"
+        },
+        {
+          "source_id": "c03-detail",
+          "excerpt_id": "e1"
+        }
+      ],
+      "risks": [
+        "唯一帖子回复有自动bot和推广，不能当方案证明",
+        "方言、吉祥物口型与代码混用可能导致反复返工",
+        "用户自录音+现成工具可能已足够，无独立产品空间"
+      ],
+      "validation": "先找3个已有真实招生/教学视频的经营者看最近作品，不外推其他Arabic地区；比较自录音+手剪与新流程。获得2份付费样片、母语盲评不降且总制作时间减半才继续；若需求只是偶尔尝鲜、普通HeyGen Morocco即可满足或关键发音仍错，停止。"
+    }
+  ],
+  "next_steps": [
+    "先验证第一条的真实任务频率和现有操作时间，取得客户定稿与母语审阅资源，再决定是否开发Web原型。暂不同时做四个产品。",
+    "补证据需明确任务：过去30天实际项目、当前付费替代、谁验收、谁批准预算、失败返工记录；不问泛泛“会不会用”。本轮未发消息、未采购或开始试用。",
+    "在报价前核实同一端点、型号、分辨率、源/目标分钟、席位、重试和输出数量；解决Rask价卡/FAQ冲突、Eleven v2费率和API可商用条款。UI订阅额度不能直接当外部产品API成本。",
+    "每个样片保留原文、源/目标语言/区域、音轨、审阅差异和版本；关键错误按含义改变、数字、名称、漏译、不可懂发音定义，不能仅用回译或模型自评。",
+    "不做已验证营收预测：所有成本与测试价格为研究者假设，真人审阅、获客、客户支持和重复订单才决定是否盈利。"
+  ],
+  "limitations": [
+    "访问于2026-10-15。25个可引用社媒/社区讨论家族，其中首轮22个、独立补查3个；7个软件/平台的官方资料，加1个人工服务案例。补充摘录不增加独立家族。这是便利样本，不是25位已验证客户，也未达到几百条全面需求普查。英语材料占多数，Swahili/罗马化Telugu等原语覆盖有限。",
+    "X、小红书和Pantip未获得可引用正文，不能声称研究过其用户需求；搜索摘要仅用于发现线索。",
+    "只读网页文本与可见回复，无产品试用、音视频播放测试、账单验证、真实客户访谈或外联；原帖可能有身份不明、产品推广、bot回复或版本变化。",
+    "7个官方替代品被核查，但部分精确价格/分功能语种与结算条件仍未完整确定；相关缺口在比较和证据上下文中保留，没有把未知写成不存在。",
+    "3个角色和9轮回答完全合成，仅是测试脚本；不能用于需求、付费意愿、转化率、语言质量或客户数量论证。",
+    "行业与生成工具变化快；旧讨论只说明当时任务/经历，不能证明当前工具仍有同一缺陷。",
+    "首轮3个合成角色用来压力测试较宽的候选概念；本次补查后缩窄的越南语工作台没有新增模拟访谈，更没有真实客户验证，原角色不得被当作这个新范围的独立确认。"
+  ]
+}

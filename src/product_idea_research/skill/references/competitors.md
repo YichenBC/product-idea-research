@@ -48,11 +48,25 @@ month-to-month pricing. “Contact sales” is unknown cost. Distinguish transcr
 minutes, translation minutes, dubbing credits, seats and exports. No estimated
 cost arithmetic without stated assumptions and compatible units.
 
+For a product built on another vendor, verify the actual integration path:
+feature × model/version × input/output direction × plan × UI/API. A UI editing
+feature does not establish self-serve API access, and a headline language count
+does not establish that feature's language pairs or quality. Include the access
+gate in the feasibility decision, not only in a footnote. Historical complaints
+about a replaced model remain historical until current behavior is checked.
+If official cards, tables or FAQs conflict, preserve the conflicting conditions
+and leave that quote unresolved; do not pick the cheaper figure for unit economics.
+
 Follow the source contract from [social research](social.md#save-evidence-not-reconstructed-testimony):
 original URL, actual access depth, excerpt/locator, date and limitations. Keep
 vendor assertions as assertions. Missing evidence becomes “not established in the
 reviewed sources”; it does not mean the feature is absent. A source about another
 plan, platform or date cannot establish this product's current limit.
+
+Spend the available quotation budget on conditions that drive the decision, not
+only headline claims. A precise capability or price recorded only in `context`
+does not become supported by citing an unrelated excerpt. Save a short decisive
+passage within the host's quotation limits, narrow the claim, or leave it unresolved.
 
 ## Deliver a useful comparison
 

@@ -1,60 +1,71 @@
-# v0.3 acceptance record
+# v0.3.1 live research and iteration
 
-Date: **2026-10-15 (Asia/Shanghai)**. The project is now **Product Idea Research**.
-This record separates fresh renamed-package tests from earlier research evaluations.
-[Prior v0.2 results and iterations](v0.2.md) · [v0.1/v0.1.1 history](v0.1.md).
+Date: **2026-10-15 (Asia/Shanghai)**. [v0.3 acceptance](v0.3.md) ·
+[v0.2](v0.2.md) · [v0.1 history](v0.1.md).
 
-## Fresh checks
+This round used **real public sources**, not authored social fixtures. It is one
+bounded live forward evaluation plus one independent offline follow-up, not a
+statistical research benchmark or a paired comparison against Atypica.
 
-| Check | Observed result | Boundary |
+## What actually ran
+
+1. An independent research agent used the shared skill on a realistic request:
+   find small-language AI-video opportunities a solo builder can deliver with agents.
+   Sources were saved incrementally. It read 22 social/community families and
+   official pages for seven alternatives, then synthesized three roles and three
+   Q&A turns per role. The first report was frozen before parent corrections.
+2. The parent independently read three additional social cases and one human-service
+   case, reviewed evidence and narrowed the leading proposed product. The final
+   study contains **25 accessible social families**, seven software/platform
+   alternatives and a human-service example. Fifty records include supplementary
+   excerpts and five unavailable records; these are not fifty customer needs.
+3. A separate agent used the revised skill on frozen real material, with a narrower
+   Web-product decision request, **no browsing and no new interviews**. It excluded
+   all stored simulated interviews, retained access gaps, distinguished Enterprise
+   API access from UI pricing, and treated switching/payment as unverified.
+   [Inspect its report and replay inputs](live-forward/README.md).
+4. That forward run exposed two report presentation defects. After correction,
+   rerendering preserved the ledger and all twelve prior exported files byte-for-byte
+   (SHA-256 comparison), with correct social coverage and normal finding paragraphs.
+
+[Final Chinese research report and evidence](../examples/small-language-video/README.md).
+The live and follow-up agents ran in the Codex host with its available tools. This
+is **not** a fresh standalone Codex CLI or Claude Code model execution. The earlier
+v0.3 standalone Codex run remains separately documented.
+
+## Changes driven by observed behavior
+
+| Observed issue | Correction | Verification |
 |---|---|---|
-| Automated tests | 50 tests and 10 subtests passed locally | GitHub CI separately checks Linux/macOS/Windows and Python 3.11/3.13 |
-| Fresh renamed wheel | New CLI and legacy CLI both report 0.3.0; new skill installs for both hosts | Installation does not prove host model behavior |
-| Actual v0.2 → v0.3 upgrade | Uninstalled old package, installed new wheel; both commands checked and rendered an old study without changing its ledger | Follow migration order to avoid shared executable ownership |
-| Existing customized skills | Legacy folders preserved byte-for-byte; installer reports migration warnings | Does not silently remove or merge user customizations |
-| Fresh Codex combined study | Two selected modules, seven source records in four material groups, two roles × three Q&A turns, six findings and one suggested next experiment | Fictional supplied material; no live browsing |
-| Evidence content review | Eight excerpts match supplied text; independent review found no substantive blockers | One bounded run, not a research-quality benchmark |
-| Report delivery regression | Fresh Codex report-only run returned four existing absolute file links; ledger and all older exports unchanged | Same saved draft, no new research; report/evidence content byte-identical |
-| Claude Code | Renamed skill installation passed; auth reports loggedIn=false | Actual model workflow remains unverified |
+| All material groups included vendor pages and failed retrievals; the count could be mistaken for social coverage | Add citable source/material/social counts to audit, retain legacy field for compatibility; show separate labeled counts in reports | Tests failed for missing fields first, then passed; final live report shows 25 social families, follow-up shows 22 |
+| Long finding paragraphs were rendered as giant headings | Short numbered headings with escaped body paragraphs; anchors unchanged | Failing HTML/Markdown regression first, then passing tests and independent rerender |
+| Precise competitor details sometimes lived only in context, not their cited excerpt | Remove unsupported precision in the final report; skill now prioritizes decisive excerpt conditions within quote limits | Semantic review found and removed exact language-count and source-direction overclaims |
+| Model/plan/channel differences and internally conflicting official prices repeatedly required manual reconciliation | Competitor guidance now explicitly checks feature × version × direction × plan × UI/API and retains conflicting quotations | Independent follow-up recognized Enterprise API gate and unresolved unit economics |
 
-The actual model run used Codex CLI `0.162.0-alpha.17.2` with its configured default
-model, a fresh installed wheel and workspace, and the renamed installed skill.
-No model override, research-service key, new source collection or outreach was used.
-[Inspect the generated report, material and prompt](../examples/combined-acceptance/README.md).
+The first researcher already handled many plan/version distinctions correctly;
+that guidance change consolidates observed useful practice, not a claim that all
+of those distinctions were missed. Structural citation validation never proves
+semantic entailment; independent review still found wording that needed narrowing.
 
-## Changes driven by this round
+## Verification
 
-- **Actionable report links:** the actual Codex final answer shortened output links
-  to relative paths despite the existing skill instruction. The CLI now returns
-  exact absolute paths in `render.artifacts`, and the skill uses those values for
-  delivery. Regression tests cover Markdown/HTML selection, Chinese/spaced paths,
-  actual files and final publication rather than temporary locations.
-- **Migration preservation:** new package/module/skill names are canonical; the old
-  command and `python -m research_workbench` forward to the same implementation.
-  The installer warns about legacy skills rather than overwriting customizations.
-- **CI artifact selection:** independent review found that `--find-links` alone could
-  choose a published package. CI now uses `--no-index` to test its local wheel.
-
-The combined model run also encountered a draft-writing UTF-8 error and attempted
-validation while the draft was absent. It repaired the write and completed without
-parent intervention; this was not a first-attempt-perfect run. No general skill
-rule was added for that single recovered execution error.
-
-## Earlier evaluations already changed the product
-
-The v0.2 live study and actual Codex cases exposed missed adjacent competitor
-features, misread optional review, overlooked original-author follow-ups and dissent,
-and ambiguous “three rounds” counts. The skill was refined and affected cases
-were rerun before that release. The fresh v0.3 combined case again preserved those
-distinctions and produced exactly two interviews of three Q&A turns each.
-
-The live study remains available separately: [real public-source subtitle research](../examples/subtitle-research/README.md).
-It covered eight accessible discussion families and three official alternatives;
-it is not being relabeled as a new v0.3 live collection.
+- **54 tests and 10 subtests passed** locally, including audit selection/grouping,
+  accessible versus blocked material, empty studies, safe rendering and snapshots.
+- Independent Python review approved both audit and renderer changes; HTML/Markdown
+  escaping, Chinese labels and existing citation anchors were checked.
+- Skill frontmatter/reference validation passed. Wheel build and fresh installation
+  are part of release verification; both host skill destinations use the same files.
+- Browser inspection confirmed the final report renders Chinese text, coverage and
+  ordinary finding paragraphs. Source text was not executed.
 
 ## Limits
 
-No live X/Xiaohongshu access or real willingness to pay was established. Synthetic
-roles are not customers. Claude's actual model behavior remains unverified. There
-is no paired accuracy/quality benchmark proving superiority to Atypica. See the
-[capability comparison](../docs/atypica-comparison.md) and [migration instructions](../docs/installation.md).
+X, Xiaohongshu and Pantip bodies were unavailable. English-language discussions
+predominate; there is no representative native-language market survey. Official
+pages are vendor claims, not product trials. Pricing conflicts and actual API costs
+remain unresolved. No real interviews, paid pilots, customer uploads or audio/video
+quality tests were conducted. All proposed prices, cost budgets and success/stop
+thresholds are research hypotheses.
+
+Claude Code skill installation is checked; actual Claude model behavior remains
+unverified. No evidence establishes superiority over Atypica or validated profit.

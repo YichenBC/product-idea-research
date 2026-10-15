@@ -218,6 +218,37 @@ class Research(Harness):
         self.cli('audit', self.study)
         self.assertEqual(path.read_bytes(), old)
 
+    def test_audit_separates_read_social_families_from_documents_and_blocked_links(self):
+        b = research_batch()
+        b['sources'] += [
+            source('reply', source_type='comment', access='excerpt'),
+            source('review', source_type='review', group_id='review-1'),
+            source('official', source_type='official', group_id='docs'),
+            source('article', source_type='article', group_id='article'),
+            source('provided', source_type='provided', url=None, group_id='export'),
+            source('snippet', access='snippet', group_id='lead', limitations=['Search result only']),
+            source('blocked', access='unavailable', excerpts=[], group_id='blocked', limitations=['Blocked']),
+        ]
+        b['runs'][0]['source_ids'] = ['s1', 'reply', 'official', 'snippet', 'blocked']
+        self.research_ready(b)
+        a = self.cli('audit', self.study, '--report', self.write('r.json', research_report()))
+        self.assertEqual(a['stored']['citable_sources'], 6)
+        self.assertEqual(a['stored']['citable_material_families'], 5)
+        self.assertEqual(a['stored']['citable_social_families'], 2)
+        self.assertEqual(a['selected']['citable_sources'], 3)
+        self.assertEqual(a['selected']['citable_material_families'], 2)
+        self.assertEqual(a['selected']['citable_social_families'], 1)
+        self.assertEqual(a['selected']['source_types'], {'post': 3, 'comment': 1, 'official': 1})
+        self.assertEqual(a['selected']['discussion_families'], 4)  # Legacy all-material count.
+
+    def test_empty_audit_has_zero_citable_coverage(self):
+        self.initialize()
+        a = self.cli('audit', self.study)
+        for scope in ('stored', 'selected'):
+            for key in ('citable_sources', 'citable_material_families', 'citable_social_families'):
+                self.assertEqual(a[scope][key], 0)
+            self.assertEqual(a[scope]['source_types'], {})
+
     def test_concurrent_sources_and_runs_preserve_updates(self):
         self.research_ready()
         processes = []

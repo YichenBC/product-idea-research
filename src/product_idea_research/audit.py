@@ -39,11 +39,17 @@ def canonical_url(url: str) -> str:
 
 def coverage(sources: list[JSONObject], runs: list[JSONObject], interviews: list[JSONObject]) -> JSONObject:
     """Count material/discussion families, without estimating independent people."""
+    citable = [s for s in sources if s['access'] in ('full', 'excerpt')]
     return {'sources': len(sources), 'runs': len(runs), 'interviews': len(interviews),
             'personas': len({i['persona_id'] for i in interviews}),
             'source_ids': [s['id'] for s in sources], 'run_ids': [r['id'] for r in runs],
             'interview_ids': [i['id'] for i in interviews],
             'discussion_families': len({s['group_id'] for s in sources}),
+            'citable_sources': len(citable),
+            'citable_material_families': len({s['group_id'] for s in citable}),
+            'citable_social_families': len({s['group_id'] for s in citable
+                                           if s['source_type'] in ('post', 'comment', 'review')}),
+            'source_types': dict(sorted(Counter(s['source_type'] for s in sources).items())),
             'groups': dict(sorted(Counter(s['group_id'] for s in sources).items())),
             'access': dict(sorted(Counter(s['access'] for s in sources).items())),
             'platforms': dict(sorted(Counter(s['platform'] for s in sources).items())),
@@ -98,4 +104,5 @@ def audit(state: Study, report: JSONObject | None = None) -> JSONObject:
             'selected_incomplete_runs': [r['id'] for r in selected_runs if r['status'] != 'complete'],
             'warnings': warnings,
             'limitations': ['Discussion/material families are not people or a representative demand estimate.',
+                            'Citable social families count accessible posts/comments/reviews by supplied grouping, not verified buyers.',
                             'Validation and coverage cannot establish claim entailment or evidence independence.']}

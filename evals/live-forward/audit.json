@@ -1,0 +1,383 @@
+{
+  "ok": true,
+  "revision": 9,
+  "scope": "report",
+  "stored": {
+    "sources": 46,
+    "runs": 2,
+    "interviews": 3,
+    "personas": 3,
+    "source_ids": [
+      "s01",
+      "s02",
+      "s03",
+      "s04",
+      "s05",
+      "s06",
+      "s07",
+      "s08",
+      "s09",
+      "s10",
+      "blocked-x",
+      "blocked-xhs",
+      "blocked-pantip1",
+      "blocked-pantip2",
+      "blocked-pantip3",
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "s11",
+      "s12",
+      "s13",
+      "s14",
+      "s15",
+      "s16",
+      "s17",
+      "s18",
+      "s19",
+      "s20",
+      "s21",
+      "s22",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "s02-detail",
+      "s07-detail",
+      "s11-detail",
+      "s12-detail",
+      "s21-detail",
+      "c04-detail",
+      "c03-detail"
+    ],
+    "run_ids": [
+      "social-live",
+      "competitor-live"
+    ],
+    "interview_ids": [
+      "i1",
+      "i2",
+      "i3"
+    ],
+    "discussion_families": 39,
+    "citable_sources": 41,
+    "citable_material_families": 34,
+    "citable_social_families": 22,
+    "source_types": {
+      "official": 14,
+      "post": 32
+    },
+    "groups": {
+      "blocked-pantip1": 1,
+      "blocked-pantip2": 1,
+      "blocked-pantip3": 1,
+      "blocked-x": 1,
+      "blocked-xhs": 1,
+      "c01-doc": 1,
+      "c02-doc": 1,
+      "c03-doc": 2,
+      "c04-doc": 2,
+      "c05-doc": 1,
+      "c06-doc": 1,
+      "c07-doc": 1,
+      "c08-doc": 1,
+      "c09-doc": 1,
+      "c10-doc": 1,
+      "c11-doc": 1,
+      "c12-doc": 1,
+      "s01-thread": 1,
+      "s02-thread": 2,
+      "s03-thread": 1,
+      "s04-thread": 1,
+      "s05-thread": 1,
+      "s06-thread": 1,
+      "s07-thread": 2,
+      "s08-thread": 1,
+      "s09-thread": 1,
+      "s10-thread": 1,
+      "s11-thread": 2,
+      "s12-thread": 2,
+      "s13-thread": 1,
+      "s14-thread": 1,
+      "s15-thread": 1,
+      "s16-thread": 1,
+      "s17-thread": 1,
+      "s18-thread": 1,
+      "s19-thread": 1,
+      "s20-thread": 1,
+      "s21-thread": 2,
+      "s22-thread": 1
+    },
+    "access": {
+      "excerpt": 41,
+      "unavailable": 5
+    },
+    "platforms": {
+      "Adobe Community": 1,
+      "AppSumo": 2,
+      "GitHub Discussions": 1,
+      "JamiiForums": 2,
+      "Logik": 1,
+      "Pantip": 3,
+      "Reddit": 20,
+      "X": 1,
+      "official": 14,
+      "小红书": 1
+    },
+    "modules": {
+      "competitor": 1,
+      "social": 1
+    }
+  },
+  "selected": {
+    "sources": 46,
+    "runs": 2,
+    "interviews": 0,
+    "personas": 0,
+    "source_ids": [
+      "s01",
+      "s02",
+      "s03",
+      "s04",
+      "s05",
+      "s06",
+      "s07",
+      "s08",
+      "s09",
+      "s10",
+      "blocked-x",
+      "blocked-xhs",
+      "blocked-pantip1",
+      "blocked-pantip2",
+      "blocked-pantip3",
+      "c01",
+      "c02",
+      "c03",
+      "c04",
+      "c05",
+      "c06",
+      "s11",
+      "s12",
+      "s13",
+      "s14",
+      "s15",
+      "s16",
+      "s17",
+      "s18",
+      "s19",
+      "s20",
+      "s21",
+      "s22",
+      "c07",
+      "c08",
+      "c09",
+      "c10",
+      "c11",
+      "c12",
+      "s02-detail",
+      "s07-detail",
+      "s11-detail",
+      "s12-detail",
+      "s21-detail",
+      "c04-detail",
+      "c03-detail"
+    ],
+    "run_ids": [
+      "social-live",
+      "competitor-live"
+    ],
+    "interview_ids": [],
+    "discussion_families": 39,
+    "citable_sources": 41,
+    "citable_material_families": 34,
+    "citable_social_families": 22,
+    "source_types": {
+      "official": 14,
+      "post": 32
+    },
+    "groups": {
+      "blocked-pantip1": 1,
+      "blocked-pantip2": 1,
+      "blocked-pantip3": 1,
+      "blocked-x": 1,
+      "blocked-xhs": 1,
+      "c01-doc": 1,
+      "c02-doc": 1,
+      "c03-doc": 2,
+      "c04-doc": 2,
+      "c05-doc": 1,
+      "c06-doc": 1,
+      "c07-doc": 1,
+      "c08-doc": 1,
+      "c09-doc": 1,
+      "c10-doc": 1,
+      "c11-doc": 1,
+      "c12-doc": 1,
+      "s01-thread": 1,
+      "s02-thread": 2,
+      "s03-thread": 1,
+      "s04-thread": 1,
+      "s05-thread": 1,
+      "s06-thread": 1,
+      "s07-thread": 2,
+      "s08-thread": 1,
+      "s09-thread": 1,
+      "s10-thread": 1,
+      "s11-thread": 2,
+      "s12-thread": 2,
+      "s13-thread": 1,
+      "s14-thread": 1,
+      "s15-thread": 1,
+      "s16-thread": 1,
+      "s17-thread": 1,
+      "s18-thread": 1,
+      "s19-thread": 1,
+      "s20-thread": 1,
+      "s21-thread": 2,
+      "s22-thread": 1
+    },
+    "access": {
+      "excerpt": 41,
+      "unavailable": 5
+    },
+    "platforms": {
+      "Adobe Community": 1,
+      "AppSumo": 2,
+      "GitHub Discussions": 1,
+      "JamiiForums": 2,
+      "Logik": 1,
+      "Pantip": 3,
+      "Reddit": 20,
+      "X": 1,
+      "official": 14,
+      "小红书": 1
+    },
+    "modules": {
+      "competitor": 1,
+      "social": 1
+    }
+  },
+  "duplicate_urls": [
+    {
+      "canonical_url": "https://appsumo.com/products/vocallab-ai/questions/does-vocallab-ai-support-vietnamese-voic-1547316/",
+      "source_ids": [
+        "s21",
+        "s21-detail"
+      ],
+      "selected_source_ids": [
+        "s21",
+        "s21-detail"
+      ]
+    },
+    {
+      "canonical_url": "https://help.heygen.com/en/articles/11391941-video-translation-languages-we-support",
+      "source_ids": [
+        "c03",
+        "c03-detail"
+      ],
+      "selected_source_ids": [
+        "c03",
+        "c03-detail"
+      ]
+    },
+    {
+      "canonical_url": "https://www.jamiiforums.com/threads/msaada-juu-ya-swahili-voice-over-ai.2331068/",
+      "source_ids": [
+        "s12",
+        "s12-detail"
+      ],
+      "selected_source_ids": [
+        "s12",
+        "s12-detail"
+      ]
+    },
+    {
+      "canonical_url": "https://www.rask.ai/pricing",
+      "source_ids": [
+        "c04",
+        "c04-detail"
+      ],
+      "selected_source_ids": [
+        "c04",
+        "c04-detail"
+      ]
+    },
+    {
+      "canonical_url": "https://www.reddit.com/r/editors/comments/1s2mgg1/managing_srtvtt_files_across_multiple_languages/",
+      "source_ids": [
+        "s07",
+        "s07-detail"
+      ],
+      "selected_source_ids": [
+        "s07",
+        "s07-detail"
+      ]
+    },
+    {
+      "canonical_url": "https://www.reddit.com/r/elearning/comments/1rwibgr/for_enterprise_ld_teams_how_do_you_manage/",
+      "source_ids": [
+        "s11",
+        "s11-detail"
+      ],
+      "selected_source_ids": [
+        "s11",
+        "s11-detail"
+      ]
+    },
+    {
+      "canonical_url": "https://www.reddit.com/r/learnvietnamese/comments/1u2zj1v/does_it_drive_anyone_else_crazy_when_vietnamese/",
+      "source_ids": [
+        "s02",
+        "s02-detail"
+      ],
+      "selected_source_ids": [
+        "s02",
+        "s02-detail"
+      ]
+    }
+  ],
+  "duplicate_excerpts": [],
+  "incomplete_runs": [
+    "social-live",
+    "competitor-live"
+  ],
+  "selected_incomplete_runs": [
+    "social-live",
+    "competitor-live"
+  ],
+  "warnings": [
+    {
+      "code": "incomplete_runs",
+      "run_ids": [
+        "social-live",
+        "competitor-live"
+      ],
+      "message": "Partial runs retain their stated collection limitations."
+    },
+    {
+      "code": "duplicate_urls",
+      "message": "URL variants may refer to the same material; records were not merged."
+    },
+    {
+      "code": "ineligible_sources",
+      "source_ids": [
+        "blocked-x",
+        "blocked-xhs",
+        "blocked-pantip1",
+        "blocked-pantip2",
+        "blocked-pantip3"
+      ],
+      "message": "Snippet and unavailable sources cannot support findings."
+    }
+  ],
+  "limitations": [
+    "Discussion/material families are not people or a representative demand estimate.",
+    "Citable social families count accessible posts/comments/reviews by supplied grouping, not verified buyers.",
+    "Validation and coverage cannot establish claim entailment or evidence independence."
+  ]
+}

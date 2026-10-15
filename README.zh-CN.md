@@ -105,3 +105,7 @@ CLI 不会自行搜索或生成内容。新一轮研究由 Agent 运行 Skill。
 
 MIT 开源；Python 标准库运行时。开发：`python -m pip install -e '.[dev]'`，
 `python -m pytest -q`，`python -m build`。
+
+## 最新真实案例
+
+[小语种 AI 视频产品机会](examples/small-language-video/README.md)：25个可引用社媒讨论家族、7个软件/平台替代方案，附真实来源、反证、假设成本与验证条件。X/小红书等缺口明确保留。[评估与迭代](evals/README.md)。
