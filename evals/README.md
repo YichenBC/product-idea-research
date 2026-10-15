@@ -42,6 +42,11 @@ study used the agent host's web tools; the Python CLI never browses or calls a m
    as three Q&A turns in one interview per role. A fresh model run produced exactly
    two interviews × three turns. This does not guarantee every future model follows it.
 
+The initial Windows CI run also caught locale-dependent reads in the new renderer
+tests. Those tests incorrectly decoded UTF-8 reports using Windows CP1252. The
+failure was reproduced locally by changing only the default reader encoding, then
+fixed with explicit UTF-8 reads; the renderer already wrote UTF-8 correctly.
+
 Semantic problems passed structural validation. Exact-reference checking is useful,
 but cannot establish whether a summary is fair or whether a source is true.
 

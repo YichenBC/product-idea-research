@@ -41,8 +41,8 @@ class ResearchRender(Harness):
         return Path(result['directory'])
 
     def assert_citations(self, directory, kind):
-        main = (directory / f'report.{kind}').read_text()
-        evidence = (directory / f'evidence.{kind}').read_text()
+        main = (directory / f'report.{kind}').read_text(encoding='utf-8')
+        evidence = (directory / f'evidence.{kind}').read_text(encoding='utf-8')
         anchors = Markup(evidence).ids
         self.assertEqual(len(anchors), len(set(anchors)))
         targets = re.findall(r'evidence\.' + kind + r'#([a-z0-9-]+)', main)
@@ -89,7 +89,7 @@ class ResearchRender(Harness):
                     self.assertIn('We use a spreadsheet', evidence)
                     self.assertLess(main.index('Test spreadsheet handoff'), main.index('Question'))
                     self.assertNotIn('https://example.com', main)
-                self.assertEqual(json.loads((directory / 'report.json').read_text()), r)
+                self.assertEqual(json.loads((directory / 'report.json').read_text(encoding='utf-8')), r)
 
     def test_combined_classification_and_language_precedence(self):
         b = research_batch()
@@ -178,7 +178,7 @@ class ResearchRender(Harness):
             _, evidence = self.assert_citations(second, kind)
             self.assertIn('Corrected archived reading', evidence)
             self.assertNotIn('We use a spreadsheet', evidence)
-            self.assertEqual(len(json.loads((second / 'study.json').read_text())['sources']), 2)
+            self.assertEqual(len(json.loads((second / 'study.json').read_text(encoding='utf-8'))['sources']), 2)
         self.assertEqual(frozen, {p.name: p.read_bytes() for p in first.iterdir()})
 
     def test_source_only_with_unused_simulation_and_blocked_collection(self):
@@ -187,8 +187,8 @@ class ResearchRender(Harness):
         self.prepare(b)
         first = self.export()
         for kind in ('md', 'html'):
-            self.assertNotIn('simulat', (first / f'report.{kind}').read_text().lower())
-            self.assertNotIn('Role cards', (first / f'evidence.{kind}').read_text())
+            self.assertNotIn('simulat', (first / f'report.{kind}').read_text(encoding='utf-8').lower())
+            self.assertNotIn('Role cards', (first / f'evidence.{kind}').read_text(encoding='utf-8'))
         run = research_batch()['runs'][0]
         run.update(id='blocked', status='partial', source_ids=[], limitations=['Access blocked by login'])
         self.ingest({'runs': [run]})
@@ -197,8 +197,8 @@ class ResearchRender(Harness):
                  limitations=['Access blocked by login'])
         second = self.export(r)
         for kind in ('md', 'html'):
-            main = (second / f'report.{kind}').read_text()
-            evidence = (second / f'evidence.{kind}').read_text()
+            main = (second / f'report.{kind}').read_text(encoding='utf-8')
+            evidence = (second / f'evidence.{kind}').read_text(encoding='utf-8')
             self.assertIn('No eligible evidence', main)
             self.assertIn('Access blocked by login', main)
             self.assertIn('Access blocked by login', evidence)
@@ -234,7 +234,7 @@ class ResearchRender(Harness):
         b['sources'][0]['url'] = url
         self.prepare(b)
         directory = self.export(kind='md')
-        evidence = (directory / 'evidence.md').read_text()
+        evidence = (directory / 'evidence.md').read_text(encoding='utf-8')
         destination = re.search(r'\]\((https[^\s)]+)\)', evidence).group(1)
         from urllib.parse import urlsplit
         self.assertEqual(urlsplit(html.unescape(destination)).hostname, '::1')
@@ -251,7 +251,7 @@ class ResearchRender(Harness):
         r['findings'].append({**copy.deepcopy(r['findings'][0]), 'id': 'f2'})
         directory = self.export(r)
         for kind in ('md', 'html'):
-            main = html.unescape((directory / f'report.{kind}').read_text())
+            main = html.unescape((directory / f'report.{kind}').read_text(encoding='utf-8'))
             self.assertIn('Sources: 2', main)
             self.assertIn('Read sources (full / excerpt): 1', main)
             self.assertIn('Snippet / unavailable: 1', main)

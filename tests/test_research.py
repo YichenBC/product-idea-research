@@ -42,7 +42,7 @@ class Research(Harness):
 
     def test_social_and_competitor_without_simulation(self):
         self.initialize()
-        state = json.loads((self.study / 'research.json').read_text())
+        state = json.loads((self.study / 'research.json').read_text(encoding='utf-8'))
         self.assertEqual((state['brief'], state['sources'], state['runs']), (None, [], []))
         status = self.ingest(research_batch())
         self.assertEqual((status['sources'], status['runs'], status['modules']), (1, 1, {'social': 1}))
@@ -209,10 +209,10 @@ class Research(Harness):
     def test_legacy_load_does_not_rewrite(self):
         self.ready()
         path = self.study / 'research.json'
-        state = json.loads(path.read_text())
+        state = json.loads(path.read_text(encoding='utf-8'))
         for key in ('brief', 'sources', 'runs'):
             state.pop(key, None)
-        path.write_text(json.dumps(state))
+        path.write_text(json.dumps(state), encoding='utf-8')
         old = path.read_bytes()
         self.cli('check', self.study, '--report', self.write('legacy.json', simulation_report()))
         self.cli('audit', self.study)
